@@ -1,0 +1,227 @@
+[
+    {
+        "id": "62deef4c-004b-4dd3-9d56-48e5d1323539",
+        "title": "D'Amore-Bernhard",
+        "date": "2020-01-21",
+        "imageUrl": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/12/24/11/downton-tree_3533245b.jpg?w968h681",
+        "description": "orchestrate transparent e-commerce",
+        "tags": [
+            {
+                "id": "d25742c6-3db8-42e2-846c-681bd2273a76",
+                "name": "User-centric"
+            }
+        ]
+    },
+    {
+        "id": "7287809f-31df-4584-9ef9-e9deb6deded4",
+        "title": "Walsh LLC",
+        "date": "2019-08-08",
+        "description": "aggregate granular metrics",
+        "tags": [
+            {
+                "id": "d25742c6-3db8-42e2-846c-681bd2273a76",
+                "name": "User-centric"
+            }
+        ]
+    },
+    {
+        "id": "d8343ec3-fbe8-4195-82ee-bc7b188c08f3",
+        "title": "Konopelski-Koelpin",
+        "date": "2019-09-18",
+        "description": "reinvent global infomediaries",
+        "tags": [
+            {
+                "id": "d25742c6-3db8-42e2-846c-681bd2273a76",
+                "name": "User-centric"
+            }
+        ]
+    },
+    {
+        "id": "8b6d74ab-5c61-4b49-809f-f48fb69c16c9",
+        "title": "Rohan Inc",
+        "date": "2020-02-03",
+        "description": "synergize bleeding-edge interfaces",
+        "tags": [
+            {
+                "id": "d25742c6-3db8-42e2-846c-681bd2273a76",
+                "name": "User-centric"
+            }
+        ]
+    },
+    {
+        "id": "360c2b30-0d6a-47a7-8d37-2d46c6c8c5ef",
+        "title": "Block-Koepp",
+        "date": "2019-12-07",
+        "description": "recontextualize efficient infrastructures",
+        "tags": [
+            {
+                "id": "7776c182-a516-4b2d-8572-73608c429c5f",
+                "name": "incremental"
+            }
+        ]
+    },
+    {
+        "id": "ca055609-8a07-49f8-8eee-2d80ae9f6369",
+        "title": "Jacobson Group",
+        "date": "2020-07-07",
+        "description": "redefine intuitive e-markets",
+        "tags": [
+            {
+                "id": "7776c182-a516-4b2d-8572-73608c429c5f",
+                "name": "incremental"
+            },
+            {
+                "id": "4417e337-ad08-4720-a1d4-448d6d46cf37",
+                "name": "client-driven"
+            }
+        ]
+    },
+    {
+        "id": "af59f40b-ca1c-4681-898c-252613d58e88",
+        "title": "Dickens Group",
+        "date": "2020-02-10",
+        "description": "synthesize real-time e-business",
+        "tags": [
+            {
+                "id": "7776c182-a516-4b2d-8572-73608c429c5f",
+                "name": "incremental"
+            }
+        ]
+    },
+    {
+        "id": "2175ebf8-b20d-4d88-a521-833ec98ee1b6",
+        "title": "Gutkowski-Leannon",
+        "date": "2019-11-19",
+        "description": "recontextualize dynamic interfaces",
+        "tags": [
+            {
+                "id": "7776c182-a516-4b2d-8572-73608c429c5f",
+                "name": "incremental"
+            },
+            {
+                "id": "4417e337-ad08-4720-a1d4-448d6d46cf37",
+                "name": "client-driven"
+            }
+        ]
+    },
+    {
+        "id": "c9a43885-407c-49e0-b536-2cb39618a3c1",
+        "title": "Konopelski, Kuvalis and Kilback",
+        "date": "2019-09-25",
+        "description": "mesh dynamic experiences",
+        "tags": [
+            {
+                "id": "7776c182-a516-4b2d-8572-73608c429c5f",
+                "name": "incremental"
+            }
+        ]
+    },
+    {
+        "id": "fc3dc33c-e157-461a-83f2-1f62287467a0",
+        "title": "Jones-Jast",
+        "date": "2020-06-09",
+        "description": "visualize mission-critical ROI",
+        "tags": [
+            {
+                "id": "7776c182-a516-4b2d-8572-73608c429c5f",
+                "name": "incremental"
+            }
+        ]
+    },
+    {
+        "id": "f4e6e401-d2fc-4bfb-8595-f908447a2461",
+        "title": "Lowe Group",
+        "date": "2020-01-24",
+        "description": "incubate customized partnerships",
+        "tags": [
+            {
+                "id": "df077d99-44ec-4be6-911d-8801fc690f4c",
+                "name": "De-engineered"
+            }
+        ]
+    },
+    {
+        "id": "29d00f5e-297e-4d06-8569-876afa5ee130",
+        "title": "Gutkowski, Collins and Grant",
+        "date": "2019-07-10",
+        "description": "enable B2C ROI",
+        "tags": [
+            {
+                "id": "df077d99-44ec-4be6-911d-8801fc690f4c",
+                "name": "De-engineered"
+            },
+            {
+                "id": "4417e337-ad08-4720-a1d4-448d6d46cf37",
+                "name": "client-driven"
+            }
+        ]
+    },
+    {
+        "id": "b5c0e445-cce7-4ede-a29b-6484a9c64ccd",
+        "title": "Hoeger-Kreiger",
+        "date": "2019-12-14",
+        "description": "revolutionize 24/7 markets",
+        "tags": [
+            {
+                "id": "df077d99-44ec-4be6-911d-8801fc690f4c",
+                "name": "De-engineered"
+            }
+        ]
+    },
+    {
+        "id": "abcfa154-a180-4db4-a9ba-6d8b26861479",
+        "title": "Heathcote, Schroeder and Kessler",
+        "date": "2019-08-23",
+        "description": "strategize granular e-tailers",
+        "tags": [
+            {
+                "id": "df077d99-44ec-4be6-911d-8801fc690f4c",
+                "name": "De-engineered"
+            },
+            {
+                "id": "4417e337-ad08-4720-a1d4-448d6d46cf37",
+                "name": "client-driven"
+            }
+        ]
+    },
+    {
+        "id": "0ea2bdfb-77c2-4612-a0aa-3097ab5134ae",
+        "title": "Volkman Group",
+        "date": "2020-05-28",
+        "description": "transform plug-and-play synergies",
+        "tags": [
+            {
+                "id": "cdfd468d-6884-46ad-ad1b-2e8dfe167752",
+                "name": "fresh-thinking"
+            }
+        ]
+    },
+    {
+        "id": "c1e8eb1b-0753-4617-b0ef-fdc7b0a60d66",
+        "title": "Kris-Homenick",
+        "date": "2020-07-08",
+        "description": "matrix synergistic infrastructures",
+        "tags": [
+            {
+                "id": "cdfd468d-6884-46ad-ad1b-2e8dfe167752",
+                "name": "fresh-thinking"
+            }
+        ]
+    },
+    {
+        "id": "6e89dee4-e52b-4052-9639-d4e37daa27c8",
+        "title": "Dickens, Schroeder and Bogisich",
+        "date": "2020-04-21",
+        "description": "implement bricks-and-clicks functionalities",
+        "tags": [
+            {
+                "id": "cdfd468d-6884-46ad-ad1b-2e8dfe167752",
+                "name": "fresh-thinking"
+            },
+            {
+                "id": "4417e337-ad08-4720-a1d4-448d6d46cf37",
+                "name": "client-driven"
+            }
+        ]
+    }
+]

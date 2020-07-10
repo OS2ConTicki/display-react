@@ -112,7 +112,7 @@ class Events extends Component {
       <>
         <h2 className="d-flex justify-content-center mt-5 mb-3">Events</h2>
         <div className="row" id="events">
-          <div className="col-2">
+          <div className="col-md-2">
             <ListGroup
               items={tags}
               textProperty="name"
