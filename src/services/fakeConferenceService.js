@@ -5,6 +5,8 @@ const events = [
     id: "62deef4c-004b-4dd3-9d56-48e5d1323539",
     title: "D'Amore-Bernhard",
     date: "2020-01-21",
+    imageUrl:
+      "https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/12/24/11/downton-tree_3533245b.jpg?w968h681",
     description: "orchestrate transparent e-commerce",
     tags: [
       {
@@ -364,4 +366,8 @@ export function getConferenceTitle() {
 
 export function getConferenceTicketUrl() {
   return conferenceInfo.ticketUrl;
+}
+
+export function getConferenceInfo() {
+  return conferenceInfo;
 }

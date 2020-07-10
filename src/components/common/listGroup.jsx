@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { getTags } from "../../services/fakeConferenceService";
 
 class ListGroup extends Component {
-  state = { tags: getTags() };
 
   render() {
     const {

@@ -14,11 +14,14 @@ class Speakers extends Component {
   render() {
     const { speakers } = this.state;
     return (
-      <div id="speakers" className="row d-flex justify-content-between m-3">
+      <>
+        <h2 className="d-flex justify-content-center mt-5 mb-3">Talere</h2>
+        <div id="speakers" className="row d-flex justify-content-center">
           {speakers.map((speaker) => (
             <Person person={speaker}></Person>
           ))}
-      </div>
+        </div>
+      </>
     );
   }
 }

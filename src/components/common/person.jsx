@@ -3,7 +3,7 @@ import React from "react";
 function Person(props) {
   const { person } = props;
   return (
-    <div className="card mb-4" style={{ width: "15rem" }}>
+    <div className="card m-2" style={{ width: "15rem" }}>
       <img
         className="card-img-top"
         style={{ height: "15rem" }}

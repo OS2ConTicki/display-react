@@ -1,1 +1,4 @@
-# todo todo
+# Simple readme
+
+`npm install`
+`npm start`

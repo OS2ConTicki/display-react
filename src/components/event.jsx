@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getEvent } from "../services/fakeConferenceService";
+import DisplayInfoComponent from "./common/displayInfoComponent";
 class Event extends Component {
   state = {
     event: {},
@@ -12,11 +13,7 @@ class Event extends Component {
 
   render() {
     const { event } = this.state;
-    return (
-      <React.Fragment>
-        <h1>{event.title}</h1>
-      </React.Fragment>
-    );
+    return <DisplayInfoComponent item={event}></DisplayInfoComponent>;
   }
 }
 

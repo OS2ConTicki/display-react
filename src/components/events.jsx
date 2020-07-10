@@ -18,7 +18,6 @@ class Events extends Component {
     searchText: "",
   };
 
-  
   componentDidMount() {
     let tags = [{ name: "Alle events", id: "" }, ...getTags()];
     this.setState({ events: getEvents(), tags: tags });
@@ -111,7 +110,8 @@ class Events extends Component {
     const { searchText } = this.state;
     return (
       <>
-        <div className="row m-3" id="events">
+        <h2 className="d-flex justify-content-center mt-5 mb-3">Events</h2>
+        <div className="row" id="events">
           <div className="col-2">
             <ListGroup
               items={tags}

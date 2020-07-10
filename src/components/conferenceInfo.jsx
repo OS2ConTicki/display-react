@@ -1,41 +1,25 @@
 import React, { Component } from "react";
+import DisplayInfoComponent from './common/displayInfoComponent'
 import {
-  getConferenceImage,
-  getConferenceDescription,
-  getConferenceTicketUrl,
-  getConferenceTitle
+  getConferenceInfo,
 } from "../services/fakeConferenceService";
 
 class Speakers extends Component {
   state = {
-    image: "",
-    description: "",
-    title: "",
-    ticketUrl: "",
+    conferenceInfo: "",
   };
 
   componentDidMount() {
     this.setState({
-      image: getConferenceImage(),
-      description: getConferenceDescription(),
-      ticketUrl: getConferenceTicketUrl(),
-      title: getConferenceTitle(),
+      conferenceInfo: getConferenceInfo(),
     });
   }
 
   render() {
-    const { image, description, ticketUrl, title } = this.state;
+    const { conferenceInfo } = this.state;
     return (
-      <div className="row m-3" id="top">
-        <h1>{title}</h1>
-        <img
-          className="card-img-top"
-          style={{ height: "15rem" }}
-          src={image}
-          alt=""
-        />
-        <p>{description}</p>
-        <p>{ticketUrl}</p>
+      <div id="top">
+        <DisplayInfoComponent item={conferenceInfo}></DisplayInfoComponent>
       </div>
     );
   }
