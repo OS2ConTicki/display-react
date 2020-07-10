@@ -1,3 +1,1 @@
-# display-react
-
-Conference app implemented in React
+# todo todo
