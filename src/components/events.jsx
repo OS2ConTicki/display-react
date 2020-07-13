@@ -4,7 +4,7 @@ import { getEvents, getTags, getSubjects } from "../services/fetchService";
 import { paginate } from "./utils/paginate";
 import EventsTable from "./eventsTable";
 import Tabs from "./common/tabs";
-import ListGroup from "./common/listGroup";
+import TagList from "./tags";
 import Pagination from "./common/pagination";
 import SearchBox from "./common/searchBox";
 
@@ -13,7 +13,7 @@ class Events extends Component {
     events: [],
     tags: [],
     tabs: [],
-    pageSize: 4,
+    pageSize: 6,
     currentPage: 1,
     selectedTag: "",
     sortColumn: { path: "date", order: "asc" },
@@ -28,7 +28,7 @@ class Events extends Component {
     let tabs = [allEventsSubjects, ...getSubjects()];
     const events = getEvents();
     events.forEach((event) => {
-      event.liked = localStorage.getItem(event.id);
+      event.liked = localStorage.getItem(event.id) === "true";
     });
     this.setState({
       events: events,
@@ -54,7 +54,13 @@ class Events extends Component {
   };
 
   handleLike = (event) => {
-    localStorage.setItem(event.id, true);
+    const isEventAlreadyLiked = localStorage.getItem(event.id) === "true";
+    if (isEventAlreadyLiked){
+      localStorage.setItem(event.id, false);      
+    } else {
+
+      localStorage.setItem(event.id, true);
+    }
     const eventToEdit = { ...event };
     eventToEdit.liked = !eventToEdit.liked;
     const index = this.state.events.indexOf(event);
@@ -151,18 +157,18 @@ class Events extends Component {
     return (
       <>
         <h2 className="d-flex justify-content-center mt-5 mb-3">Events</h2>
-        <p>{eventString}</p>
         <div className="row" id="events">
           <div className="col-md-2">
-            <ListGroup
+            <TagList
               items={tags}
               textProperty="name"
               valueProperty="id"
               selectedItem={this.state.selectedTag}
-              onItemSelect={this.handleTagSelect}
+              onTagSelect={this.handleTagSelect}
             />
           </div>
           <div className="col">
+            <p>{eventString}</p>
             <SearchBox value={searchText} onChange={this.handleSearch} />
 
             <Tabs
