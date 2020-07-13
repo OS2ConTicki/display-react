@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getEvent } from "../services/fakeConferenceService";
+import { getEvent } from "../services/fetchService";
 import DisplayInfoComponent from "./common/displayInfoComponent";
 class Event extends Component {
   state = {

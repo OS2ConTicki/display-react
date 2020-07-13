@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import _ from "lodash";
-import { getEvents, getTags } from "../services/fakeConferenceService";
+import { getEvents, getTags, getSubjects } from "../services/fetchService";
 import { paginate } from "./utils/paginate";
 import EventsTable from "./eventsTable";
+import Tabs from "./common/tabs";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
 import SearchBox from "./common/searchBox";
@@ -11,16 +12,31 @@ class Events extends Component {
   state = {
     events: [],
     tags: [],
+    tabs: [],
     pageSize: 4,
     currentPage: 1,
     selectedTag: "",
     sortColumn: { path: "date", order: "asc" },
     searchText: "",
+    selectedTab: "",
   };
 
   componentDidMount() {
-    let tags = [{ name: "Alle events", id: "" }, ...getTags()];
-    this.setState({ events: getEvents(), tags: tags });
+    let allEventsTag = { name: "Alle emner", id: "" };
+    let allEventsSubjects = { name: "Alle spor", id: "" };
+    let tags = [allEventsTag, ...getTags()];
+    let tabs = [allEventsSubjects, ...getSubjects()];
+    const events = getEvents();
+    events.forEach((event) => {
+      event.liked = localStorage.getItem(event.id);
+    });
+    this.setState({
+      events: events,
+      tags: tags,
+      tabs: tabs,
+      selectedTag: allEventsTag,
+      selectedTab: allEventsSubjects,
+    });
   }
 
   handleDelete = ({ id }) => {
@@ -38,6 +54,7 @@ class Events extends Component {
   };
 
   handleLike = (event) => {
+    localStorage.setItem(event.id, true);
     const eventToEdit = { ...event };
     eventToEdit.liked = !eventToEdit.liked;
     const index = this.state.events.indexOf(event);
@@ -50,9 +67,12 @@ class Events extends Component {
     this.setState({ selectedTag: tag, currentPage: 1, searchText: "" });
   };
 
+  handleTabSelect = (tab) => {
+    this.setState({ selectedTab: tab, currentPage: 1, searchText: "" });
+  };
+
   handleSearch = (searchText) => {
     this.setState({
-      selectedTag: null,
       currentPage: 1,
       searchText,
     });
@@ -66,13 +86,17 @@ class Events extends Component {
       selectedTag,
       sortColumn,
       searchText,
+      selectedTab,
     } = this.state;
     let filteredEvents = allEvents;
 
     if (searchText) {
       filteredEvents = allEvents.filter(
         (event) =>
-          event.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+          event.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
+          event.description.toLowerCase().indexOf(searchText.toLowerCase()) >
+            -1 ||
+          event.date.toLowerCase().indexOf(searchText.toLowerCase()) > -1
       );
     } else if (selectedTag && selectedTag.id) {
       filteredEvents = [];
@@ -83,6 +107,11 @@ class Events extends Component {
           }
         });
       });
+    }
+    if (selectedTab && selectedTab.id) {
+      filteredEvents = filteredEvents.filter(
+        (event) => event.subject.id === selectedTab.id
+      );
     }
 
     const sortedEvents = _.orderBy(
@@ -96,7 +125,15 @@ class Events extends Component {
   };
 
   render() {
-    const { pageSize, currentPage, tags, sortColumn, selectedTag } = this.state;
+    const {
+      pageSize,
+      currentPage,
+      tags,
+      tabs,
+      sortColumn,
+      selectedTag,
+      selectedTab,
+    } = this.state;
     const { length: count } = this.state.events;
 
     if (count === 0) {
@@ -104,6 +141,9 @@ class Events extends Component {
     }
     const { totalCount, data: events } = this.getPagedData();
     let eventString = `Der er ${totalCount} events tilknyttet denne konference`;
+    if (selectedTab && selectedTab.id) {
+      eventString += ` i sporet ${selectedTab.name}`;
+    }
     if (selectedTag && selectedTag.id) {
       eventString += ` med tagget ${selectedTag.name}`;
     }
@@ -111,6 +151,7 @@ class Events extends Component {
     return (
       <>
         <h2 className="d-flex justify-content-center mt-5 mb-3">Events</h2>
+        <p>{eventString}</p>
         <div className="row" id="events">
           <div className="col-md-2">
             <ListGroup
@@ -122,10 +163,18 @@ class Events extends Component {
             />
           </div>
           <div className="col">
-            <p>{eventString}</p>
-
             <SearchBox value={searchText} onChange={this.handleSearch} />
+
+            <Tabs
+              items={tabs}
+              textProperty="name"
+              valueProperty="id"
+              selectedItem={this.state.selectedTab}
+              onItemSelect={this.handleTabSelect}
+            ></Tabs>
+
             <EventsTable
+              selectedTag={this.state.selectedTag.id}
               events={events}
               sortColumn={sortColumn}
               onDelete={this.handleDelete}

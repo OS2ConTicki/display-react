@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { getTags } from "../../services/fetchService";
 
-class ListGroup extends Component {
-
+class Tabs extends Component {
   render() {
     const {
       items,
@@ -12,18 +10,18 @@ class ListGroup extends Component {
       selectedItem,
     } = this.props;
     return (
-      <ul className="list-group">
+      <ul className="nav nav-tabs mt-4 mb-1">
         {items.map((item) => (
           <li
             onClick={() => onItemSelect(item)}
             key={item[valueProperty]}
-            className={
-              item === selectedItem
-                ? "list-group-item active"
-                : "list-group-item"
-            }
+            className="nav-item"
           >
-            {item[textProperty]}
+            <a
+              className={item === selectedItem ? "nav-link active" : "nav-link"}
+            >
+              {item[textProperty]}
+            </a>
           </li>
         ))}
       </ul>
@@ -31,9 +29,9 @@ class ListGroup extends Component {
   }
 }
 
-ListGroup.defaultProps = {
+Tabs.defaultProps = {
   textProperty: "name",
   valueProperty: "id",
 };
 
-export default ListGroup;
+export default Tabs;

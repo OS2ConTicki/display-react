@@ -1,35 +1,30 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Table from './common/table';
-import Like from './common/like';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Table from "./common/table";
+import Like from "./common/like";
+import Tag from "./common/tag";
 
 class EventsTable extends Component {
   columns = [
     {
-      path: 'title',
-      label: 'Title',
-      content: (event) => (
-        <Link to={`/event/${event.id}`}>{event.title}</Link>
-      ),
+      path: "title",
+      label: "Title",
+      content: (event) => <Link to={`/event/${event.id}`}>{event.title}</Link>,
     },
     {
-      key: 'tags',
-      label: 'Tags',
-      content: (event) => (
+      key: "tags",
+      label: "Tags",
+      content: (event) =>
         event.tags.map((tag) => (
-          <span className="badge badge-secondary" key={tag.id}>{tag.name}</span>
-        ))
-      ),
+          <Tag tag={tag} selectedTag={this.props.selectedTag}></Tag>
+        )),
     },
-    { path: 'description', label: 'Beskrivelse' },
-    { path: 'date', label: 'Dato' },
+    { path: "description", label: "Beskrivelse" },
+    { path: "date", label: "Dato" },
     {
-      key: 'like',
+      key: "like",
       content: (event) => (
-        <Like
-          liked={event.liked}
-          onClick={() => this.props.onLike(event)}
-        />
+        <Like liked={event.liked} onClick={() => this.props.onLike(event)} />
       ),
     },
   ];

@@ -3,8 +3,10 @@ import eventsData from "../data/events.json";
 import conferenceData from "../data/conference-data.json";
 import speakersData from "../data/speakers.json";
 import tagsData from "../data/tags.json";
+import subjectData from "../data/subjects.json";
 
 const events = eventsData;
+const subjects = subjectData;
 const conferenceInfo = conferenceData;
 const speakers = speakersData;
 const tags = tagsData;
@@ -19,6 +21,10 @@ export function getEvent(id) {
 
 export function getTags() {
   return tags;
+}
+
+export function getSubjects() {
+  return subjects;
 }
 
 export function getSpeakers() {

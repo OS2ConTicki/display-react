@@ -1,11 +1,11 @@
 import React from "react";
 
 function Tag(props) {
-  const { tag, selected } = props;
-  let classes = "badge badge-secondary m-1";
-  if (selected) {
-    classes += " badge-primary";
-  }
+  const { tag, selectedTag } = props;
+  let classes =
+    selectedTag === tag.id
+      ? "badge badge-primary m-1"
+      : "badge badge-secondary m-1";
 
   return (
     <span className={classes} key={tag.id}>

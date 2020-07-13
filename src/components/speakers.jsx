@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getSpeakers } from "../services/fakeConferenceService";
+import { getSpeakers } from "../services/fetchService";
 import Person from "./common/person";
 
 class Speakers extends Component {
@@ -18,7 +18,7 @@ class Speakers extends Component {
         <h2 className="d-flex justify-content-center mt-5 mb-3">Talere</h2>
         <div id="speakers" className="row d-flex justify-content-center">
           {speakers.map((speaker) => (
-            <Person person={speaker}></Person>
+            <Person key={speaker.id} person={speaker}></Person>
           ))}
         </div>
       </>

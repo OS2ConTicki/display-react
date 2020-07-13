@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DisplayInfoComponent from './common/displayInfoComponent'
 import {
   getConferenceInfo,
-} from "../services/fakeConferenceService";
+} from "../services/fetchService";
 
 class Speakers extends Component {
   state = {
