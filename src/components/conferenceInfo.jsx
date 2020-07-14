@@ -5,6 +5,7 @@ import {
 } from "../services/fetchService";
 
 class Speakers extends Component {
+
   state = {
     conferenceInfo: "",
   };

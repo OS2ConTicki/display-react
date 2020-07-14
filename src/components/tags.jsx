@@ -13,6 +13,7 @@ class Tags extends Component {
     return (
 
       <>
+      <h3>tags</h3>
         {items.map((item) => (
           <span key={item[valueProperty]}>
             <Tag

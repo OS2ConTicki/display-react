@@ -20,7 +20,7 @@ class EventsTable extends Component {
         )),
     },
     { path: "description", label: "Beskrivelse" },
-    { path: "date", label: "Dato" },
+    { path: "startDate", label: "Dato" },
     {
       key: "like",
       content: (event) => (
@@ -35,6 +35,7 @@ class EventsTable extends Component {
       <Table
         columns={this.columns}
         onSort={onSort}
+        sortable={true}
         items={events}
         sortColumn={sortColumn}
       />
