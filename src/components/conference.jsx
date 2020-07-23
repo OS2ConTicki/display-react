@@ -38,6 +38,21 @@ function Conference(props) {
                   10
                 );
 
+                let tagIds = [];
+                if (event.relationships.tags.data) {
+                  event.relationships.tags.data.forEach((tag) => {
+                    tagIds.push(tag.id);
+                  });
+                }
+                event.attributes.tags = tagIds;
+                event.attributes.theme = "";
+                // event.attributes.description = event.attributes.description
+                //   ? event.attributes.description
+                //   : "";
+                if (event.relationships.themes.data) {
+                  event.attributes.theme = event.relationships.themes.data.id;
+                }
+
                 event = event.attributes;
 
                 events.push(event);
@@ -45,10 +60,22 @@ function Conference(props) {
               context.events.set(events);
               break;
             case "tags":
-              context.tags.set(data.data);
+              let saveTags = [];
+              data.data.forEach((tag) => {
+                saveTags.push({ id: tag.id, title: tag.attributes.title });
+              });
+              context.tags.set(saveTags);
               break;
             case "themes":
-              context.themes.set(data.data);
+              let saveThemes = [];
+              data.data.forEach((theme) => {
+                saveThemes.push({
+                  id: theme.id,
+                  title: theme.attributes.title,
+                });
+              });
+              context.themes.set(saveThemes);
+              break;
           }
         }
       });
@@ -60,8 +87,8 @@ function Conference(props) {
       .then((data) => {
         context.conference.set(data.data);
         const eventsUrl = data?.data?.links?.event?.href;
-        const tagsUrl = data?.data?.links?.event?.href;
-        const themesUrl = data?.data?.links?.event?.href;
+        const tagsUrl = data?.data?.links?.tag?.href;
+        const themesUrl = data?.data?.links?.theme?.href;
         if (eventsUrl) {
           fetchData(eventsUrl, "events");
         }

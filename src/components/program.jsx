@@ -1,22 +1,16 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {  useState } from "react";
 import _ from "lodash";
 import ProgramTable from "./programTable";
 import TagList from "./tags";
 import SearchBox from "./common/searchBox";
 import Tabs from "./common/tabs";
-import urlContext from "../context/urlContext";
 
 function Program({ eventsList, tagsList, themesList }) {
-  let allEventsTag = { name: "Alle emner", id: "" };
-  let allEventsThemes = { name: "Alle temaer", id: "" };
-  const context = useContext(urlContext);
-  const [sortedEvents, setSortedEvents] = useState(eventsList);
+  let allEventsTag = { title: "Alle emner", id: "" };
+  let allEventsThemes = { title: "Alle temaer", id: "" };
+  const [events, setEvents] = useState(eventsList);
   const [selectedTag, setSelectedTag] = useState(allEventsTag);
   const [selectedTab, setSelectedTab] = useState(allEventsThemes);
-  const [sortColumn, setSortColumn] = useState({
-    path: "startTime",
-    order: "asc",
-  });
 
   const [tags] = useState([allEventsTag, ...tagsList]);
   const [tabs] = useState([allEventsThemes, ...themesList]);
@@ -25,15 +19,12 @@ function Program({ eventsList, tagsList, themesList }) {
   const [dates, setDates] = useState(getDates());
   function getDates() {
     let returnDatesArray = [];
-    sortedEvents.forEach((event) => {
+    events.forEach((event) => {
       returnDatesArray.push(event.startDate);
     });
     return _.uniq(returnDatesArray);
   }
 
-  function handleSort(sortColumn) {
-    setSortColumn(sortColumn);
-  }
   function handleLike(event) {
     const isEventAlreadyLiked = localStorage.getItem(event.id) === "true";
     if (isEventAlreadyLiked) {
@@ -44,13 +35,12 @@ function Program({ eventsList, tagsList, themesList }) {
 
     const eventToEdit = { ...event };
     eventToEdit.liked = !eventToEdit.liked;
-    let events = [...sortedEvents]; 
+    let events = [...events];
     const index = events.indexOf(event);
-    events[index] = eventToEdit; 
-    setSortedEvents(events); 
+    events[index] = eventToEdit;
+    setEvents(events);
   }
-  
-  
+
   function handleTagSelect(tag) {
     setSelectedTag(tag);
     setSearchText("");
@@ -58,7 +48,7 @@ function Program({ eventsList, tagsList, themesList }) {
   }
 
   function handleTabSelect(tab) {
-    setSelectedTab(tag);
+    setSelectedTab(tab);
     setSearchText("");
     // setCurrentPage(1)
   }
@@ -69,50 +59,32 @@ function Program({ eventsList, tagsList, themesList }) {
   }
 
   function getPagedData() {
-    // const {
-    //   events: sortedEvents,
-    //   selectedTag,
-    //   sortColumn,
-    //   searchText,
-    //   selectedTab,
-    // } = this.state;
-    // let filteredEvents = allEvents;
+    let filteredEvents = [...events];
+    if (searchText) {
+      filteredEvents = filteredEvents.filter(
+        (event) =>
+          event.title?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
+          event.description?.toLowerCase().indexOf(searchText.toLowerCase()) >
+            -1 ||
+          event.startDate?.toLowerCase().indexOf(searchText.toLowerCase()) >
+            -1 ||
+          event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
+          event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+      );
+    } else if (selectedTag && selectedTag.id) {
+      filteredEvents = filteredEvents.filter((event) => {
+        return event.tags.includes(selectedTag.id);
+      });
+    } else if (selectedTab && selectedTab.id) {
+      filteredEvents = filteredEvents.filter((event) => {
+        return event.theme === selectedTab.id;
+      });
+    }
 
-    // if (searchText) {
-    //   filteredEvents = allEvents.filter(
-    //     (event) =>
-    //       event.title.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-    //       event.description.toLowerCase().indexOf(searchText.toLowerCase()) >
-    //         -1 ||
-    //       event.startDate.toLowerCase().indexOf(searchText.toLowerCase()) > -1
-    //   );
-    // } else if (selectedTag && selectedTag.id) {
-    //   filteredEvents = [];
-    //   allEvents.forEach((event) => {
-    //     event.tags.forEach((tag) => {
-    //       if (tag.id === selectedTag.id) {
-    //         filteredEvents.push(event);
-    //       }
-    //     });
-    //   });
-    // }
-    // if (selectedTab && selectedTab.id) {
-    //   filteredEvents = filteredEvents.filter(
-    //     (event) => event.subject.id === selectedTab.id
-    //   );
-    // }
-
-    // const events = _.orderBy(
-    //   filteredEvents,
-    //   [sortColumn.path],
-    //   [sortColumn.order]
-    // );
-
-    // return { totalCount: filteredEvents.length, data: events };
-    return { totalCount: sortedEvents?.length, data: sortedEvents };
+    return { totalCount: filteredEvents?.length, filteredEvents };
   }
 
-  const { data: events, totalCount } = getPagedData();
+  const { filteredEvents, totalCount } = getPagedData();
   let eventString =
     totalCount === 0
       ? `Der er ingen events tilknyttet denne konference`
@@ -144,7 +116,7 @@ function Program({ eventsList, tagsList, themesList }) {
           {tabs && (
             <Tabs
               items={tabs}
-              textProperty="name"
+              textProperty="title"
               valueProperty="id"
               selectedItem={selectedTab}
               onItemSelect={handleTabSelect}
@@ -154,9 +126,10 @@ function Program({ eventsList, tagsList, themesList }) {
           {dates.map((date) => (
             <ProgramTable
               key={date}
-              events={sortedEvents.filter((event) => event.startDate === date)}
+              events={filteredEvents.filter(
+                (event) => event.startDate === date
+              )}
               onLike={handleLike}
-              onSort={handleSort}
             />
           ))}
         </div>

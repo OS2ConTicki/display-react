@@ -8,7 +8,7 @@ function Tag(props) {
       : "badge badge-secondary m-1";
   return (
     <span className={classes} onClick={() => onTagSelect(tag)} key={tag.id}>
-      {tag.name}
+      {tag.title}
     </span>
   );
 }
