@@ -11,7 +11,7 @@ function Person(props) {
         alt=""
       />
       <div className="card-body">
-        <h5 className="card-title">{person.name}</h5>
+        <h5 className="card-title">{person.title}</h5>
         <p className="card-text">{person.description}</p>
       </div>
     </div>

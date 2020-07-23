@@ -25,6 +25,7 @@ Encore
    */
   //.addEntry('app', './src/app.js')
   .addEntry("entry", "./src/entry.js")
+  // .addEntry("event", "./src/components/event.jsx")
 
   // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
   // .splitEntryChunks()

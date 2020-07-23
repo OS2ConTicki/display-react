@@ -39,7 +39,6 @@ function ProgramTable({ events, onLike }) {
           columns={columns}
           items={events}
           label={events[0].startDate}
-          sortable={false}
         />
       )}
     </>
