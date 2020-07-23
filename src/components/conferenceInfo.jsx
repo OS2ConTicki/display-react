@@ -1,29 +1,26 @@
-import React, { Component } from "react";
-import DisplayInfoComponent from './common/displayInfoComponent'
-import {
-  getConferenceInfo,
-} from "../services/fetchService";
-
-class Speakers extends Component {
-
-  state = {
-    conferenceInfo: "",
-  };
-
-  componentDidMount() {
-    this.setState({
-      conferenceInfo: getConferenceInfo(),
-    });
-  }
-
-  render() {
-    const { conferenceInfo } = this.state;
-    return (
-      <div id="top">
-        <DisplayInfoComponent item={conferenceInfo}></DisplayInfoComponent>
-      </div>
-    );
-  }
+import React, { useContext, useState, useEffect } from "react";
+import DisplayInfoComponent from "./common/displayInfoComponent";
+import urlContext from "../context/urlContext";
+function ConferenceInfo() {
+  const context = useContext(urlContext);
+  const [conference, setConference] = useState();
+  useEffect(() => {
+    setConference(context.conference.get);
+  });
+  return (
+    <>
+      {conference && (
+        <div id="top">
+          <DisplayInfoComponent
+            title={conference.attributes.title}
+            description={conference.attributes.description}
+            image={conference.attributes.image}
+            ticketUrl={"www.google.com"}
+          ></DisplayInfoComponent>
+        </div>
+      )}
+    </>
+  );
 }
 
-export default Speakers;
+export default ConferenceInfo;
