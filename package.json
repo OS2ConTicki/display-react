@@ -34,7 +34,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11"
   },
   "scripts": {
-    "dev-server": "encore dev-server",
+    "dev-server": "encore dev-server --content-base public",
     "dev": "encore dev",
     "watch": "encore dev --watch",
     "build": "encore production --progress",
