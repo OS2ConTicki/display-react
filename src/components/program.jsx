@@ -21,7 +21,7 @@ function Program({ eventsList, tagsList, themesList }) {
   const [tags] = useState([allEventsTag, ...tagsList]);
   const [tabs] = useState([allEventsThemes, ...themesList]);
   const [searchText, setSearchText] = useState("");
- 
+
   const [dates, setDates] = useState(getDates());
   function getDates() {
     let returnDatesArray = [];
@@ -29,10 +29,6 @@ function Program({ eventsList, tagsList, themesList }) {
       returnDatesArray.push(event.startDate);
     });
     return _.uniq(returnDatesArray);
-  }
-
-  function getEvents(date, events) {
-    return events.filter((event) => event.startDate === date);
   }
 
   function handleSort(sortColumn) {
@@ -45,13 +41,16 @@ function Program({ eventsList, tagsList, themesList }) {
     } else {
       localStorage.setItem(event.id, true);
     }
+
     const eventToEdit = { ...event };
     eventToEdit.liked = !eventToEdit.liked;
-    const index = sortedEvents.indexOf(event);
-    sortedEvents[index] = eventToEdit;
-    setSortedEvents(sortedEvents);
+    let events = [...sortedEvents]; 
+    const index = events.indexOf(event);
+    events[index] = eventToEdit; 
+    setSortedEvents(events); 
   }
-
+  
+  
   function handleTagSelect(tag) {
     setSelectedTag(tag);
     setSearchText("");
@@ -154,7 +153,8 @@ function Program({ eventsList, tagsList, themesList }) {
 
           {dates.map((date) => (
             <ProgramTable
-              events={getEvents(date, events)}
+              key={date}
+              events={sortedEvents.filter((event) => event.startDate === date)}
               onLike={handleLike}
               onSort={handleSort}
             />

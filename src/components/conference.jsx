@@ -10,7 +10,6 @@ function Conference(props) {
   const fetchOptions = { headers: { accept: "application/json" } };
 
   const fetchData = (url, which) => {
-    console.log("called 1");
     fetch(url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
@@ -40,6 +39,7 @@ function Conference(props) {
                 );
 
                 event = event.attributes;
+
                 events.push(event);
               });
               context.events.set(events);
@@ -55,8 +55,6 @@ function Conference(props) {
   };
 
   useEffect(() => {
-    console.log("called 0");
-
     fetch(context.url.get, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
