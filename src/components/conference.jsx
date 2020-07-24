@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Speakers from './speakers'
+import Actors from './actors'
 import ConferenceInfo from './conferenceInfo'
 import Program from './program'
 import AppStateContext from '../context/appStateContext'
@@ -20,9 +20,9 @@ function Conference (props) {
             themesList={context.themes.get}
           />
         )}
-        {context.speakers.get && context.speakers.get.length > 0 && <Speakers title='Talere' speakers={context.speakers.get} />}
-        {context.sponsors.get && context.sponsors.get.length > 0 && <Speakers title='Sponsorer' speakers={context.sponsors.get} />}
-        {context.organizers.get && context.organizers.get.length > 0 && <Speakers title='Arrangører' speakers={context.organizers.get} />}
+        {context.speakers.get && context.speakers.get.length > 0 && <Actors title='Talere' actors={context.speakers.get} />}
+        {context.sponsors.get && context.sponsors.get.length > 0 && <Actors title='Sponsorer' actors={context.sponsors.get} />}
+        {context.organizers.get && context.organizers.get.length > 0 && <Actors title='Arrangører' actors={context.organizers.get} />}
       </div>
     </>
   )

@@ -40,11 +40,12 @@ function App (props) {
               allIncludedElements.push({
                 id: includedData.id,
                 title: includedData.attributes.title,
-                type: includedData.type
+                type: includedData.type,
+                description: includedData.attributes.description,
+                image: includedData.attributes.image
               })
             })
           }
-
           setThemes(
             allIncludedElements.filter((included) => included.type === 'theme')
           )
