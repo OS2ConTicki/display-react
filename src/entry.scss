@@ -4,3 +4,14 @@
   margin-top: -55px;
   padding-top: 55px;
 }
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.fa-spinner {
+    animation: spinner 3s linear infinite;
+font-size: 60px;
+display: flex;
+margin: 25px auto;
+}

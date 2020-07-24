@@ -5,6 +5,8 @@ import EventComponent from './components/event'
 import Conference from './components/conference'
 import AppStateContext from './context/appStateContext'
 import { mapEvent, mapElement } from './components/utils/dataMapping'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 function App (props) {
   const [conference, setConference] = useState()
@@ -15,6 +17,8 @@ function App (props) {
   const [organizers, setOrganizers] = useState()
   const [sponsors, setSponsors] = useState()
   const [locations, setLocations] = useState()
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
 
   const store = {
     conference: { get: conference, set: setConference },
@@ -28,7 +32,7 @@ function App (props) {
   }
   const fetchOptions = { headers: { accept: 'application/json' } }
   const fetchData = (url) => {
-    window.fetch(url, fetchOptions)
+    window.fetch(url + 'prut', fetchOptions)
       .then((response) => response.json())
       .then((data) => {
         if (conference !== null) {
@@ -77,7 +81,11 @@ function App (props) {
             )
           })
           setEvents(events)
+          setLoading(false)
         }
+      }).catch(() => {
+        setError(true)
+        setLoading(false)
       })
   }
 
@@ -91,22 +99,36 @@ function App (props) {
         if (allUrl) {
           fetchData(allUrl)
         }
-        // TODO errorhandling man
-      })
+      }).catch(() => {
+        setError(true)
+        setLoading(false)
+      }
+      )
   }, [])
 
   return (
     <>
-      <AppStateContext.Provider value={store}>
-        <NavBar />
-        <main className='container'>
-          <Switch>
-            <Route path='/konference' component={Conference} />
-            <Route path='/event/:id' component={EventComponent} />
-            <Redirect from='/' to='/konference' />
-          </Switch>
-        </main>
-      </AppStateContext.Provider>
+      {!loading && !error &&
+        <AppStateContext.Provider value={store}>
+          <NavBar />
+          <main className='container'>
+            <Switch>
+              <Route path='/konference' component={Conference} />
+              <Route path='/event/:id' component={EventComponent} />
+              <Redirect from='/' to='/konference' />
+            </Switch>
+          </main>
+        </AppStateContext.Provider>}
+      {loading &&
+        <FontAwesomeIcon
+          icon={faSpinner}
+        />}
+      {error &&
+        <div class='col-md mt-5'>
+          <div class='alert alert-danger' role='alert'>
+          Der skete en fejl!
+          </div>
+        </div>}
     </>
   )
 }
