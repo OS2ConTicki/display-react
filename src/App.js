@@ -3,7 +3,7 @@ import NavBar from "./components/navBar";
 import { Route, Redirect, Switch } from "react-router-dom";
 import EventComponent from "./components/event";
 import Conference from "./components/conference";
-import UrlContext from "./context/urlContext";
+import AppStateContext from "./context/appStateContext";
 import { mapEvent } from "./components/utils/dataMapping";
 
 function App(props) {
@@ -104,13 +104,13 @@ function App(props) {
     <>
       <NavBar></NavBar>
       <main className="container">
-        <UrlContext.Provider value={store}>
+        <AppStateContext.Provider value={store}>
           <Switch>
             <Route path="/konference" component={Conference}></Route>
             <Route path="/event/:id" component={EventComponent}></Route>
             <Redirect from="/" to="/konference" />
           </Switch>
-        </UrlContext.Provider>
+        </AppStateContext.Provider>
       </main>
     </>
   );

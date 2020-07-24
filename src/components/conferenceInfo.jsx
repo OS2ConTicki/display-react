@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import DisplayInfoComponent from "./common/displayInfoComponent";
-import urlContext from "../context/urlContext";
+import AppStateContext from "../context/appStateContext";
 function ConferenceInfo() {
-  const context = useContext(urlContext);
+  const context = useContext(AppStateContext);
   const [conference, setConference] = useState();
   useEffect(() => {
     setConference(context.conference.get);

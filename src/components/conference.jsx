@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import Speakers from "./speakers";
 import ConferenceInfo from "./conferenceInfo";
 import Program from "./program";
-import urlContext from "../context/urlContext";
+import AppStateContext from "../context/appStateContext";
 
 function Conference(props) {
-  const context = useContext(urlContext);
+  const context = useContext(AppStateContext);
 
   return (
     <>

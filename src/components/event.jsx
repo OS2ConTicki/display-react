@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import DisplayInfoComponent from "./common/displayInfoComponent";
-import urlContext from "../context/urlContext";
+import AppStateContext from "../context/appStateContext";
 import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
 function Event(props) {
-  const context = useContext(urlContext);
+  const context = useContext(AppStateContext);
   let [event, setEvent] = useState();
   useEffect(() => {
     const eventId = props.match.params.id;
