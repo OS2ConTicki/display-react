@@ -1,6 +1,6 @@
 {
   "name": "@os2conticki/display-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-react": "^7.9.1",
