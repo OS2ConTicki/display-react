@@ -3,7 +3,6 @@ import { getSpeakers } from "../services/fetchService";
 import Person from "./common/person";
 
 function Speakers({ speakers }) {
-  debugger
   return (
     <>
       <h2 className="d-flex justify-content-center mt-5 mb-3">Talere</h2>

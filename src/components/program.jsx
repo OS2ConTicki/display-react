@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import _ from "lodash";
 import ProgramTable from "./programTable";
 import TagList from "./tags";
@@ -71,11 +71,13 @@ function Program({ eventsList, tagsList, themesList }) {
           event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
           event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
       );
-    } else if (selectedTag && selectedTag.id) {
+    }
+    if (selectedTag && selectedTag.id) {
       filteredEvents = filteredEvents.filter((event) => {
         return event.tags.includes(selectedTag.id);
       });
-    } else if (selectedTab && selectedTab.id) {
+    }
+    if (selectedTab && selectedTab.id) {
       filteredEvents = filteredEvents.filter((event) => {
         return event.theme === selectedTab.id;
       });
@@ -90,10 +92,10 @@ function Program({ eventsList, tagsList, themesList }) {
       ? `Der er ingen events tilknyttet denne konference`
       : `Der er ${totalCount} events tilknyttet denne konference`;
   if (selectedTab && selectedTab.id) {
-    eventString += ` i temaet ${selectedTab.name}`;
+    eventString += ` i temaet ${selectedTab.title}`;
   }
   if (selectedTag && selectedTag.id) {
-    eventString += ` med tagget ${selectedTag.name}`;
+    eventString += ` med emnet ${selectedTag.title}`;
   }
   return (
     <>

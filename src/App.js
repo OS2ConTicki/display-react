@@ -33,22 +33,36 @@ function App(props) {
                 event.attributes.liked =
                   localStorage.getItem(event.id) === "true";
                 event.attributes.id = event.id;
-                event.attributes.from = event.attributes.start_time.substring(
-                  11,
-                  16
+                let startDate = new Date(event.attributes.start_time);
+                let endDate = new Date(event.attributes.end_time);
+                const dateOptions = {
+                  weekday: "long",
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                };
+                const timeOptions = {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                };
+
+                event.attributes.from = startDate.toLocaleTimeString(
+                  "da-DA",
+                  timeOptions
                 );
-                event.attributes.to = event.attributes.end_time.substring(
-                  11,
-                  16
+
+                event.attributes.to = endDate.toLocaleTimeString(
+                  "da-DA",
+                  timeOptions
                 );
-                event.attributes.startDate = event.attributes.start_time.substring(
-                  0,
-                  10
+                let helperStartDate = startDate.toLocaleDateString(
+                  "da-DA",
+                  dateOptions
                 );
-                event.attributes.endDate = event.attributes.end_time.substring(
-                  0,
-                  10
-                );
+                helperStartDate =
+                  helperStartDate.charAt(0).toUpperCase() +
+                  helperStartDate.slice(1);
+                event.attributes.startDate = helperStartDate;
 
                 let tagIds = [];
                 if (event.relationships.tags.data) {
