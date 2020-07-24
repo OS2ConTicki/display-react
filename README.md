@@ -1,4 +1,15 @@
-# Simple readme
+# OS2ConTicki display
 
-`npm install`
-`npm start`
+## Development
+
+```sh
+yarn install
+yarn dev-server
+```
+
+## Building
+
+```sh
+yarn install
+yarn build
+```
