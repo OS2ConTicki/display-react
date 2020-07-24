@@ -1,0 +1,74 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "conference",
+        "id": "9dc88fef-17aa-4366-af60-df041c3aefb6",
+        "links": {
+            "self": {
+                "href": "/data/another-conference/conference.json"
+            },
+            "event": {
+                "href": "/data/another-conference/api/event@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6@sort@field_times.value.json"
+            },
+            "speaker": {
+                "href": "/data/another-conference/api/speaker@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6.json"
+            },
+            "organizer": {
+                "href": "/data/another-conference/api/organizer@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6.json"
+            },
+            "tag": {
+                "href": "/data/another-conference/api/tag@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6.json"
+            },
+            "theme": {
+                "href": "/data/another-conference/api/theme@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6.json"
+            },
+            "location": {
+                "href": "/data/another-conference/api/location@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6.json"
+            },
+            "sponsor": {
+                "href": "/data/another-conference/api/sponsor@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6.json"
+            },
+            "all": {
+                "href": "/data/another-conference/api/event@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6@sort@field_times.value@incl-1054d1cf73c5d972e19ccaa3929d60bebb84b829.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Another conference",
+            "created": "2020-07-20T13:16:44+00:00",
+            "changed": "2020-07-21T10:06:24+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>This is the second conference. It'll be <strong>fun</strong>!</p>\n",
+            "start_time": "2001-01-01T00:00:00+00:00",
+            "end_time": "2001-01-04T23:59:59+00:00"
+        },
+        "relationships": {
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "7e779fde-afe5-4d71-a1b5-5ce04b958c06"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/another-conference/conference.json"
+        }
+    }
+}

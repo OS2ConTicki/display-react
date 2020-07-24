@@ -1,0 +1,18 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [],
+    "links": {
+        "self": {
+            "href": "/data/another-conference/api/event@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6@include@conference@2Cconfer-a674bba2523875fe38f930790544277977c0a1f4.json"
+        }
+    }
+}

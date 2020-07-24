@@ -1,0 +1,87 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "conference",
+        "id": "ed490668-3cd1-483a-8035-f4438646dce2",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/conference.json"
+            },
+            "event": {
+                "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2@sort@field_times.value.json"
+            },
+            "speaker": {
+                "href": "/data/the-first-conference/api/speaker@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2.json"
+            },
+            "organizer": {
+                "href": "/data/the-first-conference/api/organizer@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2.json"
+            },
+            "tag": {
+                "href": "/data/the-first-conference/api/tag@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2.json"
+            },
+            "theme": {
+                "href": "/data/the-first-conference/api/theme@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2.json"
+            },
+            "location": {
+                "href": "/data/the-first-conference/api/location@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2.json"
+            },
+            "sponsor": {
+                "href": "/data/the-first-conference/api/sponsor@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2.json"
+            },
+            "all": {
+                "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ed490668-3cd1-483a-8035-f4438646dce2@sort@field_times.value@incl-72ed8770241efd39b56285bc393bfe0c762af28d.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "The first conference",
+            "created": "2020-07-20T13:16:44+00:00",
+            "changed": "2020-07-23T07:52:18+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/fixtures/images/004.jpg",
+                "meta": {
+                    "alt": "Image for the conference",
+                    "title": "",
+                    "width": 800,
+                    "height": 600
+                }
+            },
+            "summary": null,
+            "description": "<p>This is the first conference. It'll be <strong>fun</strong>!</p>\n",
+            "start_time": "2001-01-07T00:00:00+00:00",
+            "end_time": "2001-01-11T23:59:59+00:00",
+            "ticket": {
+                "url": "https://dummyimage.com/600x400/000/fff&text=Conference%20ticket",
+                "text": "Buy ticket"
+            }
+        },
+        "relationships": {
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "17dec94b-9c78-4290-84c3-320cdf43d5ab"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/conference.json"
+        }
+    }
+}

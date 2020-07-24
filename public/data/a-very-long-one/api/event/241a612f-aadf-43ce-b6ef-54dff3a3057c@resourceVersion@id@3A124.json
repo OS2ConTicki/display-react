@@ -1,0 +1,91 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "241a612f-aadf-43ce-b6ef-54dff3a3057c",
+        "links": {
+            "self": {
+                "href": "/data/a-very-long-one/api/event/241a612f-aadf-43ce-b6ef-54dff3a3057c@resourceVersion@id@3A124.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Event 70",
+            "created": "2020-07-20T13:16:44+00:00",
+            "changed": "2020-07-20T13:16:44+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/a-very-long-one/sites/default/files/fixtures/images/007.jpg",
+                "meta": {
+                    "alt": "Image for the event",
+                    "title": null,
+                    "width": 800,
+                    "height": 600
+                }
+            },
+            "start_time": "2001-01-04T08:00:00+00:00",
+            "end_time": "2001-01-04T08:45:00+00:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "9b082c6e-c6eb-4407-a5a9-df6d72c981ac"
+                },
+                "links": {
+                    "related": {
+                        "href": "/data/a-very-long-one/conference.json"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "aa217d82-f0f5-4d56-a397-f5ed7ee9cdef"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/aa217d82-f0f5-4d56-a397-f5ed7ee9cdef"
+                    }
+                }
+            },
+            "organizers": {
+                "data": []
+            },
+            "speakers": {
+                "data": []
+            },
+            "sponsors": {
+                "data": []
+            },
+            "tags": {
+                "data": []
+            },
+            "themes": {
+                "data": null,
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/event/241a612f-aadf-43ce-b6ef-54dff3a3057c/field_themes?resourceVersion=id%3A124"
+                    },
+                    "self": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/event/241a612f-aadf-43ce-b6ef-54dff3a3057c/relationships/field_themes?resourceVersion=id%3A124"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/a-very-long-one/api/event/241a612f-aadf-43ce-b6ef-54dff3a3057c@resourceVersion@id@3A124.json"
+        }
+    }
+}

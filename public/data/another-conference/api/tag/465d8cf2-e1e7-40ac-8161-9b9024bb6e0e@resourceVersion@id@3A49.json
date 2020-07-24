@@ -1,0 +1,46 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "tag",
+        "id": "465d8cf2-e1e7-40ac-8161-9b9024bb6e0e",
+        "links": {
+            "self": {
+                "href": "/data/another-conference/api/tag/465d8cf2-e1e7-40ac-8161-9b9024bb6e0e@resourceVersion@id@3A49.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Glasses",
+            "created": "2020-07-20T13:16:44+00:00",
+            "changed": "2020-07-20T13:16:44+00:00",
+            "promote": true
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "9dc88fef-17aa-4366-af60-df041c3aefb6"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/9dc88fef-17aa-4366-af60-df041c3aefb6"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/another-conference/api/tag/465d8cf2-e1e7-40ac-8161-9b9024bb6e0e@resourceVersion@id@3A49.json"
+        }
+    }
+}
