@@ -7,7 +7,7 @@ const ConferenceApp = {
   render: (config) => {
     ReactDOM.render(
       <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter {...config}>
           <App {...config} />
         </BrowserRouter>
       </React.StrictMode>,
