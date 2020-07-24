@@ -1,5 +1,5 @@
 import React from "react";
-
+import ReactHtml from "raw-html-react";
 function DisplayInfoComponent({ title, description, image, ticketUrl }) {
   return (
     <>
@@ -17,7 +17,9 @@ function DisplayInfoComponent({ title, description, image, ticketUrl }) {
         )}
       </div>
       <div className="row d-flex justify-content-center">
-        <p className="text-center">{description}</p>
+        <div className="text-center">
+          <ReactHtml html={description}></ReactHtml>
+        </div>
       </div>
       <div className="row d-flex justify-content-center">
         <p className="text-center">Billeter kan købes her: {ticketUrl}</p>

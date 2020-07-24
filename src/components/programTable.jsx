@@ -2,10 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Table from "./common/table";
 import Like from "./common/like";
-import urlContext from "../context/urlContext";
 
 function ProgramTable({ events, onLike }) {
- 
   let columns = [
     {
       key: "time",
@@ -31,6 +29,7 @@ function ProgramTable({ events, onLike }) {
       ),
     },
     { path: "description", label: " " },
+    { path: "location", label: " " },
   ];
   return (
     <>

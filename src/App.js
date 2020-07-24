@@ -4,6 +4,7 @@ import { Route, Redirect, Switch } from "react-router-dom";
 import EventComponent from "./components/event";
 import Conference from "./components/conference";
 import UrlContext from "./context/urlContext";
+import { mapEvent } from "./components/utils/dataMapping";
 
 function App(props) {
   const [conference, setConference] = useState();
@@ -11,107 +12,76 @@ function App(props) {
   const [tags, setTags] = useState();
   const [themes, setThemes] = useState();
   const [speakers, setSpeakers] = useState();
+  const [organizers, setOrganizers] = useState();
+  const [sponsors, setSponsors] = useState();
+  const [locations, setLocations] = useState();
+
   const store = {
     conference: { get: conference, set: setConference },
     events: { get: events, set: setEvents },
     tags: { get: tags, set: setTags },
     themes: { get: themes, set: setThemes },
     speakers: { get: speakers, set: setSpeakers },
+    organizers: { get: organizers, set: setOrganizers },
+    sponsors: { get: sponsors, set: setSponsors },
+    locations: { get: locations, set: setLocations },
   };
-
   const fetchOptions = { headers: { accept: "application/json" } };
-
-  const fetchData = (url, which) => {
+  const fetchData = (url) => {
     fetch(url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
         if (conference !== null) {
-          switch (which) {
-            case "events":
-              let events = [];
-              data.data.forEach((event) => {
-                event.attributes.liked =
-                  localStorage.getItem(event.id) === "true";
-                event.attributes.id = event.id;
-                let startDate = new Date(event.attributes.start_time);
-                let endDate = new Date(event.attributes.end_time);
-                const dateOptions = {
-                  weekday: "long",
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                };
-                const timeOptions = {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                };
+          let allIncludedElements = [];
+          let events = [];
 
-                event.attributes.from = startDate.toLocaleTimeString(
-                  "da-DA",
-                  timeOptions
-                );
-
-                event.attributes.to = endDate.toLocaleTimeString(
-                  "da-DA",
-                  timeOptions
-                );
-                let helperStartDate = startDate.toLocaleDateString(
-                  "da-DA",
-                  dateOptions
-                );
-                helperStartDate =
-                  helperStartDate.charAt(0).toUpperCase() +
-                  helperStartDate.slice(1);
-                event.attributes.startDate = helperStartDate;
-
-                let tagIds = [];
-                if (event.relationships.tags.data) {
-                  event.relationships.tags.data.forEach((tag) => {
-                    tagIds.push(tag.id);
-                  });
-                }
-                event.attributes.tags = tagIds;
-                event.attributes.theme = "";
-                if (event.relationships.themes.data) {
-                  event.attributes.theme = event.relationships.themes.data.id;
-                }
-
-                event = event.attributes;
-
-                events.push(event);
+          if (data.included) {
+            data.included.forEach((includedData) => {
+              allIncludedElements.push({
+                id: includedData.id,
+                title: includedData.attributes.title,
+                type: includedData.type,
               });
-              setEvents(events);
-              break;
-            case "tags":
-              let saveTags = [];
-              data.data.forEach((tag) => {
-                saveTags.push({ id: tag.id, title: tag.attributes.title });
-              });
-              setTags(saveTags);
-              break;
-            case "themes":
-              let saveThemes = [];
-              data.data.forEach((theme) => {
-                saveThemes.push({
-                  id: theme.id,
-                  title: theme.attributes.title,
-                });
-              });
-              setThemes(saveThemes);
-              break;
-            case "speakers":
-              let saveSpeakers = [];
-              data.data.forEach((speaker) => {
-                saveSpeakers.push({
-                  id: speaker.id,
-                  title: speaker.attributes.title,
-                  description: speaker.attributes.description,
-                });
-              });
-              setSpeakers(saveSpeakers);
-
-              break;
+            });
           }
+
+          setThemes(
+            allIncludedElements.filter((included) => included.type === "theme")
+          );
+          setTags(
+            allIncludedElements.filter((included) => included.type === "tag")
+          );
+          setSpeakers(
+            allIncludedElements.filter(
+              (included) => included.type === "speaker"
+            )
+          );
+          setOrganizers(
+            allIncludedElements.filter(
+              (included) => included.type === "organizer"
+            )
+          );
+          setSponsors(
+            allIncludedElements.filter(
+              (included) => included.type === "sponsor"
+            )
+          );
+          setLocations(
+            allIncludedElements.filter(
+              (included) => included.type === "location"
+            )
+          );
+          data.data.forEach((event) => {
+            events.push(
+              mapEvent(
+                event,
+                allIncludedElements.filter(
+                  (included) => included.type === "location"
+                )
+              )
+            );
+          });
+          setEvents(events);
         }
       });
   };
@@ -121,22 +91,12 @@ function App(props) {
       .then((response) => response.json())
       .then((data) => {
         setConference(data.data);
-        const eventsUrl = data?.data?.links?.event?.href;
-        const tagsUrl = data?.data?.links?.tag?.href;
-        const themesUrl = data?.data?.links?.theme?.href;
-        const speakersUrl = data?.data?.links?.speaker?.href;
-        if (eventsUrl) {
-          fetchData(eventsUrl, "events");
+        const allUrl = data?.data?.links?.all?.href;
+
+        if (allUrl) {
+          fetchData(allUrl);
         }
-        if (eventsUrl) {
-          fetchData(speakersUrl, "speakers");
-        }
-        if (tagsUrl) {
-          fetchData(tagsUrl, "tags");
-        }
-        if (themesUrl) {
-          fetchData(themesUrl, "themes");
-        }
+        //TODO errorhandling man
       });
   }, []);
 

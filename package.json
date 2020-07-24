@@ -5,6 +5,10 @@
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-react": "^7.9.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@symfony/webpack-encore": "^0.28.2",
     "babel-eslint": "^10.1.0",
     "bazinga-translator": "^3.0.1",
@@ -15,6 +19,7 @@
     "node-sass": "^4.13.1",
     "popper.js": "^1.16.1",
     "prop-types": "^15.7.2",
+    "raw-html-react": "^1.2.3",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
@@ -27,11 +32,7 @@
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-scss": "^3.16.0",
-    "webpack-notifier": "^1.6.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.29",
-    "@fortawesome/free-regular-svg-icons": "^5.14.0",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
-    "@fortawesome/react-fontawesome": "^0.1.11"
+    "webpack-notifier": "^1.6.0"
   },
   "scripts": {
     "dev-server": "encore dev-server",

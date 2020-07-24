@@ -16,7 +16,7 @@ function Program({ eventsList, tagsList, themesList }) {
   const [tabs] = useState([allEventsThemes, ...themesList]);
   const [searchText, setSearchText] = useState("");
 
-  const [dates, setDates] = useState(getDates());
+  const [dates] = useState(getDates());
   function getDates() {
     let returnDatesArray = [];
     events.forEach((event) => {
@@ -69,7 +69,8 @@ function Program({ eventsList, tagsList, themesList }) {
           event.startDate?.toLowerCase().indexOf(searchText.toLowerCase()) >
             -1 ||
           event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-          event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+          event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
+          event.location?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
       );
     }
     if (selectedTag && selectedTag.id) {
