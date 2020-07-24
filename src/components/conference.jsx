@@ -10,10 +10,9 @@ function Conference (props) {
   return (
     <>
       <div>
-        {context.conference.get && context.tags.get && context.themes.get && (
+        {context.conference.get && (
           <ConferenceInfo />
         )}
-        {/* <Events /> */}
         {context.events.get && context.tags.get && context.themes.get && (
           <Program
             eventsList={context.events.get}
@@ -21,7 +20,9 @@ function Conference (props) {
             themesList={context.themes.get}
           />
         )}
-        {context.speakers.get && <Speakers speakers={context.speakers.get} />}
+        {context.speakers.get && context.speakers.get.length > 0 && <Speakers title='Talere' speakers={context.speakers.get} />}
+        {context.sponsors.get && context.sponsors.get.length > 0 && <Speakers title='Sponsorer' speakers={context.sponsors.get} />}
+        {context.organizers.get && context.organizers.get.length > 0 && <Speakers title='Arrangører' speakers={context.organizers.get} />}
       </div>
     </>
   )
