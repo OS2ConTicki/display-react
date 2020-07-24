@@ -32,7 +32,7 @@ function App (props) {
   }
   const fetchOptions = { headers: { accept: 'application/json' } }
   const fetchData = (url) => {
-    window.fetch(url + 'prut', fetchOptions)
+    window.fetch(url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
         if (conference !== null) {
