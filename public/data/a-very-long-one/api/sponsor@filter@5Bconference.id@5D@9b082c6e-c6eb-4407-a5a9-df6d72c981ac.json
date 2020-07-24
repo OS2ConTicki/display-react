@@ -1,0 +1,18 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [],
+    "links": {
+        "self": {
+            "href": "/data/a-very-long-one/api/sponsor@filter@5Bconference.id@5D@9b082c6e-c6eb-4407-a5a9-df6d72c981ac.json"
+        }
+    }
+}

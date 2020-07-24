@@ -1,0 +1,48 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "type": "location",
+            "id": "b8bc23ab-ba18-47f3-9926-6bc654f72b8a",
+            "links": {
+                "self": {
+                    "href": "/data/another-conference/api/location/b8bc23ab-ba18-47f3-9926-6bc654f72b8a@resourceVersion@id@3A40.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Room 3",
+                "created": "2020-07-20T13:16:44+00:00",
+                "changed": "2020-07-20T13:16:44+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "9dc88fef-17aa-4366-af60-df041c3aefb6"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/9dc88fef-17aa-4366-af60-df041c3aefb6"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "href": "/data/another-conference/api/location@filter@5Bconference.id@5D@9dc88fef-17aa-4366-af60-df041c3aefb6.json"
+        }
+    }
+}

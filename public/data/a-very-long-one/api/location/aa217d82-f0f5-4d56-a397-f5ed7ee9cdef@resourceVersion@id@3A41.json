@@ -1,0 +1,46 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "location",
+        "id": "aa217d82-f0f5-4d56-a397-f5ed7ee9cdef",
+        "links": {
+            "self": {
+                "href": "/data/a-very-long-one/api/location/aa217d82-f0f5-4d56-a397-f5ed7ee9cdef@resourceVersion@id@3A41.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "The long room",
+            "created": "2020-07-20T13:16:44+00:00",
+            "changed": "2020-07-20T13:16:44+00:00",
+            "promote": true
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "9b082c6e-c6eb-4407-a5a9-df6d72c981ac"
+                },
+                "links": {
+                    "related": {
+                        "href": "/data/a-very-long-one/conference.json"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/a-very-long-one/api/location/aa217d82-f0f5-4d56-a397-f5ed7ee9cdef@resourceVersion@id@3A41.json"
+        }
+    }
+}
