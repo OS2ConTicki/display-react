@@ -26,11 +26,11 @@ function Program ({ eventsList, tagsList, themesList }) {
   }
 
   function handleLike (event) {
-    const isEventAlreadyLiked = localStorage.getItem(event.id) === 'true'
+    const isEventAlreadyLiked = window.localStorage.getItem(event.id) === 'true'
     if (isEventAlreadyLiked) {
-      localStorage.setItem(event.id, false)
+      window.localStorage.setItem(event.id, false)
     } else {
-      localStorage.setItem(event.id, true)
+      window.localStorage.setItem(event.id, true)
     }
 
     const eventToEdit = { ...event }

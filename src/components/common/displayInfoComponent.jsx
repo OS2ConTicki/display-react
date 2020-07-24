@@ -21,9 +21,11 @@ function DisplayInfoComponent ({ title, description, image, ticketUrl }) {
           <ReactHtml html={description} />
         </div>
       </div>
-      <div className='row d-flex justify-content-center'>
-        <p className='text-center'>Billeter kan købes her: {ticketUrl}</p>
-      </div>
+      {ticketUrl && ticketUrl.url &&
+        <div className='row d-flex justify-content-center'>
+          {!ticketUrl.text && <p className='text-center'><a href={ticketUrl.url}>Billeter kan købes her</a></p>}
+          {ticketUrl.text && <p className='text-center'><a href={ticketUrl.url}>{ticketUrl.text}</a></p>}
+        </div>}
     </>
   )
 }

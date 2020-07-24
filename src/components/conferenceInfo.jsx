@@ -12,10 +12,10 @@ function ConferenceInfo () {
       {conference && (
         <div id='top'>
           <DisplayInfoComponent
-            title={conference.attributes.title}
-            description={conference.attributes.description}
-            image={conference.attributes.image}
-            ticketUrl='www.google.com'
+            title={conference.title}
+            description={conference.description}
+            image={conference.image}
+            ticketUrl={conference.ticketUrl}
           />
         </div>
       )}

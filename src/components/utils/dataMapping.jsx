@@ -1,18 +1,19 @@
 import _ from 'lodash'
 
-export function mapElement(element){
+export function mapElement (element) {
   return {
     id: element.id,
     title: element.attributes.title,
     type: element.type,
     description: element.attributes.description,
     image: element.attributes.image,
-    summary: element.attributes.summary
+    summary: element.attributes.summary,
+    ticketUrl: element.attributes.ticket
   }
 }
 
 export function mapEvent (event, locations) {
-  event.attributes.liked = localStorage.getItem(event.id) === 'true'
+  event.attributes.liked = window.localStorage.getItem(event.id) === 'true'
   event.attributes.id = event.id
 
   event.attributes.from = mapTime(event.attributes.start_time)

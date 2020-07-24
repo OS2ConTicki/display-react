@@ -28,7 +28,7 @@ function App (props) {
   }
   const fetchOptions = { headers: { accept: 'application/json' } }
   const fetchData = (url) => {
-    fetch(url, fetchOptions)
+    window.fetch(url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
         if (conference !== null) {
@@ -82,10 +82,10 @@ function App (props) {
   }
 
   useEffect(() => {
-    fetch(props.url, fetchOptions)
+    window.fetch(props.url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
-        setConference(data.data)
+        setConference(mapElement(data.data))
         const allUrl = data?.data?.links?.all?.href
 
         if (allUrl) {
@@ -97,16 +97,16 @@ function App (props) {
 
   return (
     <>
-      <NavBar />
-      <main className='container'>
-        <AppStateContext.Provider value={store}>
+      <AppStateContext.Provider value={store}>
+        <NavBar />
+        <main className='container'>
           <Switch>
             <Route path='/konference' component={Conference} />
             <Route path='/event/:id' component={EventComponent} />
             <Redirect from='/' to='/konference' />
           </Switch>
-        </AppStateContext.Provider>
-      </main>
+        </main>
+      </AppStateContext.Provider>
     </>
   )
 }
