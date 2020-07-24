@@ -40,7 +40,8 @@
     "watch": "encore dev --watch",
     "build": "encore production --progress",
     "coding-standards-check": "cd src && standard",
-    "coding-standards-apply": "cd src && standard --fix"
+    "coding-standards-apply": "cd src && standard --fix",
+    "postinstall": "ln -sf ../../scripts/git/hooks/pre-commit .git/hooks/pre-commit"
   },
   "browserslist": {
     "production": [
