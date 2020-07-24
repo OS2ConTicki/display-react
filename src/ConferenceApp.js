@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import { BrowserRouter } from 'react-router-dom'
 
 const ConferenceApp = {
   render: (config) => {
@@ -12,8 +12,8 @@ const ConferenceApp = {
         </BrowserRouter>
       </React.StrictMode>,
       config.element
-    );
-  },
-};
+    )
+  }
+}
 
-export default ConferenceApp;
+export default ConferenceApp

@@ -1,31 +1,31 @@
-import React from "react";
-import ReactHtml from "raw-html-react";
-function DisplayInfoComponent({ title, description, image, ticketUrl }) {
+import React from 'react'
+import ReactHtml from 'raw-html-react'
+function DisplayInfoComponent ({ title, description, image, ticketUrl }) {
   return (
     <>
-      <div className="row d-flex justify-content-center mb-3 scroll-offset-class">
+      <div className='row d-flex justify-content-center mb-3 scroll-offset-class'>
         <h1>{title}</h1>
       </div>
-      <div className="row d-flex justify-content-center mb-3">
+      <div className='row d-flex justify-content-center mb-3'>
         {image && (
           <img
-            className="card-img-top"
+            className='card-img-top'
             style={{ height: image.meta.height, width: image.meta.width }}
             src={image.url}
-            alt={image.meta.alt || ""}
+            alt={image.meta.alt || ''}
           />
         )}
       </div>
-      <div className="row d-flex justify-content-center">
-        <div className="text-center">
-          <ReactHtml html={description}></ReactHtml>
+      <div className='row d-flex justify-content-center'>
+        <div className='text-center'>
+          <ReactHtml html={description} />
         </div>
       </div>
-      <div className="row d-flex justify-content-center">
-        <p className="text-center">Billeter kan købes her: {ticketUrl}</p>
+      <div className='row d-flex justify-content-center'>
+        <p className='text-center'>Billeter kan købes her: {ticketUrl}</p>
       </div>
     </>
-  );
+  )
 }
 
-export default DisplayInfoComponent;
+export default DisplayInfoComponent

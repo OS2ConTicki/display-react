@@ -1,5 +1,5 @@
-import { createContext } from "react";
+import { createContext } from 'react'
 
-const AppStateContext = createContext({});
+const AppStateContext = createContext({})
 
-export default AppStateContext;
+export default AppStateContext

@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
-import Speakers from "./speakers";
-import ConferenceInfo from "./conferenceInfo";
-import Program from "./program";
-import AppStateContext from "../context/appStateContext";
+import React, { useContext } from 'react'
+import Speakers from './speakers'
+import ConferenceInfo from './conferenceInfo'
+import Program from './program'
+import AppStateContext from '../context/appStateContext'
 
-function Conference(props) {
-  const context = useContext(AppStateContext);
+function Conference (props) {
+  const context = useContext(AppStateContext)
 
   return (
     <>
@@ -24,7 +24,7 @@ function Conference(props) {
         {context.speakers.get && <Speakers speakers={context.speakers.get} />}
       </div>
     </>
-  );
+  )
 }
 
-export default Conference;
+export default Conference

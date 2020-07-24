@@ -1,32 +1,32 @@
-import React, { Component } from "react";
+import React from 'react'
 
-function Tabs({
+function Tabs ({
   items,
   onItemSelect,
   textProperty,
   valueProperty,
-  selectedItem,
+  selectedItem
 }) {
   return (
-    <ul className="nav nav-tabs mt-4 mb-1">
+    <ul className='nav nav-tabs mt-4 mb-1'>
       {items.map((item) => (
         <li
           onClick={() => onItemSelect(item)}
           key={item[valueProperty]}
-          className="nav-item"
+          className='nav-item'
         >
-          <a className={item === selectedItem ? "nav-link active" : "nav-link"}>
+          <a className={item === selectedItem ? 'nav-link active' : 'nav-link'}>
             {item[textProperty]}
           </a>
         </li>
       ))}
     </ul>
-  );
+  )
 }
 
 Tabs.defaultProps = {
-  textProperty: "name",
-  valueProperty: "id",
-};
+  textProperty: 'name',
+  valueProperty: 'id'
+}
 
-export default Tabs;
+export default Tabs

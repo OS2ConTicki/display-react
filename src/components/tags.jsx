@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Tag from "./common/tag";
+import React from 'react'
+import Tag from './common/tag'
 
-function Tags({ items, onTagSelect, valueProperty, selectedItem }) {
+function Tags ({ items, onTagSelect, valueProperty, selectedItem }) {
   return (
     <>
       <h3>Emner</h3>
@@ -11,16 +11,16 @@ function Tags({ items, onTagSelect, valueProperty, selectedItem }) {
             tag={item}
             onTagSelect={onTagSelect}
             selectedTag={selectedItem.id}
-          ></Tag>
+          />
         </span>
       ))}
     </>
-  );
+  )
 }
 
 Tags.defaultProps = {
-  textProperty: "name",
-  valueProperty: "id",
-};
+  textProperty: 'name',
+  valueProperty: 'id'
+}
 
-export default Tags;
+export default Tags

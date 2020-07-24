@@ -1,36 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Table from "./common/table";
-import Like from "./common/like";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Table from './common/table'
+import Like from './common/like'
 
-function ProgramTable({ events, onLike }) {
-  let columns = [
+function ProgramTable ({ events, onLike }) {
+  const columns = [
     {
-      key: "time",
+      key: 'time',
       content: (event) => (
         <span>
           {event.from} : {event.to}
         </span>
-      ),
+      )
     },
     {
-      label: " ",
-      key: "like",
+      label: ' ',
+      key: 'like',
       content: (event) => (
         <Like liked={event.liked} onClick={() => onLike(event)} />
-      ),
+      )
     },
 
     {
-      label: " ",
-      path: "title",
+      label: ' ',
+      path: 'title',
       content: (event) => (
         <Link to={`/event/${event.id}`}>{event.title}</Link>
-      ),
+      )
     },
-    { path: "description", label: " " },
-    { path: "location", label: " " },
-  ];
+    { path: 'description', label: ' ' },
+    { path: 'location', label: ' ' }
+  ]
   return (
     <>
       {events.length > 0 && (
@@ -41,7 +41,7 @@ function ProgramTable({ events, onLike }) {
         />
       )}
     </>
-  );
+  )
 }
 
-export default ProgramTable;
+export default ProgramTable

@@ -1,4 +1,4 @@
-import "./entry.scss";
+import './entry.scss'
 
-import ConferenceApp from "./ConferenceApp";
-window.ConferenceApp = ConferenceApp;
+import ConferenceApp from './ConferenceApp'
+window.ConferenceApp = ConferenceApp

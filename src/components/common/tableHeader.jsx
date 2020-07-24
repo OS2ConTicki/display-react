@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-function TableHeader({ label, columns }) {
+function TableHeader ({ label, columns }) {
   return (
     <thead>
       <tr>
@@ -9,7 +9,7 @@ function TableHeader({ label, columns }) {
         ))}
       </tr>
     </thead>
-  );
+  )
 }
 
-export default TableHeader;
+export default TableHeader
