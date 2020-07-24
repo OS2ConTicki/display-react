@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import _ from 'lodash';
 
-class TableBody extends Component {
-  renderCell = (item, column) => {
+function TableBody({  items, columns, pathProperty, valueProperty, keyProperty}){
+  function renderCell(item, column) {
     if (column.content) {
       return column.content(item);
     }
     return _.get(item, column.path);
   };
 
-  render() {
-    const {
-      items,
-      columns,
-      pathProperty,
-      valueProperty,
-      keyProperty,
-    } = this.props;
     return (
       <tbody>
         {items.map((item) => (
@@ -28,7 +20,7 @@ class TableBody extends Component {
                   + (column[pathProperty] || column[keyProperty])
                 }
               >
-                {this.renderCell(item, column)}
+                {renderCell(item, column)}
               </td>
             ))}
           </tr>
@@ -36,7 +28,6 @@ class TableBody extends Component {
       </tbody>
     );
   }
-}
 
 TableBody.defaultProps = {
   pathProperty: 'path',
