@@ -11,10 +11,11 @@
     <div id="app">#app</div>
 
     <script src="/dist/entry.js"></script>
-    <link rel="stylesheet" href="dist/entry.css">
+    <link rel="stylesheet" href="/dist/entry.css">
     <script>
      ConferenceApp.render({
        element: document.getElementById('app'),
+       basename: '/the-first-conference',
        url: '/data/the-first-conference/conference.json',
        // url: '/data/another-conference/conference.json',
        // url: '/data/a-very-long-one/conference.json',
