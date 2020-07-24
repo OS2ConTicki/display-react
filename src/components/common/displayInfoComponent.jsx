@@ -3,7 +3,7 @@ import ReactHtml from "raw-html-react";
 function DisplayInfoComponent({ title, description, image, ticketUrl }) {
   return (
     <>
-      <div className="row d-flex justify-content-center mt-5 mb-3">
+      <div className="row d-flex justify-content-center mb-3 scroll-offset-class">
         <h1>{title}</h1>
       </div>
       <div className="row d-flex justify-content-center mb-3">

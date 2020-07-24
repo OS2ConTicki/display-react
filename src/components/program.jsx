@@ -100,9 +100,14 @@ function Program({ eventsList, tagsList, themesList }) {
   }
   return (
     <>
-      <h2 className="d-flex justify-content-center mt-5 mb-3">Program</h2>
+      <h2
+        className="d-flex justify-content-center mt-5 mb-3 scroll-offset-class"
+        id="program"
+      >
+        Program
+      </h2>
       <p>{eventString}</p>
-      <div className="row" id="events">
+      <div className="row">
         <div className="col-md-2">
           {tags && (
             <TagList

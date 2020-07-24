@@ -11,8 +11,8 @@ const NavBar = () => {
           </HashLink>
         </li>
         <li className="nav-item">
-          <HashLink smooth className="navbar-brand" to="/konference#events">
-            Events
+          <HashLink smooth className="navbar-brand" to="/konference#program">
+            Program
           </HashLink>
         </li>
         <li className="nav-item">
