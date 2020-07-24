@@ -4,7 +4,7 @@ import { Route, Redirect, Switch } from 'react-router-dom'
 import EventComponent from './components/event'
 import Conference from './components/conference'
 import AppStateContext from './context/appStateContext'
-import { mapEvent } from './components/utils/dataMapping'
+import { mapEvent, mapElement } from './components/utils/dataMapping'
 
 function App (props) {
   const [conference, setConference] = useState()
@@ -37,13 +37,7 @@ function App (props) {
 
           if (data.included) {
             data.included.forEach((includedData) => {
-              allIncludedElements.push({
-                id: includedData.id,
-                title: includedData.attributes.title,
-                type: includedData.type,
-                description: includedData.attributes.description,
-                image: includedData.attributes.image
-              })
+              allIncludedElements.push(mapElement(includedData))
             })
           }
           setThemes(

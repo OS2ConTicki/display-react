@@ -28,7 +28,7 @@ function ProgramTable ({ events, onLike }) {
         <Link to={`/event/${event.id}`}>{event.title}</Link>
       )
     },
-    { path: 'description', label: ' ' },
+    { path: 'summary', label: ' ' },
     { path: 'location', label: ' ' }
   ]
   return (

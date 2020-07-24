@@ -1,5 +1,16 @@
 import _ from 'lodash'
 
+export function mapElement(element){
+  return {
+    id: element.id,
+    title: element.attributes.title,
+    type: element.type,
+    description: element.attributes.description,
+    image: element.attributes.image,
+    summary: element.attributes.summary
+  }
+}
+
 export function mapEvent (event, locations) {
   event.attributes.liked = localStorage.getItem(event.id) === 'true'
   event.attributes.id = event.id

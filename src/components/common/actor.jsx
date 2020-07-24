@@ -1,7 +1,7 @@
 import React from 'react'
+import ReactHtml from 'raw-html-react'
 
 function Actor ({ actor }) {
-  debugger
   return (
     <div className='card m-2' style={{ width: '15rem' }}>
       {actor.image &&
@@ -13,7 +13,10 @@ function Actor ({ actor }) {
         />}
       <div className='card-body'>
         <h3 className='card-title'>{actor.title}</h3>
-        {actor.description && <p className='card-text'>{actor.description}</p>}
+        {actor.description &&
+          <div className='card-text'>
+            <ReactHtml html={actor.description} />
+          </div>}
       </div>
     </div>
   )
