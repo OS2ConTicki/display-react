@@ -1,13 +1,24 @@
 // Set colors
-$black:   #1E1E1E;
-$green:   #078A5B;
+$black: #1E1E1E;
+$green: #078A5B;
 
-$primary:       $green ;
-$secondary:       $black ;
+$primary: $green;
+$secondary: $black;
 
 // Set Roboto font
 $font-family-sans-serif: Roboto;
 
+// Set font-sizes
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$h1-font-size: $font-size-base * 7;
+$h2-font-size: $font-size-base * 4;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+// Set misc. bootstrap varaibles
+$enable-responsive-font-sizes: true;
 
 // Import bootstrap components
 //@import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -35,6 +46,13 @@ $font-family-sans-serif: Roboto;
 
 @import "nav";
 @import "top";
+
+
+
+
+
+
+
 
 .scroll-offset-class {
   margin-top: -55px;
