@@ -111,7 +111,7 @@ function App (props) {
       {!loading && !error &&
         <AppStateContext.Provider value={store}>
           <NavBar />
-          <main className='container'>
+          <main className='container-fluid'>
             <Switch>
               <Route path='/konference' component={Conference} />
               <Route path='/event/:id' component={EventComponent} />

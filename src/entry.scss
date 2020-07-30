@@ -1,17 +1,53 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// Set colors
+$black:   #1E1E1E;
+$green:   #078A5B;
+
+$primary:       $green ;
+$secondary:       $black ;
+
+// Set Roboto font
+$font-family-sans-serif: Roboto;
+
+
+// Import bootstrap components
+//@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/print";
+
+// Import custom component styles
+
+@import "nav";
+@import "top";
 
 .scroll-offset-class {
   margin-top: -55px;
   padding-top: 55px;
 }
 @keyframes spinner {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+      transform: rotate(360deg);
+  }
 }
 .fa-spinner {
-    animation: spinner 3s linear infinite;
-font-size: 60px;
-display: flex;
-margin: 25px auto;
+  animation: spinner 3s linear infinite;
+  font-size: 60px;
+  display: flex;
+  margin: 25px auto;
 }
