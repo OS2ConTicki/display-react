@@ -1,11 +1,10 @@
 // Set colors
 $black: #1E1E1E;
 $green: #078A5B;
-$teal: #D7EDE5;
 
 $primary: $green;
 $secondary: $black;
-$info: $teal;
+$info: desaturate( lighten($primary, 65%), 50% );
 
 // Set Roboto font
 $font-family-sans-serif: Roboto;
