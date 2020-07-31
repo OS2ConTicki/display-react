@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Collapse from 'react-bootstrap/Collapse'
+import Container from 'react-bootstrap/Container'
 
 function Program ({ eventsList, tagsList, themesList }) {
   const allEventsTag = { title: 'Alle emner', id: '' }
@@ -91,71 +92,73 @@ function Program ({ eventsList, tagsList, themesList }) {
 
   return (
     <>
-      <Row
-        className='mt-3 mb-3 scroll-offset-class'
-        id='program'
-      >
-        <Col xs={8}>
-          <h2>
-            Program
-          </h2>
-        </Col>
-        <Col xs={4}>
-          <Button
-            variant='secondary'
-            onClick={() => setOpen(!open)}
-            aria-controls='searchEvent'
-            aria-expanded={open}
-          >
-            Find event
-          </Button>
-        </Col>
-        <Col xs={12}>
-          <Collapse
-            in={open}
-            className='bg-light p-3 rounded-sm'
-          >
-            <div id='searchEvent' className='searchEvent'>
-              <SearchBox value={searchText} onChange={handleSearch} />
+      <Container>
+        <Row
+          className='mt-3 mb-3 scroll-offset-class'
+          id='program'
+        >
+          <Col xs={8}>
+            <h2>
+              Program
+            </h2>
+          </Col>
+          <Col xs={4} className='text-right'>
+            <Button
+              variant='secondary'
+              onClick={() => setOpen(!open)}
+              aria-controls='searchEvent'
+              aria-expanded={open}
+            >
+              Søg i events
+            </Button>
+          </Col>
+          <Col xs={12}>
+            <Collapse
+              in={open}
+              className='bg-light p-3 rounded-sm'
+            >
+              <div id='searchEvent' className='searchEvent'>
+                <SearchBox value={searchText} onChange={handleSearch} />
 
-              <div className='mb-3'>
-                {tags && (
+                <div className='mb-3'>
+                  {tags && (
+                    <TagList
+                      title='Emner'
+                      items={tags}
+                      textProperty='name'
+                      valueProperty='id'
+                      selectedItem={selectedTag}
+                      onTagSelect={handleTagSelect}
+                    />
+                  )}
+                </div>
+
+                {tabs && (
                   <TagList
-                    title='Emner'
-                    items={tags}
-                    textProperty='name'
+                    title='Temaer'
+                    items={tabs}
+                    textProperty='title'
                     valueProperty='id'
                     selectedItem={selectedTag}
-                    onTagSelect={handleTagSelect}
+                    onItemSelect={handleTagSelect}
                   />
                 )}
+
               </div>
-
-              {tabs && (
-                <TagList
-                  title='Temaer'
-                  items={tabs}
-                  textProperty='title'
-                  valueProperty='id'
-                  selectedItem={selectedTag}
-                  onItemSelect={handleTagSelect}
-                />
-              )}
-
-            </div>
-          </Collapse>
-          <p className='text-muted mt-3'>{eventString}</p>
-          {dates.map((date) => (
-            <ProgramTable
-              key={date}
-              events={filteredEvents.filter(
-                (event) => event.startDate === date
-              )}
-              onLike={handleLike}
-            />
-          ))}
-        </Col>
-      </Row>
+            </Collapse>
+            <p className='text-muted mt-3'>{eventString}</p>
+            {dates.map((date) => (
+              <ProgramTable
+                key={date}
+                events={filteredEvents.filter(
+                  (event) => event.startDate === date
+                )}
+                onLike={handleLike}
+              />
+            ))}
+          </Col>
+        </Row>
+      </Container>
     </>
   )
 }

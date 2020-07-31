@@ -7,6 +7,7 @@ import AppStateContext from './context/appStateContext'
 import { mapEvent, mapElement } from './components/utils/dataMapping'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Alert from 'react-bootstrap/Alert'
 
@@ -113,13 +114,13 @@ function App (props) {
       {!loading && !error &&
         <AppStateContext.Provider value={store}>
           <NavBar />
-          <main className='container-fluid'>
+          <Container fluid>
             <Switch>
               <Route path='/konference' component={Conference} />
               <Route path='/event/:id' component={EventComponent} />
               <Redirect from='/' to='/konference' />
             </Switch>
-          </main>
+          </Container>
         </AppStateContext.Provider>}
       {loading &&
         <FontAwesomeIcon

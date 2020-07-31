@@ -6,7 +6,7 @@ import fallBackImage from '../../fallBackImage.svg'
 
 function Actor ({ actor }) {
   return (
-    <Col xs={6}>
+    <Col xs={6} md={4}>
       <Card
         className='h-100'
       >
