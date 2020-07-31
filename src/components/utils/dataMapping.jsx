@@ -19,6 +19,7 @@ export function mapEvent (event, locations) {
   event.attributes.from = mapTime(event.attributes.start_time)
   event.attributes.to = mapTime(event.attributes.end_time)
   event.attributes.startDate = mapDate(event.attributes.start_time)
+  event.attributes.day = mapDay(event.attributes.start_time)
 
   const tagIds = []
   if (event.relationships.tags.data) {
@@ -44,15 +45,22 @@ export function mapEvent (event, locations) {
 function mapDate (inputDate) {
   const date = new Date(inputDate)
   const dateOptions = {
-    weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   }
-  let helperStartDate = date.toLocaleDateString('da-DA', dateOptions)
-  helperStartDate =
-    helperStartDate.charAt(0).toUpperCase() + helperStartDate.slice(1)
-  return helperStartDate
+  const dayOptions = {
+    weekday: 'long',
+  }
+  return date.toLocaleDateString('da-DA', dateOptions);
+}
+
+function mapDay (inputDate) {
+  const date = new Date(inputDate)
+  const dayOptions = {
+    weekday: 'long',
+  }
+  return date.toLocaleDateString('da-DA', dayOptions);
 }
 
 function mapTime (inputDate) {

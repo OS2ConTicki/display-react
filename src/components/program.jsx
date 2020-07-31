@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import _ from 'lodash'
-import ProgramTable from './programTable'
+import ProgramList from './programList'
 import TagList from './tags'
 import SearchBox from './common/searchBox'
 import Button from 'react-bootstrap/Button'
@@ -23,9 +23,11 @@ function Program ({ eventsList, tagsList, themesList }) {
   function getDates () {
     const returnDatesArray = []
     events.forEach((event) => {
-      returnDatesArray.push(event.startDate)
+      returnDatesArray.push({date:event.startDate,day:event.day})
     })
-    return _.uniq(returnDatesArray)
+    return _.uniqBy(returnDatesArray, function (date) {
+      return date.date;
+    });
   }
 
   function handleLike (event) {
@@ -148,14 +150,16 @@ function Program ({ eventsList, tagsList, themesList }) {
             </Collapse>
             <p className='text-muted mt-3'>{eventString}</p>
             {dates.map((date) => (
-              <ProgramTable
-                key={date}
+              <ProgramList
+                key={date.date}
                 events={filteredEvents.filter(
-                  (event) => event.startDate === date
+                  (event) => event.startDate === date.date
                 )}
                 onLike={handleLike}
-              />
-            ))}
+                date={date.date}
+                day={date.day}
+                />
+                ))}
           </Col>
         </Row>
       </Container>
