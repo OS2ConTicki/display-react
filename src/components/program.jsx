@@ -11,12 +11,13 @@ import Container from 'react-bootstrap/Container'
 
 function Program ({ eventsList, tagsList, themesList }) {
   const allEventsTag = { title: 'Alle emner', id: '' }
-  const allEventsThemes = { title: 'Alle temaer', id: '' }
+  const allEventsTheme = { title: 'Alle temaer', id: '' }
   const [events, setEvents] = useState(eventsList)
   const [selectedTag, setSelectedTag] = useState(allEventsTag)
+  const [selectedTheme, setSelectedTheme] = useState(allEventsTheme)
 
   const [tags] = useState([allEventsTag, ...tagsList])
-  const [tabs] = useState([allEventsThemes, ...themesList])
+  const [themes] = useState([allEventsTheme, ...themesList])
   const [searchText, setSearchText] = useState('')
 
   const [dates] = useState(getDates())
@@ -44,6 +45,12 @@ function Program ({ eventsList, tagsList, themesList }) {
     const index = eventsCopy.indexOf(event)
     eventsCopy[index] = eventToEdit
     setEvents(eventsCopy)
+  }
+
+  function handleThemeSelect (theme) {
+    setSelectedTheme(theme)
+    setSearchText('')
+    // setCurrentPage(1)
   }
 
   function handleTagSelect (tag) {
@@ -77,6 +84,12 @@ function Program ({ eventsList, tagsList, themesList }) {
     if (selectedTag && selectedTag.id) {
       filteredEvents = filteredEvents.filter((event) => {
         return event.tags.includes(selectedTag.id)
+      })
+    }
+
+    if (selectedTheme && selectedTheme.id) {
+      filteredEvents = filteredEvents.filter((event) => {
+        return event.theme === selectedTheme.id
       })
     }
 
@@ -137,14 +150,14 @@ function Program ({ eventsList, tagsList, themesList }) {
                   )}
                 </div>
 
-                {tabs && (
+                {themes && (
                   <TagList
                     title='Temaer'
-                    items={tabs}
+                    items={themes}
                     textProperty='title'
                     valueProperty='id'
-                    selectedItem={selectedTag}
-                    onItemSelect={handleTagSelect}
+                    selectedItem={selectedTheme}
+                    onTagSelect={handleThemeSelect}
                   />
                 )}
 
