@@ -49,18 +49,15 @@ function mapDate (inputDate) {
     month: 'long',
     day: 'numeric'
   }
-  const dayOptions = {
-    weekday: 'long',
-  }
-  return date.toLocaleDateString('da-DA', dateOptions);
+  return date.toLocaleDateString('da-DA', dateOptions)
 }
 
 function mapDay (inputDate) {
   const date = new Date(inputDate)
   const dayOptions = {
-    weekday: 'long',
+    weekday: 'long'
   }
-  return date.toLocaleDateString('da-DA', dayOptions);
+  return date.toLocaleDateString('da-DA', dayOptions)
 }
 
 function mapTime (inputDate) {

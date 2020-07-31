@@ -23,11 +23,11 @@ function Program ({ eventsList, tagsList, themesList }) {
   function getDates () {
     const returnDatesArray = []
     events.forEach((event) => {
-      returnDatesArray.push({date:event.startDate,day:event.day})
+      returnDatesArray.push({ date: event.startDate, day: event.day })
     })
     return _.uniqBy(returnDatesArray, function (date) {
-      return date.date;
-    });
+      return date.date
+    })
   }
 
   function handleLike (event) {
@@ -66,6 +66,8 @@ function Program ({ eventsList, tagsList, themesList }) {
           event.description?.toLowerCase().indexOf(searchText.toLowerCase()) >
             -1 ||
           event.startDate?.toLowerCase().indexOf(searchText.toLowerCase()) >
+            -1 ||
+          event.day?.toLowerCase().indexOf(searchText.toLowerCase()) >
             -1 ||
           event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
           event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
@@ -158,8 +160,8 @@ function Program ({ eventsList, tagsList, themesList }) {
                 onLike={handleLike}
                 date={date.date}
                 day={date.day}
-                />
-                ))}
+              />
+            ))}
           </Col>
         </Row>
       </Container>
