@@ -108,18 +108,18 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <>
+    <Row>
       <Container>
         <Row
           className='mt-3 mb-3 scroll-offset-class'
           id='program'
         >
-          <Col xs={8}>
+          <Col xs={6}>
             <h2>
               Program
             </h2>
           </Col>
-          <Col xs={4} className='text-right'>
+          <Col xs={6} className='text-right'>
             <Button
               variant='secondary'
               onClick={() => setOpen(!open)}
@@ -178,7 +178,7 @@ function Program ({ eventsList, tagsList, themesList }) {
           </Col>
         </Row>
       </Container>
-    </>
+    </Row>
   )
 }
 

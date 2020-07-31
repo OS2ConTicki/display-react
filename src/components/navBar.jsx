@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import AppStateContext from '../context/appStateContext'
-import Container from 'react-bootstrap/Container'
 
 const NavBar = () => {
   const context = useContext(AppStateContext)
@@ -38,18 +37,16 @@ const NavBar = () => {
   }
   return (
     <nav className='main-navigation justify-content-center sticky-top'>
-      <Container>
-        <ul className='nav'>
-          {navbarItems.map((navItem) => (
-            <li className='nav-link' key={navItem.to}>
-              <HashLink smooth to={navItem.to}>
-                {navItem.label}
-              </HashLink>
+      <ul className='nav'>
+        {navbarItems.map((navItem) => (
+          <li className='nav-link' key={navItem.to}>
+            <HashLink smooth to={navItem.to}>
+              {navItem.label}
+            </HashLink>
 
-            </li>
-          ))}
-        </ul>
-      </Container>
+          </li>
+        ))}
+      </ul>
     </nav>
   )
 }

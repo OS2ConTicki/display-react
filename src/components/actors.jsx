@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 
 function Actors ({ actors, title }) {
   return (
-    <>
+    <Row>
       <Container>
         <Row>
           <Col>
@@ -19,7 +19,7 @@ function Actors ({ actors, title }) {
           </Col>
         </Row>
       </Container>
-    </>
+    </Row>
   )
 }
 
