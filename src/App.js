@@ -7,6 +7,8 @@ import AppStateContext from './context/appStateContext'
 import { mapEvent, mapElement } from './components/utils/dataMapping'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import Col from 'react-bootstrap/Col'
+import Alert from 'react-bootstrap/Alert'
 
 function App (props) {
   const [conference, setConference] = useState()
@@ -124,11 +126,11 @@ function App (props) {
           icon={faSpinner}
         />}
       {error &&
-        <div class='col-md mt-5'>
-          <div class='alert alert-danger' role='alert'>
+        <Col className='mt-5'>
+          <Alert variant='danger'>
           Der skete en fejl!
-          </div>
-        </div>}
+          </Alert>
+        </Col>}
     </>
   )
 }

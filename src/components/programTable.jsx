@@ -6,30 +6,54 @@ import Like from './common/like'
 function ProgramTable ({ events, onLike }) {
   const columns = [
     {
-      key: 'time',
+      label: ' ',
+      path: 'title',
+      key: 'title',
       content: (event) => (
-        <span>
-          {event.from} : {event.to}
-        </span>
+
+        <h3 className='card-header'>
+          <Link to={`/event/${event.id}`}>
+            {event.title}
+          </Link>
+        </h3>
+
       )
     },
     {
       label: ' ',
       key: 'like',
       content: (event) => (
-        <Like liked={event.liked} onClick={() => onLike(event)} />
+        <div className='col-4'>
+          <Like liked={event.liked} onClick={() => onLike(event)} />
+        </div>
       )
     },
-
     {
-      label: ' ',
-      path: 'title',
+      key: 'time',
       content: (event) => (
-        <Link to={`/event/${event.id}`}>{event.title}</Link>
+        <div className='col-6'>
+          {event.from} : {event.to}
+        </div>
       )
     },
-    { path: 'summary', label: ' ' },
-    { path: 'location', label: ' ' }
+    {
+      path: 'location',
+      label: ' ',
+      content: (event) => (
+        <div className='col-6'>
+          {event.location}
+        </div>
+      )
+    },
+    {
+      path: 'summary',
+      label: ' ',
+      content: (event) => (
+        <div className='col-12'>
+          {event.summary}
+        </div>
+      )
+    }
   ]
   return (
     <>

@@ -1,9 +1,11 @@
 // Set colors
 $black: #1E1E1E;
 $green: #078A5B;
+$teal: #D7EDE5;
 
 $primary: $green;
 $secondary: $black;
+$info: $teal;
 
 // Set Roboto font
 $font-family-sans-serif: Roboto;
@@ -32,6 +34,7 @@ $enable-responsive-font-sizes: true;
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/input-group";
 @import "~bootstrap/scss/transitions";
 @import "~bootstrap/scss/nav";
 @import "~bootstrap/scss/navbar";
@@ -47,25 +50,30 @@ $enable-responsive-font-sizes: true;
 @import "nav";
 @import "top";
 
-
-
-
-
-
-
-
 .scroll-offset-class {
   margin-top: -55px;
   padding-top: 55px;
 }
+
 @keyframes spinner {
   to {
       transform: rotate(360deg);
   }
 }
+
 .fa-spinner {
   animation: spinner 3s linear infinite;
   font-size: 60px;
   display: flex;
   margin: 25px auto;
+}
+
+button[aria-expanded="true"] {
+  opacity: 30%;
+}
+
+.searchEvent {
+  .badge {
+    font-size: $font-size-base;
+  }
 }

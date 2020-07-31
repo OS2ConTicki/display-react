@@ -1,12 +1,16 @@
 import React from 'react'
-import TableHeader from './tableHeader'
 import TableBody from './tableBody'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+
 const Table = ({ columns, onSort, sortColumn, items, label }) => {
   return (
-    <table className='table'>
-      <TableHeader columns={columns} label={label} />
-      <TableBody columns={columns} items={items} />
-    </table>
+    <Row>
+      <Col xs={12}>
+        <h3>{label}</h3>
+        <TableBody columns={columns} items={items} />
+      </Col>
+    </Row>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
+import Card from 'react-bootstrap/Card'
 
 function TableBody ({ items, columns, pathProperty, valueProperty, keyProperty }) {
   function renderCell (item, column) {
@@ -10,22 +11,30 @@ function TableBody ({ items, columns, pathProperty, valueProperty, keyProperty }
   };
 
   return (
-    <tbody>
+    <div className='cards'>
       {items.map((item) => (
-        <tr key={item[valueProperty]}>
-          {columns.map((column) => (
-            <td
-              key={
-                item[valueProperty] +
+        <Card
+          key={item[valueProperty]}
+          className='mb-3 bg-info'
+        >
+
+          <Card.Body className='p-0'>
+
+            {columns.map((column) => (
+              <span
+
+                key={
+                  item[valueProperty] +
                   (column[pathProperty] || column[keyProperty])
-              }
-            >
-              {renderCell(item, column)}
-            </td>
-          ))}
-        </tr>
+                }
+              >
+                {renderCell(item, column)}
+              </span>
+            ))}
+          </Card.Body>
+        </Card>
       ))}
-    </tbody>
+    </div>
   )
 }
 

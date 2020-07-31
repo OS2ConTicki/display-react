@@ -1,15 +1,21 @@
 import React from 'react'
+import Badge from 'react-bootstrap/Badge'
 
 function Tag (props) {
   const { tag, selectedTag, onTagSelect } = props
   const classes =
     selectedTag === tag.id
-      ? 'badge badge-primary m-1'
-      : 'badge badge-secondary m-1'
+      ? 'primary'
+      : 'secondary'
   return (
-    <span className={classes} onClick={() => onTagSelect(tag)} key={tag.id}>
+    <Badge
+      variant={classes}
+      onClick={() => onTagSelect(tag)}
+      key={tag.id}
+      className='px-2 py-1 mr-1'
+    >
       {tag.title}
-    </span>
+    </Badge>
   )
 }
 
