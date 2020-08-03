@@ -37,8 +37,9 @@ function DisplayInfoComponent ({ title, description, image, ticketUrl }) {
           {ticketUrl && ticketUrl.url &&
             <Row className='d-flex justify-content-center'>
               <Col xs={12} className='d-flex justify-content-center mt-3'>
-                {!ticketUrl.text && <p className='text-center'><a className='btn btn-primary btn-lg px-md-5' href={ticketUrl.url}>Billeter kan købes her</a></p>}
-                {ticketUrl.text && <p className='text-center'><a className='btn btn-primary btn-lg px-md-5' href={ticketUrl.url}>{ticketUrl.text}</a></p>}
+                <p className='text-center'>
+                  <a className='btn btn-primary btn-lg px-md-5' href={ticketUrl.url}>{ticketUrl.text || 'Billeter kan købes her'} </a>
+                </p>
               </Col>
             </Row>}
         </Container>
