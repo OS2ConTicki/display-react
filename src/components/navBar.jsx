@@ -36,14 +36,13 @@ const NavBar = () => {
     })
   }
   return (
-    <nav className='main-navigation justify-content-center sticky-top'>
-      <ul className='nav'>
+    <nav className='main-navigation sticky-top' role='navigation'>
+      <ul className='nav justify-content-center '>
         {navbarItems.map((navItem) => (
-          <li className='nav-link' key={navItem.to}>
-            <HashLink smooth to={navItem.to}>
+          <li className='nav-item' key={navItem.to}>
+            <HashLink smooth to={navItem.to} className='nav-link text-light'>
               {navItem.label}
             </HashLink>
-
           </li>
         ))}
       </ul>
