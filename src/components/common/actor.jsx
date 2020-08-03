@@ -10,9 +10,7 @@ function Actor ({ actor }) {
       <Card
         className='h-100'
       >
-        {actor.image
-          ? <Card.Img variant='top' src={actor.image.url} alt={actor.image.meta.alt || ''} />
-          : <Card.Img variant='top' src={fallBackImage} alt='Image not available' />}
+        <Card.Img variant='top' src={actor.image?.url || fallBackImage} alt={actor.image?.meta.alt || ''} />
         <Card.Body>
           <Card.Title>{actor.title}</Card.Title>
           {actor.description &&
