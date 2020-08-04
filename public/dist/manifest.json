@@ -25,8 +25,5 @@
   "dist/fonts/roboto-latin-900.woff": "http://localhost:8888/dist/fonts/roboto-latin-900.bb1e4dc6.woff",
   "dist/fonts/roboto-latin-900italic.woff": "http://localhost:8888/dist/fonts/roboto-latin-900italic.28f91510.woff",
   "dist/fonts/roboto-latin-900italic.woff2": "http://localhost:8888/dist/fonts/roboto-latin-900italic.ebf6d164.woff2",
-  "dist/images/fallBackImage.svg": "http://localhost:8888/dist/images/fallBackImage.f3839877.svg",
-  "dist/images/favicon-16x16.png": "http://localhost:8888/dist/images/favicon-16x16.png",
-  "dist/images/favicon-32x32.png": "http://localhost:8888/dist/images/favicon-32x32.png",
-  "dist/images/favicon.png": "http://localhost:8888/dist/images/favicon.png"
+  "dist/images/fallBackImage.svg": "http://localhost:8888/dist/images/fallBackImage.97c17573.svg"
 }
