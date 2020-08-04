@@ -1,7 +1,6 @@
 {
   "dist/entry.css": "http://localhost:8888/dist/entry.css",
   "dist/entry.js": "http://localhost:8888/dist/entry.js",
-  "dist/images/fallBackImage.svg": "http://localhost:8888/dist/images/fallBackImage.f3839877.svg",
   "dist/fonts/roboto-latin-100.woff": "http://localhost:8888/dist/fonts/roboto-latin-100.5cb7edfc.woff",
   "dist/fonts/roboto-latin-100.woff2": "http://localhost:8888/dist/fonts/roboto-latin-100.7370c367.woff2",
   "dist/fonts/roboto-latin-100italic.woff2": "http://localhost:8888/dist/fonts/roboto-latin-100italic.f8b1df51.woff2",
@@ -25,5 +24,9 @@
   "dist/fonts/roboto-latin-900.woff2": "http://localhost:8888/dist/fonts/roboto-latin-900.9b3766ef.woff2",
   "dist/fonts/roboto-latin-900.woff": "http://localhost:8888/dist/fonts/roboto-latin-900.bb1e4dc6.woff",
   "dist/fonts/roboto-latin-900italic.woff": "http://localhost:8888/dist/fonts/roboto-latin-900italic.28f91510.woff",
-  "dist/fonts/roboto-latin-900italic.woff2": "http://localhost:8888/dist/fonts/roboto-latin-900italic.ebf6d164.woff2"
+  "dist/fonts/roboto-latin-900italic.woff2": "http://localhost:8888/dist/fonts/roboto-latin-900italic.ebf6d164.woff2",
+  "dist/images/fallBackImage.svg": "http://localhost:8888/dist/images/fallBackImage.f3839877.svg",
+  "dist/images/favicon-16x16.png": "http://localhost:8888/dist/images/favicon-16x16.png",
+  "dist/images/favicon-32x32.png": "http://localhost:8888/dist/images/favicon-32x32.png",
+  "dist/images/favicon.png": "http://localhost:8888/dist/images/favicon.png"
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactHtml from 'raw-html-react'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import fallBackImage from '../../fallBackImage.svg'
+import fallBackImage from '../../images/fallBackImage.svg'
 
 function Actor ({ actor }) {
   return (
