@@ -21,6 +21,9 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [searchText, setSearchText] = useState('')
 
   const [dates] = useState(getDates())
+
+  const [open, setOpen] = useState(false)
+
   function getDates () {
     const returnDatesArray = []
     events.forEach((event) => {
@@ -104,8 +107,6 @@ function Program ({ eventsList, tagsList, themesList }) {
   if (selectedTag && selectedTag.id) {
     eventString += ` med emnet ${selectedTag.title}`
   }
-
-  const [open, setOpen] = useState(false)
 
   return (
     <Row>
