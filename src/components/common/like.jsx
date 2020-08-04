@@ -11,6 +11,7 @@ function Like ({ liked, onClick }) {
           icon={faHeartSolid}
           onClick={onClick}
           style={{ cursor: 'pointer' }}
+          size='lg'
         />
       )}
       {!liked && (
@@ -19,6 +20,7 @@ function Like ({ liked, onClick }) {
             icon={faHeartOutline}
             onClick={onClick}
             style={{ cursor: 'pointer' }}
+            size='lg'
           />
         </div>
       )}

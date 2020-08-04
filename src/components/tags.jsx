@@ -1,10 +1,11 @@
 import React from 'react'
 import Tag from './common/tag'
 
-function Tags ({ items, onTagSelect, valueProperty, selectedItem }) {
+function Tags ({ title, items, onTagSelect, valueProperty, selectedItem }) {
   return (
     <>
-      <h3>Emner</h3>
+      <h3 className='mb-0'>{title}</h3>
+
       {items.map((item) => (
         <span key={item[valueProperty]}>
           <Tag

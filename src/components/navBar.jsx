@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import AppStateContext from '../context/appStateContext'
+
 const NavBar = () => {
   const context = useContext(AppStateContext)
 
@@ -35,14 +36,13 @@ const NavBar = () => {
     })
   }
   return (
-    <nav className='navbar justify-content-center navbar-expand-lg navbar-light bg-light sticky-top'>
-      <ul className='navbar-nav'>
+    <nav className='main-navigation sticky-top' role='navigation'>
+      <ul className='nav justify-content-center '>
         {navbarItems.map((navItem) => (
           <li className='nav-item' key={navItem.to}>
-            <HashLink smooth className='navbar-brand' to={navItem.to}>
+            <HashLink smooth to={navItem.to} className='nav-link text-light'>
               {navItem.label}
             </HashLink>
-
           </li>
         ))}
       </ul>

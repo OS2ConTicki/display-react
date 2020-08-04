@@ -1,28 +1,37 @@
 import React, { useState } from 'react'
 import _ from 'lodash'
-import ProgramTable from './programTable'
+import ProgramList from './programList'
 import TagList from './tags'
 import SearchBox from './common/searchBox'
-import Tabs from './common/tabs'
+import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Collapse from 'react-bootstrap/Collapse'
+import Container from 'react-bootstrap/Container'
 
 function Program ({ eventsList, tagsList, themesList }) {
   const allEventsTag = { title: 'Alle emner', id: '' }
-  const allEventsThemes = { title: 'Alle temaer', id: '' }
+  const allEventsTheme = { title: 'Alle temaer', id: '' }
   const [events, setEvents] = useState(eventsList)
   const [selectedTag, setSelectedTag] = useState(allEventsTag)
-  const [selectedTab, setSelectedTab] = useState(allEventsThemes)
+  const [selectedTheme, setSelectedTheme] = useState(allEventsTheme)
 
   const [tags] = useState([allEventsTag, ...tagsList])
-  const [tabs] = useState([allEventsThemes, ...themesList])
+  const [themes] = useState([allEventsTheme, ...themesList])
   const [searchText, setSearchText] = useState('')
 
   const [dates] = useState(getDates())
+
+  const [open, setOpen] = useState(false)
+
   function getDates () {
     const returnDatesArray = []
     events.forEach((event) => {
-      returnDatesArray.push(event.startDate)
+      returnDatesArray.push({ date: event.startDate, day: event.day })
     })
-    return _.uniq(returnDatesArray)
+    return _.uniqBy(returnDatesArray, function (date) {
+      return date.date
+    })
   }
 
   function handleLike (event) {
@@ -41,14 +50,14 @@ function Program ({ eventsList, tagsList, themesList }) {
     setEvents(eventsCopy)
   }
 
-  function handleTagSelect (tag) {
-    setSelectedTag(tag)
+  function handleThemeSelect (theme) {
+    setSelectedTheme(theme)
     setSearchText('')
     // setCurrentPage(1)
   }
 
-  function handleTabSelect (tab) {
-    setSelectedTab(tab)
+  function handleTagSelect (tag) {
+    setSelectedTag(tag)
     setSearchText('')
     // setCurrentPage(1)
   }
@@ -68,6 +77,8 @@ function Program ({ eventsList, tagsList, themesList }) {
             -1 ||
           event.startDate?.toLowerCase().indexOf(searchText.toLowerCase()) >
             -1 ||
+          event.day?.toLowerCase().indexOf(searchText.toLowerCase()) >
+            -1 ||
           event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
           event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
           event.location?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
@@ -78,9 +89,10 @@ function Program ({ eventsList, tagsList, themesList }) {
         return event.tags.includes(selectedTag.id)
       })
     }
-    if (selectedTab && selectedTab.id) {
+
+    if (selectedTheme && selectedTheme.id) {
       filteredEvents = filteredEvents.filter((event) => {
-        return event.theme === selectedTab.id
+        return event.theme === selectedTheme.id
       })
     }
 
@@ -92,57 +104,82 @@ function Program ({ eventsList, tagsList, themesList }) {
     totalCount === 0
       ? 'Der er ingen events tilknyttet denne konference'
       : `Der er ${totalCount} events tilknyttet denne konference`
-  if (selectedTab && selectedTab.id) {
-    eventString += ` i temaet ${selectedTab.title}`
-  }
   if (selectedTag && selectedTag.id) {
     eventString += ` med emnet ${selectedTag.title}`
   }
-  return (
-    <>
-      <h2
-        className='d-flex justify-content-center mt-5 mb-3 scroll-offset-class'
-        id='program'
-      >
-        Program
-      </h2>
-      <p>{eventString}</p>
-      <div className='row'>
-        <div className='col-md-2'>
-          {tags && (
-            <TagList
-              items={tags}
-              textProperty='name'
-              valueProperty='id'
-              selectedItem={selectedTag}
-              onTagSelect={handleTagSelect}
-            />
-          )}
-        </div>
-        <div className='col'>
-          <SearchBox value={searchText} onChange={handleSearch} />
-          {tabs && (
-            <Tabs
-              items={tabs}
-              textProperty='title'
-              valueProperty='id'
-              selectedItem={selectedTab}
-              onItemSelect={handleTabSelect}
-            />
-          )}
 
-          {dates.map((date) => (
-            <ProgramTable
-              key={date}
-              events={filteredEvents.filter(
-                (event) => event.startDate === date
-              )}
-              onLike={handleLike}
-            />
-          ))}
-        </div>
-      </div>
-    </>
+  return (
+    <Row>
+      <Container>
+        <Row
+          className='mt-3 mb-3 scroll-offset-class'
+          id='program'
+        >
+          <Col xs={6}>
+            <h2>
+              Program
+            </h2>
+          </Col>
+          <Col xs={6} className='text-right'>
+            <Button
+              variant='secondary'
+              onClick={() => setOpen(!open)}
+              aria-controls='searchEvent'
+              aria-expanded={open}
+            >
+              Søg i events
+            </Button>
+          </Col>
+          <Col xs={12}>
+            <Collapse
+              in={open}
+              className='bg-light p-3 rounded-sm'
+            >
+              <div id='searchEvent' className='searchEvent'>
+                <SearchBox value={searchText} onChange={handleSearch} />
+
+                <div className='mb-3'>
+                  {tags && (
+                    <TagList
+                      title='Emner'
+                      items={tags}
+                      textProperty='name'
+                      valueProperty='id'
+                      selectedItem={selectedTag}
+                      onTagSelect={handleTagSelect}
+                    />
+                  )}
+                </div>
+
+                {themes && (
+                  <TagList
+                    title='Temaer'
+                    items={themes}
+                    textProperty='title'
+                    valueProperty='id'
+                    selectedItem={selectedTheme}
+                    onTagSelect={handleThemeSelect}
+                  />
+                )}
+
+              </div>
+            </Collapse>
+            <p className='text-muted mt-3'>{eventString}</p>
+            {dates.map((date) => (
+              <ProgramList
+                key={date.date}
+                events={filteredEvents.filter(
+                  (event) => event.startDate === date.date
+                )}
+                onLike={handleLike}
+                date={date.date}
+                day={date.day}
+              />
+            ))}
+          </Col>
+        </Row>
+      </Container>
+    </Row>
   )
 }
 

@@ -7,6 +7,9 @@ import AppStateContext from './context/appStateContext'
 import { mapEvent, mapElement } from './components/utils/dataMapping'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Alert from 'react-bootstrap/Alert'
 
 function App (props) {
   const [conference, setConference] = useState()
@@ -111,24 +114,24 @@ function App (props) {
       {!loading && !error &&
         <AppStateContext.Provider value={store}>
           <NavBar />
-          <main className='container'>
+          <Container fluid>
             <Switch>
               <Route path='/konference' component={Conference} />
               <Route path='/event/:id' component={EventComponent} />
               <Redirect from='/' to='/konference' />
             </Switch>
-          </main>
+          </Container>
         </AppStateContext.Provider>}
       {loading &&
         <FontAwesomeIcon
           icon={faSpinner}
         />}
       {error &&
-        <div class='col-md mt-5'>
-          <div class='alert alert-danger' role='alert'>
+        <Col className='mt-5'>
+          <Alert variant='danger'>
           Der skete en fejl!
-          </div>
-        </div>}
+          </Alert>
+        </Col>}
     </>
   )
 }
