@@ -1,8 +1,9 @@
 // Set colors
 $black: #1E1E1E;
 $green: #078A5B;
+$blue: #1E3284;
 
-$primary: $green;
+$primary: $blue;
 $secondary: $black;
 $info: desaturate( lighten($primary, 65%), 50% );
 
@@ -68,7 +69,7 @@ $enable-responsive-font-sizes: true;
 }
 
 button[aria-expanded="true"] {
-  opacity: 30%;
+  opacity: 60%;
 }
 
 .searchEvent {
