@@ -20,7 +20,7 @@
             },
             "attributes": {
                 "langcode": "en",
-                "title": "Welcome",
+                "title": "Personlighed, motivation & karriere",
                 "created": "2020-07-20T13:16:44+00:00",
                 "changed": "2020-07-20T13:16:44+00:00",
                 "promote": true,
@@ -33,10 +33,10 @@
                         "height": 600
                     }
                 },
-                "summary": null,
-                "description": "Welcome!",
-                "start_time": "2001-01-01T09:00:00+00:00",
-                "end_time": "2001-01-01T09:30:00+00:00"
+                "summary": "En workshop om personlighedsprofiler",
+                "description": "Workshop om personlighedsprofiler - I vil få tilbudt at udfylde en profil og får umiddelbar feedback på denne samt en introduktion til, hvordan den anvendes i jobsøgningssammenhæng. Udbyttet vil være en øget indsigt i egne personlige kompetencer og motivation. Mere uddybende får du som deltager indsigt i <ul><li>Egen personlighedsprofil – hvem er du, når du er på arbejde?</li><li>Grundlæggende motivation – hvad betyder motivation for, hvad du tilbyder og leverer?</li><li>Det gode karrierevalg – hvordan giver du dig selv mulighed for at levere de bedste resultater på kort og lang sigt?</li></ul>            Kom frisk og bliv klogere på dig selv! Workshoppen faciliteres af Potential in Action.",
+                "start_time": "2020-10-19T09:00:00+00:00",
+                "end_time": "2020-10-19T12:00:00+00:00"
             },
             "relationships": {
                 "conference": {
@@ -96,7 +96,7 @@
             },
             "attributes": {
                 "langcode": "en",
-                "title": "The first event",
+                "title": "Uddannet fra DPU – hvad så nu?",
                 "created": "2020-07-20T13:16:44+00:00",
                 "changed": "2020-07-20T13:16:44+00:00",
                 "promote": true,
@@ -109,10 +109,11 @@
                         "height": 600
                     }
                 },
-                "summary": null,
-                "description": "This is the first event in <emph>the conference</emph>.",
-                "start_time": "2001-01-01T12:00:00+00:00",
-                "end_time": "2001-01-01T13:00:00+00:00"
+                "summary": "Mød dine fremtidige arbejdsgivere",
+                "description": "Som cand.pæd. har du typisk en unik profil, hvor du kan koble praksiserfaring med et akademisk afsæt. Men hvordan får du arbejdsgivere til at se lige præcis dét potentiale?</br>På dette arrangement vil du møde arbejdsgivere, som fortæller om ansættelsesprocedurer og giver gode råd. Få samtidig inspiration fra en række cand.pæd’er i job, der kommer og fortæller om deres karrierevalg og -veje. Online deltagelse er muligt.",
+                "start_time": "2020-10-19T14:00:00+00:00",
+                "end_time": "2020-10-19T17:00:00+00:00"
+
             },
             "relationships": {
                 "conference": {
@@ -213,7 +214,7 @@
             },
             "attributes": {
                 "langcode": "en",
-                "title": "The first conference",
+                "title": "Jobbootcamp",
                 "created": "2020-07-20T13:16:44+00:00",
                 "changed": "2020-07-23T07:52:18+00:00",
                 "promote": true,
@@ -227,7 +228,7 @@
                     }
                 },
                 "summary": null,
-                "description": "<p>This is the first conference. It'll be <strong>fun</strong>!</p>\n",
+                "description": "<div>JOB BootCamp 2020 Aarhus<p>I uge 43 bliver Aarhus fyldt med jobrettede events for  dimittender.</p><p>Kontakt for mere info:</p><p>Hanne Marklund, VisionPilot</p><p><a href='mailto:hmar@aarhus.dk'>hmar@aarhus.dk</a> / 51 57 63 34</p><p>Se mere på <a target='_blank' href='http://www.facebook.com/JOBBootCampAarhus'>www.facebook.com/JOBBootCampAarhus</a></p></div>",
                 "start_time": "2001-01-07T00:00:00+00:00",
                 "end_time": "2001-01-11T23:59:59+00:00",
                 "ticket": {
@@ -288,7 +289,7 @@
             },
             "attributes": {
                 "langcode": "en",
-                "title": "Room 1",
+                "title": "Skanderborgvej 213, Viby 8260",
                 "created": "2020-07-20T13:16:44+00:00",
                 "changed": "2020-07-20T13:16:44+00:00",
                 "promote": true
