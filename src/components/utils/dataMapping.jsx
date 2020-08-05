@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import { getDate } from './dateHandler'
 
 export function mapElement (element) {
   return {
@@ -15,12 +16,8 @@ export function mapElement (element) {
 export function mapEvent (event, locations) {
   event.attributes.liked = window.localStorage.getItem(event.id) === 'true'
   event.attributes.id = event.id
-
-  event.attributes.from = mapTime(event.attributes.start_time)
-  event.attributes.to = mapTime(event.attributes.end_time)
-  event.attributes.startDate = mapDate(event.attributes.start_time)
-  event.attributes.day = mapDay(event.attributes.start_time)
-
+  event.attributes.startDate = getDate(event.attributes.start_time)
+  event.attributes.isEventDone = isEventDone(event.attributes.end_time)
   const tagIds = []
   if (event.relationships.tags.data) {
     event.relationships.tags.data.forEach((tag) => {
@@ -42,29 +39,8 @@ export function mapEvent (event, locations) {
   return event.attributes
 }
 
-function mapDate (inputDate) {
+function isEventDone (inputDate) {
+  const now = new Date()
   const date = new Date(inputDate)
-  const dateOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  }
-  return date.toLocaleDateString('da-DA', dateOptions)
-}
-
-function mapDay (inputDate) {
-  const date = new Date(inputDate)
-  const dayOptions = {
-    weekday: 'long'
-  }
-  return date.toLocaleDateString('da-DA', dayOptions)
-}
-
-function mapTime (inputDate) {
-  const timeOptions = {
-    hour: '2-digit',
-    minute: '2-digit'
-  }
-  const date = new Date(inputDate)
-  return date.toLocaleTimeString('da-DA', timeOptions)
+  return date < now
 }

@@ -1,10 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Like from './common/like'
 import Row from 'react-bootstrap/Row'
+import Event from './event'
 import Col from 'react-bootstrap/Col'
-import Card from 'react-bootstrap/Card'
-
 function ProgramList ({ events, onLike, date, day }) {
   return (
     <>
@@ -19,32 +16,7 @@ function ProgramList ({ events, onLike, date, day }) {
               className='mb-3'
               key={item.id}
             >
-              <Card className='bg-info'>
-
-                <Card.Body>
-                  <Row>
-                    <Col xs={8}>
-                      <Link to={`/event/${item.id}`}>
-                        <h3>{item.title}</h3>
-                      </Link>
-                    </Col>
-                    <Col xs={4} className='text-right'>
-                      <Like liked={item.liked} onClick={() => onLike(item)} />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col xs={6}>
-                      <strong>{item.from} : {item.to}</strong>
-                    </Col>
-                    <Col xs={6}>
-                      <strong>{item.location}</strong>
-                    </Col>
-                    <Col xs={12}>
-                      {item.summary}
-                    </Col>
-                  </Row>
-                </Card.Body>
-              </Card>
+              <Event onLike={onLike} event={item} />
             </Col>
           ))}
         </Row>
