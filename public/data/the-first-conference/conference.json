@@ -43,7 +43,7 @@
         },
         "attributes": {
             "langcode": "en",
-            "title": "The first conference",
+            "title": "Jobbootcamp",
             "created": "2020-07-20T13:16:44+00:00",
             "changed": "2020-07-23T07:52:18+00:00",
             "promote": true,
@@ -57,7 +57,7 @@
                 }
             },
             "summary": null,
-            "description": "<p>This is the first conference. It'll be <strong>fun</strong>!</p>\n",
+            "description": "<div>JOB BootCamp 2020 Aarhus<p>I uge 43 bliver Aarhus fyldt med jobrettede events for  dimittender. Tilmelding åbner snart! Og hjemmesiden bliver  opdateret.</p><p>Kontakt for mere info:</p><p>Hanne Marklund, VisionPilot</p><p><a href='mailto:hmar@aarhus.dk'>hmar@aarhus.dk</a> / 51 57 63 34</p><p>Se mere på <a target='_blank' href='http://www.facebook.com/JOBBootCampAarhus'>www.facebook.com/JOBBootCampAarhus</a></p></div>",
             "start_time": "2001-01-07T00:00:00+00:00",
             "end_time": "2001-01-11T23:59:59+00:00",
             "ticket": {

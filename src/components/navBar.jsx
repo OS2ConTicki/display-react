@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import AppStateContext from '../context/appStateContext'
-
 const NavBar = () => {
   const context = useContext(AppStateContext)
 
@@ -45,6 +44,9 @@ const NavBar = () => {
             </HashLink>
           </li>
         ))}
+        <li className='nav-item' onClick={() => context.language.set('da')}><a className='nav-link text-light'>dansk</a></li>
+        <li className='nav-item' onClick={() => context.language.set('en')}><a className='nav-link text-light'>engelsk</a></li>
+
       </ul>
     </nav>
   )

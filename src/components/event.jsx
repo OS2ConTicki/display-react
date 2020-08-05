@@ -1,32 +1,42 @@
-import React, { useEffect, useState, useContext } from 'react'
-import DisplayInfoComponent from './common/displayInfoComponent'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import Like from './common/like'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Card from 'react-bootstrap/Card'
+import { getTime } from './utils/dateHandler'
 import AppStateContext from '../context/appStateContext'
-import _ from 'lodash'
 
-function Event (props) {
+function Event ({ event, onLike }) {
+  const classes = event.isEventDone ? 'bg-dark' : 'bg-info'
   const context = useContext(AppStateContext)
-  const [event, setEvent] = useState()
-  useEffect(() => {
-    const eventId = props.match.params.id
-    const events = context.events.get
-    if (events) {
-      const eventToSave = _.find(events, function (event) {
-        return event.id === eventId
-      })
-      setEvent(eventToSave)
-    }
-  })
   return (
-    <>
-      {event && (
-        <DisplayInfoComponent
-          title={event.title}
-          description={event.description}
-          image={event.image}
-          ticketUrl={event.ticketUrl}
-        />
-      )}
-    </>
+    <Card className={classes}>
+      <Card.Body>
+        <Row>
+          <Col xs={8}>
+            <Link to={`/event/${event.id}`}>
+              <h3>{event.title}</h3>
+            </Link>
+          </Col>
+          <Col xs={4} className='text-right'>
+            <Like liked={event.liked} onClick={() => onLike(event)} />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={6}>
+            <strong>
+              {getTime(event.start_time, context.language.get)} :{' '}
+              {getTime(event.end_time, context.language.get)}
+            </strong>
+          </Col>
+          <Col xs={6}>
+            <strong>{event.location}</strong>
+          </Col>
+          <Col xs={12}>{event.summary}</Col>
+        </Row>
+      </Card.Body>
+    </Card>
   )
 }
 

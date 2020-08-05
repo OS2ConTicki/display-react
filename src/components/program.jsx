@@ -1,41 +1,58 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import _ from 'lodash'
 import ProgramList from './programList'
-import TagList from './tags'
+import BadgeList from './badgeList'
 import SearchBox from './common/searchBox'
 import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Collapse from 'react-bootstrap/Collapse'
 import Container from 'react-bootstrap/Container'
+import { useTranslate } from 'react-translate'
+import { getDay, getDate } from './utils/dateHandler'
+import AppStateContext from '../context/appStateContext'
 
 function Program ({ eventsList, tagsList, themesList }) {
+  const t = useTranslate('Conticki')
+  const context = useContext(AppStateContext)
   const allEventsTag = { title: 'Alle emner', id: '' }
   const allEventsTheme = { title: 'Alle temaer', id: '' }
+  const allEventsDay = { title: 'Alle dage', id: '' }
   const [events, setEvents] = useState(eventsList)
   const [selectedTag, setSelectedTag] = useState(allEventsTag)
   const [selectedTheme, setSelectedTheme] = useState(allEventsTheme)
-
+  const [selectedDay, setSelectedDay] = useState(allEventsDay)
   const [tags] = useState([allEventsTag, ...tagsList])
   const [themes] = useState([allEventsTheme, ...themesList])
   const [searchText, setSearchText] = useState('')
-
   const [dates] = useState(getDates())
-
+  const [days] = useState([allEventsDay, ...getDays()])
   const [open, setOpen] = useState(false)
-
   function getDates () {
     const returnDatesArray = []
     events.forEach((event) => {
-      returnDatesArray.push({ date: event.startDate, day: event.day })
+      returnDatesArray.push({
+        date: getDate(event.start_time, context.language.get),
+        day: getDay(event.start_time, context.language.get),
+        id: event.startDate
+      })
     })
     return _.uniqBy(returnDatesArray, function (date) {
       return date.date
     })
   }
+  function getDays () {
+    const days = []
+    const dates = getDates()
+    dates.forEach((date) => {
+      days.push(date.day)
+    })
+    return days
+  }
 
   function handleLike (event) {
-    const isEventAlreadyLiked = window.localStorage.getItem(event.id) === 'true'
+    const isEventAlreadyLiked =
+      window.localStorage.getItem(event.id) === 'true'
     if (isEventAlreadyLiked) {
       window.localStorage.setItem(event.id, false)
     } else {
@@ -53,18 +70,20 @@ function Program ({ eventsList, tagsList, themesList }) {
   function handleThemeSelect (theme) {
     setSelectedTheme(theme)
     setSearchText('')
-    // setCurrentPage(1)
   }
 
   function handleTagSelect (tag) {
     setSelectedTag(tag)
     setSearchText('')
-    // setCurrentPage(1)
+  }
+
+  function handleDaySelect (day) {
+    setSelectedDay(day)
+    setSearchText('')
   }
 
   function handleSearch (searchText) {
     setSearchText(searchText)
-    // setCurrentPage(1)
   }
 
   function getPagedData () {
@@ -75,24 +94,26 @@ function Program ({ eventsList, tagsList, themesList }) {
           event.title?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
           event.description?.toLowerCase().indexOf(searchText.toLowerCase()) >
             -1 ||
-          event.startDate?.toLowerCase().indexOf(searchText.toLowerCase()) >
-            -1 ||
-          event.day?.toLowerCase().indexOf(searchText.toLowerCase()) >
-            -1 ||
           event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
           event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
           event.location?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
       )
     }
-    if (selectedTag && selectedTag.id) {
+    if (selectedTag.id) {
       filteredEvents = filteredEvents.filter((event) => {
         return event.tags.includes(selectedTag.id)
       })
     }
 
-    if (selectedTheme && selectedTheme.id) {
+    if (selectedTheme.id) {
       filteredEvents = filteredEvents.filter((event) => {
         return event.theme === selectedTheme.id
+      })
+    }
+
+    if (selectedDay.id) {
+      filteredEvents = filteredEvents.filter((event) => {
+        return event.startDate === selectedDay.id
       })
     }
 
@@ -102,23 +123,25 @@ function Program ({ eventsList, tagsList, themesList }) {
   const { filteredEvents, totalCount } = getPagedData()
   let eventString =
     totalCount === 0
-      ? 'Der er ingen events tilknyttet denne konference'
-      : `Der er ${totalCount} events tilknyttet denne konference`
-  if (selectedTag && selectedTag.id) {
-    eventString += ` med emnet ${selectedTag.title}`
+      ? t('NO_EVENTS')
+      : t('NUMBER_OF_EVENTS', { n: totalCount })
+
+  if (selectedTheme.id && selectedTag.id) {
+    eventString +=
+      t('WITH_THEME', { theme: selectedTheme.title }) +
+      t('AND_WITH_TAG', { tag: selectedTag.title })
+  } else if (selectedTheme.id) {
+    eventString += t('WITH_THEME', { theme: selectedTheme.title })
+  } else if (selectedTag.id) {
+    eventString += t('WITH_TAG', { tag: selectedTag.title })
   }
 
   return (
     <Row>
       <Container>
-        <Row
-          className='mt-3 mb-3 scroll-offset-class'
-          id='program'
-        >
+        <Row className='mt-3 mb-3 scroll-offset-class' id='program'>
           <Col xs={6}>
-            <h2>
-              Program
-            </h2>
+            <h2>{t('PROGRAM')}</h2>
           </Col>
           <Col xs={6} className='text-right'>
             <Button
@@ -127,53 +150,59 @@ function Program ({ eventsList, tagsList, themesList }) {
               aria-controls='searchEvent'
               aria-expanded={open}
             >
-              Søg i events
+              {t('SEARCH_EVENTS')}
             </Button>
           </Col>
           <Col xs={12}>
-            <Collapse
-              in={open}
-              className='bg-light p-3 rounded-sm'
-            >
+            <Collapse in={open} className='bg-light p-3 rounded-sm'>
               <div id='searchEvent' className='searchEvent'>
                 <SearchBox value={searchText} onChange={handleSearch} />
 
                 <div className='mb-3'>
-                  {tags && (
-                    <TagList
-                      title='Emner'
-                      items={tags}
-                      textProperty='name'
+                  {themes && (
+                    <BadgeList
+                      title={t('THEMES')}
+                      items={themes}
+                      textProperty='title'
                       valueProperty='id'
-                      selectedItem={selectedTag}
-                      onTagSelect={handleTagSelect}
+                      selectedItem={selectedTheme}
+                      onItemSelect={handleThemeSelect}
                     />
                   )}
                 </div>
-
-                {themes && (
-                  <TagList
-                    title='Temaer'
-                    items={themes}
-                    textProperty='title'
+                {tags && (
+                  <BadgeList
+                    title={t('TAGS')}
+                    items={tags}
+                    textProperty='name'
                     valueProperty='id'
-                    selectedItem={selectedTheme}
-                    onTagSelect={handleThemeSelect}
+                    selectedItem={selectedTag}
+                    onItemSelect={handleTagSelect}
                   />
                 )}
-
               </div>
             </Collapse>
             <p className='text-muted mt-3'>{eventString}</p>
+            {days && days.length > 2 && (
+              <div className='mb-3'>
+                <BadgeList
+                  items={days}
+                  textProperty='name'
+                  valueProperty='id'
+                  selectedItem={selectedDay}
+                  onItemSelect={handleDaySelect}
+                />
+              </div>
+            )}
             {dates.map((date) => (
               <ProgramList
-                key={date.date}
-                events={filteredEvents.filter(
-                  (event) => event.startDate === date.date
-                )}
+                key={date.id}
+                events={filteredEvents.filter((event) => {
+                  return event.startDate === date.id
+                })}
                 onLike={handleLike}
-                date={date.date}
-                day={date.day}
+                date={getDate(date.date, context.language.get)}
+                day={getDay(date.date, context.language.get)}
               />
             ))}
           </Col>

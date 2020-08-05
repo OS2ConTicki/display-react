@@ -19,7 +19,7 @@
         },
         "attributes": {
             "langcode": "en",
-            "title": "The first event",
+            "title": "Uddannet fra DPU – hvad så nu?",
             "created": "2020-07-20T13:16:44+00:00",
             "changed": "2020-07-20T13:16:44+00:00",
             "promote": true,
@@ -32,11 +32,11 @@
                     "height": 600
                 }
             },
-            "summary": null,
-            "description": "This is the first event in <emph>the conference</emph>.",
-            "start_time": "2001-01-01T12:00:00+00:00",
-            "end_time": "2001-01-01T13:00:00+00:00"
-        },
+            "summary": "Mød dine fremtidige arbejdsgivere",
+            "description": "Som cand.pæd. har du typisk en unik profil, hvor du kan koble praksiserfaring med et akademisk afsæt. Men hvordan får du arbejdsgivere til at se lige præcis dét potentiale?</br>På dette arrangement vil du møde arbejdsgivere, som fortæller om ansættelsesprocedurer og giver gode råd. Få samtidig inspiration fra en række cand.pæd’er i job, der kommer og fortæller om deres karrierevalg og -veje. Online deltagelse er muligt.",
+            "start_time": "2020-10-19T14:00:00+00:00",
+            "end_time": "2020-10-19T17:00:00+00:00"
+    },
         "relationships": {
             "conference": {
                 "data": {
