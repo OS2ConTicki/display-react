@@ -42,6 +42,7 @@ $enable-responsive-font-sizes: true;
 @import "~bootstrap/scss/badge";
 @import "~bootstrap/scss/alert";
 @import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
 
@@ -49,6 +50,7 @@ $enable-responsive-font-sizes: true;
 
 @import "nav";
 @import "top";
+@import "app-install-banner";
 
 .scroll-offset-class {
   margin-top: -55px;
