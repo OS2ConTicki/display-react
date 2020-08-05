@@ -4,8 +4,7 @@ import Badge from './common/badge'
 function BadgeList ({ title, items, onItemSelect, valueProperty, selectedItem }) {
   return (
     <>
-      <h3 className='mb-0'>{title}</h3>
-
+      {title && <h3 className='mb-0'>{title}</h3>}
       {items.map((item) => (
         <span key={item[valueProperty]}>
           <Badge

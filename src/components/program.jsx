@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col'
 import Collapse from 'react-bootstrap/Collapse'
 import Container from 'react-bootstrap/Container'
 import { useTranslate } from 'react-translate'
-import { getDay, getDate } from './utils/dateHandler'
+import { getDayByLanguage, getDateByLanguage } from './utils/dateHandler'
 import AppStateContext from '../context/appStateContext'
 
 function Program ({ eventsList, tagsList, themesList }) {
@@ -28,24 +28,26 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [dates] = useState(getDates())
   const [days] = useState([allEventsDay, ...getDays()])
   const [open, setOpen] = useState(false)
+
   function getDates () {
     const returnDatesArray = []
     events.forEach((event) => {
       returnDatesArray.push({
-        date: getDate(event.start_time, context.language.get),
-        day: getDay(event.start_time, context.language.get),
+        displayDate: getDateByLanguage(event.start_time, context.language.get),
+        displayDay: getDayByLanguage(event.start_time, context.language.get),
+        date: event.start_time,
         id: event.startDate
       })
     })
     return _.uniqBy(returnDatesArray, function (date) {
-      return date.date
+      return date.id
     })
   }
   function getDays () {
     const days = []
     const dates = getDates()
     dates.forEach((date) => {
-      days.push(date.day)
+      days.push({ id: date.id, title: `${date.displayDay} ${date.displayDate}` })
     })
     return days
   }
@@ -201,8 +203,8 @@ function Program ({ eventsList, tagsList, themesList }) {
                   return event.startDate === date.id
                 })}
                 onLike={handleLike}
-                date={getDate(date.date, context.language.get)}
-                day={getDay(date.date, context.language.get)}
+                date={getDateByLanguage(date.date, context.language.get)}
+                day={getDayByLanguage(date.date, context.language.get)}
               />
             ))}
           </Col>

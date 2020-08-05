@@ -1,5 +1,5 @@
 
-export function getDate (inputDate, language) {
+export function getDateByLanguage (inputDate, language) {
   const date = new Date(inputDate)
   const lang = language === 'en' ? 'en-EN' : 'da-DA'
   const dateOptions = {
@@ -9,7 +9,12 @@ export function getDate (inputDate, language) {
   }
   return date.toLocaleDateString(lang, dateOptions)
 }
-export function getDay (inputDate, language) {
+
+export function getDate (inputDate) {
+  const date = new Date(inputDate)
+  return date.toDateString()
+}
+export function getDayByLanguage (inputDate, language) {
   const lang = language === 'en' ? 'en-EN' : 'da-DA'
   const dayOptions = {
     weekday: 'long'

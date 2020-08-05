@@ -16,7 +16,7 @@ export function mapElement (element) {
 export function mapEvent (event, locations) {
   event.attributes.liked = window.localStorage.getItem(event.id) === 'true'
   event.attributes.id = event.id
-  event.attributes.startDate = getDate(event.attributes.start_time, 'da')
+  event.attributes.startDate = getDate(event.attributes.start_time)
   event.attributes.isEventDone = isEventDone(event.attributes.end_time)
   const tagIds = []
   if (event.relationships.tags.data) {
