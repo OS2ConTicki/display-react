@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
 
-
 function Footer () {
   const context = useContext(AppStateContext)
 
@@ -17,7 +16,7 @@ function Footer () {
             <p className='text-light mt-2'>OS2Contiki - Conference and ticket management</p>
           </Col>
           <Col md={6}>
-            <Nav variant="pills" defaultActiveKey="/home">
+            <Nav variant='pills' defaultActiveKey='/home'>
               <Nav.Item>
                 <Nav.Link className='disabled text-light'>Vælg sprog:</Nav.Link>
               </Nav.Item>
