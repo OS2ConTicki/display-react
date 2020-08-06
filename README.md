@@ -46,7 +46,7 @@ Or get it directly from a cdn:
     <script>
      ConferenceApp.render({
        element: document.getElementById('app'),
-       basename: '/my-conference,
+       basename: '/my-conference',
        // Url to conference api.
        url: '…'
      })
