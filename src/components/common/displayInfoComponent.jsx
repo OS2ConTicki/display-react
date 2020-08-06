@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col'
 function DisplayInfoComponent ({ title, description, image, ticketUrl }) {
   return (
     <>
-      <Row className='top scroll-offset-class mb-3'>
+      <Row className='top scroll-offset-class'>
         <Container className='my-md-5'>
           <Row>
             <Col xs={12} md={7} className='my-5'>
@@ -27,10 +27,10 @@ function DisplayInfoComponent ({ title, description, image, ticketUrl }) {
           </Row>
         </Container>
       </Row>
-      <Row className='my-3'>
+      <Row className='py-3 bg-light'>
         <Container>
           <Row>
-            <Col xs={12} className='d-flex justify-content-center mt-3'>
+            <Col xs={12} className='d-flex mt-3'>
               <ReactHtml html={description} />
             </Col>
           </Row>
