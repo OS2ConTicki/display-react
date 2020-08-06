@@ -12,6 +12,7 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import Alert from 'react-bootstrap/Alert'
 import { TranslatorProvider } from 'react-translate'
+import Footer from './components/footer'
 
 function App (props) {
   const [conference, setConference] = useState()
@@ -177,6 +178,7 @@ function App (props) {
               <Redirect from='/' to='/konference' />
             </Switch>
           </Container>
+          <Footer />
           {isIos() && !isInStandaloneMode() &&
             <AppInstallBanner />}
         </AppStateContext.Provider>}
