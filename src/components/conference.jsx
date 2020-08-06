@@ -10,7 +10,7 @@ function Conference (props) {
 
   return (
     <>
-      <div>
+      <div className='mb-5'>
         {context.conference.get && (
           <ConferenceInfo />
         )}

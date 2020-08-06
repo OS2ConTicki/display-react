@@ -2,10 +2,10 @@
   "entrypoints": {
     "entry": {
       "css": [
-        "http://localhost:8888/dist/entry.css"
+        "/dist/entry.css"
       ],
       "js": [
-        "http://localhost:8888/dist/entry.js"
+        "/dist/entry.js"
       ]
     }
   }

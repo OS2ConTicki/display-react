@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import AppStateContext from '../context/appStateContext'
+import Appicon from '../images/appsymbol.svg'
+
 const NavBar = () => {
   const context = useContext(AppStateContext)
 
@@ -37,6 +39,7 @@ const NavBar = () => {
   return (
     <nav className='main-navigation sticky-top' role='navigation'>
       <ul className='nav justify-content-center '>
+        <li><img src={Appicon} alt='' style={{ height: 40 }} className='nav-link' /></li>
         {navbarItems.map((navItem) => (
           <li className='nav-item' key={navItem.to}>
             <HashLink smooth to={navItem.to} className='nav-link text-light'>

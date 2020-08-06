@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import NavBar from './components/navBar'
+import AppInstallBanner from './components/appInstallBanner'
 import { Route, Redirect, Switch } from 'react-router-dom'
 import EntityMapper from './components/entityMapper'
 import Conference from './components/conference'
@@ -153,6 +154,14 @@ function App (props) {
       )
   }, [])
 
+  // Detects if device is on iOS
+  const isIos = () => {
+    const userAgent = window.navigator.userAgent.toLowerCase()
+    return /iphone|ipad|ipod/.test(userAgent)
+  }
+  // Detects if device is in standalone mode
+  const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone)
+
   return (
     <TranslatorProvider translations={translations}>
       {!loading && !error &&
@@ -168,6 +177,8 @@ function App (props) {
               <Redirect from='/' to='/konference' />
             </Switch>
           </Container>
+          {isIos() && !isInStandaloneMode() &&
+            <AppInstallBanner />}
         </AppStateContext.Provider>}
       {loading &&
         <FontAwesomeIcon

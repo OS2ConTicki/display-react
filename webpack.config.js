@@ -69,16 +69,17 @@ Encore
   .autoProvidejQuery()
 
   // uncomment if you use API Platform Admin (composer req api-admin)
-  .enableReactPreset();
+  .enableReactPreset()
 // .addEntry('admin', './assets/js/admin.js')
 
-// Enable copy of static assets
-// .copyFiles({
-//   from: './assets/images',
-//   // if versioning is enabled, add the file hash too
-//   to: 'images/[path][name].[hash:8].[ext]',
-//   // only copy files matching this pattern
-//   pattern: /\.(png|jpg|jpeg)$/
-// })
+  // Enable copy of static assets
+  .copyFiles({
+    from: './src/images',
+    // if versioning is enabled, add the file hash too
+    //to: 'images/[path][name].[hash:8].[ext]',
+    to: 'images/[path][name].[ext]',
+    // only copy files matching this pattern
+    pattern: /\.(png|jpg|jpeg)$/
+  })
 
 module.exports = Encore.getWebpackConfig();
