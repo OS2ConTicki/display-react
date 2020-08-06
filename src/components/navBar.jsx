@@ -47,9 +47,6 @@ const NavBar = () => {
             </HashLink>
           </li>
         ))}
-        <li className='nav-item' onClick={() => context.language.set('da')}><a className='nav-link text-light'>dansk</a></li>
-        <li className='nav-item' onClick={() => context.language.set('en')}><a className='nav-link text-light'>engelsk</a></li>
-
       </ul>
     </nav>
   )
