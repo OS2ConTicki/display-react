@@ -7,13 +7,15 @@ import fallBackImage from '../../images/fallBackImage.svg'
 
 function Actor ({ actor }) {
   return (
-    <Col xs={6} md={4}>
+    <Col xs={12} md={4} className='mb-3'>
       <Card className='h-100'>
-        <Card.Img
-          variant='top'
-          src={actor.image?.url || fallBackImage}
-          alt={actor.image?.meta.alt || ''}
-        />
+        <div className='image-square'>
+          <Card.Img
+            variant='top'
+            src={actor.image?.url || fallBackImage}
+            alt={actor.image?.meta.alt || ''}
+          />
+        </div>
         <Card.Body>
           <Card.Title>
             <Link to={`/${actor.type}/${actor.id}`}>{actor.title}</Link>
