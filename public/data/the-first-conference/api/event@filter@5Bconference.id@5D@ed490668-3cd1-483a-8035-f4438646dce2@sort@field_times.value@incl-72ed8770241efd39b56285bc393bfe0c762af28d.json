@@ -36,7 +36,11 @@
                 "summary": "En workshop om personlighedsprofiler",
                 "description": "Workshop om personlighedsprofiler - I vil få tilbudt at udfylde en profil og får umiddelbar feedback på denne samt en introduktion til, hvordan den anvendes i jobsøgningssammenhæng. Udbyttet vil være en øget indsigt i egne personlige kompetencer og motivation. Mere uddybende får du som deltager indsigt i <ul><li>Egen personlighedsprofil – hvem er du, når du er på arbejde?</li><li>Grundlæggende motivation – hvad betyder motivation for, hvad du tilbyder og leverer?</li><li>Det gode karrierevalg – hvordan giver du dig selv mulighed for at levere de bedste resultater på kort og lang sigt?</li></ul>            Kom frisk og bliv klogere på dig selv! Workshoppen faciliteres af Potential in Action.",
                 "start_time": "2020-10-19T09:00:00+00:00",
-                "end_time": "2020-10-19T12:00:00+00:00"
+                "end_time": "2020-10-19T12:00:00+00:00",
+                "ticket": {
+                    "url": "https://dummyimage.com/600x400/000/fff&text=Event%20ticket",
+                    "text": "Buy ticket for this event"
+                }
             },
             "relationships": {
                 "conference": {

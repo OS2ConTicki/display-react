@@ -91,50 +91,32 @@ function App (props) {
       .then((response) => response.json())
       .then((data) => {
         if (conference !== null) {
-          const allIncludedElements = []
-          const events = []
-
-          if (data.included) {
-            data.included.forEach((includedData) => {
-              allIncludedElements.push(mapElement(includedData))
-            })
-          }
-          setThemes(
-            allIncludedElements.filter((included) => included.type === 'theme')
-          )
-          setTags(
-            allIncludedElements.filter((included) => included.type === 'tag')
-          )
-          setSpeakers(
-            allIncludedElements.filter(
-              (included) => included.type === 'speaker'
-            )
-          )
-          setOrganizers(
-            allIncludedElements.filter(
-              (included) => included.type === 'organizer'
-            )
-          )
-          setSponsors(
-            allIncludedElements.filter(
-              (included) => included.type === 'sponsor'
-            )
-          )
-          setLocations(
-            allIncludedElements.filter(
-              (included) => included.type === 'location'
-            )
-          )
-          data.data.forEach((event) => {
-            events.push(
-              mapEvent(
-                event,
-                allIncludedElements.filter(
-                  (included) => included.type === 'location'
-                )
+          const allIncludedElements = data.included ? data.included.map(mapElement) : []
+          const events = data.data.map(
+            event => mapEvent(event,
+              allIncludedElements.filter(
+                included => included.type === 'location'
               )
             )
-          })
+          )
+          setThemes(
+            allIncludedElements.filter(included => included.type === 'theme')
+          )
+          setTags(
+            allIncludedElements.filter(included => included.type === 'tag')
+          )
+          setSpeakers(
+            allIncludedElements.filter(included => included.type === 'speaker')
+          )
+          setOrganizers(
+            allIncludedElements.filter(included => included.type === 'organizer')
+          )
+          setSponsors(
+            allIncludedElements.filter(included => included.type === 'sponsor')
+          )
+          setLocations(
+            allIncludedElements.filter(included => included.type === 'location')
+          )
           setEvents(events)
           setLoading(false)
         }

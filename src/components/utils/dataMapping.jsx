@@ -9,7 +9,7 @@ export function mapElement (element) {
     description: element.attributes.description,
     image: element.attributes.image,
     summary: element.attributes.summary,
-    ticketUrl: element.attributes.ticket
+    ticket: element.attributes.ticket
   }
 }
 
