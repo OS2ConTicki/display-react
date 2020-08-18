@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import NavBar from './components/navBar'
 import AppInstallBanner from './components/appInstallBanner'
-import { Route, Redirect, Switch } from 'react-router-dom'
-import EntityMapper from './components/entityMapper'
+import { Route, Switch, useParams } from 'react-router-dom'
 import Conference from './components/conference'
 import AppStateContext from './context/appStateContext'
-import { mapEvent, mapElement } from './components/utils/dataMapping'
+import { mapElement, mapEvent } from './components/utils/dataMapping'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import Container from 'react-bootstrap/Container'
@@ -13,6 +12,14 @@ import Col from 'react-bootstrap/Col'
 import Alert from 'react-bootstrap/Alert'
 import { TranslatorProvider } from 'react-translate'
 import Footer from './components/footer'
+import Event from './components/event/Event'
+import EventList from './components/event/EventList'
+import Organizer from './components/organizer/Organizer'
+import OrganizerList from './components/organizer/OrganizerList'
+import Speaker from './components/speaker/Speaker'
+import SpeakerList from './components/speaker/SpeakerList'
+import Sponsor from './components/sponsor/Sponsor'
+import SponsorList from './components/sponsor/SponsorList'
 
 function App (props) {
   const [conference, setConference] = useState()
@@ -163,6 +170,66 @@ function App (props) {
   // Detects if device is in standalone mode
   const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator.standalone)
 
+  const ShowEvent = () => {
+    const context = useContext(AppStateContext)
+    const { id } = useParams()
+    const event = context.events.get.find(event => event.id === id)
+
+    return <Event event={event} />
+  }
+
+  const ListEvent = () => {
+    const context = useContext(AppStateContext)
+    const events = context.events.get
+
+    return <EventList events={events} />
+  }
+
+  const ShowOrganizer = () => {
+    const context = useContext(AppStateContext)
+    const { id } = useParams()
+    const organizer = context.organizers.get.find(organizer => organizer.id === id)
+
+    return <Organizer organizer={organizer} />
+  }
+
+  const ListOrganizer = () => {
+    const context = useContext(AppStateContext)
+    const organizers = context.organizers.get
+
+    return <OrganizerList organizers={organizers} />
+  }
+
+  const ShowSpeaker = () => {
+    const context = useContext(AppStateContext)
+    const { id } = useParams()
+    const speaker = context.speakers.get.find(speaker => speaker.id === id)
+
+    return <Speaker speaker={speaker} />
+  }
+
+  const ListSpeaker = () => {
+    const context = useContext(AppStateContext)
+    const speakers = context.speakers.get
+
+    return <SpeakerList speakers={speakers} />
+  }
+
+  const ShowSponsor = () => {
+    const context = useContext(AppStateContext)
+    const { id } = useParams()
+    const sponsor = context.sponsors.get.find(sponsor => sponsor.id === id)
+
+    return <Sponsor sponsor={sponsor} />
+  }
+
+  const ListSponsor = () => {
+    const context = useContext(AppStateContext)
+    const sponsors = context.sponsors.get
+
+    return <SponsorList sponsors={sponsors} />
+  }
+
   return (
     <TranslatorProvider translations={translations}>
       {!loading && !error &&
@@ -170,12 +237,16 @@ function App (props) {
           <NavBar />
           <Container fluid>
             <Switch>
-              <Route path='/konference' component={Conference} />
-              <Route path='/event/:id' component={EntityMapper} />
-              <Route path='/organizer/:id' component={EntityMapper} />
-              <Route path='/sponsor/:id' component={EntityMapper} />
-              <Route path='/speaker/:id' component={EntityMapper} />
-              <Redirect from='/' to='/konference' />
+              <Route path='/event/:id' component={ShowEvent} />
+              <Route path='/event' component={ListEvent} />
+              <Route path='/organizer/:id' component={ShowOrganizer} />
+              <Route path='/organizer' component={ListOrganizer} />
+              <Route path='/speaker/:id' component={ShowSpeaker} />
+              <Route path='/speaker' component={ListSpeaker} />
+              <Route path='/sponsor/:id' component={ShowSponsor} />
+              <Route path='/sponsor' component={ListSponsor} />
+              {/* Default: show conference */}
+              <Route path='*' component={Conference} />
             </Switch>
           </Container>
           <Footer />

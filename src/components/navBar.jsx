@@ -8,11 +8,11 @@ const NavBar = () => {
 
   const navbarItems = [
     {
-      to: '/konference#top',
-      label: 'Konference'
+      to: '/#top',
+      label: 'Home'
     },
     {
-      to: '/konference#program',
+      to: '/#program',
       label: 'Program'
     }
 
@@ -20,19 +20,19 @@ const NavBar = () => {
 
   if (context.speakers.get && context.speakers.get.length > 0) {
     navbarItems.push({
-      to: `/konference#${context.speakers.get[0].type}`,
+      to: `/${context.speakers.get[0].type}`,
       label: 'Talere'
     })
   }
   if (context.organizers.get && context.organizers.get.length > 0) {
     navbarItems.push({
-      to: `/konference#${context.organizers.get[0].type}`,
+      to: `/${context.organizers.get[0].type}`,
       label: 'Arrangører'
     })
   }
   if (context.sponsors.get && context.sponsors.get.length > 0) {
     navbarItems.push({
-      to: `/konference#${context.sponsors.get[0].type}`,
+      to: `/${context.sponsors.get[0].type}`,
       label: 'Sponsorer'
     })
   }
