@@ -1,42 +1,63 @@
-import _ from 'lodash'
 import { getDate } from './dateHandler'
 
-export function mapElement (element) {
-  return {
+export function mapElement (element, entities = {}) {
+  const data = {
     id: element.id,
-    title: element.attributes.title,
-    type: element.type,
-    description: element.attributes.description,
-    image: element.attributes.image,
-    summary: element.attributes.summary,
-    ticket: element.attributes.ticket
+    type: element.type
   }
+
+  // Map all attributes.
+  for (const [name, value] of Object.entries(element.attributes)) {
+    data[name] = value
+  }
+
+  // Expand all relationships.
+  if (entities && element.relationships) {
+    const getEntity = (item) => {
+      const { type, id } = item
+
+      return (entities[type] && entities[type][id]) ? entities[type][id] : null
+    }
+
+    for (const [name, relationship] of Object.entries(element.relationships)) {
+      if (relationship.data) {
+        data[name] = Array.isArray(relationship.data)
+          ? relationship.data.map(getEntity)
+          : getEntity(relationship.data)
+      }
+    }
+  }
+
+  return data
 }
 
-export function mapEvent (event, locations) {
-  event.attributes.liked = window.localStorage.getItem(event.id) === 'true'
-  event.attributes.id = event.id
-  event.attributes.startDate = getDate(event.attributes.start_time)
-  event.attributes.isEventDone = isEventDone(event.attributes.end_time)
-  const tagIds = []
-  if (event.relationships.tags.data) {
-    event.relationships.tags.data.forEach((tag) => {
-      tagIds.push(tag.id)
-    })
-  }
-  if (event.relationships.location.data) {
-    const location = _.find(locations, function (location) {
-      return location.id === event.relationships.location.data.id
-    })
-    event.attributes.location = location.title
-    event.attributes.locationId = location.id
-  }
-  event.attributes.tags = tagIds
-  event.attributes.theme = ''
-  if (event.relationships.themes.data) {
-    event.attributes.theme = event.relationships.themes.data.id
-  }
-  return event.attributes
+export function mapEvent (event, entities) {
+  const data = mapElement(event, entities)
+  data.liked = window.localStorage.getItem(event.id) === 'true'
+  data.id = event.id
+  data.startDate = getDate(data.start_time)
+  data.isEventDone = isEventDone(data.end_time)
+
+  // const tagIds = []
+  // if (event.relationships.tags.data) {
+  //   event.relationships.tags.data.forEach((tag) => {
+  //     tagIds.push(tag.id)
+  //   })
+  // }
+  // if (event.relationships.location.data) {
+  //   const location = _.find(locations, function (location) {
+  //     return location.id === event.relationships.location.data.id
+  //   })
+  //   data.location = location.title
+  //   data.locationId = location.id
+  // }
+  // data.tags = tagIds
+  // data.theme = ''
+  // if (event.relationships.themes.data) {
+  //   data.theme = event.relationships.themes.data.id
+  // }
+
+  return data
 }
 
 function isEventDone (inputDate) {

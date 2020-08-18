@@ -14,6 +14,8 @@ import { TranslatorProvider } from 'react-translate'
 import Footer from './components/footer'
 import Event from './components/event/Event'
 import EventList from './components/event/EventList'
+import Location from './components/location/Location'
+import LocationList from './components/location/LocationList'
 import Organizer from './components/organizer/Organizer'
 import OrganizerList from './components/organizer/OrganizerList'
 import Speaker from './components/speaker/Speaker'
@@ -91,32 +93,31 @@ function App (props) {
       .then((response) => response.json())
       .then((data) => {
         if (conference !== null) {
-          const allIncludedElements = data.included ? data.included.map(mapElement) : []
+          const included = data.included ?? []
+          // Group entities by type and index by id.
+          const entities = {}
+          for (const entity of included) {
+            if (typeof entities[entity.type] === 'undefined') {
+              entities[entity.type] = {}
+            }
+            entities[entity.type][entity.id] = entity
+          }
+          // Expand the entities
+          for (const map of Object.values(entities)) {
+            for (const [id, element] of Object.entries(map)) {
+              map[id] = mapElement(element, entities)
+            }
+          }
+
           const events = data.data.map(
-            event => mapEvent(event,
-              allIncludedElements.filter(
-                included => included.type === 'location'
-              )
-            )
+            event => mapEvent(event, entities)
           )
-          setThemes(
-            allIncludedElements.filter(included => included.type === 'theme')
-          )
-          setTags(
-            allIncludedElements.filter(included => included.type === 'tag')
-          )
-          setSpeakers(
-            allIncludedElements.filter(included => included.type === 'speaker')
-          )
-          setOrganizers(
-            allIncludedElements.filter(included => included.type === 'organizer')
-          )
-          setSponsors(
-            allIncludedElements.filter(included => included.type === 'sponsor')
-          )
-          setLocations(
-            allIncludedElements.filter(included => included.type === 'location')
-          )
+          setLocations(Object.values(entities.location ?? {}))
+          setOrganizers(Object.values(entities.organizer ?? {}))
+          setSpeakers(Object.values(entities.speaker ?? {}))
+          setSponsors(Object.values(entities.sponsor ?? {}))
+          setTags(Object.values(entities.tag ?? {}))
+          setThemes(Object.values(entities.theme ?? {}))
           setEvents(events)
           setLoading(false)
         }
@@ -165,6 +166,21 @@ function App (props) {
     const events = context.events.get
 
     return <EventList events={events} />
+  }
+
+  const ShowLocation = () => {
+    const context = useContext(AppStateContext)
+    const { id } = useParams()
+    const location = context.locations.get.find(location => location.id === id)
+
+    return <Location location={location} />
+  }
+
+  const ListLocation = () => {
+    const context = useContext(AppStateContext)
+    const locations = context.locations.get
+
+    return <LocationList locations={locations} />
   }
 
   const ShowOrganizer = () => {
@@ -221,6 +237,8 @@ function App (props) {
             <Switch>
               <Route path='/event/:id' component={ShowEvent} />
               <Route path='/event' component={ListEvent} />
+              <Route path='/location/:id' component={ShowLocation} />
+              <Route path='/location' component={ListLocation} />
               <Route path='/organizer/:id' component={ShowOrganizer} />
               <Route path='/organizer' component={ListOrganizer} />
               <Route path='/speaker/:id' component={ShowSpeaker} />
