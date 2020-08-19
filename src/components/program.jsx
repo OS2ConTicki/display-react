@@ -184,7 +184,8 @@ function Program ({ eventsList, tagsList, themesList }) {
                 )}
               </div>
             </Collapse>
-            <p className='text-muted mt-3'>{eventString}</p>
+            {totalCount === 0 &&
+              <p className='text-muted mt-3'>{eventString}</p>}
             {days && days.length > 2 && (
               <div className='mb-3'>
                 <BadgeList
