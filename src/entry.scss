@@ -80,3 +80,14 @@ button[aria-expanded="true"] {
     font-size: $font-size-base;
   }
 }
+
+.image-square {
+  @include media-breakpoint-up(md) {
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
+    img {
+      position:absolute;
+    }
+  }
+}
