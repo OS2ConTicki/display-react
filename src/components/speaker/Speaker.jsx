@@ -40,7 +40,9 @@ const Speaker = ({ speaker }) => {
           </Row>
         </Container>
       </Row>
-       {/* @TODO Show list of events for this speaker */}
+
+      {/* @TODO Show list of events for this speaker */}
+
     </div>
   )
 }
