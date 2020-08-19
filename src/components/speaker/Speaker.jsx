@@ -14,7 +14,7 @@ const Speaker = ({ speaker }) => {
       <Row className='top scroll-offset-class'>
         <Container className='my-md-5'>
           <Row>
-            <Col xs={12} md={7} className='my-5'>
+            <Col xs={12} md={7} className='mb-5'>
               <h1>{title}</h1>
             </Col>
             <Col xs={12} md={5} className='mb-3'>
@@ -40,10 +40,7 @@ const Speaker = ({ speaker }) => {
           </Row>
         </Container>
       </Row>
-
-      {/* @TODO Show list of events for this speaker */}
-
-      <pre>{JSON.stringify(speaker, null, 2)}</pre>
+       {/* @TODO Show list of events for this speaker */}
     </div>
   )
 }
