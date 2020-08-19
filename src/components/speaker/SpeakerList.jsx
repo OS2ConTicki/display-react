@@ -6,30 +6,36 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import fallBackImage from '../../images/fallBackImage.svg'
+import Container from 'react-bootstrap/esm/Container'
 
 const SpeakerList = ({ speakers }) => (
-  <Row className='speakers'>
-    {speakers.map(speaker => (
-      <Col xs={6} md={4} key={speaker.id}>
-        <Card className='speaker h-100'>
-          <Link to={`/speaker/${speaker.id}`}>
-            <Card.Img
-              variant='top'
-              src={speaker.image?.url || fallBackImage}
-              alt={speaker.image?.meta.alt || ''}
-            />
-          </Link>
-          <Card.Body>
-            <Card.Title>
-              <Link to={`/speaker/${speaker.id}`}>{speaker.title}</Link>
-            </Card.Title>
-            {speaker.description && <ReactHtml html={speaker.description} />}
-          </Card.Body>
-        </Card>
+  <Container className='my-md-5'>
+    <Row className='speakers'>
+      <Col xs={12} className='my-5'>
+        <h1>Speakers</h1>
       </Col>
-    )
-    )}
-  </Row>
+      {speakers.map(speaker => (
+        <Col xs={12} md={4} lg={3} key={speaker.id} className='mb-3'>
+          <Card className='speaker h-100'>
+            <Link to={`/speaker/${speaker.id}`} className='image-square'>
+              <Card.Img
+                variant='top'
+                src={speaker.image?.url || fallBackImage}
+                alt={speaker.image?.meta.alt || ''}
+              />
+            </Link>
+            <Card.Body>
+              <Card.Title>
+                <Link to={`/speaker/${speaker.id}`}>{speaker.title}</Link>
+              </Card.Title>
+              {speaker.description && <ReactHtml html={speaker.description} />}
+            </Card.Body>
+          </Card>
+        </Col>
+      )
+      )}
+    </Row>
+  </Container>
 )
 
 SpeakerList.propTypes = {
