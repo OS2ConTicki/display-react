@@ -8,7 +8,7 @@ import { getTime } from './utils/dateHandler'
 import AppStateContext from '../context/appStateContext'
 
 function Event ({ event, onLike }) {
-  const classes = event.isEventDone ? 'bg-dark' : 'bg-info'
+  const classes = event.isEventDone ? 'bg-light' : 'bg-info'
   const context = useContext(AppStateContext)
   return (
     <Card className={classes}>
@@ -24,13 +24,17 @@ function Event ({ event, onLike }) {
           </Col>
         </Row>
         <Row>
-          <Col xs={6}>
+          <Col xs={4}>
             <strong>
               {getTime(event.start_time, context.language.get)} :{' '}
               {getTime(event.end_time, context.language.get)}
             </strong>
           </Col>
-          <Col xs={6}>
+          <Col xs={4}>
+            {/* TODO: Event theme */}
+            <strong>Tema</strong>
+          </Col>
+          <Col xs={4}>
             <Link to={`location/${event.location.id}`}>
               <strong>{event.location.title}</strong>
             </Link>
