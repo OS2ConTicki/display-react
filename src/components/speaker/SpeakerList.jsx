@@ -8,14 +8,15 @@ import Card from 'react-bootstrap/Card'
 import fallBackImage from '../../images/fallBackImage.svg'
 import Container from 'react-bootstrap/esm/Container'
 
-const SpeakerList = ({ speakers }) => (
+const SpeakerList = ({ speakers, isSubElement }) => (
   <Container className='my-md-5'>
     <Row className='speakers'>
       <Col xs={12} className='my-5'>
-        {/speaker/.test(window.location.href) ? <h1>Speakers</h1> : <h2>Speakers</h2>}
+        {isSubElement ? <h2>Speakers</h2> : <h1>Speakers</h1>}
       </Col>
-      {speakers.map(speaker => (
-        <Col xs={12} md={4} lg={3} key={speaker.id} className='mb-3'>
+
+      {speakers.slice(0, isSubElement ? 3 : speakers.length).map(speaker => (
+        <Col xs={12} md={isSubElement ? 4 : 4} lg={isSubElement ? 4 : 3} key={speaker.id} className='mb-3'>
           <Card className='speaker h-100'>
             <Link to={`/speaker/${speaker.id}`} className='image-square'>
               <Card.Img
@@ -34,12 +35,18 @@ const SpeakerList = ({ speakers }) => (
         </Col>
       )
       )}
+      {isSubElement &&
+        <Col xs={12} className='my-5 text-center'>
+          {/* TODO: Translate */}
+          <a href='/speaker/' className='btn btn-primary btn-lg'>Se alle talere</a>
+        </Col>}
     </Row>
   </Container>
 )
 
 SpeakerList.propTypes = {
-  speakers: PropTypes.array.isRequired
+  speakers: PropTypes.array.isRequired,
+  isSubElement: PropTypes.bool
 }
 
 export default SpeakerList
