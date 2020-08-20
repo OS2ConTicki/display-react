@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "speaker",
+        "id": "ad2ed3f8-223a-48c2-81e9-7e172f3216d8",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/speaker/ad2ed3f8-223a-48c2-81e9-7e172f3216d8@resourceVersion@id@3A229.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Tina Skiffard",
+            "created": "2020-08-14T07:12:48+00:00",
+            "changed": "2020-08-17T07:43:01+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/Tina@20Skiffard.jpg",
+                "meta": {
+                    "alt": "Portræt Tina Skiffard",
+                    "title": "",
+                    "width": 365,
+                    "height": 237
+                }
+            },
+            "summary": null,
+            "description": "<p>Innovationskonsulent,&nbsp;Erhverv Aarhus og GATE</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/speaker/ad2ed3f8-223a-48c2-81e9-7e172f3216d8@resourceVersion@id@3A229.json"
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "speaker",
+        "id": "fd132d81-8b06-456b-b3bb-a280e5c1b55d",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/speaker/fd132d81-8b06-456b-b3bb-a280e5c1b55d@resourceVersion@id@3A234.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Marc Perera Christensen",
+            "created": "2020-08-14T06:33:48+00:00",
+            "changed": "2020-08-17T07:45:17+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/Marc.jpg",
+                "meta": {
+                    "alt": "Portræt Marc Perera Christensen",
+                    "title": "",
+                    "width": 600,
+                    "height": 600
+                }
+            },
+            "summary": null,
+            "description": "<p>Direktør,&nbsp;Erhverv Aarhus</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/speaker/fd132d81-8b06-456b-b3bb-a280e5c1b55d@resourceVersion@id@3A234.json"
+        }
+    }
+}

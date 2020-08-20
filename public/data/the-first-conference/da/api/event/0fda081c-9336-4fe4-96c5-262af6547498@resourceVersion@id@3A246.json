@@ -1,0 +1,103 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "0fda081c-9336-4fe4-96c5-262af6547498",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/event/0fda081c-9336-4fe4-96c5-262af6547498@resourceVersion@id@3A246.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Uddannet fra DPU – hvad så nu?",
+            "created": "2020-08-13T13:28:12+00:00",
+            "changed": "2020-08-18T11:58:24+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>Som cand.pæd. har du typisk en unik profil, hvor du kan koble praksiserfaring med et akademisk afsæt.<br />\nMen hvordan får du arbejdsgivere til at se lige præcis dét potentiale?<br />\nPå dette arrangement vil du møde arbejdsgivere, som fortæller om ansættelsesprocedurer og giver gode råd.<br />\nFå samtidig inspiration fra en række cand.pæd’er i job, der kommer og fortæller om deres karrierevalg og -veje.<br />\nOnline deltagelse er muligt.</p>\n",
+            "ticket": {
+                "url": "https://pretix.eu/jobcenter-aarhus/magistrene/",
+                "text": "Book plads til arrangementet"
+            },
+            "start_time": "2020-10-19T14:00:00+00:00",
+            "end_time": "2020-10-19T17:00:00+00:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/location/0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                    }
+                }
+            },
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "5a4f1956-b5d0-4e17-8263-3a1a46f2a57a"
+                    }
+                ]
+            },
+            "speakers": {
+                "data": [
+                    {
+                        "type": "speaker",
+                        "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            },
+            "tags": {
+                "data": [
+                    {
+                        "type": "tag",
+                        "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436"
+                    }
+                ]
+            },
+            "themes": {
+                "data": {
+                    "type": "theme",
+                    "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/event/0fda081c-9336-4fe4-96c5-262af6547498@resourceVersion@id@3A246.json"
+        }
+    }
+}

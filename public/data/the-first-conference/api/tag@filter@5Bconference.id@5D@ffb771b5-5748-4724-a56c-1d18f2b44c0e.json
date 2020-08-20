@@ -1,0 +1,77 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "type": "tag",
+            "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/tag/688a820b-cd6a-4e6e-b381-a7e15ba2365b@resourceVersion@id@3A215.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Workshop",
+                "created": "2020-08-17T07:20:46+00:00",
+                "changed": "2020-08-17T07:20:46+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "tag",
+            "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/tag/a68d50fa-bc34-4a0e-8337-c826fe93f436@resourceVersion@id@3A216.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Oplæg",
+                "created": "2020-08-17T07:21:13+00:00",
+                "changed": "2020-08-17T07:21:13+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/tag@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+        }
+    }
+}

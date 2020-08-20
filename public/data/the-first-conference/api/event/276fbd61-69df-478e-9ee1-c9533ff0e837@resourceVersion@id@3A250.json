@@ -1,0 +1,103 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "276fbd61-69df-478e-9ee1-c9533ff0e837",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A250.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "How to - Kaffemøde",
+            "created": "2020-08-14T07:10:15+00:00",
+            "changed": "2020-08-18T12:00:42+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>Netværk og kaffemøde går tit hånd-i-hånd, og selvom du sikkert kender til at værdien af at afholde gode kaffemøder, kan det være svært at komme i gang med det. Derfor faciliterer vi en workshop, som giver konkrete råd og vejledning til at komme i gang med kaffemøder samt faciliteret kaffemøde-øvelser.&nbsp;</p>\n",
+            "ticket": {
+                "url": "https://pretix.eu/jobcenter-aarhus/howtokaffemoede/",
+                "text": "Tilmeld dig workshoppen"
+            },
+            "start_time": "2020-10-23T10:00:00+00:00",
+            "end_time": "2020-10-23T12:00:00+00:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "715af720-70aa-4a2d-b288-5cec7499d8a1"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1"
+                    }
+                }
+            },
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "0462e4fd-9393-4c02-a470-203d9347b350"
+                    }
+                ]
+            },
+            "speakers": {
+                "data": [
+                    {
+                        "type": "speaker",
+                        "id": "ad2ed3f8-223a-48c2-81e9-7e172f3216d8"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            },
+            "tags": {
+                "data": [
+                    {
+                        "type": "tag",
+                        "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b"
+                    }
+                ]
+            },
+            "themes": {
+                "data": {
+                    "type": "theme",
+                    "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A250.json"
+        }
+    }
+}

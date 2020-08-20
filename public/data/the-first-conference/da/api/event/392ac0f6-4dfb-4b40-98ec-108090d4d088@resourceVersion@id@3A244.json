@@ -1,0 +1,107 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "392ac0f6-4dfb-4b40-98ec-108090d4d088",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/event/392ac0f6-4dfb-4b40-98ec-108090d4d088@resourceVersion@id@3A244.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "SMV’er - masser af potentielle jobmuligheder – hvordan finder jeg dem?",
+            "created": "2020-08-13T12:26:08+00:00",
+            "changed": "2020-08-18T11:56:41+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>Hvordan finder man virksomheder, der kan være relevant for uopfordrede ansøgninger? Her præsenterer vi vores redskaber til, hvordan man som jobsøger kommer forbi de mest kendte og dermed også søgte virksomheder og i stedet får kontakt til den store gruppe af SMV’er, der faktisk kan være mere relevante for ens jobsøgning.</p>\n",
+            "ticket": {
+                "url": "https://pretix.eu/jobcenter-aarhus/karriere-3/",
+                "text": "Book en plads til workshoppen"
+            },
+            "start_time": "2020-10-23T09:00:00+00:00",
+            "end_time": "2020-10-23T12:00:00+00:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "a1c1f7a2-6dac-470c-9391-a817e772be79"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79"
+                    }
+                }
+            },
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "3cc66c55-e42f-4efb-bcd4-809bbfbbc354"
+                    }
+                ]
+            },
+            "speakers": {
+                "data": [
+                    {
+                        "type": "speaker",
+                        "id": "79ced56c-d311-4fae-8124-c7cc355a3132"
+                    },
+                    {
+                        "type": "speaker",
+                        "id": "fedf2ddb-0727-4046-b1b3-e9f76745140c"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            },
+            "tags": {
+                "data": [
+                    {
+                        "type": "tag",
+                        "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436"
+                    }
+                ]
+            },
+            "themes": {
+                "data": {
+                    "type": "theme",
+                    "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/event/392ac0f6-4dfb-4b40-98ec-108090d4d088@resourceVersion@id@3A244.json"
+        }
+    }
+}

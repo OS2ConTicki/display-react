@@ -1,0 +1,1530 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "type": "event",
+            "id": "e91bd995-c87e-4e66-bc4f-903517e5945a",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/e91bd995-c87e-4e66-bc4f-903517e5945a@resourceVersion@id@3A245.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Personlighed, motivation & karriere",
+                "created": "2020-08-13T12:31:25+00:00",
+                "changed": "2020-08-18T11:57:25+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Workshop om personlighedsprofiler - I vil få tilbudt at udfylde en profil og får umiddelbar feedback på denne samt en introduktion til, hvordan den anvendes i jobsøgningssammenhæng. Udbyttet vil være en øget indsigt i egne personlige kompetencer og motivation. Mere uddybende får du som deltager indsigt i;</p>\n\n<ul>\n\t<li>Egen personlighedsprofil – hvem er du, når du er på arbejde?</li>\n\t<li>Grundlæggende motivation – hvad betyder motivation for, hvad du tilbyder og leverer?</li>\n\t<li>Det gode karrierevalg – hvordan giver du dig selv mulighed for at levere de bedste resultater på kort og lang sigt?</li>\n</ul>\n\n<p>Kom frisk og bliv klogere på dig selv!</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/karriere/",
+                    "text": "Book plads til workshoppen"
+                },
+                "start_time": "2020-10-19T09:00:00+00:00",
+                "end_time": "2020-10-19T12:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "a1c1f7a2-6dac-470c-9391-a817e772be79"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "3cc66c55-e42f-4efb-bcd4-809bbfbbc354"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "79ced56c-d311-4fae-8124-c7cc355a3132"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "0fda081c-9336-4fe4-96c5-262af6547498",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/0fda081c-9336-4fe4-96c5-262af6547498@resourceVersion@id@3A246.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Uddannet fra DPU – hvad så nu?",
+                "created": "2020-08-13T13:28:12+00:00",
+                "changed": "2020-08-18T11:58:24+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Som cand.pæd. har du typisk en unik profil, hvor du kan koble praksiserfaring med et akademisk afsæt.<br />\nMen hvordan får du arbejdsgivere til at se lige præcis dét potentiale?<br />\nPå dette arrangement vil du møde arbejdsgivere, som fortæller om ansættelsesprocedurer og giver gode råd.<br />\nFå samtidig inspiration fra en række cand.pæd’er i job, der kommer og fortæller om deres karrierevalg og -veje.<br />\nOnline deltagelse er muligt.</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/magistrene/",
+                    "text": "Book plads til arrangementet"
+                },
+                "start_time": "2020-10-19T14:00:00+00:00",
+                "end_time": "2020-10-19T17:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "5a4f1956-b5d0-4e17-8263-3a1a46f2a57a"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "618efd10-4c8e-4c0b-bbc1-227aca9e11ef",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/618efd10-4c8e-4c0b-bbc1-227aca9e11ef@resourceVersion@id@3A243.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "AJKS - opstartsplan, salg og pitch ",
+                "created": "2020-08-13T13:35:14+00:00",
+                "changed": "2020-08-18T11:55:34+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Denne workshop varer fire timer og har fokus på at få freelancere og selvstændige godt fra start.</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/ajks/",
+                    "text": "Book plads til workshoppen"
+                },
+                "start_time": "2020-10-20T11:00:00+00:00",
+                "end_time": "2020-10-20T15:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "715af720-70aa-4a2d-b288-5cec7499d8a1"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "c0c4c38b-25e6-4a9c-8b47-f1353cb4611c"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "816c2566-0750-4ae3-9b16-9c24f3e2ca1a"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "1b56aec2-afd2-49aa-a55b-4b6db1c3a5cd",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/1b56aec2-afd2-49aa-a55b-4b6db1c3a5cd@resourceVersion@id@3A249.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Se dine muligheder – hvor kunne jeg også være relevant?",
+                "created": "2020-08-14T07:24:54+00:00",
+                "changed": "2020-08-18T11:59:49+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Der er mange veje til drømmejobbet – kom til dette foredrag, hvor en virksomhed og en kandidat fortæller om deres oplevelser med at ansætte/søge uden for ”egne” traditionelle kandidater/områder.</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/karriere-2/",
+                    "text": "Tilmeld dig workshoppen"
+                },
+                "start_time": "2020-10-21T09:00:00+00:00",
+                "end_time": "2020-10-21T12:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "a1c1f7a2-6dac-470c-9391-a817e772be79"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "3cc66c55-e42f-4efb-bcd4-809bbfbbc354"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "fedf2ddb-0727-4046-b1b3-e9f76745140c"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "2f43cb09-0de8-49a8-9f40-d4d8560cb900",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/2f43cb09-0de8-49a8-9f40-d4d8560cb900@resourceVersion@id@3A247.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Nyuddannede: Netværk dig til dit næste job",
+                "created": "2020-08-14T06:36:52+00:00",
+                "changed": "2020-08-18T11:58:51+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Vidste du, at 65% af virksomhederne bruger deres netværk til at rekruttere nyuddannede?</p>\n\n<p>Du har sikkert hørt det utallige gange. Du skal netværke, netværke, netværke. Men hvordan kommer du i gang? Med netværksworkshoppen uddeler vi konkrete netværkstips og faciliterer netværksøvelser som sikrer, at du udvider dit netværk. Desuden inviterer vi en håndfuld virksomheder, som giver deres besyv med, hvad de lægger særlig vægt på, når de ansætter nye medarbejdere.</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/netvaerk/",
+                    "text": "Tilmeld dig workshoppen"
+                },
+                "start_time": "2020-10-21T10:10:00+00:00",
+                "end_time": "2020-10-21T12:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "715af720-70aa-4a2d-b288-5cec7499d8a1"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "0462e4fd-9393-4c02-a470-203d9347b350"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "fd132d81-8b06-456b-b3bb-a280e5c1b55d"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "c72189c4-9d7b-4206-9262-28822246a09c",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/c72189c4-9d7b-4206-9262-28822246a09c@resourceVersion@id@3A248.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Akademisk medarbejder, AC’er?",
+                "created": "2020-08-14T07:17:25+00:00",
+                "changed": "2020-08-18T11:59:19+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Kært barn har mange navne, men hvad betyder det egentlig at være ansat som akademisk medarbejder? Hvilke kompetencer efterspørges, og hvad lægger arbejdsgivere mon vægt på? Kom og få svar på alle dine spørgsmål til dette arrangement, hvor du vil møde både arbejdsgivere samt AC’ere med forskellige profiler og typer af arbejdsopgaver.</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/ac/",
+                    "text": "Tilmeld dig arrangementet"
+                },
+                "start_time": "2020-10-21T14:00:00+00:00",
+                "end_time": "2020-10-21T17:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "5a4f1956-b5d0-4e17-8263-3a1a46f2a57a"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "931efb1b-fdfe-46cd-bbbd-682b3035d87c"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "392ac0f6-4dfb-4b40-98ec-108090d4d088",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/392ac0f6-4dfb-4b40-98ec-108090d4d088@resourceVersion@id@3A244.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "SMV’er - masser af potentielle jobmuligheder – hvordan finder jeg dem?",
+                "created": "2020-08-13T12:26:08+00:00",
+                "changed": "2020-08-18T11:56:41+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Hvordan finder man virksomheder, der kan være relevant for uopfordrede ansøgninger? Her præsenterer vi vores redskaber til, hvordan man som jobsøger kommer forbi de mest kendte og dermed også søgte virksomheder og i stedet får kontakt til den store gruppe af SMV’er, der faktisk kan være mere relevante for ens jobsøgning.</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/karriere-3/",
+                    "text": "Book en plads til workshoppen"
+                },
+                "start_time": "2020-10-23T09:00:00+00:00",
+                "end_time": "2020-10-23T12:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "a1c1f7a2-6dac-470c-9391-a817e772be79"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "3cc66c55-e42f-4efb-bcd4-809bbfbbc354"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "79ced56c-d311-4fae-8124-c7cc355a3132"
+                        },
+                        {
+                            "type": "speaker",
+                            "id": "fedf2ddb-0727-4046-b1b3-e9f76745140c"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "276fbd61-69df-478e-9ee1-c9533ff0e837",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A250.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "How to - Kaffemøde",
+                "created": "2020-08-14T07:10:15+00:00",
+                "changed": "2020-08-18T12:00:42+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Netværk og kaffemøde går tit hånd-i-hånd, og selvom du sikkert kender til at værdien af at afholde gode kaffemøder, kan det være svært at komme i gang med det. Derfor faciliterer vi en workshop, som giver konkrete råd og vejledning til at komme i gang med kaffemøder samt faciliteret kaffemøde-øvelser.&nbsp;</p>\n",
+                "ticket": {
+                    "url": "https://pretix.eu/jobcenter-aarhus/howtokaffemoede/",
+                    "text": "Tilmeld dig workshoppen"
+                },
+                "start_time": "2020-10-23T10:00:00+00:00",
+                "end_time": "2020-10-23T12:00:00+00:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "715af720-70aa-4a2d-b288-5cec7499d8a1"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "0462e4fd-9393-4c02-a470-203d9347b350"
+                        }
+                    ]
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "ad2ed3f8-223a-48c2-81e9-7e172f3216d8"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": [
+                        {
+                            "type": "tag",
+                            "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b"
+                        }
+                    ]
+                },
+                "themes": {
+                    "data": {
+                        "type": "theme",
+                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "type": "conference",
+            "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A254.json"
+                },
+                "event": {
+                    "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value.json"
+                },
+                "speaker": {
+                    "href": "/data/the-first-conference/api/speaker@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                },
+                "organizer": {
+                    "href": "/data/the-first-conference/api/organizer@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                },
+                "tag": {
+                    "href": "/data/the-first-conference/api/tag@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                },
+                "theme": {
+                    "href": "/data/the-first-conference/api/theme@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                },
+                "location": {
+                    "href": "/data/the-first-conference/api/location@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                },
+                "sponsor": {
+                    "href": "/data/the-first-conference/api/sponsor@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                },
+                "all": {
+                    "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value@incl-35ad4d6b605bc11656547dbd691f8c4bbf46e458.json"
+                }
+            },
+            "attributes": {
+                "langcode": "da",
+                "title": "JOB BootCamp",
+                "created": "2020-08-13T12:13:15+00:00",
+                "changed": "2020-08-20T06:23:29+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/105413454_105260671243317_7587995258585147510_n.jpg",
+                    "meta": {
+                        "alt": "Logo for Job Bootcamp",
+                        "title": "",
+                        "width": 206,
+                        "height": 206
+                    }
+                },
+                "summary": null,
+                "description": "<p>Jobcenter Aarhus står i spidsen for JOB BootCamp 2020, hvor man i uge 43 samler aktørerne i en fælles indsats for at få dimittender hurtigt i job.</p>\n",
+                "start_time": "2020-10-19T00:00:00+00:00",
+                "end_time": "2020-10-23T23:59:59+00:00",
+                "app": {
+                    "primary_color": "#ffffff",
+                    "logo": "/data/the-first-conference/sites/default/files/2020-08/lorempixel-512x512-01.png",
+                    "icons": {
+                        "114x114": "/data/the-first-conference/sites/default/files/styles/app_icon_114x114/public/2020-08/lorempixel-512x512-01.png@itok@t3xQMnXl.json",
+                        "120x120": "/data/the-first-conference/sites/default/files/styles/app_icon_120x120/public/2020-08/lorempixel-512x512-01.png@itok@8p_5mOEl.json",
+                        "128x128": "/data/the-first-conference/sites/default/files/styles/app_icon_128x128/public/2020-08/lorempixel-512x512-01.png@itok@IBMLeJkY.json",
+                        "144x144": "/data/the-first-conference/sites/default/files/styles/app_icon_144x144/public/2020-08/lorempixel-512x512-01.png@itok@btgN3piH.json",
+                        "150x150": "/data/the-first-conference/sites/default/files/styles/app_icon_150x150/public/2020-08/lorempixel-512x512-01.png@itok@uQDBA1Br.json",
+                        "152x152": "/data/the-first-conference/sites/default/files/styles/app_icon_152x152/public/2020-08/lorempixel-512x512-01.png@itok@XveIfQ6J.json",
+                        "16x16": "/data/the-first-conference/sites/default/files/styles/app_icon_16x16/public/2020-08/lorempixel-512x512-01.png@itok@d8LEvWmG.json",
+                        "196x196": "/data/the-first-conference/sites/default/files/styles/app_icon_196x196/public/2020-08/lorempixel-512x512-01.png@itok@cI-xTOvh.json",
+                        "310x150": "/data/the-first-conference/sites/default/files/styles/app_icon_310x150/public/2020-08/lorempixel-512x512-01.png@itok@__tgbUqV.json",
+                        "310x310": "/data/the-first-conference/sites/default/files/styles/app_icon_310x310/public/2020-08/lorempixel-512x512-01.png@itok@Tfre57rK.json",
+                        "32x32": "/data/the-first-conference/sites/default/files/styles/app_icon_32x32/public/2020-08/lorempixel-512x512-01.png@itok@qWX5vxPk.json",
+                        "57x57": "/data/the-first-conference/sites/default/files/styles/app_icon_57x57/public/2020-08/lorempixel-512x512-01.png@itok@amdkxC4j.json",
+                        "60x60": "/data/the-first-conference/sites/default/files/styles/app_icon_60x60/public/2020-08/lorempixel-512x512-01.png@itok@89Nd942-.json",
+                        "70x70": "/data/the-first-conference/sites/default/files/styles/app_icon_70x70/public/2020-08/lorempixel-512x512-01.png@itok@A7XtHigb.json",
+                        "72x72": "/data/the-first-conference/sites/default/files/styles/app_icon_72x72/public/2020-08/lorempixel-512x512-01.png@itok@sygzsIRi.json",
+                        "76x76": "/data/the-first-conference/sites/default/files/styles/app_icon_76x76/public/2020-08/lorempixel-512x512-01.png@itok@PD6YnqyK.json",
+                        "96x96": "/data/the-first-conference/sites/default/files/styles/app_icon_96x96/public/2020-08/lorempixel-512x512-01.png@itok@22hB9hXR.json"
+                    }
+                }
+            },
+            "relationships": {
+                "organizers": {
+                    "data": [
+                        {
+                            "type": "organizer",
+                            "id": "abf0231c-a388-4f8f-b38f-750747ed7643"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": []
+                }
+            }
+        },
+        {
+            "type": "organizer",
+            "id": "abf0231c-a388-4f8f-b38f-750747ed7643",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/organizer/abf0231c-a388-4f8f-b38f-750747ed7643@resourceVersion@id@3A253.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Jobcenter Aarhus",
+                "created": "2020-08-13T12:16:05+00:00",
+                "changed": "2020-08-19T18:54:14+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Jobcenter.jpg",
+                    "meta": {
+                        "alt": "Logo Jobcenter Aarhus",
+                        "title": "",
+                        "width": 367,
+                        "height": 137
+                    }
+                },
+                "summary": null,
+                "description": "<p><em>Jobcenter Aarhus</em>&nbsp;når du er ledig. Hvad du skal gøre som ledig, afhænger først og fremmest af, om du er berettiget til dagpenge fra en a-kasse eller ej.</p>\n",
+                "website_url": "https://www.aarhus.dk/borger/job-og-ledighed/"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "location",
+            "id": "a1c1f7a2-6dac-470c-9391-a817e772be79",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79@resourceVersion@id@3A180.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Skanderborgvej",
+                "created": "2020-08-13T12:27:01+00:00",
+                "changed": "2020-08-13T12:27:01+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Skanderborgvej 213</p>\n\n<p>Viby 8260</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "location",
+            "id": "0cfb9def-f7aa-44c1-be29-2c82235053b3",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/location/0cfb9def-f7aa-44c1-be29-2c82235053b3@resourceVersion@id@3A185.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Åboulevarden",
+                "created": "2020-08-13T13:26:01+00:00",
+                "changed": "2020-08-13T13:26:01+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Magistrenes A-kasse</p>\n\n<p>Åboulevarden 23, 2</p>\n\n<p>8000 Aarhus C</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "location",
+            "id": "715af720-70aa-4a2d-b288-5cec7499d8a1",
+            "links": {
+                "self": {
+                    "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1?resourceVersion=id%3A166"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Dokk1",
+                "created": "2020-08-13T08:08:09+00:00",
+                "changed": "2020-08-13T08:08:20+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/dokk1_ex_01.jpg",
+                    "meta": {
+                        "alt": "Bygningen Dokk1",
+                        "title": "",
+                        "width": 1957,
+                        "height": 954
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a94bf801-6d08-44c2-980b-2be4c28b9567"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/a94bf801-6d08-44c2-980b-2be4c28b9567"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "organizer",
+            "id": "3cc66c55-e42f-4efb-bcd4-809bbfbbc354",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/organizer/3cc66c55-e42f-4efb-bcd4-809bbfbbc354@resourceVersion@id@3A194.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Potential in action",
+                "created": "2020-08-14T06:43:52+00:00",
+                "changed": "2020-08-14T06:44:04+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/PIA_1.jpg",
+                    "meta": {
+                        "alt": "Mand der holder oplæg for en gruppe",
+                        "title": "",
+                        "width": 813,
+                        "height": 540
+                    }
+                },
+                "summary": null,
+                "description": "<p>Potential in Action er specialiseret i coaching og karrierevejledning af nyuddannede akademikere og har arbejdet intensivt med området siden 2011. Det har givet os en stor indsigt i, hvordan man bygger bro mellem højtuddannede dimittender og det private erhvervsliv.</p>\n\n<p>I Potential in Action arbejder vi altid med det hele menneske. Ved at gå i dybden med dine faglige og personlige kompetencer hjælper vi dig med at finde og argumentere for din værdiskabelse som medarbejder, fx i en privat virksomhed.</p>\n\n<p>Vores tre workshops baserer sig på denne tilgang og vil især handle om at stille skarpt på din personlighed og motivation samt om at se nye jobmuligheder for din profil.</p>\n\n<p>Vi glæder os til at se dig til tre udbytterige dage – vi lover, at du får noget konkret med dig herfra!</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "organizer",
+            "id": "5a4f1956-b5d0-4e17-8263-3a1a46f2a57a",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/organizer/5a4f1956-b5d0-4e17-8263-3a1a46f2a57a@resourceVersion@id@3A191.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Magistrenes A-kasse",
+                "created": "2020-08-14T06:40:17+00:00",
+                "changed": "2020-08-14T06:40:29+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/ma-logo_0.png",
+                    "meta": {
+                        "alt": "Logo: Magistrenes A-kasse",
+                        "title": "",
+                        "width": 225,
+                        "height": 225
+                    }
+                },
+                "summary": null,
+                "description": "<p>Du er kommet til den rigtige a-kasse, hvis du har en baggrund inden for et af vores specialer: Humaniora, naturvidenskab, samfundsvidenskab, it, kommunikation, sundhed, psykologi og pædagogik.</p>\n\n<p>Det gælder, uanset om du er nyuddannet, lønmodtager, freelancer eller projektansat, eller du driver din egen virksomhed. Det er nemlig profilerne for vores 82.000 medlemmer – og ekspertisen hos vores rådgivere.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "organizer",
+            "id": "c0c4c38b-25e6-4a9c-8b47-f1353cb4611c",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/organizer/c0c4c38b-25e6-4a9c-8b47-f1353cb4611c@resourceVersion@id@3A192.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "AJKS - Arbejdsløshedskassen for Journalistisk, Kommunikation & Sprog",
+                "created": "2020-08-14T06:41:15+00:00",
+                "changed": "2020-08-14T06:41:24+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/AJKS_0.jpg",
+                    "meta": {
+                        "alt": "Logo: AJKS",
+                        "title": "",
+                        "width": 300,
+                        "height": 150
+                    }
+                },
+                "summary": null,
+                "description": "<p>AJKS er&nbsp;niche a-kassen, som er fagligt forankret og kender beskæftigelsesmulighederne indenfor kommunikation, medier og sprog bedre end nogen anden.&nbsp;&nbsp;&nbsp;</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "organizer",
+            "id": "0462e4fd-9393-4c02-a470-203d9347b350",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/organizer/0462e4fd-9393-4c02-a470-203d9347b350@resourceVersion@id@3A193.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Erhverv Aarhus",
+                "created": "2020-08-14T06:42:21+00:00",
+                "changed": "2020-08-14T06:42:31+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/erhverv-aarhus_0.png",
+                    "meta": {
+                        "alt": "Logo: Erhverv Aarhus",
+                        "title": "",
+                        "width": 1200,
+                        "height": 630
+                    }
+                },
+                "summary": null,
+                "description": "<p>Vi glæder os rigtig meget til Job BootCamp, og til at byde ind med konkrete netværks- og kaffemødetips. Vores workshops bygger på erfaringer fra byens største erhvervsnetværk Erhverv Aarhus. Desuden har vi gang i et innovationsprojekt GATE, som netop har til formål at bekæmpe den høje dimittendledighed.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "79ced56c-d311-4fae-8124-c7cc355a3132",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A231.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Søren Ø. Skadhede",
+                "created": "2020-08-13T12:20:30+00:00",
+                "changed": "2020-08-17T07:43:38+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/S@C3@B8ren.jpg",
+                    "meta": {
+                        "alt": "Portræt: Søren Skadhede",
+                        "title": "",
+                        "width": 200,
+                        "height": 200
+                    }
+                },
+                "summary": null,
+                "description": "<p>Seniorkonsulent,&nbsp;Potential in action</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A196.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Christopher Bering Baden",
+                "created": "2020-08-13T13:24:37+00:00",
+                "changed": "2020-08-14T06:51:10+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Christopher.jpg",
+                    "meta": {
+                        "alt": "Portræt: Christopher Bering Baden",
+                        "title": "",
+                        "width": 1610,
+                        "height": 1875
+                    }
+                },
+                "summary": null,
+                "description": "<p>Karriererådgiver, Magistrenes A-kasse&nbsp;Aarhus</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "816c2566-0750-4ae3-9b16-9c24f3e2ca1a",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A232.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Jens Braarup",
+                "created": "2020-08-13T13:32:38+00:00",
+                "changed": "2020-08-17T07:44:14+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Jens-Braarup-Jakob-Carlsen.jpg",
+                    "meta": {
+                        "alt": "Portræt: Jens Braarup",
+                        "title": "",
+                        "width": 392,
+                        "height": 587
+                    }
+                },
+                "summary": null,
+                "description": "<p>Karrierevejleder, Team for karriere og jobsøgning, AJKS - Arbejdsløshedskassen for journalistik, Kommunikation &amp; Sprog</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "fedf2ddb-0727-4046-b1b3-e9f76745140c",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/fedf2ddb-0727-4046-b1b3-e9f76745140c@resourceVersion@id@3A230.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Allan Nielsen",
+                "created": "2020-08-14T07:05:26+00:00",
+                "changed": "2020-08-17T07:43:21+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Allan_Nielsen.jpg",
+                    "meta": {
+                        "alt": "Portræt: Allan Nielsen",
+                        "title": "",
+                        "width": 250,
+                        "height": 250
+                    }
+                },
+                "summary": null,
+                "description": "<p>Seniorkonsulent,&nbsp;Potential in action</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "fd132d81-8b06-456b-b3bb-a280e5c1b55d",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/fd132d81-8b06-456b-b3bb-a280e5c1b55d@resourceVersion@id@3A234.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Marc Perera Christensen",
+                "created": "2020-08-14T06:33:48+00:00",
+                "changed": "2020-08-17T07:45:17+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Marc.jpg",
+                    "meta": {
+                        "alt": "Portræt Marc Perera Christensen",
+                        "title": "",
+                        "width": 600,
+                        "height": 600
+                    }
+                },
+                "summary": null,
+                "description": "<p>Direktør,&nbsp;Erhverv Aarhus</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "931efb1b-fdfe-46cd-bbbd-682b3035d87c",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/931efb1b-fdfe-46cd-bbbd-682b3035d87c@resourceVersion@id@3A228.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Jeanette Bach",
+                "created": "2020-08-14T07:20:22+00:00",
+                "changed": "2020-08-17T07:42:41+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Jeanette-Bach.jpg",
+                    "meta": {
+                        "alt": "Portræt: Jeanette Bach",
+                        "title": "",
+                        "width": 500,
+                        "height": 650
+                    }
+                },
+                "summary": null,
+                "description": "<p>Karriererådgiver,&nbsp;Magistrenes A-kasse Aarhus</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "ad2ed3f8-223a-48c2-81e9-7e172f3216d8",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/ad2ed3f8-223a-48c2-81e9-7e172f3216d8@resourceVersion@id@3A229.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Tina Skiffard",
+                "created": "2020-08-14T07:12:48+00:00",
+                "changed": "2020-08-17T07:43:01+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Tina@20Skiffard.jpg",
+                    "meta": {
+                        "alt": "Portræt Tina Skiffard",
+                        "title": "",
+                        "width": 365,
+                        "height": 237
+                    }
+                },
+                "summary": null,
+                "description": "<p>Innovationskonsulent,&nbsp;Erhverv Aarhus og GATE</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "tag",
+            "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/tag/688a820b-cd6a-4e6e-b381-a7e15ba2365b@resourceVersion@id@3A215.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Workshop",
+                "created": "2020-08-17T07:20:46+00:00",
+                "changed": "2020-08-17T07:20:46+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "tag",
+            "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/tag/a68d50fa-bc34-4a0e-8337-c826fe93f436@resourceVersion@id@3A216.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Oplæg",
+                "created": "2020-08-17T07:21:13+00:00",
+                "changed": "2020-08-17T07:21:13+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "theme",
+            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e@resourceVersion@id@3A240.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Den attraktive jobansøger",
+                "created": "2020-08-18T11:49:41+00:00",
+                "changed": "2020-08-18T11:49:41+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "theme",
+            "id": "db11d986-2486-4ae0-ba87-9cc17902d24f",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f@resourceVersion@id@3A242.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Iværksætteri",
+                "created": "2020-08-18T11:50:34+00:00",
+                "changed": "2020-08-18T11:50:34+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "theme",
+            "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c@resourceVersion@id@3A238.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Fremtidens arbejdsmarked",
+                "created": "2020-08-18T11:48:46+00:00",
+                "changed": "2020-08-18T11:48:46+00:00",
+                "promote": true
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@include@conference@2Cconfer-3882a5ef878d4dad446c56413d06a3face3f9cda.json"
+        }
+    }
+}
