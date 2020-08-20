@@ -8,7 +8,7 @@ import { format } from 'date-fns'
 
 const Event = ({ event, onLike }) => {
   // Unwrap the event object.
-  const { title, image, description, ticketUrl, startTime, endTime } = event
+  const { title, image, description, ticketUrl } = event
 
   return (
     <div className='event'>
@@ -36,7 +36,7 @@ const Event = ({ event, onLike }) => {
         <Container>
           <Row>
             {/* TODO: Fix timezone */}
-            <Col><p className='lead mb-0'>{format(new Date(startTime), 'eeee kk:mm')} to {format(new Date(endTime), 'kk:mm')}</p></Col>
+            <Col><p className='lead mb-0'>{format(new Date(event.start_time), 'eeee kk:mm')} to {format(new Date(event.end_time), 'kk:mm')}</p></Col>
             {ticketUrl && ticketUrl.url &&
               <Col className='mt-3 text-right'>
                 <a
