@@ -37,25 +37,31 @@ export function mapEvent (event, entities) {
   data.id = event.id
   data.startDate = getDate(data.start_time)
   data.isEventDone = isEventDone(data.end_time)
+  // event.themes may be an object!
+  if (data.themes && !Array.isArray(data.themes)) {
+    data.themes = [data.themes]
+  }
 
-  // const tagIds = []
-  // if (event.relationships.tags.data) {
-  //   event.relationships.tags.data.forEach((tag) => {
-  //     tagIds.push(tag.id)
-  //   })
-  // }
-  // if (event.relationships.location.data) {
-  //   const location = _.find(locations, function (location) {
-  //     return location.id === event.relationships.location.data.id
-  //   })
-  //   data.location = location.title
-  //   data.locationId = location.id
-  // }
-  // data.tags = tagIds
-  // data.theme = ''
-  // if (event.relationships.themes.data) {
-  //   data.theme = event.relationships.themes.data.id
-  // }
+  // Build search string
+  const searchItems = [
+    data.title,
+    data.description,
+    data.location && data.location.title
+  ]
+  if (data.tags) {
+    searchItems.push(data.tags.map(tag => tag.title))
+  }
+  if (data.themes) {
+    searchItems.push(data.themes.map(theme => theme.title))
+  }
+  data.search =
+    // Flatten
+    [].concat(...searchItems)
+      .filter(value => !!value)
+      .join(' ')
+    // Strip tags
+      .replace(/(<([^>]+)>)/ig, '')
+      .toLocaleLowerCase()
 
   return data
 }

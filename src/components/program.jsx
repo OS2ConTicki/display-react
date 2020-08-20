@@ -27,7 +27,7 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [searchText, setSearchText] = useState('')
   const [dates] = useState(getDates())
   const [days] = useState([allEventsDay, ...getDays()])
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(!false)
 
   function getDates () {
     const returnDatesArray = []
@@ -91,25 +91,20 @@ function Program ({ eventsList, tagsList, themesList }) {
   function getPagedData () {
     let filteredEvents = [...events]
     if (searchText) {
+      const search = searchText.toLocaleLowerCase()
       filteredEvents = filteredEvents.filter(
-        (event) =>
-          event.title?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-          event.description?.toLowerCase().indexOf(searchText.toLowerCase()) >
-            -1 ||
-          event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-          event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-          event.location?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+        (event) => event.search && event.search.includes(search)
       )
     }
     if (selectedTag.id) {
       filteredEvents = filteredEvents.filter((event) => {
-        return event.tags.includes(selectedTag.id)
+        return event.tags && event.tags.filter(tag => tag.id === selectedTag.id).length > 0
       })
     }
 
     if (selectedTheme.id) {
       filteredEvents = filteredEvents.filter((event) => {
-        return event.theme === selectedTheme.id
+        return event.themes && event.themes.filter(theme => theme.id === selectedTheme.id).length > 0
       })
     }
 
