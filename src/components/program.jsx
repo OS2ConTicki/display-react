@@ -30,7 +30,7 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [searchText, setSearchText] = useState('')
   const [dates] = useState(getDates())
   const [days] = useState([allEventsDay, ...getDays()])
-  const [open, setOpen] = useState(!false)
+  const [open, setOpen] = useState(false)
   const [showMyEvents, setShowMyEvents] = useState(false)
 
   function getDates () {
@@ -156,6 +156,7 @@ function Program ({ eventsList, tagsList, themesList }) {
               onClick={() => setOpen(!open)}
               aria-controls='searchEvent'
               aria-expanded={open}
+              className='mt-2'
             >
               {t('SEARCH_EVENTS')}
             </Button>
@@ -188,8 +189,7 @@ function Program ({ eventsList, tagsList, themesList }) {
                 )}
               </div>
             </Collapse>
-            {totalCount === 0 &&
-              <p className='text-muted mt-3'>{eventString}</p>}
+
             {days && days.length > 2 && (
               <div className='mb-3'>
                 <BadgeList
@@ -212,7 +212,8 @@ function Program ({ eventsList, tagsList, themesList }) {
             >
               {showMyEvents ? t('Show all events') : t('Show my events')}
             </IconButton>
-
+            {totalCount === 0 &&
+              <p className='text-muted mt-3'>{eventString}</p>}
             {dates.map((date) => (
               <ProgramList
                 key={date.id}
