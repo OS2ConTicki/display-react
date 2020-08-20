@@ -30,7 +30,7 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [searchText, setSearchText] = useState('')
   const [dates] = useState(getDates())
   const [days] = useState([allEventsDay, ...getDays()])
-  const [open, setOpen] = useState(!false)
+  const [open, setOpen] = useState(false)
   const [showMyEvents, setShowMyEvents] = useState(false)
 
   function getDates () {
