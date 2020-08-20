@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "organizer",
+        "id": "0462e4fd-9393-4c02-a470-203d9347b350",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/organizer/0462e4fd-9393-4c02-a470-203d9347b350@resourceVersion@id@3A193.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Erhverv Aarhus",
+            "created": "2020-08-14T06:42:21+00:00",
+            "changed": "2020-08-14T06:42:31+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/erhverv-aarhus_0.png",
+                "meta": {
+                    "alt": "Logo: Erhverv Aarhus",
+                    "title": "",
+                    "width": 1200,
+                    "height": 630
+                }
+            },
+            "summary": null,
+            "description": "<p>Vi glæder os rigtig meget til Job BootCamp, og til at byde ind med konkrete netværks- og kaffemødetips. Vores workshops bygger på erfaringer fra byens største erhvervsnetværk Erhverv Aarhus. Desuden har vi gang i et innovationsprojekt GATE, som netop har til formål at bekæmpe den høje dimittendledighed.</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/organizer/0462e4fd-9393-4c02-a470-203d9347b350@resourceVersion@id@3A193.json"
+        }
+    }
+}

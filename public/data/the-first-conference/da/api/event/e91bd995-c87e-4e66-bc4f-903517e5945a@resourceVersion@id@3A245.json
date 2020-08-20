@@ -1,0 +1,103 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "e91bd995-c87e-4e66-bc4f-903517e5945a",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/event/e91bd995-c87e-4e66-bc4f-903517e5945a@resourceVersion@id@3A245.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Personlighed, motivation & karriere",
+            "created": "2020-08-13T12:31:25+00:00",
+            "changed": "2020-08-18T11:57:25+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>Workshop om personlighedsprofiler - I vil få tilbudt at udfylde en profil og får umiddelbar feedback på denne samt en introduktion til, hvordan den anvendes i jobsøgningssammenhæng. Udbyttet vil være en øget indsigt i egne personlige kompetencer og motivation. Mere uddybende får du som deltager indsigt i;</p>\n\n<ul>\n\t<li>Egen personlighedsprofil – hvem er du, når du er på arbejde?</li>\n\t<li>Grundlæggende motivation – hvad betyder motivation for, hvad du tilbyder og leverer?</li>\n\t<li>Det gode karrierevalg – hvordan giver du dig selv mulighed for at levere de bedste resultater på kort og lang sigt?</li>\n</ul>\n\n<p>Kom frisk og bliv klogere på dig selv!</p>\n",
+            "ticket": {
+                "url": "https://pretix.eu/jobcenter-aarhus/karriere/",
+                "text": "Book plads til workshoppen"
+            },
+            "start_time": "2020-10-19T09:00:00+00:00",
+            "end_time": "2020-10-19T12:00:00+00:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "a1c1f7a2-6dac-470c-9391-a817e772be79"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79"
+                    }
+                }
+            },
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "3cc66c55-e42f-4efb-bcd4-809bbfbbc354"
+                    }
+                ]
+            },
+            "speakers": {
+                "data": [
+                    {
+                        "type": "speaker",
+                        "id": "79ced56c-d311-4fae-8124-c7cc355a3132"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            },
+            "tags": {
+                "data": [
+                    {
+                        "type": "tag",
+                        "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b"
+                    }
+                ]
+            },
+            "themes": {
+                "data": {
+                    "type": "theme",
+                    "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/event/e91bd995-c87e-4e66-bc4f-903517e5945a@resourceVersion@id@3A245.json"
+        }
+    }
+}

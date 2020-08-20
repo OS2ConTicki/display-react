@@ -1,0 +1,103 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "618efd10-4c8e-4c0b-bbc1-227aca9e11ef",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/event/618efd10-4c8e-4c0b-bbc1-227aca9e11ef@resourceVersion@id@3A243.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "AJKS - opstartsplan, salg og pitch ",
+            "created": "2020-08-13T13:35:14+00:00",
+            "changed": "2020-08-18T11:55:34+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>Denne workshop varer fire timer og har fokus på at få freelancere og selvstændige godt fra start.</p>\n",
+            "ticket": {
+                "url": "https://pretix.eu/jobcenter-aarhus/ajks/",
+                "text": "Book plads til workshoppen"
+            },
+            "start_time": "2020-10-20T11:00:00+00:00",
+            "end_time": "2020-10-20T15:00:00+00:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "715af720-70aa-4a2d-b288-5cec7499d8a1"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1"
+                    }
+                }
+            },
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "c0c4c38b-25e6-4a9c-8b47-f1353cb4611c"
+                    }
+                ]
+            },
+            "speakers": {
+                "data": [
+                    {
+                        "type": "speaker",
+                        "id": "816c2566-0750-4ae3-9b16-9c24f3e2ca1a"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            },
+            "tags": {
+                "data": [
+                    {
+                        "type": "tag",
+                        "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b"
+                    }
+                ]
+            },
+            "themes": {
+                "data": {
+                    "type": "theme",
+                    "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/event/618efd10-4c8e-4c0b-bbc1-227aca9e11ef@resourceVersion@id@3A243.json"
+        }
+    }
+}

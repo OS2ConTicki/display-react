@@ -1,0 +1,46 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "theme",
+        "id": "427b436a-ac91-4820-afc4-2340ef1b1daf",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/theme/427b436a-ac91-4820-afc4-2340ef1b1daf@resourceVersion@id@3A241.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Internationalisering",
+            "created": "2020-08-18T11:50:01+00:00",
+            "changed": "2020-08-18T11:50:01+00:00",
+            "promote": true
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/theme/427b436a-ac91-4820-afc4-2340ef1b1daf@resourceVersion@id@3A241.json"
+        }
+    }
+}

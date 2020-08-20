@@ -9,11 +9,12 @@ import OrganizerTeaser from './organizer/OrganizerTeaser'
 function Conference (props) {
   const t = useTranslate('Conticki')
   const context = useContext(AppStateContext)
+  const conference = context.conference.get
 
   return (
     <>
       <div className='mb-5'>
-        {context.conference.get && (
+        {conference && (
           <ConferenceInfo />
         )}
         {context.events.get && context.tags.get && context.themes.get && (

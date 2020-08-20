@@ -87,27 +87,33 @@ function App (props) {
     }
   }
 
+  const getMappedEntities = (data, entities = {}) => {
+    const included = data.included ?? []
+    // Group entities by type and index by id.
+    for (const entity of included) {
+      if (typeof entities[entity.type] === 'undefined') {
+        entities[entity.type] = {}
+      }
+      entities[entity.type][entity.id] = entity
+    }
+    // Expand the entities
+    for (const map of Object.values(entities)) {
+      for (const [id, element] of Object.entries(map)) {
+        map[id] = mapElement(element, entities)
+      }
+    }
+
+    return entities
+  }
+
   const fetchOptions = { headers: { accept: 'application/json' } }
-  const fetchData = (url) => {
+  const fetchEvents = (url, entities) => {
     window.fetch(url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
         if (conference !== null) {
-          const included = data.included ?? []
-          // Group entities by type and index by id.
-          const entities = {}
-          for (const entity of included) {
-            if (typeof entities[entity.type] === 'undefined') {
-              entities[entity.type] = {}
-            }
-            entities[entity.type][entity.id] = entity
-          }
-          // Expand the entities
-          for (const map of Object.values(entities)) {
-            for (const [id, element] of Object.entries(map)) {
-              map[id] = mapElement(element, entities)
-            }
-          }
+          // Add entities related to the events.
+          entities = getMappedEntities(data, entities)
 
           const events = data.data.map(
             event => mapEvent(event, entities)
@@ -131,12 +137,14 @@ function App (props) {
     window.fetch(props.url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
-        setConference(mapElement(data.data))
+        const entities = getMappedEntities(data)
+        setConference(mapElement(data.data, entities))
         setLanguage(data.data.attributes.langcode)
         const allUrl = data?.data?.links?.all?.href
 
         if (allUrl) {
-          fetchData(allUrl)
+          // Pass along the entities related to the conference.
+          fetchEvents(allUrl, entities)
         }
       }).catch(() => {
         setError(true)

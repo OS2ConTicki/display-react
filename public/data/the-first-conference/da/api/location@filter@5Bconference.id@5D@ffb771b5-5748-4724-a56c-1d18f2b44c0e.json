@@ -1,0 +1,81 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "type": "location",
+            "id": "a1c1f7a2-6dac-470c-9391-a817e772be79",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/da/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79@resourceVersion@id@3A180.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Skanderborgvej",
+                "created": "2020-08-13T12:27:01+00:00",
+                "changed": "2020-08-13T12:27:01+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Skanderborgvej 213</p>\n\n<p>Viby 8260</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "location",
+            "id": "0cfb9def-f7aa-44c1-be29-2c82235053b3",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/da/api/location/0cfb9def-f7aa-44c1-be29-2c82235053b3@resourceVersion@id@3A185.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Åboulevarden",
+                "created": "2020-08-13T13:26:01+00:00",
+                "changed": "2020-08-13T13:26:01+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Magistrenes A-kasse</p>\n\n<p>Åboulevarden 23, 2</p>\n\n<p>8000 Aarhus C</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/location@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+        }
+    }
+}
