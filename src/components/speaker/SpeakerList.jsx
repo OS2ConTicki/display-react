@@ -12,7 +12,7 @@ const SpeakerList = ({ speakers }) => (
   <Container className='my-md-5'>
     <Row className='speakers'>
       <Col xs={12} className='my-5'>
-        <h1>Speakers</h1>
+        {/speaker/.test(window.location.href) ? <h1>Speakers</h1> : <h2>Speakers</h2>}
       </Col>
       {speakers.map(speaker => (
         <Col xs={12} md={4} lg={3} key={speaker.id} className='mb-3'>
