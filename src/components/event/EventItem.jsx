@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
-import Like from './common/like'
+import Like from '../common/like'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import { getTime } from './utils/dateHandler'
-import AppStateContext from '../context/appStateContext'
+import { getTime } from '../utils/dateHandler'
+import AppStateContext from '../../context/appStateContext'
 
 function Event ({ event, onLike }) {
   const classes = event.isEventDone ? 'bg-light' : 'bg-info'
@@ -32,7 +32,7 @@ function Event ({ event, onLike }) {
             </strong>
           </Col>
           <Col xs={4}>
-            <strong>{[themes].map(theme => (
+            <strong>{themes.map(theme => (
               <span key={theme.id}>{theme.title}</span>
             )
             )}

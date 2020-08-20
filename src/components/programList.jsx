@@ -1,6 +1,6 @@
 import React from 'react'
 import Row from 'react-bootstrap/Row'
-import Event from './event'
+import Event from './event/EventItem'
 import Col from 'react-bootstrap/Col'
 function ProgramList ({ events, onLike, date, day }) {
   return (
