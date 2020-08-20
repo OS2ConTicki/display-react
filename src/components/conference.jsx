@@ -5,7 +5,7 @@ import Program from './program'
 import AppStateContext from '../context/appStateContext'
 import { useTranslate } from 'react-translate'
 import OrganizerTeaser from './organizer/OrganizerTeaser'
-import SpeakerList from './speaker/SpeakerList'
+import SpeakerListPromoted from './speaker/SpeakerList'
 
 function Conference (props) {
   const t = useTranslate('Conticki')
@@ -26,7 +26,7 @@ function Conference (props) {
           />
         )}
 
-        {context.speakers.get.length > 0 && <SpeakerList title={t('SPEAKERS')} speakers={context.speakers.get} isSubElement />}
+        {context.speakers.get.length > 0 && <SpeakerListPromoted title={t('SPEAKERS')} speakers={context.speakers.get} />}
 
         <OrganizerTeaser />
 

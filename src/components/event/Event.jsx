@@ -73,7 +73,7 @@ const Event = ({ event, onLike }) => {
         <Row className='py-3'>
           <Container>
             <Row>
-              <SpeakerList speakers={event.speakers} isSubElement />
+              <SpeakerList speakers={event.speakers} />
             </Row>
           </Container>
         </Row>}
