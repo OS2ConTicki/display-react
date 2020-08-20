@@ -10,6 +10,7 @@ import AppStateContext from '../context/appStateContext'
 function Event ({ event, onLike }) {
   const classes = event.isEventDone ? 'bg-light' : 'bg-info'
   const context = useContext(AppStateContext)
+  const { themes } = event
   return (
     <Card className={classes}>
       <Card.Body>
@@ -31,8 +32,11 @@ function Event ({ event, onLike }) {
             </strong>
           </Col>
           <Col xs={4}>
-            {/* TODO: Event theme */}
-            <strong>Tema</strong>
+            <strong>{[themes].map(theme => (
+              <span key={theme.id}>{theme.title}</span>
+            )
+            )}
+            </strong>
           </Col>
           <Col xs={4}>
             <Link to={`location/${event.location.id}`}>
