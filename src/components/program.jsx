@@ -11,6 +11,9 @@ import Container from 'react-bootstrap/Container'
 import { useTranslate } from 'react-translate'
 import { getDayByLanguage, getDateByLanguage } from './utils/dateHandler'
 import AppStateContext from '../context/appStateContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons'
+import Badge from 'react-bootstrap/Badge'
 
 function Program ({ eventsList, tagsList, themesList }) {
   const t = useTranslate('Conticki')
@@ -151,10 +154,9 @@ function Program ({ eventsList, tagsList, themesList }) {
             </Button>
           </Col>
           <Col xs={12}>
-            <Collapse in={open} className='bg-light p-3 rounded-sm'>
-              <div id='searchEvent' className='searchEvent'>
+            <Collapse in={open} className='bg-light border p-3 rounded-sm'>
+              <div id='searchEvent' className='searchEvent mb-3'>
                 <SearchBox value={searchText} onChange={handleSearch} />
-
                 <div className='mb-3'>
                   {themes && (
                     <BadgeList
@@ -190,6 +192,15 @@ function Program ({ eventsList, tagsList, themesList }) {
                   selectedItem={selectedDay}
                   onItemSelect={handleDaySelect}
                 />
+                <Badge
+                  variant='primary'
+                  className='px-2 py-1 mr-1 mb-1'
+                  style={{ cursor: 'pointer' }}
+                >
+                  <FontAwesomeIcon
+                    icon={faHeartSolid}
+                  />
+                </Badge>
               </div>
             )}
             {dates.map((date) => (
