@@ -5,10 +5,13 @@ import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
 import { format } from 'date-fns'
+import OrganizerList from '../organizer/OrganizerList'
+import SpeakerList from '../speaker/SpeakerList'
+import SponsorList from '../sponsor/SponsorList'
 
 const Event = ({ event, onLike }) => {
   // Unwrap the event object.
-  const { title, image, description, ticketUrl } = event
+  const { title, image, description, ticketUrl, themes } = event
 
   return (
     <div className='event'>
@@ -35,8 +38,16 @@ const Event = ({ event, onLike }) => {
       <Row className='py-3 bg-light'>
         <Container>
           <Row>
-            {/* TODO: Fix timezone */}
-            <Col><p className='lead mb-0'>{format(new Date(event.start_time), 'eeee kk:mm')} to {format(new Date(event.end_time), 'kk:mm')}</p></Col>
+            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>Hvornår</strong>{format(new Date(event.start_time), 'eeee kk:mm')} to {format(new Date(event.end_time), 'kk:mm')}</p></Col>
+            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>Hvor</strong>{event.location.title}</p></Col>
+            <Col md={4}>
+              <p className='lead mb-0'><strong className='mr-3'>Tema</strong>
+                {[themes].map(theme => (
+                  <span key={theme.id}>{theme.title}</span>
+                )
+                )}
+              </p>
+            </Col>
             {ticketUrl && ticketUrl.url &&
               <Col className='mt-3 text-right'>
                 <a
@@ -55,9 +66,32 @@ const Event = ({ event, onLike }) => {
               <ReactHtml html={description} />
             </Col>
           </Row>
-
         </Container>
       </Row>
+      {event.speakers.length > 0 &&
+        <Row className='py-3'>
+          <Container>
+            <Row>
+              <SpeakerList speakers={event.speakers} />
+            </Row>
+          </Container>
+        </Row>}
+      {event.organizers.length > 0 &&
+        <Row className='py-3'>
+          <Container>
+            <Row>
+              <OrganizerList organizers={event.organizers} />
+            </Row>
+          </Container>
+        </Row>}
+      {event.sponsors.length > 0 &&
+        <Row className='py-3'>
+          <Container>
+            <Row>
+              <SponsorList sponsors={event.sponsors} />
+            </Row>
+          </Container>
+        </Row>}
 
       <pre>{JSON.stringify(event, null, 2)}</pre>
     </div>
