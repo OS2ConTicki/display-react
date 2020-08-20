@@ -13,7 +13,7 @@ const SpeakerList = ({ speakers, title }) => (
       </Col>
 
       {speakers.map(speaker => (
-        <Col xs={12} md={4} lg={3} key={speaker.id} className='mb-3'>
+        <Col xs={12} md={4} key={speaker.id} className='mb-3'>
           <SpeakerItem speaker={speaker} />
         </Col>
       )

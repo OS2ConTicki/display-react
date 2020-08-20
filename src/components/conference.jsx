@@ -1,20 +1,21 @@
 import React, { useContext } from 'react'
-import Actors from './actors'
 import ConferenceInfo from './conferenceInfo'
 import Program from './program'
 import AppStateContext from '../context/appStateContext'
 import { useTranslate } from 'react-translate'
 import OrganizerTeaser from './organizer/OrganizerTeaser'
-import SpeakerListPromoted from './speaker/SpeakerList'
+import SponsorTeaser from './sponsor/SponsorTeaser'
+import SpeakerListPromoted from './speaker/SpeakerListPromoted'
 
 function Conference (props) {
   const t = useTranslate('Conticki')
   const context = useContext(AppStateContext)
   const conference = context.conference.get
+  const promotedSpeakers = context.speakers.get.filter(speaker => speaker.promote)
 
   return (
     <>
-      <div className='mb-5'>
+      <div>
         {conference && (
           <ConferenceInfo />
         )}
@@ -25,14 +26,9 @@ function Conference (props) {
             themesList={context.themes.get}
           />
         )}
-
-        {context.speakers.get.length > 0 && <SpeakerListPromoted title={t('SPEAKERS')} speakers={context.speakers.get} />}
-
-        <OrganizerTeaser />
-
-        {context.speakers.get && context.speakers.get.length > 0 && <Actors title={t('SPEAKERS')} actors={context.speakers.get} />}
-        {context.sponsors.get && context.sponsors.get.length > 0 && <Actors title={t('SPONSORS')} actors={context.sponsors.get} />}
-        {context.organizers.get && context.organizers.get.length > 0 && <Actors title={t('ORGANIZERS')} actors={context.organizers.get} />}
+        {promotedSpeakers.length > 0 && <SpeakerListPromoted title={t('SPEAKERS')} speakers={promotedSpeakers} />}
+        <OrganizerTeaser organizers={conference.organizers} />
+        {context.sponsors.get && context.sponsors.get.length > 0 && <SponsorTeaser title={t('SPONSORS')} sponsors={context.sponsors.get} />}
       </div>
     </>
   )
