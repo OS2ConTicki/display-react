@@ -12,46 +12,6 @@
     "data": [
         {
             "type": "speaker",
-            "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34",
-            "links": {
-                "self": {
-                    "href": "/data/the-first-conference/da/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A196.json"
-                }
-            },
-            "attributes": {
-                "langcode": "en",
-                "title": "Christopher Bering Baden",
-                "created": "2020-08-13T13:24:37+00:00",
-                "changed": "2020-08-14T06:51:10+00:00",
-                "promote": true,
-                "image": {
-                    "url": "/data/the-first-conference/sites/default/files/2020-08/Christopher.jpg",
-                    "meta": {
-                        "alt": "Portræt: Christopher Bering Baden",
-                        "title": "",
-                        "width": 1610,
-                        "height": 1875
-                    }
-                },
-                "summary": null,
-                "description": "<p>Karriererådgiver, Magistrenes A-kasse&nbsp;Aarhus</p>\n"
-            },
-            "relationships": {
-                "conference": {
-                    "data": {
-                        "type": "conference",
-                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "speaker",
             "id": "931efb1b-fdfe-46cd-bbbd-682b3035d87c",
             "links": {
                 "self": {
@@ -172,29 +132,29 @@
         },
         {
             "type": "speaker",
-            "id": "79ced56c-d311-4fae-8124-c7cc355a3132",
+            "id": "fd132d81-8b06-456b-b3bb-a280e5c1b55d",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/da/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A231.json"
+                    "href": "/data/the-first-conference/da/api/speaker/fd132d81-8b06-456b-b3bb-a280e5c1b55d@resourceVersion@id@3A234.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
-                "title": "Søren Ø. Skadhede",
-                "created": "2020-08-13T12:20:30+00:00",
-                "changed": "2020-08-17T07:43:38+00:00",
+                "title": "Marc Perera Christensen",
+                "created": "2020-08-14T06:33:48+00:00",
+                "changed": "2020-08-17T07:45:17+00:00",
                 "promote": true,
                 "image": {
-                    "url": "/data/the-first-conference/sites/default/files/2020-08/S@C3@B8ren.jpg",
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Marc.jpg",
                     "meta": {
-                        "alt": "Portræt: Søren Skadhede",
+                        "alt": "Portræt Marc Perera Christensen",
                         "title": "",
-                        "width": 200,
-                        "height": 200
+                        "width": 600,
+                        "height": 600
                     }
                 },
                 "summary": null,
-                "description": "<p>Seniorkonsulent,&nbsp;Potential in action</p>\n"
+                "description": "<p>Direktør,&nbsp;Erhverv Aarhus</p>\n"
             },
             "relationships": {
                 "conference": {
@@ -215,15 +175,15 @@
             "id": "816c2566-0750-4ae3-9b16-9c24f3e2ca1a",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/da/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A232.json"
+                    "href": "/data/the-first-conference/da/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A255.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
                 "title": "Jens Braarup",
                 "created": "2020-08-13T13:32:38+00:00",
-                "changed": "2020-08-17T07:44:14+00:00",
-                "promote": true,
+                "changed": "2020-08-20T14:48:15+00:00",
+                "promote": false,
                 "image": {
                     "url": "/data/the-first-conference/sites/default/files/2020-08/Jens-Braarup-Jakob-Carlsen.jpg",
                     "meta": {
@@ -252,29 +212,69 @@
         },
         {
             "type": "speaker",
-            "id": "fd132d81-8b06-456b-b3bb-a280e5c1b55d",
+            "id": "79ced56c-d311-4fae-8124-c7cc355a3132",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/da/api/speaker/fd132d81-8b06-456b-b3bb-a280e5c1b55d@resourceVersion@id@3A234.json"
+                    "href": "/data/the-first-conference/da/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A256.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
-                "title": "Marc Perera Christensen",
-                "created": "2020-08-14T06:33:48+00:00",
-                "changed": "2020-08-17T07:45:17+00:00",
-                "promote": true,
+                "title": "Søren Ø. Skadhede",
+                "created": "2020-08-13T12:20:30+00:00",
+                "changed": "2020-08-20T15:01:23+00:00",
+                "promote": false,
                 "image": {
-                    "url": "/data/the-first-conference/sites/default/files/2020-08/Marc.jpg",
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/S@C3@B8ren.jpg",
                     "meta": {
-                        "alt": "Portræt Marc Perera Christensen",
+                        "alt": "Portræt: Søren Skadhede",
                         "title": "",
-                        "width": 600,
-                        "height": 600
+                        "width": 200,
+                        "height": 200
                     }
                 },
                 "summary": null,
-                "description": "<p>Direktør,&nbsp;Erhverv Aarhus</p>\n"
+                "description": "<p>Seniorkonsulent,&nbsp;Potential in action</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/da/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A257.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Christopher Bering Baden",
+                "created": "2020-08-13T13:24:37+00:00",
+                "changed": "2020-08-20T15:01:33+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Christopher.jpg",
+                    "meta": {
+                        "alt": "Portræt: Christopher Bering Baden",
+                        "title": "",
+                        "width": 1610,
+                        "height": 1875
+                    }
+                },
+                "summary": null,
+                "description": "<p>Karriererådgiver, Magistrenes A-kasse&nbsp;Aarhus</p>\n"
             },
             "relationships": {
                 "conference": {

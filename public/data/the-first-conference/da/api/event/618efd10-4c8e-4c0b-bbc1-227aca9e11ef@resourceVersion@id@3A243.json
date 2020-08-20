@@ -82,17 +82,19 @@
                     }
                 ]
             },
-            "themes": {
-                "data": {
-                    "type": "theme",
-                    "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
-                },
-                "links": {
-                    "related": {
-                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f"
+            "themes": [
+                {
+                    "data": {
+                        "type": "theme",
+                        "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f"
+                        }
                     }
                 }
-            }
+            ]
         }
     },
     "links": {

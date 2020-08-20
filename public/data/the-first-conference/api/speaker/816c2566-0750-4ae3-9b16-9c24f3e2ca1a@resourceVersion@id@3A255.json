@@ -14,15 +14,15 @@
         "id": "816c2566-0750-4ae3-9b16-9c24f3e2ca1a",
         "links": {
             "self": {
-                "href": "/data/the-first-conference/da/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A232.json"
+                "href": "/data/the-first-conference/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A255.json"
             }
         },
         "attributes": {
             "langcode": "en",
             "title": "Jens Braarup",
             "created": "2020-08-13T13:32:38+00:00",
-            "changed": "2020-08-17T07:44:14+00:00",
-            "promote": true,
+            "changed": "2020-08-20T14:48:15+00:00",
+            "promote": false,
             "image": {
                 "url": "/data/the-first-conference/sites/default/files/2020-08/Jens-Braarup-Jakob-Carlsen.jpg",
                 "meta": {
@@ -43,7 +43,7 @@
                 },
                 "links": {
                     "related": {
-                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
                     }
                 }
             }
@@ -51,7 +51,7 @@
     },
     "links": {
         "self": {
-            "href": "/data/the-first-conference/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A232.json"
+            "href": "/data/the-first-conference/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A255.json"
         }
     }
 }
