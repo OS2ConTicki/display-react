@@ -92,8 +92,6 @@ const Event = ({ event, onLike }) => {
             </Row>
           </Container>
         </Row>}
-
-      <pre>{JSON.stringify(event, null, 2)}</pre>
     </div>
   )
 }
