@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import _ from 'lodash'
 import ProgramList from './programList'
 import BadgeList from './badgeList'
@@ -9,11 +9,11 @@ import Col from 'react-bootstrap/Col'
 import Collapse from 'react-bootstrap/Collapse'
 import Container from 'react-bootstrap/Container'
 import { useTranslate } from 'react-translate'
-import { getDayByLanguage, getDateByLanguage } from './utils/dateHandler'
+import { getDateByLanguage, getDayByLanguage } from './utils/dateHandler'
 import AppStateContext from '../context/appStateContext'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons'
-import Badge from 'react-bootstrap/Badge'
+import { faHeart as faHeartOutline } from '@fortawesome/free-regular-svg-icons'
+import IconButton from './common/IconButton'
 
 function Program ({ eventsList, tagsList, themesList }) {
   const t = useTranslate('Conticki')
@@ -31,6 +31,7 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [dates] = useState(getDates())
   const [days] = useState([allEventsDay, ...getDays()])
   const [open, setOpen] = useState(!false)
+  const [showMyEvents, setShowMyEvents] = useState(false)
 
   function getDates () {
     const returnDatesArray = []
@@ -117,6 +118,12 @@ function Program ({ eventsList, tagsList, themesList }) {
       })
     }
 
+    if (showMyEvents) {
+      filteredEvents = filteredEvents.filter((event) => {
+        return event.liked === showMyEvents
+      })
+    }
+
     return { totalCount: filteredEvents?.length, filteredEvents }
   }
 
@@ -192,17 +199,20 @@ function Program ({ eventsList, tagsList, themesList }) {
                   selectedItem={selectedDay}
                   onItemSelect={handleDaySelect}
                 />
-                <Badge
-                  variant='primary'
-                  className='px-2 py-1 mr-1 mb-1'
-                  style={{ cursor: 'pointer' }}
-                >
-                  <FontAwesomeIcon
-                    icon={faHeartSolid}
-                  />
-                </Badge>
               </div>
             )}
+
+            <IconButton
+              variant='primary'
+              onClick={() => setShowMyEvents(!showMyEvents)}
+              icon={{
+                icon: showMyEvents ? faHeartOutline : faHeartSolid,
+                size: 'lg'
+              }}
+            >
+              {showMyEvents ? t('Show all events') : t('Show my events')}
+            </IconButton>
+
             {dates.map((date) => (
               <ProgramList
                 key={date.id}
