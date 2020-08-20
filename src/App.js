@@ -63,7 +63,9 @@ function App (props) {
         NO_EVENTS: 'This conference has no events',
         SPEAKERS: 'Speakers',
         ORGANIZERS: 'Organizers',
-        SPONSORS: 'Sponsors'
+        SPONSORS: 'Sponsors',
+        'Show all events': 'Show all events',
+        'Show my events': 'Show my events'
       }
     }
   } else {
@@ -81,8 +83,9 @@ function App (props) {
         NO_EVENTS: 'Der er ingen events tilknyttet denne konference',
         SPEAKERS: 'Talere',
         ORGANIZERS: 'Arrangører',
-        SPONSORS: 'Sponsorer'
-
+        SPONSORS: 'Sponsorer',
+        'Show all events': 'Vis alle events',
+        'Show my events': 'Vis mine events'
       }
     }
   }
