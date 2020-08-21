@@ -15,6 +15,7 @@
     "babel-eslint": "^10.1.0",
     "bootstrap": "^4.5.0",
     "core-js": "^3.0.0",
+    "date-fns": "^2.15.0",
     "debounce": "^1.2.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
