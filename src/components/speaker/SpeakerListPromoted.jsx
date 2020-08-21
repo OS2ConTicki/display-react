@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/esm/Container'
 import SpeakerItem from './SpeakerItem'
 
-const SpeakerList = ({ speakers, title }) => (
+const SpeakerListPromoted = ({ speakers, title }) => (
   <Container className='my-md-5'>
     <Row className='speakers'>
       <Col xs={12} className='my-5'>
@@ -26,8 +26,8 @@ const SpeakerList = ({ speakers, title }) => (
   </Container>
 )
 
-SpeakerList.propTypes = {
+SpeakerListPromoted.propTypes = {
   speakers: PropTypes.array.isRequired
 }
 
-export default SpeakerList
+export default SpeakerListPromoted
