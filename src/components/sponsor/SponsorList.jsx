@@ -16,8 +16,7 @@ const SponsorList = ({ sponsors }) => {
     <Container className='my-md-5'>
       <Row className='sponsors'>
         <Col xs={12} className='my-5'>
-          {/* TODO: Translate */}
-          <h1>{t('Sponsors')}</h1>
+          <h1>{t('Sponsors', { n: 87 })}</h1>
         </Col>
         {sponsors.map(sponsor => (
           <Col xs={12} md={4} lg={3} key={sponsor.id} className='mb-3'>
