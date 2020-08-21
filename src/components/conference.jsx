@@ -26,9 +26,9 @@ function Conference (props) {
             themesList={context.themes.get}
           />
         )}
-        {promotedSpeakers.length > 0 && <SpeakerListPromoted title={t('SPEAKERS')} speakers={promotedSpeakers} />}
+        {promotedSpeakers.length > 0 && <SpeakerListPromoted title={t('Speakers', { n: 87 })} speakers={promotedSpeakers} />}
         <OrganizerTeaser organizers={conference.organizers} />
-        {context.sponsors.get && context.sponsors.get.length > 0 && <SponsorTeaser title={t('SPONSORS')} sponsors={context.sponsors.get} />}
+        {context.sponsors.get && context.sponsors.get.length > 0 && <SponsorTeaser title={t('Sponsors', { n: 87 })} sponsors={context.sponsors.get} />}
       </div>
     </>
   )
