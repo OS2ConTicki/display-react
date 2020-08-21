@@ -41,7 +41,7 @@ const Event = ({ event, onLike }) => {
       <Row className='py-3 bg-light'>
         <Container>
           <Row>
-            {/* TODO: We should show the data here as well */}
+            {/* TODO: We should show the event date here as well */}
             <Col md={4}><p className='lead mb-0'><strong className='mr-3'>{t('When')}</strong>{format(new Date(event.start_time), 'eeee kk:mm')} to {format(new Date(event.end_time), 'kk:mm')}</p></Col>
             <Col md={4}><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`} className='image-square'>{location.title}</Link></p></Col>
             <Col md={4}>
