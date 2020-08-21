@@ -39,10 +39,10 @@ const NavBar = () => {
     })
   }
   return (
-    <Navbar bg='primary' expand='lg' className='main-navigation sticky-top'>
+    <Navbar variant='dark' bg='primary' expand='lg' sticky='top' className='main-navigation'>
       <Container>
         <Navbar.Brand href='/'><img src={Appicon} alt='' style={{ height: 40 }} /></Navbar.Brand>
-        <Navbar.Toggle aria-controls='main-navigation' className='btn-light' />
+        <Navbar.Toggle aria-controls='main-navigation' />
         <Navbar.Collapse id='main-navigation'>
           <Nav className='mr-autotext-venter'>
             {navbarItems.map((navItem) => (
