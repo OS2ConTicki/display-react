@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/esm/Container'
 import SpeakerItem from './SpeakerItem'
+import { Link } from 'react-router-dom'
 
 const SpeakerListPromoted = ({ speakers, title }) => (
   <Container className='my-md-5'>
@@ -19,7 +20,7 @@ const SpeakerListPromoted = ({ speakers, title }) => (
       )}
       <Col xs={12} className='my-5 text-center'>
         {/* TODO: Translate */}
-        <a href='/speaker/' className='btn btn-primary btn-lg'>Se alle talere</a>
+        <Link to='/speaker/' className='btn btn-primary btn-lg'>Se alle talere</Link>
       </Col>
     </Row>
   </Container>
