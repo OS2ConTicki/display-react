@@ -1,16 +1,14 @@
 import React, { useContext } from 'react'
-import { HashLink } from 'react-router-hash-link'
 import AppStateContext from '../context/appStateContext'
 import Appicon from '../images/appsymbol.svg'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container'
 
 const NavBar = () => {
   const context = useContext(AppStateContext)
 
   const navbarItems = [
-    {
-      to: '/#top',
-      label: 'Home'
-    },
     {
       to: '/#program',
       label: 'Program'
@@ -37,18 +35,23 @@ const NavBar = () => {
     })
   }
   return (
-    <nav className='main-navigation sticky-top' role='navigation'>
-      <ul className='nav justify-content-center '>
-        <li><img src={Appicon} alt='' style={{ height: 40 }} className='nav-link' /></li>
-        {navbarItems.map((navItem) => (
-          <li className='nav-item' key={navItem.to}>
-            <HashLink smooth to={navItem.to} className='nav-link text-light'>
-              {navItem.label}
-            </HashLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <Navbar bg='primary' expand='lg' className='main-navigation sticky-top'>
+      <Container>
+        <Navbar.Brand href='/'><img src={Appicon} alt='' style={{ height: 40 }} /></Navbar.Brand>
+        <Navbar.Toggle aria-controls='main-navigation' className='btn-light' />
+        <Navbar.Collapse id='main-navigation'>
+          <Nav className='mr-autotext-venter'>
+            {navbarItems.map((navItem) => (
+              <Nav.Link key={navItem.to} href={navItem.to} className='text-light'>
+
+                {navItem.label}
+
+              </Nav.Link>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 
