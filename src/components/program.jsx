@@ -148,7 +148,7 @@ function Program ({ eventsList, tagsList, themesList }) {
       <Container>
         <Row className='mt-3 mb-3 scroll-offset-class' id='program'>
           <Col xs={6}>
-            <h2>{t('PROGRAM')}</h2>
+            <h2>{t('Program')}</h2>
           </Col>
           <Col xs={6} className='text-right'>
             <Button
@@ -158,7 +158,7 @@ function Program ({ eventsList, tagsList, themesList }) {
               aria-expanded={open}
               className='mt-2'
             >
-              {t('SEARCH_EVENTS')}
+              {t('Search events')}
             </Button>
           </Col>
           <Col xs={12}>
@@ -168,7 +168,7 @@ function Program ({ eventsList, tagsList, themesList }) {
                 <div className='mb-3'>
                   {themes && (
                     <BadgeList
-                      title={t('THEMES')}
+                      title={t('Themes', { n: 87 })}
                       items={themes}
                       textProperty='title'
                       valueProperty='id'
@@ -179,7 +179,7 @@ function Program ({ eventsList, tagsList, themesList }) {
                 </div>
                 {tags && (
                   <BadgeList
-                    title={t('TAGS')}
+                    title={t('Tags', { n: 87 })}
                     items={tags}
                     textProperty='name'
                     valueProperty='id'

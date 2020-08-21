@@ -4,8 +4,10 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Nav from 'react-bootstrap/Nav'
+import { useTranslate } from 'react-translate'
 
 function Footer () {
+  const t = useTranslate('Conticki')
   const context = useContext(AppStateContext)
 
   return (
@@ -15,18 +17,18 @@ function Footer () {
           <Container>
             <Row className='my-3'>
               <Col md={6} className=''>
-                <p className='text-light mt-2'>OS2Contiki - Conference and ticket management</p>
+                <p className='text-light mt-2'>{t('OS2Contiki - Conference and ticket management')}</p>
               </Col>
               <Col md={6}>
                 <Nav variant='pills' defaultActiveKey='/home'>
                   <Nav.Item>
-                    <Nav.Link className='disabled text-light'>Vælg sprog:</Nav.Link>
+                    <Nav.Link className='disabled text-light'>{t('Select language')}:</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link className='text-light' onClick={() => context.language.set('da')}>Dansk</Nav.Link>
+                    <Nav.Link className='text-light' onClick={() => context.language.set('da')}>{t('Dansk')}</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link className='text-light' onClick={() => context.language.set('en')}>English</Nav.Link>
+                    <Nav.Link className='text-light' onClick={() => context.language.set('en')}>{t('English')}</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Col>

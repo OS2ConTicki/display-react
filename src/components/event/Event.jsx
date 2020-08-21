@@ -9,8 +9,10 @@ import OrganizerList from '../organizer/OrganizerList'
 import SpeakerList from '../speaker/SpeakerList'
 import SponsorList from '../sponsor/SponsorList'
 import { Link } from 'react-router-dom'
+import { useTranslate } from 'react-translate'
 
 const Event = ({ event, onLike }) => {
+  const t = useTranslate('Conticki')
   // Unwrap the event object.
   const { title, image, description, ticketUrl, themes, location } = event
 
@@ -39,22 +41,22 @@ const Event = ({ event, onLike }) => {
       <Row className='py-3 bg-light'>
         <Container>
           <Row>
-            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>Hvornår</strong>{format(new Date(event.start_time), 'eeee kk:mm')} to {format(new Date(event.end_time), 'kk:mm')}</p></Col>
-            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>Hvor</strong><Link to={`/location/${location.id}`} className='image-square'>{location.title}</Link></p></Col>
+            {/* TODO: We should show the data here as well */}
+            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>{t('When')}</strong>{format(new Date(event.start_time), 'eeee kk:mm')} to {format(new Date(event.end_time), 'kk:mm')}</p></Col>
+            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`} className='image-square'>{location.title}</Link></p></Col>
             <Col md={4}>
-              <p className='lead mb-0'><strong className='mr-3'>Tema</strong>
-                {[themes].map(theme => (
-                  <span key={theme.id}>{theme.title}</span>
-                )
-                )}
-              </p>
+              {themes && themes.length > 0 &&
+                <p className='lead mb-0'>
+                  <strong className='mr-3'>{t('Themes', { n: themes.length })}</strong>
+                  {themes.map(theme => <span key={theme.id}>{theme.title}</span>)}
+                </p>}
             </Col>
             {ticketUrl && ticketUrl.url &&
               <Col className='mt-3 text-right'>
                 <a
                   className='btn btn-primary btn-lg px-md-5'
                   href={ticketUrl.url}
-                >{ticketUrl.text || 'Billeter kan købes her'}
+                >{ticketUrl.text || t('Buy ticket')}
                 </a>
               </Col>}
           </Row>
