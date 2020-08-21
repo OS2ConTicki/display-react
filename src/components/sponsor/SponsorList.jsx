@@ -12,7 +12,8 @@ const SponsorList = ({ sponsors }) => (
   <Container className='my-md-5'>
     <Row className='sponsors'>
       <Col xs={12} className='my-5'>
-        {/sponsor/.test(window.location.href) ? <h1>Sponsors</h1> : <h2>Sponsors</h2>}
+        {/* TODO: Translate */}
+        <h1>Sponsors</h1>
       </Col>
       {sponsors.map(sponsor => (
         <Col xs={12} md={4} lg={3} key={sponsor.id} className='mb-3'>

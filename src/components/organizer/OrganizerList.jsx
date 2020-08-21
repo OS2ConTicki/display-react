@@ -13,7 +13,7 @@ const OrganizerList = ({ organizers }) => (
   <Container className='my-md-5'>
     <Row className='organizers'>
       <Col xs={12} className='my-5'>
-        {/organizer/.test(window.location.href) ? <h1>Organizers</h1> : <h2>Organizers</h2>}
+        <h1>Organizers</h1>
       </Col>
       {organizers.map(organizer => (
         <Col xs={12} key={organizer.id} className='mb-3'>
