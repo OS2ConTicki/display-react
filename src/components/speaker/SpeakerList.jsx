@@ -23,8 +23,7 @@ const SpeakerList = ({ speakers, title }) => (
 )
 
 SpeakerList.propTypes = {
-  speakers: PropTypes.array.isRequired,
-  isSubElement: PropTypes.bool
+  speakers: PropTypes.array.isRequired
 }
 
 export default SpeakerList
