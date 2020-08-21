@@ -10,10 +10,10 @@ function DisplayInfoComponent ({ title, description, image, ticket }) {
       <Row className='top scroll-offset-class'>
         <Container className='my-md-5'>
           <Row>
-            <Col xs={12} md={7} className='my-5'>
+            <Col xs={12} md={7} className='mb-5'>
               <h1>{title}</h1>
             </Col>
-            <Col xs={12} md={5} className='mb-3'>
+            <Col xs={12} md={5} className='mb-3 text-right'>
               {image && (
                 <img
                   className='img-fluid'

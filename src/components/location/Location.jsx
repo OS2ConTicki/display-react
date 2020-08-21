@@ -14,11 +14,11 @@ const Location = ({ location }) => {
       <Row className='top scroll-offset-class'>
         <Container className='my-md-5'>
           <Row>
-            <Col xs={12} md={7} className='my-5'>
+            <Col xs={12} md={image ? 7 : 12} className='my-5'>
               <h1>{title}</h1>
             </Col>
-            <Col xs={12} md={5} className='mb-3'>
-              {image && (
+            {image && (
+              <Col xs={12} md={5} className='mb-3'>
                 <img
                   className='img-fluid'
                   height={image.meta.height}
@@ -26,8 +26,8 @@ const Location = ({ location }) => {
                   src={image.url}
                   alt={image.meta.alt || ''}
                 />
-              )}
-            </Col>
+              </Col>
+            )}
           </Row>
         </Container>
       </Row>
@@ -40,8 +40,6 @@ const Location = ({ location }) => {
           </Row>
         </Container>
       </Row>
-
-      <pre>{JSON.stringify(location, null, 2)}</pre>
     </div>
   )
 }

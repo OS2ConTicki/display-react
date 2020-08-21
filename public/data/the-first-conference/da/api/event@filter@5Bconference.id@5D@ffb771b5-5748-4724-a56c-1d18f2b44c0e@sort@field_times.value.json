@@ -84,15 +84,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -170,15 +167,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -256,15 +250,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -342,15 +333,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -428,15 +416,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -514,15 +499,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -604,15 +586,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -690,15 +669,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         }

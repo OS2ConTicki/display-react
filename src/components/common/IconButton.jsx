@@ -17,9 +17,9 @@ const IconButton = ({ iconPosition = 'before', icon: iconProps, children, ...but
 
   return (
     <Button {...buttonProps}>
-      {icon && iconPosition === 'before' && <span class='pr-2'>{icon}</span>}
+      {icon && iconPosition === 'before' && <span className='pr-2'>{icon}</span>}
       {children}
-      {icon && iconPosition !== 'before' && <span class='pl-2'>{icon}</span>}
+      {icon && iconPosition !== 'before' && <span className='pl-2'>{icon}</span>}
     </Button>
   )
 }

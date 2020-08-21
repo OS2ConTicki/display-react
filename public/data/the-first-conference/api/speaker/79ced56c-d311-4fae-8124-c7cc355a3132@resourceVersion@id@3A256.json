@@ -14,15 +14,15 @@
         "id": "79ced56c-d311-4fae-8124-c7cc355a3132",
         "links": {
             "self": {
-                "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A231.json"
+                "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A256.json"
             }
         },
         "attributes": {
             "langcode": "en",
             "title": "Søren Ø. Skadhede",
             "created": "2020-08-13T12:20:30+00:00",
-            "changed": "2020-08-17T07:43:38+00:00",
-            "promote": true,
+            "changed": "2020-08-20T15:01:23+00:00",
+            "promote": false,
             "image": {
                 "url": "/data/the-first-conference/sites/default/files/2020-08/S@C3@B8ren.jpg",
                 "meta": {
@@ -51,7 +51,7 @@
     },
     "links": {
         "self": {
-            "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A231.json"
+            "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A256.json"
         }
     }
 }

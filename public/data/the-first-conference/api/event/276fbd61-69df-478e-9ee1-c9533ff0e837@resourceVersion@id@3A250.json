@@ -83,15 +83,12 @@
                 ]
             },
             "themes": {
-                "data": {
-                    "type": "theme",
-                    "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                },
-                "links": {
-                    "related": {
-                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                "data": [
+                    {
+                        "type": "theme",
+                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                     }
-                }
+                ]
             }
         }
     },

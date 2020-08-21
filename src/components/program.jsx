@@ -156,15 +156,15 @@ function Program ({ eventsList, tagsList, themesList }) {
               onClick={() => setOpen(!open)}
               aria-controls='searchEvent'
               aria-expanded={open}
+              className='mt-2'
             >
               {t('SEARCH_EVENTS')}
             </Button>
           </Col>
           <Col xs={12}>
-            <Collapse in={open} className='bg-light p-3 rounded-sm'>
-              <div id='searchEvent' className='searchEvent'>
+            <Collapse in={open} className='bg-light border p-3 rounded-sm'>
+              <div id='searchEvent' className='searchEvent mb-3'>
                 <SearchBox value={searchText} onChange={handleSearch} />
-
                 <div className='mb-3'>
                   {themes && (
                     <BadgeList
@@ -189,7 +189,7 @@ function Program ({ eventsList, tagsList, themesList }) {
                 )}
               </div>
             </Collapse>
-            <p className='text-muted mt-3'>{eventString}</p>
+
             {days && days.length > 2 && (
               <div className='mb-3'>
                 <BadgeList
@@ -212,7 +212,8 @@ function Program ({ eventsList, tagsList, themesList }) {
             >
               {showMyEvents ? t('Show all events') : t('Show my events')}
             </IconButton>
-
+            {totalCount === 0 &&
+              <p className='text-muted mt-3'>{eventString}</p>}
             {dates.map((date) => (
               <ProgramList
                 key={date.id}

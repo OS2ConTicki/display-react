@@ -84,15 +84,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -170,15 +167,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -256,15 +250,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "db11d986-2486-4ae0-ba87-9cc17902d24f"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -342,15 +333,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -428,15 +416,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -514,15 +499,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -604,15 +586,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
                         }
-                    }
+                    ]
                 }
             }
         },
@@ -690,15 +669,12 @@
                     ]
                 },
                 "themes": {
-                    "data": {
-                        "type": "theme",
-                        "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/theme/baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
+                    "data": [
+                        {
+                            "type": "theme",
+                            "id": "baf7f8cd-84c9-4f5a-87b6-a576bbd7526e"
                         }
-                    }
+                    ]
                 }
             }
         }
@@ -1101,15 +1077,15 @@
             "id": "79ced56c-d311-4fae-8124-c7cc355a3132",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A231.json"
+                    "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A256.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
                 "title": "Søren Ø. Skadhede",
                 "created": "2020-08-13T12:20:30+00:00",
-                "changed": "2020-08-17T07:43:38+00:00",
-                "promote": true,
+                "changed": "2020-08-20T15:01:23+00:00",
+                "promote": false,
                 "image": {
                     "url": "/data/the-first-conference/sites/default/files/2020-08/S@C3@B8ren.jpg",
                     "meta": {
@@ -1141,15 +1117,15 @@
             "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A196.json"
+                    "href": "/data/the-first-conference/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A257.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
                 "title": "Christopher Bering Baden",
                 "created": "2020-08-13T13:24:37+00:00",
-                "changed": "2020-08-14T06:51:10+00:00",
-                "promote": true,
+                "changed": "2020-08-20T15:01:33+00:00",
+                "promote": false,
                 "image": {
                     "url": "/data/the-first-conference/sites/default/files/2020-08/Christopher.jpg",
                     "meta": {
@@ -1181,15 +1157,15 @@
             "id": "816c2566-0750-4ae3-9b16-9c24f3e2ca1a",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A232.json"
+                    "href": "/data/the-first-conference/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A255.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
                 "title": "Jens Braarup",
                 "created": "2020-08-13T13:32:38+00:00",
-                "changed": "2020-08-17T07:44:14+00:00",
-                "promote": true,
+                "changed": "2020-08-20T14:48:15+00:00",
+                "promote": false,
                 "image": {
                     "url": "/data/the-first-conference/sites/default/files/2020-08/Jens-Braarup-Jakob-Carlsen.jpg",
                     "meta": {
