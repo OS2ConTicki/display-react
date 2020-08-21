@@ -52,40 +52,62 @@ function App (props) {
     translations = {
       locale: 'en',
       Conticki: {
-        SEARCH_EVENTS: 'Search events',
-        PROGRAM: 'Program',
-        THEMES: 'Themes',
-        TAGS: 'Tags',
+        'OS2Contiki - Conference and ticket management': 'OS2Contiki - Conference and ticket management',
+        'Search events': 'Search events',
+        Program: 'Program',
+        Themes: ['Theme', 'Themes'],
+        Tags: 'Tags',
+        When: 'When',
+        Where: 'Where',
+        Home: 'Frontpage',
         NUMBER_OF_EVENTS: ['This conference has {{n}} event', 'This conference has {{n}} events'],
         WITH_THEME: ' with the theme {{theme}}',
         WITH_TAG: ' with the tag {{tag}}',
         AND_WITH_TAG: ' and with the tag {{tag}}',
         NO_EVENTS: 'This conference has no events',
-        SPEAKERS: 'Speakers',
-        ORGANIZERS: 'Organizers',
-        SPONSORS: 'Sponsors',
+        Speakers: ['Speaker', 'Speakers'],
+        Organizers: ['Organizer', 'Organizers'],
+        Sponsors: ['Sponsor', 'Sponsors'],
         'Show all events': 'Show all events',
-        'Show my events': 'Show my events'
+        'Show my events': 'Show my events',
+        'Buy ticket': 'Buy ticket',
+        'Select language': 'Select language',
+        Dansk: 'Dansk',
+        English: 'English',
+        'Organized by': 'Organized by',
+        'Read more about {{organizer}}': 'Read more about {{organizer}}',
+        'See all speakers': 'See all speakers'
       }
     }
   } else {
     translations = {
       locale: 'da',
       Conticki: {
-        SEARCH_EVENTS: 'Søg i events',
-        PROGRAM: 'Program',
-        THEMES: 'Temaer',
-        TAGS: 'Emner',
+        'OS2Contiki - Conference and ticket management': 'OS2Contiki - konference- og billetsystem',
+        'Search events': 'Søg i events',
+        Program: 'Program',
+        Themes: ['Tema', 'Temaer'],
+        Tags: 'Emner',
+        When: 'Hvornår',
+        Where: 'Hvor',
+        Home: 'Forside',
         NUMBER_OF_EVENTS: ['Der er et {{n}} event tilknyttet denne konference', 'Der er {{n}} events tilknyttet denne konference'],
         WITH_THEME: ' med temaet {{theme}}',
         WITH_TAG: ' med emnet {{tag}}',
         AND_WITH_TAG: ' og med emnet {{tag}}',
         NO_EVENTS: 'Der er ingen events tilknyttet denne konference',
-        SPEAKERS: 'Talere',
-        ORGANIZERS: 'Arrangører',
-        SPONSORS: 'Sponsorer',
+        Speakers: ['Oplægsholder', 'Oplægsholdere'],
+        Organizers: ['Arrangør', 'Arrangører'],
+        Sponsors: ['Sponsor', 'Sponsorer'],
         'Show all events': 'Vis alle events',
-        'Show my events': 'Vis mine events'
+        'Show my events': 'Vis mine events',
+        'Buy ticket': 'Buy ticket',
+        'Select language': 'Vælg sprog',
+        Dansk: 'Dansk',
+        English: 'English',
+        'Organized by': 'Arrangeret af',
+        'Read more about {{organizer}}': 'Læs mere om {{organizer}}',
+        'See all speakers': 'Se alle oplægsholdere'
       }
     }
   }

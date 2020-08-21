@@ -2,38 +2,42 @@ import React, { useContext } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import AppStateContext from '../context/appStateContext'
 import Appicon from '../images/appsymbol.svg'
+import { useTranslate } from 'react-translate'
 
 const NavBar = () => {
+  const t = useTranslate('Conticki')
   const context = useContext(AppStateContext)
 
   const navbarItems = [
     {
       to: '/#top',
-      label: 'Home'
+      label: t('Home')
     },
     {
       to: '/#program',
-      label: 'Program'
+      label: t('Program')
     }
-
   ]
 
   if (context.speakers.get && context.speakers.get.length > 0) {
     navbarItems.push({
       to: `/${context.speakers.get[0].type}`,
-      label: 'Talere'
+      // Force pluralization
+      label: t('Speakers', { n: 87 })
     })
   }
   if (context.organizers.get && context.organizers.get.length > 0) {
     navbarItems.push({
       to: `/${context.organizers.get[0].type}`,
-      label: 'Arrangører'
+      // Force pluralization
+      label: t('Organizers', { n: 87 })
     })
   }
   if (context.sponsors.get && context.sponsors.get.length > 0) {
     navbarItems.push({
       to: `/${context.sponsors.get[0].type}`,
-      label: 'Sponsorer'
+      // Force pluralization
+      label: t('Sponsors', { n: 87 })
     })
   }
   return (
