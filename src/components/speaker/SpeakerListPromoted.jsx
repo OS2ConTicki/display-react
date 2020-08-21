@@ -11,8 +11,7 @@ const SpeakerListPromoted = ({ speakers, title }) => (
       <Col xs={12} className='my-5'>
         <h2>{title}</h2>
       </Col>
-      {/* TODO: Show promoted speakers instead of just 3 */}
-      {speakers.slice(0, 3).map(speaker => (
+      {speakers.map(speaker => (
         <Col xs={12} md={4} key={speaker.id} className='mb-3'>
           <SpeakerItem speaker={speaker} />
         </Col>
