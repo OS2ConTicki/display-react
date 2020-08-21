@@ -9,7 +9,7 @@ const SpeakerList = ({ speakers, title }) => (
   <Container className='my-md-5'>
     <Row className='speakers'>
       <Col xs={12} className='my-5'>
-        <h1>{title ? 'Speaker' : title}</h1>
+        <h1>{title || 'Speakers'}</h1>
       </Col>
 
       {speakers.map(speaker => (
