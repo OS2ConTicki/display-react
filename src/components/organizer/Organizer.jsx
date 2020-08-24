@@ -40,8 +40,6 @@ const Organizer = ({ organizer }) => {
           </Row>
         </Container>
       </Row>
-
-      <pre>{JSON.stringify(organizer, null, 2)}</pre>
     </div>
   )
 }
