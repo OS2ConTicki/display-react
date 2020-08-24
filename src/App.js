@@ -82,7 +82,8 @@ function App (props) {
         'Organized by': 'Organized by',
         'Read more about {{organizer}}': 'Read more about {{organizer}}',
         'See all speakers': 'See all speakers',
-        'No description': 'No description'
+        'No description': 'No description',
+        Frontpage: 'Frontpage'
       }
     }
   } else {
@@ -117,7 +118,8 @@ function App (props) {
         'Organized by': 'Arrangeret af',
         'Read more about {{organizer}}': 'Læs mere om {{organizer}}',
         'See all speakers': 'Se alle oplægsholdere',
-        'No description': 'Ingen beskrivelse'
+        'No description': 'Ingen beskrivelse',
+        Frontpage: 'Forside'
       }
     }
   }
