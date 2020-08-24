@@ -42,7 +42,7 @@ const NavBar = () => {
   return (
     <Navbar variant='dark' bg='primary' expand='lg' sticky='top' className='main-navigation'>
       <Container>
-        <Navbar.Brand href='/'><img src={Appicon} alt='' style={{ height: 40 }} /></Navbar.Brand>
+        <Link to='/#home' className='nav-brand'><img src={Appicon} alt={t('Frontpage')} style={{ height: 40 }} /></Link>
         <Navbar.Toggle aria-controls='main-navigation' />
         <Navbar.Collapse id='main-navigation'>
           <Nav className='mr-autotext-venter'>

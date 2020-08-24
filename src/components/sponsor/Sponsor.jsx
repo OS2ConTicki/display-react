@@ -40,8 +40,6 @@ const Sponsor = ({ sponsor }) => {
           </Row>
         </Container>
       </Row>
-
-      <pre>{JSON.stringify(sponsor, null, 2)}</pre>
     </div>
   )
 }
