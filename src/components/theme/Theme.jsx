@@ -4,8 +4,10 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
+import { useTranslate } from 'react-translate'
 
 const Theme = ({ theme }) => {
+  const t = useTranslate('Conticki')
   // Unwrap the theme object.
   const { title, description } = theme
 
@@ -24,7 +26,7 @@ const Theme = ({ theme }) => {
         <Container>
           <Row>
             <Col xs={12} className='d-flex mt-3'>
-              <ReactHtml html={description} />
+              {description ? <ReactHtml html={description} /> : t('No description')}
             </Col>
           </Row>
         </Container>
