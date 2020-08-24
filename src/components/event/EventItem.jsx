@@ -20,9 +20,10 @@ function Event ({ event, onLike }) {
               <h3>{event.title}</h3>
             </Link>
           </Col>
-          <Col xs={4} className='text-right'>
-            <Like liked={event.liked} onClick={() => onLike(event)} />
-          </Col>
+          {onLike &&
+            <Col xs={4} className='text-right'>
+              <Like liked={event.liked} onClick={() => onLike(event)} />
+            </Col>}
         </Row>
         <Row>
           <Col xs={4}>

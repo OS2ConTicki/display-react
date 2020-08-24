@@ -1,20 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import EventItem from './EventItem'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
-const EventList = ({ events, onLike }) => (
-  <div className='events'>
-    {events.map(event => (
-      <div key={event.id} className='event'>
-        <div className='title'>
-          <Link to={`/event/${event.id}`}>
-            {event.title}
-          </Link>
-        </div>
-      </div>)
-    )}
-  </div>
-)
+const EventList = ({ events }) => {
+  return (
+    <Container className='events'>
+      <Row>
+        {events.map(event => (
+          <Col key={event.id} xs={12} className='mb-3'>
+            <EventItem event={event} />
+          </Col>
+        )
+        )}
+      </Row>
+    </Container>
+  )
+}
 
 EventList.propTypes = {
   onLike: PropTypes.func,
