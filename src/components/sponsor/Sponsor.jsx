@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
+import EventList from '../event/EventList'
 
 const Sponsor = ({ sponsor }) => {
   // Unwrap the sponsor object.
@@ -40,6 +41,9 @@ const Sponsor = ({ sponsor }) => {
           </Row>
         </Container>
       </Row>
+
+      {/* TODO Show event list for this sponsor */}
+      {sponsor.events && <EventList events={sponsor.events} />}
     </div>
   )
 }

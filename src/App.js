@@ -180,6 +180,8 @@ function App (props) {
                     return event.organizers.filter(s => s.id === entity.id).length > 0
                   case 'speaker':
                     return event.speakers.filter(s => s.id === entity.id).length > 0
+                  case 'sponsor':
+                    return event.sponsors.filter(s => s.id === entity.id).length > 0
                   case 'theme':
                     return event.themes.filter(s => s.id === entity.id).length > 0
                 }
