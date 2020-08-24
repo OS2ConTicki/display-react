@@ -171,8 +171,21 @@ function App (props) {
             fetchEvents(nextUrl, entities, events)
           } else {
             const addEvents = (entity) => {
-              // TODO: Filter events.
-              entity.events = events.filter(event => Math.random() > 0.7)
+              // Find related events.
+              entity.events = events.filter(event => {
+                switch (entity.type) {
+                  case 'location':
+                    return [event.location].filter(s => s.id === entity.id).length > 0
+                  case 'organizer':
+                    return event.organizers.filter(s => s.id === entity.id).length > 0
+                  case 'speaker':
+                    return event.speakers.filter(s => s.id === entity.id).length > 0
+                  case 'theme':
+                    return event.themes.filter(s => s.id === entity.id).length > 0
+                }
+
+                return false
+              })
 
               return entity
             }
