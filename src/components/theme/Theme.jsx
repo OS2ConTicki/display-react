@@ -7,27 +7,16 @@ import ReactHtml from 'raw-html-react'
 
 const Theme = ({ theme }) => {
   // Unwrap the theme object.
-  const { title, image, description } = theme
+  const { title, description } = theme
 
   return (
     <div className='theme'>
       <Row className='top scroll-offset-class'>
         <Container className='my-md-5'>
           <Row>
-            <Col xs={12} md={image ? 7 : 12} className='my-5'>
+            <Col md={12} className='my-5'>
               <h1>{title}</h1>
             </Col>
-            {image && (
-              <Col xs={12} md={5} className='mb-3'>
-                <img
-                  className='img-fluid'
-                  height={image.meta.height}
-                  width={image.meta.width}
-                  src={image.url}
-                  alt={image.meta.alt || ''}
-                />
-              </Col>
-            )}
           </Row>
         </Container>
       </Row>
