@@ -22,6 +22,8 @@ import Speaker from './components/speaker/Speaker'
 import SpeakerList from './components/speaker/SpeakerList'
 import Sponsor from './components/sponsor/Sponsor'
 import SponsorList from './components/sponsor/SponsorList'
+import Theme from './components/theme/Theme'
+import ThemeList from './components/theme/ThemeList'
 
 function App (props) {
   const [conference, setConference] = useState()
@@ -58,6 +60,9 @@ function App (props) {
         Themes: ['Theme', 'Themes'],
         Tags: 'Tags',
         When: 'When',
+        To: 'to',
+        Date: 'Date',
+        Time: 'Time',
         Where: 'Where',
         Home: 'Frontpage',
         NUMBER_OF_EVENTS: ['This conference has {{n}} event', 'This conference has {{n}} events'],
@@ -76,7 +81,8 @@ function App (props) {
         English: 'English',
         'Organized by': 'Organized by',
         'Read more about {{organizer}}': 'Read more about {{organizer}}',
-        'See all speakers': 'See all speakers'
+        'See all speakers': 'See all speakers',
+        'No description': 'No description'
       }
     }
   } else {
@@ -89,6 +95,9 @@ function App (props) {
         Themes: ['Tema', 'Temaer'],
         Tags: 'Emner',
         When: 'Hvornår',
+        To: 'til',
+        Date: 'Dato',
+        Time: 'Tid',
         Where: 'Hvor',
         Home: 'Forside',
         NUMBER_OF_EVENTS: ['Der er et {{n}} event tilknyttet denne konference', 'Der er {{n}} events tilknyttet denne konference'],
@@ -107,7 +116,8 @@ function App (props) {
         English: 'English',
         'Organized by': 'Arrangeret af',
         'Read more about {{organizer}}': 'Læs mere om {{organizer}}',
-        'See all speakers': 'Se alle oplægsholdere'
+        'See all speakers': 'Se alle oplægsholdere',
+        'No description': 'Ingen beskrivelse'
       }
     }
   }
@@ -275,6 +285,21 @@ function App (props) {
     return <SponsorList sponsors={sponsors} />
   }
 
+  const ShowTheme = () => {
+    const context = useContext(AppStateContext)
+    const { id } = useParams()
+    const theme = context.themes.get.find(theme => theme.id === id)
+
+    return <Theme theme={theme} />
+  }
+
+  const ListTheme = () => {
+    const context = useContext(AppStateContext)
+    const themes = context.themes.get
+
+    return <ThemeList themes={themes} />
+  }
+
   return (
     <TranslatorProvider translations={translations}>
       {!loading && !error &&
@@ -292,6 +317,8 @@ function App (props) {
               <Route path='/speaker' component={ListSpeaker} />
               <Route path='/sponsor/:id' component={ShowSponsor} />
               <Route path='/sponsor' component={ListSponsor} />
+              <Route path='/theme/:id' component={ShowTheme} />
+              <Route path='/theme' component={ListTheme} />
               {/* Default: show conference */}
               <Route path='*' component={Conference} />
             </Switch>
