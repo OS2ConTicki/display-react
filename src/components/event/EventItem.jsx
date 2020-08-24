@@ -33,7 +33,7 @@ function Event ({ event, onLike }) {
           </Col>
           <Col xs={4}>
             <strong>{themes.map(theme => (
-              <span key={theme.id}>{theme.title}</span>
+              <Link key={theme.id} to={`/theme/${theme.id}`}>{theme.title}</Link>
             )
             )}
             </strong>
