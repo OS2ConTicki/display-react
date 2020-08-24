@@ -41,14 +41,14 @@ const Event = ({ event, onLike }) => {
       <Row className='py-3 bg-light'>
         <Container>
           <Row>
-            {/* TODO: We should show the event date here as well */}
-            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>{t('When')}</strong>{format(new Date(event.start_time), 'eeee kk:mm')} to {format(new Date(event.end_time), 'kk:mm')}</p></Col>
-            <Col md={4}><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`} className='image-square'>{location.title}</Link></p></Col>
-            <Col md={4}>
+            <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Date')}</strong>{format(new Date(event.start_time), 'eeee d. MMMM')}</p></Col>
+            <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Time')}</strong>{format(new Date(event.start_time), 'kk:mm')} {t('To')} {format(new Date(event.end_time), 'kk:mm')}</p></Col>
+            <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`} className='image-square'>{location.title}</Link></p></Col>
+            <Col md={6}>
               {themes && themes.length > 0 &&
                 <p className='lead mb-0'>
                   <strong className='mr-3'>{t('Themes', { n: themes.length })}</strong>
-                  {themes.map(theme => <span key={theme.id}>{theme.title}</span>)}
+                  {themes.map(theme => <Link key={theme.id} to={`/theme/${theme.id}`}>{theme.title}</Link>)}
                 </p>}
             </Col>
             {ticketUrl && ticketUrl.url &&
@@ -95,6 +95,8 @@ const Event = ({ event, onLike }) => {
             </Row>
           </Container>
         </Row>}
+      <pre>{JSON.stringify(themes, null, 2)}</pre>
+      <pre>{JSON.stringify(location, null, 2)}</pre>
     </div>
   )
 }
