@@ -47,7 +47,7 @@ const NavBar = () => {
         <Navbar.Collapse id='main-navigation'>
           <Nav className='mr-autotext-venter'>
             {navbarItems.map((navItem) => (
-              <Link exact key={navItem.to} to={navItem.to} className='nav-link'>{navItem.label}</Link>
+              <Link key={navItem.to} to={navItem.to} className='nav-link'>{navItem.label}</Link>
             ))}
           </Nav>
         </Navbar.Collapse>
