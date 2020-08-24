@@ -132,7 +132,15 @@ function App (props) {
   }
 
   const fetchOptions = { headers: { accept: 'application/json' } }
-  const fetchEvents = (url, entities) => {
+
+  /**
+   * Fetch events.
+   *
+   * @param string url
+   * @param string entities Previously collected entities
+   * @param string events Previously collected events
+   */
+  const fetchEvents = (url, entities, events = []) => {
     window.fetch(url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {
@@ -140,17 +148,23 @@ function App (props) {
           // Add entities related to the events.
           entities = getMappedEntities(data, entities)
 
-          const events = data.data.map(
+          events = events.concat(data.data.map(
             event => mapEvent(event, entities)
-          )
+          ))
           setLocations(Object.values(entities.location ?? {}))
           setOrganizers(Object.values(entities.organizer ?? {}))
           setSpeakers(Object.values(entities.speaker ?? {}))
           setSponsors(Object.values(entities.sponsor ?? {}))
           setTags(Object.values(entities.tag ?? {}))
           setThemes(Object.values(entities.theme ?? {}))
-          setEvents(events)
-          setLoading(false)
+
+          const nextUrl = data.links?.next?.href
+          if (nextUrl) {
+            fetchEvents(nextUrl, entities, events)
+          } else {
+            setEvents(events)
+            setLoading(false)
+          }
         }
       }).catch(() => {
         setError(true)
