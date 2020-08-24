@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
+import EventList from '../event/EventList'
 
 const Speaker = ({ speaker }) => {
   // Unwrap the speaker object.
@@ -41,8 +42,8 @@ const Speaker = ({ speaker }) => {
         </Container>
       </Row>
 
-      {/* @TODO Show list of events for this speaker */}
-
+      {/* TODO Show event list for this speaker */}
+      {speaker.events && <EventList events={speaker.events} />}
     </div>
   )
 }

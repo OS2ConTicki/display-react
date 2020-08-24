@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
+import EventList from '../event/EventList'
 
 const Organizer = ({ organizer }) => {
   // Unwrap the organizer object.
@@ -40,6 +41,9 @@ const Organizer = ({ organizer }) => {
           </Row>
         </Container>
       </Row>
+
+      {/* TODO Show event list for this organizer */}
+      {organizer.events && <EventList events={organizer.events} />}
     </div>
   )
 }

@@ -163,17 +163,25 @@ function App (props) {
           events = events.concat(data.data.map(
             event => mapEvent(event, entities)
           ))
-          setLocations(Object.values(entities.location ?? {}))
-          setOrganizers(Object.values(entities.organizer ?? {}))
-          setSpeakers(Object.values(entities.speaker ?? {}))
-          setSponsors(Object.values(entities.sponsor ?? {}))
-          setTags(Object.values(entities.tag ?? {}))
-          setThemes(Object.values(entities.theme ?? {}))
 
           const nextUrl = data.links?.next?.href
           if (nextUrl) {
             fetchEvents(nextUrl, entities, events)
           } else {
+            const addEvents = (entity) => {
+              // TODO: Filter events.
+              entity.events = events.filter(event => Math.random() > 0.7)
+
+              return entity
+            }
+
+            setLocations(Object.values(entities.location ?? {}).map(addEvents))
+            setOrganizers(Object.values(entities.organizer ?? {}).map(addEvents))
+            setSpeakers(Object.values(entities.speaker ?? {}).map(addEvents))
+            setSponsors(Object.values(entities.sponsor ?? {}).map(addEvents))
+            setTags(Object.values(entities.tag ?? {}).map(addEvents))
+            setThemes(Object.values(entities.theme ?? {}).map(addEvents))
+
             setEvents(events)
             setLoading(false)
           }

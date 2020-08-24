@@ -11,7 +11,6 @@ const EventList = ({ events, onLike }) => (
             {event.title}
           </Link>
         </div>
-        {JSON.stringify(event)}
       </div>)
     )}
   </div>
