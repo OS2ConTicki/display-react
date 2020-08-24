@@ -1,13 +1,8 @@
 
 .main-navigation {
-  background-color: $primary;
   .nav-link{
     font-size: 1em;
     font-weight: 500;
     color: white;
-    @include media-breakpoint-down(md) {
-      font-size: 0.8em;
-      padding: 0.5rem .75rem;
-    }
   }
 }

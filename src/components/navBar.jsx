@@ -1,18 +1,17 @@
 import React, { useContext } from 'react'
-import { HashLink } from 'react-router-hash-link'
 import AppStateContext from '../context/appStateContext'
 import Appicon from '../images/appsymbol.svg'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import Container from 'react-bootstrap/Container'
 import { useTranslate } from 'react-translate'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   const t = useTranslate('Conticki')
   const context = useContext(AppStateContext)
 
   const navbarItems = [
-    {
-      to: '/#top',
-      label: t('Home')
-    },
     {
       to: '/#program',
       label: t('Program')
@@ -41,18 +40,19 @@ const NavBar = () => {
     })
   }
   return (
-    <nav className='main-navigation sticky-top' role='navigation'>
-      <ul className='nav justify-content-center '>
-        <li><img src={Appicon} alt='' style={{ height: 40 }} className='nav-link' /></li>
-        {navbarItems.map((navItem) => (
-          <li className='nav-item' key={navItem.to}>
-            <HashLink smooth to={navItem.to} className='nav-link text-light'>
-              {navItem.label}
-            </HashLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <Navbar variant='dark' bg='primary' expand='lg' sticky='top' className='main-navigation'>
+      <Container>
+        <Navbar.Brand href='/'><img src={Appicon} alt='' style={{ height: 40 }} /></Navbar.Brand>
+        <Navbar.Toggle aria-controls='main-navigation' />
+        <Navbar.Collapse id='main-navigation'>
+          <Nav className='mr-autotext-venter'>
+            {navbarItems.map((navItem) => (
+              <Link key={navItem.to} to={navItem.to} className='nav-link'>{navItem.label}</Link>
+            ))}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 
