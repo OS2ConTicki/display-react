@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
 import { useTranslate } from 'react-translate'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   const t = useTranslate('Conticki')
@@ -46,11 +47,7 @@ const NavBar = () => {
         <Navbar.Collapse id='main-navigation'>
           <Nav className='mr-autotext-venter'>
             {navbarItems.map((navItem) => (
-              <Nav.Link key={navItem.to} href={navItem.to} className='text-light'>
-
-                {navItem.label}
-
-              </Nav.Link>
+              <Link exact key={navItem.to} to={navItem.to} className='nav-link'>{navItem.label}</Link>
             ))}
           </Nav>
         </Navbar.Collapse>
