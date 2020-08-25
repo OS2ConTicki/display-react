@@ -40,7 +40,7 @@ function Event ({ event, onLike }) {
             </strong>
           </Col>
           <Col xs={4}>
-            <Link to={`location/${event.location.id}`}>
+            <Link to={`/location/${event.location.id}`}>
               <strong>{event.location.title}</strong>
             </Link>
           </Col>
