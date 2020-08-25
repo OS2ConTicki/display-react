@@ -83,7 +83,12 @@ function App (props) {
         'Read more about {{organizer}}': 'Read more about {{organizer}}',
         'See all speakers': 'See all speakers',
         'No description': 'No description',
-        Frontpage: 'Frontpage'
+        Frontpage: 'Frontpage',
+        'Location for': 'Location for',
+        'Organizer for': 'Organizer for',
+        'Speaker at': 'Speaker at',
+        'Sponsor for': 'Sponsor for',
+        'Theme for': 'Theme for'
       }
     }
   } else {
@@ -119,7 +124,12 @@ function App (props) {
         'Read more about {{organizer}}': 'Læs mere om {{organizer}}',
         'See all speakers': 'Se alle oplægsholdere',
         'No description': 'Ingen beskrivelse',
-        Frontpage: 'Forside'
+        Frontpage: 'Forside',
+        'Location for': 'Sted for',
+        'Organizer for': 'Arrangør af',
+        'Speaker at': 'Taler ved',
+        'Sponsor for': 'Sponsor for',
+        'Theme for': 'Tema for'
       }
     }
   }
@@ -163,17 +173,42 @@ function App (props) {
           events = events.concat(data.data.map(
             event => mapEvent(event, entities)
           ))
-          setLocations(Object.values(entities.location ?? {}))
-          setOrganizers(Object.values(entities.organizer ?? {}))
-          setSpeakers(Object.values(entities.speaker ?? {}))
-          setSponsors(Object.values(entities.sponsor ?? {}))
-          setTags(Object.values(entities.tag ?? {}))
-          setThemes(Object.values(entities.theme ?? {}))
 
           const nextUrl = data.links?.next?.href
           if (nextUrl) {
             fetchEvents(nextUrl, entities, events)
           } else {
+            const addEvents = (entity) => {
+              // Find related events.
+              const relatedEvents = events.filter(event => {
+                switch (entity.type) {
+                  case 'location':
+                    return [event.location].filter(s => s.id === entity.id).length > 0
+                  case 'organizer':
+                    return event.organizers.filter(s => s.id === entity.id).length > 0
+                  case 'speaker':
+                    return event.speakers.filter(s => s.id === entity.id).length > 0
+                  case 'sponsor':
+                    return event.sponsors.filter(s => s.id === entity.id).length > 0
+                  case 'theme':
+                    return event.themes.filter(s => s.id === entity.id).length > 0
+                }
+
+                return false
+              })
+
+              entity.events = relatedEvents.length > 0 ? relatedEvents : null
+
+              return entity
+            }
+
+            setLocations(Object.values(entities.location ?? {}).map(addEvents))
+            setOrganizers(Object.values(entities.organizer ?? {}).map(addEvents))
+            setSpeakers(Object.values(entities.speaker ?? {}).map(addEvents))
+            setSponsors(Object.values(entities.sponsor ?? {}).map(addEvents))
+            setTags(Object.values(entities.tag ?? {}).map(addEvents))
+            setThemes(Object.values(entities.theme ?? {}).map(addEvents))
+
             setEvents(events)
             setLoading(false)
           }

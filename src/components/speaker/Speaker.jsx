@@ -4,8 +4,11 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
+import EventList from '../event/EventList'
+import { useTranslate } from 'react-translate'
 
 const Speaker = ({ speaker }) => {
+  const t = useTranslate('Conticki')
   // Unwrap the speaker object.
   const { title, image, description } = speaker
 
@@ -40,9 +43,19 @@ const Speaker = ({ speaker }) => {
           </Row>
         </Container>
       </Row>
-
-      {/* @TODO Show list of events for this speaker */}
-
+      {speaker.events &&
+        <Row className='py-3'>
+          <Container>
+            <Row>
+              <Col xs={12} className='d-flex mt-3'>
+                <h2 className='h4'>{t('Speaker at')}</h2>
+              </Col>
+            </Row>
+          </Container>
+          <Col xs={12} className='d-flex mt-3'>
+            <EventList events={speaker.events} />
+          </Col>
+        </Row>}
     </div>
   )
 }
