@@ -174,7 +174,7 @@ function App (props) {
           } else {
             const addEvents = (entity) => {
               // Find related events.
-              entity.events = events.filter(event => {
+              const relatedEvents = events.filter(event => {
                 switch (entity.type) {
                   case 'location':
                     return [event.location].filter(s => s.id === entity.id).length > 0
@@ -190,6 +190,8 @@ function App (props) {
 
                 return false
               })
+
+              entity.events = relatedEvents.length > 0 ? relatedEvents : null
 
               return entity
             }
