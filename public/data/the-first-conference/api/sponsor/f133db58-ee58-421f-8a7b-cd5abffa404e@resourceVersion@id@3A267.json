@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "sponsor",
+        "id": "f133db58-ee58-421f-8a7b-cd5abffa404e",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/sponsor/f133db58-ee58-421f-8a7b-cd5abffa404e@resourceVersion@id@3A267.json"
+            }
+        },
+        "attributes": {
+            "langcode": "da",
+            "title": "Flødebollehuset",
+            "created": "2020-08-24T16:47:40+00:00",
+            "changed": "2020-08-25T07:36:32+00:00",
+            "promote": false,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/Spangs7833-1-1024x703_3.png",
+                "meta": {
+                    "alt": "Flødebolle",
+                    "title": "",
+                    "width": 1024,
+                    "height": 703
+                }
+            },
+            "summary": null,
+            "description": "<p>Umm!</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/sponsor/f133db58-ee58-421f-8a7b-cd5abffa404e@resourceVersion@id@3A267.json"
+        }
+    }
+}

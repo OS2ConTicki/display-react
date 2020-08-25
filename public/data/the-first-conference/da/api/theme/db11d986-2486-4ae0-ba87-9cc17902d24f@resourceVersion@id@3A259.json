@@ -14,15 +14,17 @@
         "id": "db11d986-2486-4ae0-ba87-9cc17902d24f",
         "links": {
             "self": {
-                "href": "/data/the-first-conference/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f@resourceVersion@id@3A242.json"
+                "href": "/data/the-first-conference/da/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f@resourceVersion@id@3A259.json"
             }
         },
         "attributes": {
             "langcode": "en",
             "title": "Iværksætteri",
             "created": "2020-08-18T11:50:34+00:00",
-            "changed": "2020-08-18T11:50:34+00:00",
-            "promote": true
+            "changed": "2020-08-24T12:36:56+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>Er du iværksætter? Så er dette lige noget for dig!</p>\n"
         },
         "relationships": {
             "conference": {
@@ -32,7 +34,7 @@
                 },
                 "links": {
                     "related": {
-                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
                     }
                 }
             }
@@ -40,7 +42,7 @@
     },
     "links": {
         "self": {
-            "href": "/data/the-first-conference/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f@resourceVersion@id@3A242.json"
+            "href": "/data/the-first-conference/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f@resourceVersion@id@3A259.json"
         }
     }
 }

@@ -14,38 +14,38 @@
         "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e",
         "links": {
             "self": {
-                "href": "/data/the-first-conference/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A254.json"
+                "href": "/data/the-first-conference/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A265.json"
             },
             "event": {
-                "href": "/data/the-first-conference/da/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value.json"
+                "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value.json"
             },
             "speaker": {
-                "href": "/data/the-first-conference/da/api/speaker@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                "href": "/data/the-first-conference/api/speaker@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
             },
             "organizer": {
-                "href": "/data/the-first-conference/da/api/organizer@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                "href": "/data/the-first-conference/api/organizer@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
             },
             "tag": {
-                "href": "/data/the-first-conference/da/api/tag@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                "href": "/data/the-first-conference/api/tag@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
             },
             "theme": {
-                "href": "/data/the-first-conference/da/api/theme@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                "href": "/data/the-first-conference/api/theme@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
             },
             "location": {
-                "href": "/data/the-first-conference/da/api/location@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                "href": "/data/the-first-conference/api/location@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
             },
             "sponsor": {
-                "href": "/data/the-first-conference/da/api/sponsor@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+                "href": "/data/the-first-conference/api/sponsor@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
             },
             "all": {
-                "href": "/data/the-first-conference/da/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value@i-69ee5bb9acfc0c4b33f891781e59e1129b7fa23a.json"
+                "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value@incl-35ad4d6b605bc11656547dbd691f8c4bbf46e458.json"
             }
         },
         "attributes": {
             "langcode": "da",
             "title": "JOB BootCamp",
             "created": "2020-08-13T12:13:15+00:00",
-            "changed": "2020-08-20T06:23:29+00:00",
+            "changed": "2020-08-24T16:55:44+00:00",
             "promote": true,
             "image": {
                 "url": "/data/the-first-conference/sites/default/files/2020-08/105413454_105260671243317_7587995258585147510_n.jpg",
@@ -94,13 +94,18 @@
                 ]
             },
             "sponsors": {
-                "data": []
+                "data": [
+                    {
+                        "type": "sponsor",
+                        "id": "daf63962-8283-47af-aaeb-59f435827dc2"
+                    }
+                ]
             }
         }
     },
     "links": {
         "self": {
-            "href": "/data/the-first-conference/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A254.json"
+            "href": "/data/the-first-conference/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A265.json"
         }
     }
 }

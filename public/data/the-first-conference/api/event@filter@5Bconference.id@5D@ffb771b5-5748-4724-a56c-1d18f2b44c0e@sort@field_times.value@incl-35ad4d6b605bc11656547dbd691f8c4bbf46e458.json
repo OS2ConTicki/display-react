@@ -600,14 +600,14 @@
             "id": "276fbd61-69df-478e-9ee1-c9533ff0e837",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A250.json"
+                    "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A262.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
                 "title": "How to - Kaffemøde",
                 "created": "2020-08-14T07:10:15+00:00",
-                "changed": "2020-08-18T12:00:42+00:00",
+                "changed": "2020-08-24T16:48:35+00:00",
                 "promote": true,
                 "summary": null,
                 "description": "<p>Netværk og kaffemøde går tit hånd-i-hånd, og selvom du sikkert kender til at værdien af at afholde gode kaffemøder, kan det være svært at komme i gang med det. Derfor faciliterer vi en workshop, som giver konkrete råd og vejledning til at komme i gang med kaffemøder samt faciliteret kaffemøde-øvelser.&nbsp;</p>\n",
@@ -633,11 +633,11 @@
                 "location": {
                     "data": {
                         "type": "location",
-                        "id": "715af720-70aa-4a2d-b288-5cec7499d8a1"
+                        "id": "a1c1f7a2-6dac-470c-9391-a817e772be79"
                     },
                     "links": {
                         "related": {
-                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1"
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79"
                         }
                     }
                 },
@@ -658,7 +658,12 @@
                     ]
                 },
                 "sponsors": {
-                    "data": []
+                    "data": [
+                        {
+                            "type": "sponsor",
+                            "id": "f133db58-ee58-421f-8a7b-cd5abffa404e"
+                        }
+                    ]
                 },
                 "tags": {
                     "data": [
@@ -685,7 +690,7 @@
             "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A254.json"
+                    "href": "/data/the-first-conference/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A265.json"
                 },
                 "event": {
                     "href": "/data/the-first-conference/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value.json"
@@ -716,7 +721,7 @@
                 "langcode": "da",
                 "title": "JOB BootCamp",
                 "created": "2020-08-13T12:13:15+00:00",
-                "changed": "2020-08-20T06:23:29+00:00",
+                "changed": "2020-08-24T16:55:44+00:00",
                 "promote": true,
                 "image": {
                     "url": "/data/the-first-conference/sites/default/files/2020-08/105413454_105260671243317_7587995258585147510_n.jpg",
@@ -765,7 +770,12 @@
                     ]
                 },
                 "sponsors": {
-                    "data": []
+                    "data": [
+                        {
+                            "type": "sponsor",
+                            "id": "daf63962-8283-47af-aaeb-59f435827dc2"
+                        }
+                    ]
                 }
             }
         },
@@ -1353,6 +1363,46 @@
             }
         },
         {
+            "type": "sponsor",
+            "id": "f133db58-ee58-421f-8a7b-cd5abffa404e",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/sponsor/f133db58-ee58-421f-8a7b-cd5abffa404e@resourceVersion@id@3A267.json"
+                }
+            },
+            "attributes": {
+                "langcode": "da",
+                "title": "Flødebollehuset",
+                "created": "2020-08-24T16:47:40+00:00",
+                "changed": "2020-08-25T07:36:32+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Spangs7833-1-1024x703_3.png",
+                    "meta": {
+                        "alt": "Flødebolle",
+                        "title": "",
+                        "width": 1024,
+                        "height": 703
+                    }
+                },
+                "summary": null,
+                "description": "<p>Umm!</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
             "type": "tag",
             "id": "688a820b-cd6a-4e6e-b381-a7e15ba2365b",
             "links": {
@@ -1444,15 +1494,17 @@
             "id": "db11d986-2486-4ae0-ba87-9cc17902d24f",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f@resourceVersion@id@3A242.json"
+                    "href": "/data/the-first-conference/api/theme/db11d986-2486-4ae0-ba87-9cc17902d24f@resourceVersion@id@3A259.json"
                 }
             },
             "attributes": {
                 "langcode": "en",
                 "title": "Iværksætteri",
                 "created": "2020-08-18T11:50:34+00:00",
-                "changed": "2020-08-18T11:50:34+00:00",
-                "promote": true
+                "changed": "2020-08-24T12:36:56+00:00",
+                "promote": true,
+                "summary": null,
+                "description": "<p>Er du iværksætter? Så er dette lige noget for dig!</p>\n"
             },
             "relationships": {
                 "conference": {

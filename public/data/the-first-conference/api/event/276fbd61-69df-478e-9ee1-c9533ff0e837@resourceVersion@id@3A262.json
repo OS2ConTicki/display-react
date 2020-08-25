@@ -14,14 +14,14 @@
         "id": "276fbd61-69df-478e-9ee1-c9533ff0e837",
         "links": {
             "self": {
-                "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A250.json"
+                "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A262.json"
             }
         },
         "attributes": {
             "langcode": "en",
             "title": "How to - Kaffemøde",
             "created": "2020-08-14T07:10:15+00:00",
-            "changed": "2020-08-18T12:00:42+00:00",
+            "changed": "2020-08-24T16:48:35+00:00",
             "promote": true,
             "summary": null,
             "description": "<p>Netværk og kaffemøde går tit hånd-i-hånd, og selvom du sikkert kender til at værdien af at afholde gode kaffemøder, kan det være svært at komme i gang med det. Derfor faciliterer vi en workshop, som giver konkrete råd og vejledning til at komme i gang med kaffemøder samt faciliteret kaffemøde-øvelser.&nbsp;</p>\n",
@@ -47,11 +47,11 @@
             "location": {
                 "data": {
                     "type": "location",
-                    "id": "715af720-70aa-4a2d-b288-5cec7499d8a1"
+                    "id": "a1c1f7a2-6dac-470c-9391-a817e772be79"
                 },
                 "links": {
                     "related": {
-                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/715af720-70aa-4a2d-b288-5cec7499d8a1"
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/location/a1c1f7a2-6dac-470c-9391-a817e772be79"
                     }
                 }
             },
@@ -72,7 +72,12 @@
                 ]
             },
             "sponsors": {
-                "data": []
+                "data": [
+                    {
+                        "type": "sponsor",
+                        "id": "f133db58-ee58-421f-8a7b-cd5abffa404e"
+                    }
+                ]
             },
             "tags": {
                 "data": [
@@ -94,7 +99,7 @@
     },
     "links": {
         "self": {
-            "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A250.json"
+            "href": "/data/the-first-conference/api/event/276fbd61-69df-478e-9ee1-c9533ff0e837@resourceVersion@id@3A262.json"
         }
     }
 }
