@@ -45,7 +45,7 @@
     "build": "encore production --progress",
     "coding-standards-check": "cd src && standard",
     "coding-standards-apply": "cd src && standard --fix",
-    "postinstall": "[ -d .git/hooks ] && ln -sf ../../scripts/git/hooks/pre-commit .git/hooks/pre-commit"
+    "postinstall": "[ -d .git/hooks ] && ln -sf ../../scripts/git/hooks/pre-commit .git/hooks/pre-commit || true"
   },
   "browserslist": {
     "production": [

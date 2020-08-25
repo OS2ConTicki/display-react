@@ -76,6 +76,7 @@ yarn build
 npm adduser os2conticki
 npm version «some version»
 npm publish --access public
+git push --tags
 ```
 
 ## Code linting
