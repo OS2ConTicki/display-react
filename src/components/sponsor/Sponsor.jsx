@@ -5,8 +5,10 @@ import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
 import EventList from '../event/EventList'
+import { useTranslate } from 'react-translate'
 
 const Sponsor = ({ sponsor }) => {
+  const t = useTranslate('Conticki')
   // Unwrap the sponsor object.
   const { title, image, description } = sponsor
 
@@ -41,9 +43,19 @@ const Sponsor = ({ sponsor }) => {
           </Row>
         </Container>
       </Row>
-
-      {/* TODO Show event list for this sponsor */}
-      {sponsor.events && <EventList events={sponsor.events} />}
+      {sponsor.events &&
+        <Row className='py-3'>
+          <Container>
+            <Row>
+              <Col xs={12} className='d-flex mt-3'>
+                <h2 className='h4'>{t('Sponsor for')}</h2>
+              </Col>
+            </Row>
+          </Container>
+          <Col xs={12} className='d-flex mt-3'>
+            <EventList events={sponsor.events} />
+          </Col>
+        </Row>}
     </div>
   )
 }

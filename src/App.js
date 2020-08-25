@@ -84,7 +84,8 @@ function App (props) {
         'See all speakers': 'See all speakers',
         'No description': 'No description',
         Frontpage: 'Frontpage',
-        'Speaks at': 'Speaks at'
+        'Speaks at': 'Speaks at',
+        'Sponsor for': 'Sponsor for'
       }
     }
   } else {
@@ -121,7 +122,8 @@ function App (props) {
         'See all speakers': 'Se alle oplægsholdere',
         'No description': 'Ingen beskrivelse',
         Frontpage: 'Forside',
-        'Speaks at': 'Er taler ved disse events'
+        'Speaks at': 'Er taler ved disse events',
+        'Sponsor for': 'Sponsorere disse events'
       }
     }
   }
