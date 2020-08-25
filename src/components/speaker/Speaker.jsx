@@ -48,7 +48,7 @@ const Speaker = ({ speaker }) => {
           <Container>
             <Row>
               <Col xs={12} className='d-flex mt-3'>
-                <h2 className='h4'>{t('Speaks at')}</h2>
+                <h2 className='h4'>{t('Speaker at')}</h2>
               </Col>
             </Row>
           </Container>

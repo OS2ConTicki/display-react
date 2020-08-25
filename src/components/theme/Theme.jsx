@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
 import { useTranslate } from 'react-translate'
+import EventList from '../event/EventList'
 
 const Theme = ({ theme }) => {
   const t = useTranslate('Conticki')
@@ -31,6 +32,19 @@ const Theme = ({ theme }) => {
           </Row>
         </Container>
       </Row>
+      {theme.events &&
+        <Row className='py-3'>
+          <Container>
+            <Row>
+              <Col xs={12} className='d-flex mt-3'>
+                <h2 className='h4'>{t('Theme for')}</h2>
+              </Col>
+            </Row>
+          </Container>
+          <Col xs={12} className='d-flex mt-3'>
+            <EventList events={theme.events} />
+          </Col>
+        </Row>}
     </div>
   )
 }
