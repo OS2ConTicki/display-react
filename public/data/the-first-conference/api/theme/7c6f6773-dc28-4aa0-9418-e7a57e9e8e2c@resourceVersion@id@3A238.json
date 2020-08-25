@@ -1,0 +1,46 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "theme",
+        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c@resourceVersion@id@3A238.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Fremtidens arbejdsmarked",
+            "created": "2020-08-18T11:48:46+00:00",
+            "changed": "2020-08-18T11:48:46+00:00",
+            "promote": true
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/theme/7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c@resourceVersion@id@3A238.json"
+        }
+    }
+}

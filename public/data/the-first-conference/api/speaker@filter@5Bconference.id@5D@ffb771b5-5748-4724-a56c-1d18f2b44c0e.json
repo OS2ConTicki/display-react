@@ -1,0 +1,299 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "type": "speaker",
+            "id": "931efb1b-fdfe-46cd-bbbd-682b3035d87c",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/931efb1b-fdfe-46cd-bbbd-682b3035d87c@resourceVersion@id@3A228.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Jeanette Bach",
+                "created": "2020-08-14T07:20:22+00:00",
+                "changed": "2020-08-17T07:42:41+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Jeanette-Bach.jpg",
+                    "meta": {
+                        "alt": "Portræt: Jeanette Bach",
+                        "title": "",
+                        "width": 500,
+                        "height": 650
+                    }
+                },
+                "summary": null,
+                "description": "<p>Karriererådgiver,&nbsp;Magistrenes A-kasse Aarhus</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "ad2ed3f8-223a-48c2-81e9-7e172f3216d8",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/ad2ed3f8-223a-48c2-81e9-7e172f3216d8@resourceVersion@id@3A229.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Tina Skiffard",
+                "created": "2020-08-14T07:12:48+00:00",
+                "changed": "2020-08-17T07:43:01+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Tina@20Skiffard.jpg",
+                    "meta": {
+                        "alt": "Portræt Tina Skiffard",
+                        "title": "",
+                        "width": 365,
+                        "height": 237
+                    }
+                },
+                "summary": null,
+                "description": "<p>Innovationskonsulent,&nbsp;Erhverv Aarhus og GATE</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "fedf2ddb-0727-4046-b1b3-e9f76745140c",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/fedf2ddb-0727-4046-b1b3-e9f76745140c@resourceVersion@id@3A230.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Allan Nielsen",
+                "created": "2020-08-14T07:05:26+00:00",
+                "changed": "2020-08-17T07:43:21+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Allan_Nielsen.jpg",
+                    "meta": {
+                        "alt": "Portræt: Allan Nielsen",
+                        "title": "",
+                        "width": 250,
+                        "height": 250
+                    }
+                },
+                "summary": null,
+                "description": "<p>Seniorkonsulent,&nbsp;Potential in action</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "fd132d81-8b06-456b-b3bb-a280e5c1b55d",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/fd132d81-8b06-456b-b3bb-a280e5c1b55d@resourceVersion@id@3A234.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Marc Perera Christensen",
+                "created": "2020-08-14T06:33:48+00:00",
+                "changed": "2020-08-17T07:45:17+00:00",
+                "promote": true,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Marc.jpg",
+                    "meta": {
+                        "alt": "Portræt Marc Perera Christensen",
+                        "title": "",
+                        "width": 600,
+                        "height": 600
+                    }
+                },
+                "summary": null,
+                "description": "<p>Direktør,&nbsp;Erhverv Aarhus</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "816c2566-0750-4ae3-9b16-9c24f3e2ca1a",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/816c2566-0750-4ae3-9b16-9c24f3e2ca1a@resourceVersion@id@3A255.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Jens Braarup",
+                "created": "2020-08-13T13:32:38+00:00",
+                "changed": "2020-08-20T14:48:15+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Jens-Braarup-Jakob-Carlsen.jpg",
+                    "meta": {
+                        "alt": "Portræt: Jens Braarup",
+                        "title": "",
+                        "width": 392,
+                        "height": 587
+                    }
+                },
+                "summary": null,
+                "description": "<p>Karrierevejleder, Team for karriere og jobsøgning, AJKS - Arbejdsløshedskassen for journalistik, Kommunikation &amp; Sprog</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "79ced56c-d311-4fae-8124-c7cc355a3132",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A256.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Søren Ø. Skadhede",
+                "created": "2020-08-13T12:20:30+00:00",
+                "changed": "2020-08-20T15:01:23+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/S@C3@B8ren.jpg",
+                    "meta": {
+                        "alt": "Portræt: Søren Skadhede",
+                        "title": "",
+                        "width": 200,
+                        "height": 200
+                    }
+                },
+                "summary": null,
+                "description": "<p>Seniorkonsulent,&nbsp;Potential in action</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34",
+            "links": {
+                "self": {
+                    "href": "/data/the-first-conference/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A257.json"
+                }
+            },
+            "attributes": {
+                "langcode": "en",
+                "title": "Christopher Bering Baden",
+                "created": "2020-08-13T13:24:37+00:00",
+                "changed": "2020-08-20T15:01:33+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/the-first-conference/sites/default/files/2020-08/Christopher.jpg",
+                    "meta": {
+                        "alt": "Portræt: Christopher Bering Baden",
+                        "title": "",
+                        "width": 1610,
+                        "height": 1875
+                    }
+                },
+                "summary": null,
+                "description": "<p>Karriererådgiver, Magistrenes A-kasse&nbsp;Aarhus</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/speaker@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e.json"
+        }
+    }
+}

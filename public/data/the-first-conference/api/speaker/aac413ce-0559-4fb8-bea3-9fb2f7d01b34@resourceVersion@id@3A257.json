@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "speaker",
+        "id": "aac413ce-0559-4fb8-bea3-9fb2f7d01b34",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A257.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Christopher Bering Baden",
+            "created": "2020-08-13T13:24:37+00:00",
+            "changed": "2020-08-20T15:01:33+00:00",
+            "promote": false,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/Christopher.jpg",
+                "meta": {
+                    "alt": "Portræt: Christopher Bering Baden",
+                    "title": "",
+                    "width": 1610,
+                    "height": 1875
+                }
+            },
+            "summary": null,
+            "description": "<p>Karriererådgiver, Magistrenes A-kasse&nbsp;Aarhus</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/speaker/aac413ce-0559-4fb8-bea3-9fb2f7d01b34@resourceVersion@id@3A257.json"
+        }
+    }
+}

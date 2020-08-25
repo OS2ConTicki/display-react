@@ -1,0 +1,100 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "c72189c4-9d7b-4206-9262-28822246a09c",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/event/c72189c4-9d7b-4206-9262-28822246a09c@resourceVersion@id@3A248.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Akademisk medarbejder, AC’er?",
+            "created": "2020-08-14T07:17:25+00:00",
+            "changed": "2020-08-18T11:59:19+00:00",
+            "promote": true,
+            "summary": null,
+            "description": "<p>Kært barn har mange navne, men hvad betyder det egentlig at være ansat som akademisk medarbejder? Hvilke kompetencer efterspørges, og hvad lægger arbejdsgivere mon vægt på? Kom og få svar på alle dine spørgsmål til dette arrangement, hvor du vil møde både arbejdsgivere samt AC’ere med forskellige profiler og typer af arbejdsopgaver.</p>\n",
+            "ticket": {
+                "url": "https://pretix.eu/jobcenter-aarhus/ac/",
+                "text": "Tilmeld dig arrangementet"
+            },
+            "start_time": "2020-10-21T14:00:00+00:00",
+            "end_time": "2020-10-21T17:00:00+00:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/location/0cfb9def-f7aa-44c1-be29-2c82235053b3"
+                    }
+                }
+            },
+            "organizers": {
+                "data": [
+                    {
+                        "type": "organizer",
+                        "id": "5a4f1956-b5d0-4e17-8263-3a1a46f2a57a"
+                    }
+                ]
+            },
+            "speakers": {
+                "data": [
+                    {
+                        "type": "speaker",
+                        "id": "931efb1b-fdfe-46cd-bbbd-682b3035d87c"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": []
+            },
+            "tags": {
+                "data": [
+                    {
+                        "type": "tag",
+                        "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436"
+                    }
+                ]
+            },
+            "themes": {
+                "data": [
+                    {
+                        "type": "theme",
+                        "id": "7c6f6773-dc28-4aa0-9418-e7a57e9e8e2c"
+                    }
+                ]
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/event/c72189c4-9d7b-4206-9262-28822246a09c@resourceVersion@id@3A248.json"
+        }
+    }
+}

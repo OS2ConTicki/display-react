@@ -12,12 +12,7 @@ function ConferenceInfo () {
     <>
       {conference && (
         <div id='top'>
-          <DisplayInfoComponent
-            title={conference.title}
-            description={conference.description}
-            image={conference.image}
-            ticketUrl={conference.ticketUrl}
-          />
+          <DisplayInfoComponent {...conference} />
         </div>
       )}
     </>

@@ -46,14 +46,14 @@
     <div id="app">#app</div>
     <script src="/dist/entry.js"></script>
     <script>
-     ConferenceApp.render({
-       element: document.getElementById('app'),
-       basename: '/the-first-conference',
-       url: '/data/the-first-conference/conference.json',
-      //  url: '/data/another-conference/conference.json',
-      //  url: '/data/a-very-long-one/conference.json',
-     })
-     if ('serviceWorker' in navigator) {
+      ConferenceApp.render({
+        element: document.getElementById('app'),
+        basename: '/the-first-conference',
+        url: '/data/the-first-conference/conference.json'
+        // url: '/data/another-conference/conference.json'
+        // url: '/data/a-very-long-one/conference.json'git
+      })
+      if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/service-worker.js');
       }
     </script>

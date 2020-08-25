@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "speaker",
+        "id": "79ced56c-d311-4fae-8124-c7cc355a3132",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A256.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Søren Ø. Skadhede",
+            "created": "2020-08-13T12:20:30+00:00",
+            "changed": "2020-08-20T15:01:23+00:00",
+            "promote": false,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/S@C3@B8ren.jpg",
+                "meta": {
+                    "alt": "Portræt: Søren Skadhede",
+                    "title": "",
+                    "width": 200,
+                    "height": 200
+                }
+            },
+            "summary": null,
+            "description": "<p>Seniorkonsulent,&nbsp;Potential in action</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/speaker/79ced56c-d311-4fae-8124-c7cc355a3132@resourceVersion@id@3A256.json"
+        }
+    }
+}

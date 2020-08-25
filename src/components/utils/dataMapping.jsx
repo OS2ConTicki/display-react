@@ -1,42 +1,69 @@
-import _ from 'lodash'
 import { getDate } from './dateHandler'
 
-export function mapElement (element) {
-  return {
+export function mapElement (element, entities = {}) {
+  const data = {
     id: element.id,
-    title: element.attributes.title,
-    type: element.type,
-    description: element.attributes.description,
-    image: element.attributes.image,
-    summary: element.attributes.summary,
-    ticketUrl: element.attributes.ticket
+    type: element.type
   }
+
+  // Map all attributes.
+  for (const [name, value] of Object.entries(element.attributes)) {
+    data[name] = value
+  }
+
+  // Expand all relationships.
+  if (entities && element.relationships) {
+    const getEntity = (item) => {
+      const { type, id } = item
+
+      return (entities[type] && entities[type][id]) ? entities[type][id] : null
+    }
+
+    for (const [name, relationship] of Object.entries(element.relationships)) {
+      if (relationship.data) {
+        data[name] = Array.isArray(relationship.data)
+          ? relationship.data.map(getEntity)
+          : getEntity(relationship.data)
+      }
+    }
+  }
+
+  return data
 }
 
-export function mapEvent (event, locations) {
-  event.attributes.liked = window.localStorage.getItem(event.id) === 'true'
-  event.attributes.id = event.id
-  event.attributes.startDate = getDate(event.attributes.start_time)
-  event.attributes.isEventDone = isEventDone(event.attributes.end_time)
-  const tagIds = []
-  if (event.relationships.tags.data) {
-    event.relationships.tags.data.forEach((tag) => {
-      tagIds.push(tag.id)
-    })
+export function mapEvent (event, entities) {
+  const data = mapElement(event, entities)
+  data.liked = window.localStorage.getItem(event.id) === 'true'
+  data.id = event.id
+  data.startDate = getDate(data.start_time)
+  data.isEventDone = isEventDone(data.end_time)
+  // event.themes may be an object!
+  if (data.themes && !Array.isArray(data.themes)) {
+    data.themes = [data.themes]
   }
-  if (event.relationships.location.data) {
-    const location = _.find(locations, function (location) {
-      return location.id === event.relationships.location.data.id
-    })
-    event.attributes.location = location.title
-    event.attributes.locationId = location.id
+
+  // Build search string
+  const searchItems = [
+    data.title,
+    data.description,
+    data.location && data.location.title
+  ]
+  if (data.tags) {
+    searchItems.push(data.tags.map(tag => tag.title))
   }
-  event.attributes.tags = tagIds
-  event.attributes.theme = ''
-  if (event.relationships.themes.data) {
-    event.attributes.theme = event.relationships.themes.data.id
+  if (data.themes) {
+    searchItems.push(data.themes.map(theme => theme.title))
   }
-  return event.attributes
+  data.search =
+    // Flatten
+    [].concat(...searchItems)
+      .filter(value => !!value)
+      .join(' ')
+    // Strip tags
+      .replace(/(<([^>]+)>)/ig, '')
+      .toLocaleLowerCase()
+
+  return data
 }
 
 function isEventDone (inputDate) {

@@ -1,0 +1,46 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "tag",
+        "id": "a68d50fa-bc34-4a0e-8337-c826fe93f436",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/tag/a68d50fa-bc34-4a0e-8337-c826fe93f436@resourceVersion@id@3A216.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Oplæg",
+            "created": "2020-08-17T07:21:13+00:00",
+            "changed": "2020-08-17T07:21:13+00:00",
+            "promote": true
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/tag/a68d50fa-bc34-4a0e-8337-c826fe93f436@resourceVersion@id@3A216.json"
+        }
+    }
+}

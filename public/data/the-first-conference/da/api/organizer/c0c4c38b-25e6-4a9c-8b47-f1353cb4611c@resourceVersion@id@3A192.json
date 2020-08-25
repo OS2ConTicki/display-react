@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "organizer",
+        "id": "c0c4c38b-25e6-4a9c-8b47-f1353cb4611c",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/organizer/c0c4c38b-25e6-4a9c-8b47-f1353cb4611c@resourceVersion@id@3A192.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "AJKS - Arbejdsløshedskassen for Journalistisk, Kommunikation & Sprog",
+            "created": "2020-08-14T06:41:15+00:00",
+            "changed": "2020-08-14T06:41:24+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/AJKS_0.jpg",
+                "meta": {
+                    "alt": "Logo: AJKS",
+                    "title": "",
+                    "width": 300,
+                    "height": 150
+                }
+            },
+            "summary": null,
+            "description": "<p>AJKS er&nbsp;niche a-kassen, som er fagligt forankret og kender beskæftigelsesmulighederne indenfor kommunikation, medier og sprog bedre end nogen anden.&nbsp;&nbsp;&nbsp;</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/organizer/c0c4c38b-25e6-4a9c-8b47-f1353cb4611c@resourceVersion@id@3A192.json"
+        }
+    }
+}

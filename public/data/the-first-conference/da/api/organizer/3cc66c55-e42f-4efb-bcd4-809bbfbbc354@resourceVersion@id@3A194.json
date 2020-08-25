@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "organizer",
+        "id": "3cc66c55-e42f-4efb-bcd4-809bbfbbc354",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/organizer/3cc66c55-e42f-4efb-bcd4-809bbfbbc354@resourceVersion@id@3A194.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Potential in action",
+            "created": "2020-08-14T06:43:52+00:00",
+            "changed": "2020-08-14T06:44:04+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/PIA_1.jpg",
+                "meta": {
+                    "alt": "Mand der holder oplæg for en gruppe",
+                    "title": "",
+                    "width": 813,
+                    "height": 540
+                }
+            },
+            "summary": null,
+            "description": "<p>Potential in Action er specialiseret i coaching og karrierevejledning af nyuddannede akademikere og har arbejdet intensivt med området siden 2011. Det har givet os en stor indsigt i, hvordan man bygger bro mellem højtuddannede dimittender og det private erhvervsliv.</p>\n\n<p>I Potential in Action arbejder vi altid med det hele menneske. Ved at gå i dybden med dine faglige og personlige kompetencer hjælper vi dig med at finde og argumentere for din værdiskabelse som medarbejder, fx i en privat virksomhed.</p>\n\n<p>Vores tre workshops baserer sig på denne tilgang og vil især handle om at stille skarpt på din personlighed og motivation samt om at se nye jobmuligheder for din profil.</p>\n\n<p>Vi glæder os til at se dig til tre udbytterige dage – vi lover, at du får noget konkret med dig herfra!</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/organizer/3cc66c55-e42f-4efb-bcd4-809bbfbbc354@resourceVersion@id@3A194.json"
+        }
+    }
+}

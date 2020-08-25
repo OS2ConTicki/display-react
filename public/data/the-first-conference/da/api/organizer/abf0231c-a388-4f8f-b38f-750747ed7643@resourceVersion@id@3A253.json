@@ -1,0 +1,58 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "organizer",
+        "id": "abf0231c-a388-4f8f-b38f-750747ed7643",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/da/api/organizer/abf0231c-a388-4f8f-b38f-750747ed7643@resourceVersion@id@3A253.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Jobcenter Aarhus",
+            "created": "2020-08-13T12:16:05+00:00",
+            "changed": "2020-08-19T18:54:14+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/Jobcenter.jpg",
+                "meta": {
+                    "alt": "Logo Jobcenter Aarhus",
+                    "title": "",
+                    "width": 367,
+                    "height": 137
+                }
+            },
+            "summary": null,
+            "description": "<p><em>Jobcenter Aarhus</em>&nbsp;når du er ledig. Hvad du skal gøre som ledig, afhænger først og fremmest af, om du er berettiget til dagpenge fra en a-kasse eller ej.</p>\n",
+            "website_url": "https://www.aarhus.dk/borger/job-og-ledighed/"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/organizer/abf0231c-a388-4f8f-b38f-750747ed7643@resourceVersion@id@3A253.json"
+        }
+    }
+}

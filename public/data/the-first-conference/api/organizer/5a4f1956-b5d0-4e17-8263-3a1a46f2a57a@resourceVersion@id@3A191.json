@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "organizer",
+        "id": "5a4f1956-b5d0-4e17-8263-3a1a46f2a57a",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/organizer/5a4f1956-b5d0-4e17-8263-3a1a46f2a57a@resourceVersion@id@3A191.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Magistrenes A-kasse",
+            "created": "2020-08-14T06:40:17+00:00",
+            "changed": "2020-08-14T06:40:29+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/ma-logo_0.png",
+                "meta": {
+                    "alt": "Logo: Magistrenes A-kasse",
+                    "title": "",
+                    "width": 225,
+                    "height": 225
+                }
+            },
+            "summary": null,
+            "description": "<p>Du er kommet til den rigtige a-kasse, hvis du har en baggrund inden for et af vores specialer: Humaniora, naturvidenskab, samfundsvidenskab, it, kommunikation, sundhed, psykologi og pædagogik.</p>\n\n<p>Det gælder, uanset om du er nyuddannet, lønmodtager, freelancer eller projektansat, eller du driver din egen virksomhed. Det er nemlig profilerne for vores 82.000 medlemmer – og ekspertisen hos vores rådgivere.</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/organizer/5a4f1956-b5d0-4e17-8263-3a1a46f2a57a@resourceVersion@id@3A191.json"
+        }
+    }
+}

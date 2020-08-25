@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import _ from 'lodash'
 import ProgramList from './programList'
 import BadgeList from './badgeList'
@@ -9,8 +9,11 @@ import Col from 'react-bootstrap/Col'
 import Collapse from 'react-bootstrap/Collapse'
 import Container from 'react-bootstrap/Container'
 import { useTranslate } from 'react-translate'
-import { getDayByLanguage, getDateByLanguage } from './utils/dateHandler'
+import { getDateByLanguage, getDayByLanguage } from './utils/dateHandler'
 import AppStateContext from '../context/appStateContext'
+import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons'
+import { faHeart as faHeartOutline } from '@fortawesome/free-regular-svg-icons'
+import IconButton from './common/IconButton'
 
 function Program ({ eventsList, tagsList, themesList }) {
   const t = useTranslate('Conticki')
@@ -28,6 +31,7 @@ function Program ({ eventsList, tagsList, themesList }) {
   const [dates] = useState(getDates())
   const [days] = useState([allEventsDay, ...getDays()])
   const [open, setOpen] = useState(false)
+  const [showMyEvents, setShowMyEvents] = useState(false)
 
   function getDates () {
     const returnDatesArray = []
@@ -91,31 +95,32 @@ function Program ({ eventsList, tagsList, themesList }) {
   function getPagedData () {
     let filteredEvents = [...events]
     if (searchText) {
+      const search = searchText.toLocaleLowerCase()
       filteredEvents = filteredEvents.filter(
-        (event) =>
-          event.title?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-          event.description?.toLowerCase().indexOf(searchText.toLowerCase()) >
-            -1 ||
-          event.from?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-          event.to?.toLowerCase().indexOf(searchText.toLowerCase()) > -1 ||
-          event.location?.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+        (event) => event.search && event.search.includes(search)
       )
     }
     if (selectedTag.id) {
       filteredEvents = filteredEvents.filter((event) => {
-        return event.tags.includes(selectedTag.id)
+        return event.tags && event.tags.filter(tag => tag.id === selectedTag.id).length > 0
       })
     }
 
     if (selectedTheme.id) {
       filteredEvents = filteredEvents.filter((event) => {
-        return event.theme === selectedTheme.id
+        return event.themes && event.themes.filter(theme => theme.id === selectedTheme.id).length > 0
       })
     }
 
     if (selectedDay.id) {
       filteredEvents = filteredEvents.filter((event) => {
         return event.startDate === selectedDay.id
+      })
+    }
+
+    if (showMyEvents) {
+      filteredEvents = filteredEvents.filter((event) => {
+        return event.liked === showMyEvents
       })
     }
 
@@ -143,7 +148,7 @@ function Program ({ eventsList, tagsList, themesList }) {
       <Container>
         <Row className='mt-3 mb-3 scroll-offset-class' id='program'>
           <Col xs={6}>
-            <h2>{t('PROGRAM')}</h2>
+            <h2>{t('Program')}</h2>
           </Col>
           <Col xs={6} className='text-right'>
             <Button
@@ -151,19 +156,19 @@ function Program ({ eventsList, tagsList, themesList }) {
               onClick={() => setOpen(!open)}
               aria-controls='searchEvent'
               aria-expanded={open}
+              className='mt-2'
             >
-              {t('SEARCH_EVENTS')}
+              {t('Search events')}
             </Button>
           </Col>
           <Col xs={12}>
-            <Collapse in={open} className='bg-light p-3 rounded-sm'>
-              <div id='searchEvent' className='searchEvent'>
+            <Collapse in={open} className='bg-light border p-3 rounded-sm'>
+              <div id='searchEvent' className='searchEvent mb-3'>
                 <SearchBox value={searchText} onChange={handleSearch} />
-
                 <div className='mb-3'>
                   {themes && (
                     <BadgeList
-                      title={t('THEMES')}
+                      title={t('Themes', { n: 87 })}
                       items={themes}
                       textProperty='title'
                       valueProperty='id'
@@ -174,7 +179,7 @@ function Program ({ eventsList, tagsList, themesList }) {
                 </div>
                 {tags && (
                   <BadgeList
-                    title={t('TAGS')}
+                    title={t('Tags', { n: 87 })}
                     items={tags}
                     textProperty='name'
                     valueProperty='id'
@@ -184,7 +189,7 @@ function Program ({ eventsList, tagsList, themesList }) {
                 )}
               </div>
             </Collapse>
-            <p className='text-muted mt-3'>{eventString}</p>
+
             {days && days.length > 2 && (
               <div className='mb-3'>
                 <BadgeList
@@ -196,6 +201,19 @@ function Program ({ eventsList, tagsList, themesList }) {
                 />
               </div>
             )}
+
+            <IconButton
+              variant='primary'
+              onClick={() => setShowMyEvents(!showMyEvents)}
+              icon={{
+                icon: showMyEvents ? faHeartOutline : faHeartSolid,
+                size: 'lg'
+              }}
+            >
+              {showMyEvents ? t('Show all events') : t('Show my events')}
+            </IconButton>
+            {totalCount === 0 &&
+              <p className='text-muted mt-3'>{eventString}</p>}
             {dates.map((date) => (
               <ProgramList
                 key={date.id}

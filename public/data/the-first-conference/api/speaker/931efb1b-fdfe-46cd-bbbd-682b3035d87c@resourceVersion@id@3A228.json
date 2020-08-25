@@ -1,0 +1,57 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "speaker",
+        "id": "931efb1b-fdfe-46cd-bbbd-682b3035d87c",
+        "links": {
+            "self": {
+                "href": "/data/the-first-conference/api/speaker/931efb1b-fdfe-46cd-bbbd-682b3035d87c@resourceVersion@id@3A228.json"
+            }
+        },
+        "attributes": {
+            "langcode": "en",
+            "title": "Jeanette Bach",
+            "created": "2020-08-14T07:20:22+00:00",
+            "changed": "2020-08-17T07:42:41+00:00",
+            "promote": true,
+            "image": {
+                "url": "/data/the-first-conference/sites/default/files/2020-08/Jeanette-Bach.jpg",
+                "meta": {
+                    "alt": "Portræt: Jeanette Bach",
+                    "title": "",
+                    "width": 500,
+                    "height": 650
+                }
+            },
+            "summary": null,
+            "description": "<p>Karriererådgiver,&nbsp;Magistrenes A-kasse Aarhus</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://admin.os2conticki.srvitkhulk.itkdev.dk/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/the-first-conference/api/speaker/931efb1b-fdfe-46cd-bbbd-682b3035d87c@resourceVersion@id@3A228.json"
+        }
+    }
+}
