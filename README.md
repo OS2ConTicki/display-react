@@ -15,17 +15,17 @@ yarn add @os2conticki/display-react
 Use it:
 
 ```html
-<link ref="stylesheet" href="node_modules/@os2conticki/npm-test/dist/entry.css"></script>
+<link ref="stylesheet" href="node_modules/@os2conticki/display-react/public/dist/entry.css"></script>
 …
-<script src="node_modules/@os2conticki/npm-test/dist/entry.js"></script>
+<script src="node_modules/@os2conticki/display-react/public/dist/entry.js"></script>
 ```
 
 Or get it directly from a cdn:
 
 ```sh
-<link ref="stylesheet" href="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/dist/entry.css"></script>
+<link ref="stylesheet" href="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/public/dist/entry.css"></script>
 …
-<script src="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/dist/entry.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/public/dist/entry.js"></script>
 ```
 
 ## Example
@@ -37,12 +37,12 @@ Or get it directly from a cdn:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>My conference</title>
-    <link ref="stylesheet" href="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/dist/entry.css"></script>
+    <link ref="stylesheet" href="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/public/dist/entry.css"></script>
   </head>
   <body>
     <div id="app"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/dist/entry.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/public/dist/entry.js"></script>
     <script>
      ConferenceApp.render({
        element: document.getElementById('app'),
