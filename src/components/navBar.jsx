@@ -46,10 +46,11 @@ const NavBar = () => {
   return (
     <Navbar variant='dark' bg='primary' expand='lg' sticky='top' className='main-navigation'>
       <Container>
-        <Link to='/#home' className='nav-brand mr-md-3'>
-          {/* TODO: Provide better fallback if no icon is available */}
-          {icon ? <img src={icon} alt={t('Frontpage')} style={{ height: 40 }} /> : <span className='nav-link'>{t('Frontpage')}</span>}
-        </Link>
+        <Navbar.Brand>
+          <Link to='/#home' className='nav-brand mr-md-3'>
+            {icon ? <img src={icon} alt={conference.title} style={{ height: 40 }} /> : <span className='text-light'>{conference.title}</span>}
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls='main-navigation' />
         <Navbar.Collapse id='main-navigation'>
           <Nav className='mr-autotext-venter'>
