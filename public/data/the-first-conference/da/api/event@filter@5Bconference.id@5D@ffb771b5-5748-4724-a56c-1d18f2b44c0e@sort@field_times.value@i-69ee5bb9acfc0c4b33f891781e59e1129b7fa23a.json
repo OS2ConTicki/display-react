@@ -690,7 +690,7 @@
             "id": "ffb771b5-5748-4724-a56c-1d18f2b44c0e",
             "links": {
                 "self": {
-                    "href": "/data/the-first-conference/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A265.json"
+                    "href": "/data/the-first-conference/da/api/conference/ffb771b5-5748-4724-a56c-1d18f2b44c0e@resourceVersion@id@3A268.json"
                 },
                 "event": {
                     "href": "/data/the-first-conference/da/api/event@filter@5Bconference.id@5D@ffb771b5-5748-4724-a56c-1d18f2b44c0e@sort@field_times.value.json"
@@ -721,7 +721,7 @@
                 "langcode": "da",
                 "title": "JOB BootCamp",
                 "created": "2020-08-13T12:13:15+00:00",
-                "changed": "2020-08-24T16:55:44+00:00",
+                "changed": "2020-08-25T13:04:13+00:00",
                 "promote": true,
                 "image": {
                     "url": "/data/the-first-conference/sites/default/files/2020-08/105413454_105260671243317_7587995258585147510_n.jpg",
@@ -740,24 +740,25 @@
                     "primary_color": "#ffffff",
                     "logo": "/data/the-first-conference/sites/default/files/2020-08/lorempixel-512x512-01.png",
                     "icons": {
-                        "114x114": "/data/the-first-conference/sites/default/files/styles/app_icon_114x114/public/2020-08/lorempixel-512x512-01.png@itok@t3xQMnXl.json",
-                        "120x120": "/data/the-first-conference/sites/default/files/styles/app_icon_120x120/public/2020-08/lorempixel-512x512-01.png@itok@8p_5mOEl.json",
-                        "128x128": "/data/the-first-conference/sites/default/files/styles/app_icon_128x128/public/2020-08/lorempixel-512x512-01.png@itok@IBMLeJkY.json",
-                        "144x144": "/data/the-first-conference/sites/default/files/styles/app_icon_144x144/public/2020-08/lorempixel-512x512-01.png@itok@btgN3piH.json",
-                        "150x150": "/data/the-first-conference/sites/default/files/styles/app_icon_150x150/public/2020-08/lorempixel-512x512-01.png@itok@uQDBA1Br.json",
-                        "152x152": "/data/the-first-conference/sites/default/files/styles/app_icon_152x152/public/2020-08/lorempixel-512x512-01.png@itok@XveIfQ6J.json",
-                        "16x16": "/data/the-first-conference/sites/default/files/styles/app_icon_16x16/public/2020-08/lorempixel-512x512-01.png@itok@d8LEvWmG.json",
-                        "196x196": "/data/the-first-conference/sites/default/files/styles/app_icon_196x196/public/2020-08/lorempixel-512x512-01.png@itok@cI-xTOvh.json",
-                        "310x150": "/data/the-first-conference/sites/default/files/styles/app_icon_310x150/public/2020-08/lorempixel-512x512-01.png@itok@__tgbUqV.json",
-                        "310x310": "/data/the-first-conference/sites/default/files/styles/app_icon_310x310/public/2020-08/lorempixel-512x512-01.png@itok@Tfre57rK.json",
-                        "32x32": "/data/the-first-conference/sites/default/files/styles/app_icon_32x32/public/2020-08/lorempixel-512x512-01.png@itok@qWX5vxPk.json",
-                        "57x57": "/data/the-first-conference/sites/default/files/styles/app_icon_57x57/public/2020-08/lorempixel-512x512-01.png@itok@amdkxC4j.json",
-                        "60x60": "/data/the-first-conference/sites/default/files/styles/app_icon_60x60/public/2020-08/lorempixel-512x512-01.png@itok@89Nd942-.json",
-                        "70x70": "/data/the-first-conference/sites/default/files/styles/app_icon_70x70/public/2020-08/lorempixel-512x512-01.png@itok@A7XtHigb.json",
-                        "72x72": "/data/the-first-conference/sites/default/files/styles/app_icon_72x72/public/2020-08/lorempixel-512x512-01.png@itok@sygzsIRi.json",
-                        "76x76": "/data/the-first-conference/sites/default/files/styles/app_icon_76x76/public/2020-08/lorempixel-512x512-01.png@itok@PD6YnqyK.json",
-                        "96x96": "/data/the-first-conference/sites/default/files/styles/app_icon_96x96/public/2020-08/lorempixel-512x512-01.png@itok@22hB9hXR.json"
-                    }
+                        "114x114": "/data/the-first-conference/sites/default/files/styles/app_icon_114x114/public/2020-08/lorempixel-512x512-01.png@itok@t3xQMnXl",
+                        "120x120": "/data/the-first-conference/sites/default/files/styles/app_icon_120x120/public/2020-08/lorempixel-512x512-01.png@itok@8p_5mOEl",
+                        "128x128": "/data/the-first-conference/sites/default/files/styles/app_icon_128x128/public/2020-08/lorempixel-512x512-01.png@itok@IBMLeJkY",
+                        "144x144": "/data/the-first-conference/sites/default/files/styles/app_icon_144x144/public/2020-08/lorempixel-512x512-01.png@itok@btgN3piH",
+                        "150x150": "/data/the-first-conference/sites/default/files/styles/app_icon_150x150/public/2020-08/lorempixel-512x512-01.png@itok@uQDBA1Br",
+                        "152x152": "/data/the-first-conference/sites/default/files/styles/app_icon_152x152/public/2020-08/lorempixel-512x512-01.png@itok@XveIfQ6J",
+                        "16x16": "/data/the-first-conference/sites/default/files/styles/app_icon_16x16/public/2020-08/lorempixel-512x512-01.png@itok@d8LEvWmG",
+                        "196x196": "/data/the-first-conference/sites/default/files/styles/app_icon_196x196/public/2020-08/lorempixel-512x512-01.png@itok@cI-xTOvh",
+                        "310x150": "/data/the-first-conference/sites/default/files/styles/app_icon_310x150/public/2020-08/lorempixel-512x512-01.png@itok@__tgbUqV",
+                        "310x310": "/data/the-first-conference/sites/default/files/styles/app_icon_310x310/public/2020-08/lorempixel-512x512-01.png@itok@Tfre57rK",
+                        "32x32": "/data/the-first-conference/sites/default/files/styles/app_icon_32x32/public/2020-08/lorempixel-512x512-01.png@itok@qWX5vxPk",
+                        "57x57": "/data/the-first-conference/sites/default/files/styles/app_icon_57x57/public/2020-08/lorempixel-512x512-01.png@itok@amdkxC4j",
+                        "60x60": "/data/the-first-conference/sites/default/files/styles/app_icon_60x60/public/2020-08/lorempixel-512x512-01.png@itok@89Nd942-",
+                        "70x70": "/data/the-first-conference/sites/default/files/styles/app_icon_70x70/public/2020-08/lorempixel-512x512-01.png@itok@A7XtHigb",
+                        "72x72": "/data/the-first-conference/sites/default/files/styles/app_icon_72x72/public/2020-08/lorempixel-512x512-01.png@itok@sygzsIRi",
+                        "76x76": "/data/the-first-conference/sites/default/files/styles/app_icon_76x76/public/2020-08/lorempixel-512x512-01.png@itok@PD6YnqyK",
+                        "96x96": "/data/the-first-conference/sites/default/files/styles/app_icon_96x96/public/2020-08/lorempixel-512x512-01.png@itok@22hB9hXR"
+                    },
+                    "logo_svg": "/data/the-first-conference/sites/default/files/2020-08/appsymbol.svg"
                 }
             },
             "relationships": {
