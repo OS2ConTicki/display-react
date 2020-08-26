@@ -43,8 +43,8 @@
     "dev": "encore dev",
     "watch": "encore dev --watch",
     "build": "encore production --progress",
-    "coding-standards-check": "cd src && standard",
-    "coding-standards-apply": "cd src && standard --fix",
+    "coding-standards-check": "standard webpack.config.js; cd src && standard",
+    "coding-standards-apply": "standard --fix webpack.config.js; cd src && standard --fix",
     "postinstall": "[ -d .git/hooks ] && ln -sf ../../scripts/git/hooks/pre-commit .git/hooks/pre-commit || true"
   },
   "browserslist": {
