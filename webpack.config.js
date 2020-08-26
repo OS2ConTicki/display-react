@@ -68,4 +68,10 @@ Encore
     pattern: /\.(png|jpg|jpeg)$/
   })
 
+// For production we want to use a relative output path.
+// @TODO There must be a better way to do this.
+if (Encore.isProduction()) {
+  Encore.setPublicPath('.')
+}
+
 module.exports = Encore.getWebpackConfig()
