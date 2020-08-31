@@ -43,6 +43,18 @@ const Organizer = ({ organizer }) => {
           </Row>
         </Container>
       </Row>
+      {organizer.website_url &&
+        <Row className='py-3 bg-light'>
+          <Container>
+            <Row>
+              <Col xs={12} className='d-flex mt-3'>
+                <a href={organizer.website_url} className='btn btn-primary btn-lg'>
+                  {t('Read more on webpage for {{organizer}}', { organizer: organizer.title })}
+                </a>
+              </Col>
+            </Row>
+          </Container>
+        </Row>}
       {organizer.events &&
         <Row className='py-3'>
           <Container>

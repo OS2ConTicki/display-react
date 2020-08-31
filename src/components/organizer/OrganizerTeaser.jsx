@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
 import { useTranslate } from 'react-translate'
+import { Link } from 'react-router-dom'
 
 const Organizer = ({ organizers }) => {
   const t = useTranslate('Conticki')
@@ -16,7 +17,9 @@ const Organizer = ({ organizers }) => {
           <Col xs={12} md={organizers.length >= 4 ? 3 : 12 / organizers.length} key={organizer.id} className='mb-3'>
             <h3 className='h2'>{organizer.title}</h3>
             <ReactHtml html={organizer.description} />
-            <a href={organizer.website_url} className='btn btn-primary btn-lg'>{t('Read more about {{organizer}}', { organizer: organizer.title })}</a>
+            <Link to={`organizer/${organizer.id}`} className='btn btn-primary btn-lg'>
+              {t('Read more about {{organizer}}', { organizer: organizer.title })}
+            </Link>
           </Col>
         )
         )}

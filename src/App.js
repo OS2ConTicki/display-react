@@ -88,7 +88,8 @@ function App (props) {
         'Organizer for': 'Organizer for',
         'Speaker at': 'Speaker at',
         'Sponsor for': 'Sponsor for',
-        'Theme for': 'Theme for'
+        'Theme for': 'Theme for',
+        'Read more on webpage for {{organizer}}': 'Read more on webpage for {{organizer}}'
       }
     }
   } else {
@@ -129,7 +130,8 @@ function App (props) {
         'Organizer for': 'Arrangør af',
         'Speaker at': 'Taler ved',
         'Sponsor for': 'Sponsor for',
-        'Theme for': 'Tema for'
+        'Theme for': 'Tema for',
+        'Read more on webpage for {{organizer}}': 'Læs mere på websiden for {{organizer}}'
       }
     }
   }
