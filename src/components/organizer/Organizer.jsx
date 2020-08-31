@@ -20,7 +20,7 @@ const Organizer = ({ organizer }) => {
             <Col xs={12} md={7} className='my-5'>
               <h1>{title}</h1>
             </Col>
-            <Col xs={12} md={5} className='mb-3'>
+            <Col xs={12} md={5} className='mb-3 text-center text-md-right'>
               {image && (
                 <img
                   className='img-fluid'

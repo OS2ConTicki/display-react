@@ -20,7 +20,7 @@ const Speaker = ({ speaker }) => {
             <Col xs={12} md={7} className='mb-5'>
               <h1>{title}</h1>
             </Col>
-            <Col xs={12} md={5} className='mb-3'>
+            <Col xs={12} md={5} className='mb-3 text-center text-md-right'>
               {image && (
                 <img
                   className='img-fluid'
@@ -53,7 +53,7 @@ const Speaker = ({ speaker }) => {
             </Row>
           </Container>
           <Col xs={12} className='d-flex mt-3'>
-            <EventList events={speaker.events} />
+            <EventList events={speaker.events} showDates />
           </Col>
         </Row>}
     </div>
