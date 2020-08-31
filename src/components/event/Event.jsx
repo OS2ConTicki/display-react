@@ -25,7 +25,7 @@ const Event = ({ event, onLike }) => {
               <h1>{title}</h1>
             </Col>
             {image && (
-              <Col xs={12} md={5} className='mb-3'>
+              <Col xs={12} md={5} className='mb-3 text-center text-md-right'>
                 <img
                   className='img-fluid'
                   height={image.meta.height}
