@@ -43,7 +43,7 @@ const Event = ({ event, onLike }) => {
           <Row>
             <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Date')}</strong>{format(new Date(event.start_time), 'eeee d. MMMM')}</p></Col>
             <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Time')}</strong>{format(new Date(event.start_time), 'kk:mm')} {t('To')} {format(new Date(event.end_time), 'kk:mm')}</p></Col>
-            <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`} className='image-square'>{location.title}</Link></p></Col>
+            <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`}>{location.title}</Link></p></Col>
             <Col md={6}>
               {themes && themes.length > 0 &&
                 <p className='lead mb-0'>
