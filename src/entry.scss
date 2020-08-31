@@ -71,8 +71,8 @@ $enable-responsive-font-sizes: true;
   margin: 25px auto;
 }
 
-button[aria-expanded="true"] {
-  opacity: 60%;
+button.filter-events[aria-expanded='true'] {
+  opacity: 0.6;
 }
 
 .searchEvent {

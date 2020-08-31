@@ -90,6 +90,7 @@ function App (props) {
         'Sponsor for': 'Sponsor for',
         'Theme for': 'Theme for',
         'Read more on webpage for {{organizer}}': 'Read more on webpage for {{organizer}}',
+        'Type search words': 'Type search words',
         'Sponsored by': 'Sponsored by',
         'Read more about {{sponsor}}': 'Read more about {{sponsor}}'
       }
@@ -134,6 +135,7 @@ function App (props) {
         'Sponsor for': 'Sponsor for',
         'Theme for': 'Tema for',
         'Read more on webpage for {{organizer}}': 'Læs mere på websiden for {{organizer}}',
+        'Type search words': 'Indtast søgeord',
         'Sponsored by': 'Sponsoreret af',
         'Read more about {{sponsor}}': 'Læs mere om {{sponsor}}'
       }

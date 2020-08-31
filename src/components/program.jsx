@@ -156,7 +156,7 @@ function Program ({ eventsList, tagsList, themesList }) {
               onClick={() => setOpen(!open)}
               aria-controls='searchEvent'
               aria-expanded={open}
-              className='mt-2'
+              className='mt-2 filter-events'
             >
               {t('Search events')}
             </Button>
