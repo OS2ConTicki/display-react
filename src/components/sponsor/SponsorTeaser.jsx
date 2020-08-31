@@ -10,7 +10,7 @@ const Sponsor = ({ sponsors }) => {
   const t = useTranslate('Conticki')
 
   return (
-    <Row className='sponsors scroll-offset-class mt-md-5 py-md-5 bg-light'>
+    <Row className='sponsors scroll-offset-class py-md-5 bg-light'>
       <Col xs={12} className='text-center'>
         <h2 className='lead'>{t('Sponsored by')}</h2>
         {sponsors.map(sponsor => (
