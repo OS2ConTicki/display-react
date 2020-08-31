@@ -14,7 +14,7 @@ import { useTranslate } from 'react-translate'
 const Event = ({ event, onLike }) => {
   const t = useTranslate('Conticki')
   // Unwrap the event object.
-  const { title, image, description, ticketUrl, themes, location } = event
+  const { title, image, description, ticket, themes, location } = event
 
   return (
     <div className='event'>
@@ -51,12 +51,12 @@ const Event = ({ event, onLike }) => {
                   {themes.map(theme => <Link key={theme.id} to={`/theme/${theme.id}`}>{theme.title}</Link>)}
                 </p>}
             </Col>
-            {ticketUrl && ticketUrl.url &&
-              <Col className='mt-3 text-right'>
+            {ticket && ticket.url &&
+              <Col className='mt-3 py-3 text-center'>
                 <a
                   className='btn btn-primary btn-lg px-md-5'
-                  href={ticketUrl.url}
-                >{ticketUrl.text || t('Buy ticket')}
+                  href={ticket.url}
+                >{ticket.text || t('Buy ticket')}
                 </a>
               </Col>}
           </Row>
