@@ -89,7 +89,8 @@ function App (props) {
         'Speaker at': 'Speaker at',
         'Sponsor for': 'Sponsor for',
         'Theme for': 'Theme for',
-        'Read more on webpage for {{organizer}}': 'Read more on webpage for {{organizer}}'
+        'Read more on webpage for {{organizer}}': 'Read more on webpage for {{organizer}}',
+        'Type search words': 'Type search words'
       }
     }
   } else {
@@ -131,7 +132,8 @@ function App (props) {
         'Speaker at': 'Taler ved',
         'Sponsor for': 'Sponsor for',
         'Theme for': 'Tema for',
-        'Read more on webpage for {{organizer}}': 'Læs mere på websiden for {{organizer}}'
+        'Read more on webpage for {{organizer}}': 'Læs mere på websiden for {{organizer}}',
+        'Type search words': 'Indtast søgeord'
       }
     }
   }
