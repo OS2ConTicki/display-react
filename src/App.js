@@ -134,7 +134,7 @@ function App (props) {
         'Sponsor for': 'Sponsor for',
         'Theme for': 'Tema for',
         'Read more on webpage for {{organizer}}': 'Læs mere på websiden for {{organizer}}',
-        'Sponsored by': 'Sponsored by',
+        'Sponsored by': 'Sponsoreret af',
         'Read more about {{sponsor}}': 'Læs mere om {{sponsor}}'
       }
     }
