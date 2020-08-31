@@ -53,7 +53,7 @@ const Speaker = ({ speaker }) => {
             </Row>
           </Container>
           <Col xs={12} className='d-flex mt-3'>
-            <EventList events={speaker.events} />
+            <EventList events={speaker.events} showDates />
           </Col>
         </Row>}
     </div>
