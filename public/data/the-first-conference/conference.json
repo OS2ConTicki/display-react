@@ -82,7 +82,10 @@
                     "76x76": "/data/the-first-conference/sites/default/files/styles/app_icon_76x76/public/2020-08/lorempixel-512x512-01.png@itok@PD6YnqyK",
                     "96x96": "/data/the-first-conference/sites/default/files/styles/app_icon_96x96/public/2020-08/lorempixel-512x512-01.png@itok@22hB9hXR"
                 },
-                "logo_svg": "/data/the-first-conference/sites/default/files/2020-08/appsymbol.svg"
+                "logo_svg": "/data/the-first-conference/sites/default/files/2020-08/appsymbol.svg",
+                "accessibility_statement": {
+                    "url": "https://dummyimage.com/600x400/000/fff&text=Accessibility statement"
+                }
             }
         },
         "relationships": {
