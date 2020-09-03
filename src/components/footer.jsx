@@ -22,7 +22,7 @@ function Footer () {
               </Col>
               <Col md={4}>
                 {conference.app.accessibility_statement?.url &&
-                  <p className='mt-2'><a className='text-light' href={conference.app.accessibility_statement.url}>{conference.app.accessibility_statement.text ? conference.app.accessibility_statement.text : t('Accessibility statement')}</a></p>}
+                  <p className='mt-2'><a className='text-light' href={conference.app.accessibility_statement.url}>{conference.app.accessibility_statement.text || t('Accessibility statement')}</a></p>}
               </Col>
               <Col md={4}>
                 <Nav variant='pills' defaultActiveKey='/home'>
