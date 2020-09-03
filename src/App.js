@@ -193,7 +193,8 @@ function App (props) {
               const relatedEvents = events.filter(event => {
                 switch (entity.type) {
                   case 'location':
-                    return [event.location].filter(s => s.id === entity.id).length > 0
+                    // event.location may be undefined.
+                    return [event.location].filter(s => s && s.id === entity.id).length > 0
                   case 'organizer':
                     return event.organizers.filter(s => s.id === entity.id).length > 0
                   case 'speaker':
