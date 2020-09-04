@@ -40,9 +40,10 @@ function Event ({ event, onLike }) {
             </strong>
           </Col>
           <Col xs={4}>
-            <Link to={`/location/${event.location.id}`}>
-              <strong>{event.location.title}</strong>
-            </Link>
+            {event.location &&
+              <Link to={`/location/${event.location.id}`}>
+                <strong>{event.location.title}</strong>
+              </Link>}
           </Col>
           <Col xs={12}>{event.summary}</Col>
         </Row>
