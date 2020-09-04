@@ -16,15 +16,15 @@ function Footer () {
       <Row>
         <Col>
           <Container>
-            <Row className='my-3'>
-              <Col md={4}>
+            <Row xs={1} md={3} className='my-3'>
+              <Col>
                 <p className='text-light mt-2'>{t('OS2Contiki - Conference and ticket management')}</p>
               </Col>
-              <Col md={4}>
-                {conference.app.accessibility_statement?.url &&
-                  <p className='mt-2'><a className='text-light' href={conference.app.accessibility_statement.url}>{conference.app.accessibility_statement.text || t('Accessibility statement')}</a></p>}
-              </Col>
-              <Col md={4}>
+              {conference.app.accessibility_statement?.url &&
+                <Col>
+                  <p className='mt-2'><a className='text-light' href={conference.app.accessibility_statement.url}>{conference.app.accessibility_statement.text || t('Accessibility statement')}</a></p>
+                </Col>}
+              <Col>
                 <Nav variant='pills' defaultActiveKey='/home'>
                   <Nav.Item>
                     <Nav.Link className='disabled text-light'>{t('Select language')}:</Nav.Link>

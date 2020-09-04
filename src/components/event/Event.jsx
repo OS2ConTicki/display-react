@@ -40,26 +40,28 @@ const Event = ({ event, onLike }) => {
       </Row>
       <Row className='py-3 bg-light'>
         <Container>
-          <Row>
-            <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Date')}</strong>{format(new Date(event.start_time), 'eeee d. MMMM')}</p></Col>
-            <Col md={6}><p className='lead mb-0'><strong className='mr-3'>{t('Time')}</strong>{format(new Date(event.start_time), 'kk:mm')} {t('To')} {format(new Date(event.end_time), 'kk:mm')}</p></Col>
-            <Col md={6}>{location && <p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`}>{location.title}</Link></p>}</Col>
-            <Col md={6}>
+          <Row xs={1} md={2}>
+            <Col><p className='lead mb-0'><strong className='mr-3'>{t('Date')}</strong>{format(new Date(event.start_time), 'eeee d. MMMM')}</p></Col>
+            <Col><p className='lead mb-0'><strong className='mr-3'>{t('Time')}</strong>{format(new Date(event.start_time), 'kk:mm')} {t('To')} {format(new Date(event.end_time), 'kk:mm')}</p></Col>
+            <Col><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`}>{location.title}</Link></p></Col>
+            <Col>
               {themes && themes.length > 0 &&
                 <p className='lead mb-0'>
                   <strong className='mr-3'>{t('Themes', { n: themes.length })}</strong>
                   {themes.map(theme => <Link key={theme.id} to={`/theme/${theme.id}`}>{theme.title}</Link>)}
                 </p>}
             </Col>
-            {ticket && ticket.url &&
+          </Row>
+          {ticket && ticket.url &&
+            <Row>
               <Col className='mt-3 py-3 text-center'>
                 <a
                   className='btn btn-primary btn-lg px-md-5'
                   href={ticket.url}
                 >{ticket.text || t('Buy ticket')}
                 </a>
-              </Col>}
-          </Row>
+              </Col>
+            </Row>}
         </Container>
       </Row>
       <Row className='py-3'>
