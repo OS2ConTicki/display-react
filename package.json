@@ -4,7 +4,7 @@
   "description": "App for OS2ConTicki",
   "repository": "https://github.com/OS2Conference/display-react",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-react": "^7.9.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
@@ -36,6 +36,7 @@
     "stylelint-config-standard-scss": "^1.1.0",
     "stylelint-scss": "^3.16.0",
     "typeface-roboto": "^0.0.75",
+    "url-loader": "^2.0.1",
     "webpack-notifier": "^1.6.0"
   },
   "scripts": {
@@ -58,8 +59,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "url-loader": "^2.0.1"
   }
 }
