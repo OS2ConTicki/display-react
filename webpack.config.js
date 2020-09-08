@@ -58,6 +58,12 @@ Encore
   // uncomment if you use API Platform Admin (composer req api-admin)
   .enableReactPreset()
 
+  .configureUrlLoader({
+    images: {
+      esModule: false
+    }
+  })
+
   // Enable copy of static assets
   .copyFiles({
     from: './src/images',
