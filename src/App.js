@@ -93,6 +93,8 @@ function App (props) {
         'Type search words': 'Type search words',
         'Sponsored by': 'Sponsored by',
         'Read more about {{sponsor}}': 'Read more about {{sponsor}}',
+        'Install this webapp on your iPhone: tab {{image}} and then Add to homescreen.': 'Install this webapp on your iPhone: tab {{image}} and then Add to homescreen.',
+        'Install Conference App': 'Install Conference App',
         'Accessibility statement': 'Accessibility statement'
       }
     }
@@ -139,6 +141,8 @@ function App (props) {
         'Type search words': 'Indtast søgeord',
         'Sponsored by': 'Sponsoreret af',
         'Read more about {{sponsor}}': 'Læs mere om {{sponsor}}',
+        'Install this webapp on your iPhone: tab {{image}} and then Add to homescreen.': 'Installer som app på din iPhone: tryk {{image}} og derefter Tilføj til hjemmeskærm',
+        'Install Conference App': 'App installation',
         'Accessibility statement': 'Tilgængelighedserklæring'
       }
     }
@@ -373,7 +377,7 @@ function App (props) {
           </Container>
           <Footer />
           {isIos() && !isInStandaloneMode() &&
-            <AppInstallBanner />}
+            <AppInstallBanner icons={conference.app.icons} />}
         </AppStateContext.Provider>}
       {loading &&
         <FontAwesomeIcon
@@ -385,6 +389,7 @@ function App (props) {
           Der skete en fejl!
           </Alert>
         </Col>}
+
     </TranslatorProvider>
   )
 }
