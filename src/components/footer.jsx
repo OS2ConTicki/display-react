@@ -21,7 +21,7 @@ function Footer () {
                 <p className='text-light mt-2'>{t('OS2Contiki - Conference and ticket management')}</p>
               </Col>
               {conference.app.accessibility_statement?.url &&
-                <Col>
+                <Col className='text-md-center'>
                   <p className='mt-2'><a className='text-light' href={conference.app.accessibility_statement.url}>{conference.app.accessibility_statement.text || t('Accessibility statement')}</a></p>
                 </Col>}
               <Col>
