@@ -7,7 +7,7 @@ import Header from '../common/Header'
 import { useTranslate } from 'react-translate'
 import { format } from 'date-fns'
 
-function DisplayInfoComponent ({ title, description, image, ticket, start_time, end_time }) {
+function DisplayInfoComponent ({ title, description, image, ticket, start_time: startTime, end_time: endTime }) {
   const t = useTranslate('Conticki')
 
   return (
@@ -17,7 +17,7 @@ function DisplayInfoComponent ({ title, description, image, ticket, start_time, 
         <Container>
           <Row>
             <Col>
-              <p className='lead text-white'>{format(new Date(start_time), 'eeee d. MMMM')} {t('To')} {format(new Date(end_time), 'eeee d. MMMM')}</p>
+              <p className='lead text-white'>{format(new Date(startTime), 'eeee d. MMMM')} {t('To')} {format(new Date(endTime), 'eeee d. MMMM')}</p>
             </Col>
           </Row>
         </Container>
