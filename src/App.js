@@ -123,7 +123,7 @@ function App (props) {
         Sponsors: ['Sponsor', 'Sponsorer'],
         'Show all events': 'Vis alle events',
         'Show my events': 'Vis mine events',
-        'Buy ticket': 'Buy ticket',
+        'Buy ticket': 'Køb billet',
         'Select language': 'Vælg sprog',
         Dansk: 'Dansk',
         English: 'English',
@@ -142,7 +142,7 @@ function App (props) {
         'Sponsored by': 'Sponsoreret af',
         'Read more about {{sponsor}}': 'Læs mere om {{sponsor}}',
         'Install this webapp on your iPhone: tab {{image}} and then Add to homescreen.': 'Installer som app på din iPhone: tryk {{image}} og derefter Tilføj til hjemmeskærm',
-        'Install Conference App': 'App installation',
+        'Install Conference App': 'App-installation',
         'Accessibility statement': 'Tilgængelighedserklæring'
       }
     }
