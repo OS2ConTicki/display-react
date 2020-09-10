@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
 import EventList from '../event/EventList'
 import { useTranslate } from 'react-translate'
+import Header from '../common/Header'
 
 const Sponsor = ({ sponsor }) => {
   const t = useTranslate('Conticki')
@@ -15,24 +16,7 @@ const Sponsor = ({ sponsor }) => {
   return (
     <div className='sponsor'>
       <Row className='top scroll-offset-class'>
-        <Container className='my-md-5'>
-          <Row>
-            <Col xs={12} md={7} className='my-5'>
-              <h1>{title}</h1>
-            </Col>
-            <Col xs={12} md={5} className='mb-3 text-center text-md-right'>
-              {image && (
-                <img
-                  className='img-fluid'
-                  height={image.meta.height}
-                  width={image.meta.width}
-                  src={image.url}
-                  alt={image.meta.alt || ''}
-                />
-              )}
-            </Col>
-          </Row>
-        </Container>
+        <Header title={title} image={image} />
       </Row>
       <Row className='py-3 bg-light'>
         <Container>
