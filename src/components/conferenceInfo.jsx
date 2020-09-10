@@ -13,6 +13,7 @@ function ConferenceInfo () {
       {conference && (
         <div id='top'>
           <DisplayInfoComponent {...conference} />
+          <pre>{JSON.stringify(conference, null, 2)}</pre>
         </div>
       )}
     </>

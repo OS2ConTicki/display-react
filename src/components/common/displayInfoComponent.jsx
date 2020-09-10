@@ -3,26 +3,21 @@ import ReactHtml from 'raw-html-react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Header from '../common/Header'
+import { useTranslate } from 'react-translate'
+import { format } from 'date-fns'
 
-function DisplayInfoComponent ({ title, description, image, ticket }) {
+function DisplayInfoComponent ({ title, description, image, ticket, start_time, end_time }) {
+  const t = useTranslate('Conticki')
+
   return (
     <>
       <Row className='top scroll-offset-class'>
-        <Container className='my-md-5'>
+        <Header title={title} image={image} />
+        <Container>
           <Row>
-            <Col xs={12} md={7} className='mb-5'>
-              <h1>{title}</h1>
-            </Col>
-            <Col xs={12} md={5} className='mb-3 text-center text-md-right'>
-              {image && (
-                <img
-                  className='img-fluid'
-                  height={image.meta.height}
-                  width={image.meta.width}
-                  src={image.url}
-                  alt={image.meta.alt || ''}
-                />
-              )}
+            <Col>
+              <p className='lead text-white'>{format(new Date(start_time), 'eeee d. MMMM')} {t('To')} {format(new Date(end_time), 'eeee d. MMMM')}</p>
             </Col>
           </Row>
         </Container>
