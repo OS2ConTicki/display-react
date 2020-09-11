@@ -19,7 +19,7 @@ function DisplayInfoComponent ({ title, description, image, ticket, start_time: 
         <Container>
           <Row>
             <Col>
-              <p className='lead text-white'>{capitalize(formatDate(startTime, 'eeee d. MMMM'))} {t('To')} {formatDate(endTime, 'PPPP')}</p>
+              <p className='lead text-white'>{capitalize(t('{{start_time}} to {{end_time}}', { start_time: formatDate(startTime, 'PPPP'), end_time: formatDate(endTime, 'PPPP') }))}</p>
             </Col>
           </Row>
         </Container>
