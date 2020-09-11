@@ -106,7 +106,7 @@ function App (props) {
         'OS2Contiki - Conference and ticket management': 'OS2Contiki - konference- og billetsystem',
         'Search events': 'Søg i events',
         Program: 'Program',
-        Themes: ['Tema', 'Temaer'],
+        Themes: ['Hovedspor', 'Hovedspor'],
         Tags: 'Emner',
         When: 'Hvornår',
         Date: 'Dato',
