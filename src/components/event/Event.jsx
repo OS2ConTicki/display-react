@@ -4,13 +4,13 @@ import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import PropTypes from 'prop-types'
 import ReactHtml from 'raw-html-react'
-import { format } from 'date-fns'
 import OrganizerList from '../organizer/OrganizerList'
 import SpeakerList from '../speaker/SpeakerList'
 import SponsorList from '../sponsor/SponsorList'
 import { Link } from 'react-router-dom'
 import { useTranslate } from 'react-translate'
 import Header from '../common/Header'
+import { formatDate, formatTime } from '../utils/dateHandler.jsx'
 
 const Event = ({ event, onLike }) => {
   const t = useTranslate('Conticki')
@@ -25,8 +25,8 @@ const Event = ({ event, onLike }) => {
       <Row className='py-3 bg-light'>
         <Container>
           <Row xs={1} md={2}>
-            <Col><p className='lead mb-0'><strong className='mr-3'>{t('Date')}</strong>{format(new Date(event.start_time), 'eeee d. MMMM')}</p></Col>
-            <Col><p className='lead mb-0'><strong className='mr-3'>{t('Time')}</strong>{format(new Date(event.start_time), 'kk:mm')} {t('To')} {format(new Date(event.end_time), 'kk:mm')}</p></Col>
+            <Col><p className='lead mb-0'><strong className='mr-3'>{t('Date')}</strong>{formatDate(event.start_time, 'PPPP')}</p></Col>
+            <Col><p className='lead mb-0'><strong className='mr-3'>{t('Time')}</strong>{t('{{start_time}} to {{end_time}}', { start_time: formatTime(event.start_time), end_time: formatTime(event.end_time) })}</p></Col>
             <Col><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`}>{location.title}</Link></p></Col>
             <Col>
               {themes && themes.length > 0 &&
