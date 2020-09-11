@@ -3,26 +3,23 @@ import ReactHtml from 'raw-html-react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Header from '../common/Header'
+import { useTranslate } from 'react-translate'
+import { formatDate } from '../utils/dateHandler.jsx'
 
-function DisplayInfoComponent ({ title, description, image, ticket }) {
+function DisplayInfoComponent ({ title, description, image, ticket, start_time: startTime, end_time: endTime }) {
+  const t = useTranslate('Conticki')
+  const capitalize = ([first, ...rest], lowerRest = false) =>
+    first.toUpperCase() + (lowerRest ? rest.join('').toLowerCase() : rest.join(''))
+
   return (
     <>
       <Row className='top scroll-offset-class'>
-        <Container className='my-md-5'>
+        <Header title={title} image={image} />
+        <Container>
           <Row>
-            <Col xs={12} md={7} className='mb-5'>
-              <h1>{title}</h1>
-            </Col>
-            <Col xs={12} md={5} className='mb-3 text-center text-md-right'>
-              {image && (
-                <img
-                  className='img-fluid'
-                  height={image.meta.height}
-                  width={image.meta.width}
-                  src={image.url}
-                  alt={image.meta.alt || ''}
-                />
-              )}
+            <Col>
+              <p className='lead text-white'>{capitalize(t('{{start_time}} to {{end_time}}', { start_time: formatDate(startTime, 'PPPP'), end_time: formatDate(endTime, 'PPPP') }))}</p>
             </Col>
           </Row>
         </Container>
