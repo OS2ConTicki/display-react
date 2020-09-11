@@ -1,16 +1,17 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import Like from '../common/like'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
-import { getTime } from '../utils/dateHandler'
-import AppStateContext from '../../context/appStateContext'
+import { formatTime } from '../utils/dateHandler'
+import { useTranslate } from 'react-translate'
 
 function Event ({ event, onLike }) {
   const classes = event.isEventDone ? 'bg-light' : 'bg-info'
-  const context = useContext(AppStateContext)
   const { themes } = event
+  const t = useTranslate('Conticki')
+
   return (
     <Card className={classes}>
       <Card.Body>
@@ -28,8 +29,7 @@ function Event ({ event, onLike }) {
         <Row>
           <Col xs={4}>
             <strong>
-              {getTime(event.start_time, context.language.get)} :{' '}
-              {getTime(event.end_time, context.language.get)}
+              {t('{{start_time}}–{{end_time}}', { start_time: formatTime(event.start_time), end_time: formatTime(event.end_time) })}
             </strong>
           </Col>
           <Col xs={4}>

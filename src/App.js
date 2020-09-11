@@ -95,7 +95,9 @@ function App (props) {
         'Read more about {{sponsor}}': 'Read more about {{sponsor}}',
         'Install this webapp on your iPhone: tab {{image}} and then Add to homescreen.': 'Install this webapp on your iPhone: tab {{image}} and then Add to homescreen.',
         'Install Conference App': 'Install Conference App',
-        'Accessibility statement': 'Accessibility statement'
+        'Accessibility statement': 'Accessibility statement',
+        '{{start_time}}–{{end_time}}': '{{start_time}}–{{end_time}}',
+        '{{start_time}} to {{end_time}}': '{{start_time}} to {{end_time}}'
       }
     }
   } else {
@@ -143,7 +145,9 @@ function App (props) {
         'Read more about {{sponsor}}': 'Læs mere om {{sponsor}}',
         'Install this webapp on your iPhone: tab {{image}} and then Add to homescreen.': 'Installer som app på din iPhone: tryk {{image}} og derefter Tilføj til hjemmeskærm',
         'Install Conference App': 'App-installation',
-        'Accessibility statement': 'Tilgængelighedserklæring'
+        'Accessibility statement': 'Tilgængelighedserklæring',
+        '{{start_time}}–{{end_time}}': '{{start_time}}–{{end_time}}',
+        '{{start_time}} to {{end_time}}': '{{start_time}} til {{end_time}}'
       }
     }
   }
