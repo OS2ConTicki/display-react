@@ -9,6 +9,8 @@ import { formatDate } from '../utils/dateHandler.jsx'
 
 function DisplayInfoComponent ({ title, description, image, ticket, start_time: startTime, end_time: endTime }) {
   const t = useTranslate('Conticki')
+  const capitalize = ([first, ...rest], lowerRest = false) =>
+    first.toUpperCase() + (lowerRest ? rest.join('').toLowerCase() : rest.join(''))
 
   return (
     <>
@@ -17,7 +19,7 @@ function DisplayInfoComponent ({ title, description, image, ticket, start_time: 
         <Container>
           <Row>
             <Col>
-              <p className='lead text-white'>{formatDate(startTime, 'eeee d. MMMM')} {t('To')} {formatDate(endTime, 'PPPP')}</p>
+              <p className='lead text-white'>{capitalize(formatDate(startTime, 'eeee d. MMMM'))} {t('To')} {formatDate(endTime, 'PPPP')}</p>
             </Col>
           </Row>
         </Container>
