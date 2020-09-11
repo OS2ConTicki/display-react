@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Header from '../common/Header'
 import { useTranslate } from 'react-translate'
-import { format } from 'date-fns'
+import { formatDate } from '../utils/dateHandler.jsx'
 
 function DisplayInfoComponent ({ title, description, image, ticket, start_time: startTime, end_time: endTime }) {
   const t = useTranslate('Conticki')
@@ -17,7 +17,7 @@ function DisplayInfoComponent ({ title, description, image, ticket, start_time: 
         <Container>
           <Row>
             <Col>
-              <p className='lead text-white'>{format(new Date(startTime), 'eeee d. MMMM')} {t('To')} {format(new Date(endTime), 'eeee d. MMMM')}</p>
+              <p className='lead text-white'>{formatDate(startTime, 'eeee d. MMMM')} {t('To')} {formatDate(endTime, 'PPPP')}</p>
             </Col>
           </Row>
         </Container>
