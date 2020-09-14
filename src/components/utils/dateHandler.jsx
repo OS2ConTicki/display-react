@@ -1,9 +1,14 @@
 import { useContext } from 'react'
-import { format } from 'date-fns'
+import { utcToZonedTime, format } from 'date-fns-tz'
 import { da, enGB } from 'date-fns/locale'
 import AppStateContext from '../../context/appStateContext'
 
 const locales = { da, en: enGB }
+
+const getCurrentTimeZone = () => {
+  // @TODO Let user/app choose display timezone?
+  return 'Europe/Copenhagen'
+}
 
 const getCurrentLocale = () => {
   const context = useContext(AppStateContext)
@@ -13,22 +18,26 @@ const getCurrentLocale = () => {
 }
 
 const loadDate = (date) => {
-  return date instanceof Date ? date : new Date(date)
+  if (date instanceof Date) {
+    date = new Date(date)
+  }
+
+  return utcToZonedTime(date, getCurrentTimeZone())
 }
 
 // @see https://date-fns.org/docs/format
 export const formatDate = (date, formatStr = 'P') => {
-  const locale = getCurrentLocale()
+  const [locale, timeZone] = [getCurrentLocale(), getCurrentTimeZone()]
   date = loadDate(date)
 
-  return format(date, formatStr, { locale: locale })
+  return format(date, formatStr, { locale, timeZone })
 }
 
 export const formatTime = (date, formatStr = 'p') => {
-  const locale = getCurrentLocale()
+  const [locale, timeZone] = [getCurrentLocale(), getCurrentTimeZone()]
   date = loadDate(date)
 
-  return format(date, formatStr, { locale: locale })
+  return format(date, formatStr, { locale, timeZone })
 }
 
 export function getDateByLanguage (inputDate, language) {
