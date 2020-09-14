@@ -19,14 +19,14 @@ function Event ({ event, onLike }) {
           <Col>
             <Link to={`/event/${event.id}`}>
               <h3>{event.title}</h3>
-              {event.organizers &&
-                <p>
-                  {event.organizers.map(organizer => (
-                    <span key={organizer.id}>{organizer.title}</span>
-                  )
-                  )}
-                </p>}
             </Link>
+            {event.organizers &&
+              <p>
+                {event.organizers.map(organizer => (
+                  <span key={organizer.id} className='mr-3'>{organizer.website_url ? <a href={organizer.website_url}>{organizer.title}</a> : organizer.title}</span>
+                )
+                )}
+              </p>}
           </Col>
           {onLike &&
             <Col xs='auto' className='text-right'>
