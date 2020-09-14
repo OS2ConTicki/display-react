@@ -23,7 +23,7 @@ function Event ({ event, onLike }) {
             {event.organizers &&
               <p>
                 {event.organizers.map(organizer => (
-                  <span key={organizer.id} className='mr-3'>{organizer.website_url ? <a href={organizer.website_url}>{organizer.title}</a> : organizer.title}</span>
+                  <Link key={organizer.id} className='mr-3' to={`/organizer/${organizer.id}`}>{organizer.title}</Link>
                 )
                 )}
               </p>}
