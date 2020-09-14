@@ -16,6 +16,7 @@
     "bootstrap": "^4.5.0",
     "core-js": "^3.0.0",
     "date-fns": "^2.15.0",
+    "date-fns-tz": "^1.0.10",
     "debounce": "^1.2.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
