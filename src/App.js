@@ -242,7 +242,8 @@ function App (props) {
       .then((data) => {
         const entities = getMappedEntities(data)
         setConference(mapElement(data.data, entities))
-        setLanguage(data.data.attributes.langcode)
+        // Default to Danish.
+        setLanguage(data.data.attributes.langcode ?? 'da')
         const allUrl = data?.data?.links?.all?.href
 
         if (allUrl) {
