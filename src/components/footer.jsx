@@ -25,7 +25,7 @@ function Footer () {
                   <p className='mt-2'><a className='text-light' href={conference.app.accessibility_statement.url}>{conference.app.accessibility_statement.text || t('Accessibility statement')}</a></p>
                 </Col>}
               <Col>
-                <Nav variant='pills' defaultActiveKey='/home'>
+                <Nav variant='pills' defaultActiveKey='/home' className='float-right'>
                   <Nav.Item>
                     <Nav.Link className='disabled text-light'>{t('Select language')}:</Nav.Link>
                   </Nav.Item>
