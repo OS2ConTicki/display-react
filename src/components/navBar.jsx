@@ -9,9 +9,12 @@ import { Link } from 'react-router-dom'
 const NavBar = () => {
   const t = useTranslate('Conticki')
   const context = useContext(AppStateContext)
-  const conference = context.conference.get
 
   const navbarItems = [
+    {
+      to: '/#home',
+      label: t('Home')
+    },
     {
       to: '/#program',
       label: t('Program')
@@ -40,17 +43,9 @@ const NavBar = () => {
     })
   }
 
-  // We prefer to use an SVG.
-  const icon = conference.app?.logo_svg || conference.app?.icons?.['128x128']
-
   return (
     <Navbar variant='dark' bg='primary' expand='lg' sticky='top' className='main-navigation'>
       <Container>
-        <Navbar.Brand>
-          <Link to='/#home' className='nav-brand mr-md-3'>
-            {icon ? <img src={icon} alt={conference.title} style={{ height: 40 }} /> : <span className='text-light'>{conference.title}</span>}
-          </Link>
-        </Navbar.Brand>
         <Navbar.Toggle aria-controls='main-navigation' />
         <Navbar.Collapse id='main-navigation'>
           <Nav className='mr-autotext-venter'>
