@@ -1,0 +1,112 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "event",
+        "id": "cd6a0d8a-7817-4e7c-9cfd-a85dd9ad7ffc",
+        "links": {
+            "self": {
+                "href": "/data/test-conference/api/event/cd6a0d8a-7817-4e7c-9cfd-a85dd9ad7ffc@resourceVersion@id@3A49.json"
+            }
+        },
+        "attributes": {
+            "title": "2. Event",
+            "created": "2020-09-14T06:27:16+00:00",
+            "changed": "2020-09-14T10:35:53+00:00",
+            "promote": false,
+            "image": {
+                "url": "/data/test-conference/sites/default/files/2020-09/download@20@282@29.jpg",
+                "meta": {
+                    "alt": "Rådhuset i Aarhus",
+                    "title": "",
+                    "width": 168,
+                    "height": 299
+                }
+            },
+            "language": "da",
+            "summary": null,
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+            "start_time": "2020-09-14T09:30:00+02:00",
+            "end_time": "2020-09-14T10:00:00+02:00"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    }
+                }
+            },
+            "location": {
+                "data": {
+                    "type": "location",
+                    "id": "a097b641-9233-4274-bdf8-7b106b63b276"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/location/a097b641-9233-4274-bdf8-7b106b63b276"
+                    }
+                }
+            },
+            "organizers": {
+                "data": []
+            },
+            "speakers": {
+                "data": [
+                    {
+                        "type": "speaker",
+                        "id": "48edbff0-c311-4688-96d4-674fd5e1b188"
+                    },
+                    {
+                        "type": "speaker",
+                        "id": "4ca62d42-21ad-4b27-9994-a2d750067107"
+                    },
+                    {
+                        "type": "speaker",
+                        "id": "5067889e-7842-4321-96b3-9b6b120ec621"
+                    },
+                    {
+                        "type": "speaker",
+                        "id": "43df2bb3-13f0-4257-ab83-236800ccb9ec"
+                    }
+                ]
+            },
+            "sponsors": {
+                "data": [
+                    {
+                        "type": "sponsor",
+                        "id": "91a909e9-e85b-49c4-800b-68bdc026aaa8"
+                    }
+                ]
+            },
+            "tags": {
+                "data": []
+            },
+            "themes": {
+                "data": [],
+                "links": {
+                    "self": {
+                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/cd6a0d8a-7817-4e7c-9cfd-a85dd9ad7ffc/relationships/field_themes?resourceVersion=id%3A49"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/test-conference/api/event/cd6a0d8a-7817-4e7c-9cfd-a85dd9ad7ffc@resourceVersion@id@3A49.json"
+        }
+    }
+}

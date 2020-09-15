@@ -1,0 +1,56 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "sponsor",
+        "id": "7aada4f1-f6a5-463e-bda4-abbe6caf242a",
+        "links": {
+            "self": {
+                "href": "/data/test-conference/api/sponsor/7aada4f1-f6a5-463e-bda4-abbe6caf242a@resourceVersion@id@3A26.json"
+            }
+        },
+        "attributes": {
+            "title": "Jutlander Bank",
+            "created": "2020-09-14T06:44:24+00:00",
+            "changed": "2020-09-14T06:44:33+00:00",
+            "promote": false,
+            "image": {
+                "url": "/data/test-conference/sites/default/files/2020-09/Jutlander-Bank-logo.png",
+                "meta": {
+                    "alt": "Jutlander Bank",
+                    "title": "",
+                    "width": 657,
+                    "height": 185
+                }
+            },
+            "summary": null,
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/test-conference/api/sponsor/7aada4f1-f6a5-463e-bda4-abbe6caf242a@resourceVersion@id@3A26.json"
+        }
+    }
+}

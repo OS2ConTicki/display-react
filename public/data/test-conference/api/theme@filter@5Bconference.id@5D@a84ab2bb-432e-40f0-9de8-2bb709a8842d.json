@@ -1,0 +1,139 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "type": "theme",
+            "id": "60328f97-a9e8-4dd3-a19d-5f7680664fe7",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/theme/60328f97-a9e8-4dd3-a19d-5f7680664fe7@resourceVersion@id@3A50.json"
+                }
+            },
+            "attributes": {
+                "title": "Natur",
+                "created": "2020-09-14T10:37:34+00:00",
+                "changed": "2020-09-14T10:37:34+00:00",
+                "promote": false,
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "theme",
+            "id": "99650617-286e-4f89-a75d-2428bc63bbeb",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/theme/99650617-286e-4f89-a75d-2428bc63bbeb@resourceVersion@id@3A51.json"
+                }
+            },
+            "attributes": {
+                "title": "Erhverv",
+                "created": "2020-09-14T10:37:57+00:00",
+                "changed": "2020-09-14T10:37:57+00:00",
+                "promote": false,
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "theme",
+            "id": "a13007d5-0abc-4439-bf85-f5c79b4ce0bb",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/theme/a13007d5-0abc-4439-bf85-f5c79b4ce0bb@resourceVersion@id@3A52.json"
+                }
+            },
+            "attributes": {
+                "title": "Aarhus Ø",
+                "created": "2020-09-14T10:38:19+00:00",
+                "changed": "2020-09-14T10:38:19+00:00",
+                "promote": false,
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "theme",
+            "id": "5931d188-5876-4015-83dc-34b393edcde2",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/theme/5931d188-5876-4015-83dc-34b393edcde2@resourceVersion@id@3A53.json"
+                }
+            },
+            "attributes": {
+                "title": "Idræt",
+                "created": "2020-09-14T10:38:45+00:00",
+                "changed": "2020-09-14T10:38:45+00:00",
+                "promote": false,
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "href": "/data/test-conference/api/theme@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d.json"
+        }
+    }
+}

@@ -28,7 +28,7 @@ function Conference (props) {
         )}
         {promotedSpeakers.length > 0 && <SpeakerListPromoted title={t('Speakers', { n: 87 })} speakers={promotedSpeakers} />}
         {conference.organizers && conference.organizers.length > 0 && <OrganizerTeaser organizers={conference.organizers} />}
-        {context.sponsors.get && context.sponsors.get.length > 0 && <SponsorTeaser title={t('Sponsors', { n: 87 })} sponsors={context.sponsors.get} />}
+        {conference.sponsors && conference.sponsors.length > 0 && <SponsorTeaser title={t('Sponsors', { n: 87 })} sponsors={conference.sponsors} />}
       </div>
     </>
   )
