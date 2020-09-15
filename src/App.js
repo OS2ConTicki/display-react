@@ -360,7 +360,7 @@ function App (props) {
       {!loading && !error &&
         <AppStateContext.Provider value={store}>
           <NavBar />
-          <Container fluid>
+          <Container id='home' fluid>
             <Switch>
               <Route path='/event/:id' component={ShowEvent} />
               <Route path='/event' component={ListEvent} />
