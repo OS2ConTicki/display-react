@@ -237,6 +237,8 @@ function App (props) {
   }
 
   useEffect(() => {
+    // @TODO We should updated/add the include query parameter to make sure that
+    // we get all the data we need.
     window.fetch(props.url, fetchOptions)
       .then((response) => response.json())
       .then((data) => {

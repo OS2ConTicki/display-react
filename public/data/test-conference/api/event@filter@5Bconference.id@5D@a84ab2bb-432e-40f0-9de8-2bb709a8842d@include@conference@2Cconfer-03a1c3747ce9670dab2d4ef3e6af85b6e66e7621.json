@@ -1,0 +1,990 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": [
+        {
+            "type": "event",
+            "id": "ec9e62bb-478a-4561-a036-4c64ba3508f2",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2@resourceVersion@id@3A48.json"
+                }
+            },
+            "attributes": {
+                "title": "1. Event",
+                "created": "2020-09-14T06:27:16+00:00",
+                "changed": "2020-09-14T09:08:49+00:00",
+                "promote": false,
+                "language": "da",
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+                "start_time": "2020-09-14T09:00:00+02:00",
+                "end_time": "2020-09-14T09:30:00+02:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "a097b641-9233-4274-bdf8-7b106b63b276"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/location/a097b641-9233-4274-bdf8-7b106b63b276"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": []
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "c8b1a163-ec96-47e3-ab53-ee5cefaac3e0"
+                        },
+                        {
+                            "type": "speaker",
+                            "id": "0c207470-acaa-4edf-80bb-0c11ca9a4b51"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": [
+                        {
+                            "type": "sponsor",
+                            "id": "8df551ca-a0dc-4fdf-ae49-3358334fe2da"
+                        }
+                    ]
+                },
+                "tags": {
+                    "data": []
+                },
+                "themes": {
+                    "data": [],
+                    "links": {
+                        "self": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2/relationships/field_themes?resourceVersion=id%3A48"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "cd6a0d8a-7817-4e7c-9cfd-a85dd9ad7ffc",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/event/cd6a0d8a-7817-4e7c-9cfd-a85dd9ad7ffc@resourceVersion@id@3A49.json"
+                }
+            },
+            "attributes": {
+                "title": "2. Event",
+                "created": "2020-09-14T06:27:16+00:00",
+                "changed": "2020-09-14T10:35:53+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/download@20@282@29.jpg",
+                    "meta": {
+                        "alt": "Rådhuset i Aarhus",
+                        "title": "",
+                        "width": 168,
+                        "height": 299
+                    }
+                },
+                "language": "da",
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+                "start_time": "2020-09-14T09:30:00+02:00",
+                "end_time": "2020-09-14T10:00:00+02:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "a097b641-9233-4274-bdf8-7b106b63b276"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/location/a097b641-9233-4274-bdf8-7b106b63b276"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": []
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "48edbff0-c311-4688-96d4-674fd5e1b188"
+                        },
+                        {
+                            "type": "speaker",
+                            "id": "4ca62d42-21ad-4b27-9994-a2d750067107"
+                        },
+                        {
+                            "type": "speaker",
+                            "id": "5067889e-7842-4321-96b3-9b6b120ec621"
+                        },
+                        {
+                            "type": "speaker",
+                            "id": "43df2bb3-13f0-4257-ab83-236800ccb9ec"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": [
+                        {
+                            "type": "sponsor",
+                            "id": "91a909e9-e85b-49c4-800b-68bdc026aaa8"
+                        }
+                    ]
+                },
+                "tags": {
+                    "data": []
+                },
+                "themes": {
+                    "data": [],
+                    "links": {
+                        "self": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/cd6a0d8a-7817-4e7c-9cfd-a85dd9ad7ffc/relationships/field_themes?resourceVersion=id%3A49"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "35e8b46c-ffa7-401f-bb37-9db2e3affea2",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/event/35e8b46c-ffa7-401f-bb37-9db2e3affea2@resourceVersion@id@3A34.json"
+                }
+            },
+            "attributes": {
+                "title": "3. Event",
+                "created": "2020-09-14T06:27:16+00:00",
+                "changed": "2020-09-14T06:53:09+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/_d3_9929_0.jpg",
+                    "meta": {
+                        "alt": "Musikhuset",
+                        "title": "",
+                        "width": 1200,
+                        "height": 560
+                    }
+                },
+                "language": "da",
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+                "start_time": "2020-09-14T10:00:00+02:00",
+                "end_time": "2020-09-14T10:30:00+02:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "06a5d460-7fdb-47dc-ac7e-6392484c207d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/location/06a5d460-7fdb-47dc-ac7e-6392484c207d"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": []
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "c8b1a163-ec96-47e3-ab53-ee5cefaac3e0"
+                        },
+                        {
+                            "type": "speaker",
+                            "id": "48edbff0-c311-4688-96d4-674fd5e1b188"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": [
+                        {
+                            "type": "sponsor",
+                            "id": "a9e2978f-5631-4623-8e2a-23786b685cb9"
+                        }
+                    ]
+                },
+                "tags": {
+                    "data": []
+                },
+                "themes": {
+                    "data": [],
+                    "links": {
+                        "self": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/35e8b46c-ffa7-401f-bb37-9db2e3affea2/relationships/field_themes?resourceVersion=id%3A34"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "90acbd76-da93-4b61-b527-e8695a1f5e39",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/event/90acbd76-da93-4b61-b527-e8695a1f5e39@resourceVersion@id@3A33.json"
+                }
+            },
+            "attributes": {
+                "title": "4. Event",
+                "created": "2020-09-14T06:27:16+00:00",
+                "changed": "2020-09-14T06:50:46+00:00",
+                "promote": false,
+                "language": "da",
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+                "start_time": "2020-09-14T10:30:00+02:00",
+                "end_time": "2020-09-14T11:00:00+02:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "a097b641-9233-4274-bdf8-7b106b63b276"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/location/a097b641-9233-4274-bdf8-7b106b63b276"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": []
+                },
+                "speakers": {
+                    "data": [
+                        {
+                            "type": "speaker",
+                            "id": "0c207470-acaa-4edf-80bb-0c11ca9a4b51"
+                        }
+                    ]
+                },
+                "sponsors": {
+                    "data": [
+                        {
+                            "type": "sponsor",
+                            "id": "7aada4f1-f6a5-463e-bda4-abbe6caf242a"
+                        }
+                    ]
+                },
+                "tags": {
+                    "data": []
+                },
+                "themes": {
+                    "data": [],
+                    "links": {
+                        "self": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/90acbd76-da93-4b61-b527-e8695a1f5e39/relationships/field_themes?resourceVersion=id%3A33"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "event",
+            "id": "6e764f3c-1aea-479d-86c6-afcecf2e93cc",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/event/6e764f3c-1aea-479d-86c6-afcecf2e93cc@resourceVersion@id@3A10.json"
+                }
+            },
+            "attributes": {
+                "title": "Velkomst",
+                "created": "2020-09-10T09:24:22+00:00",
+                "changed": "2020-09-10T09:24:22+00:00",
+                "promote": false,
+                "language": "da",
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+                "start_time": "2020-09-25T10:00:00+02:00",
+                "end_time": "2020-09-25T10:20:00+02:00"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                },
+                "location": {
+                    "data": {
+                        "type": "location",
+                        "id": "a097b641-9233-4274-bdf8-7b106b63b276"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/location/a097b641-9233-4274-bdf8-7b106b63b276"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": []
+                },
+                "speakers": {
+                    "data": []
+                },
+                "sponsors": {
+                    "data": []
+                },
+                "tags": {
+                    "data": []
+                },
+                "themes": {
+                    "data": [],
+                    "links": {
+                        "self": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/6e764f3c-1aea-479d-86c6-afcecf2e93cc/relationships/field_themes?resourceVersion=id%3A10"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "type": "conference",
+            "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d@resourceVersion@id@3A60.json"
+                },
+                "event": {
+                    "href": "/data/test-conference/api/event@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d@sort@field_times.value.json"
+                },
+                "speaker": {
+                    "href": "/data/test-conference/api/speaker@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d.json"
+                },
+                "organizer": {
+                    "href": "/data/test-conference/api/organizer@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d.json"
+                },
+                "tag": {
+                    "href": "/data/test-conference/api/tag@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d.json"
+                },
+                "theme": {
+                    "href": "/data/test-conference/api/theme@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d.json"
+                },
+                "location": {
+                    "href": "/data/test-conference/api/location@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d.json"
+                },
+                "sponsor": {
+                    "href": "/data/test-conference/api/sponsor@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d.json"
+                },
+                "all": {
+                    "href": "/data/test-conference/api/event@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d@sort@field_times.value@incl-ffec78dc945ada3d34ba75db57153c71dd6e6ca7.json"
+                }
+            },
+            "attributes": {
+                "title": "TESTkonference",
+                "created": "2020-09-10T07:57:18+00:00",
+                "changed": "2020-09-15T14:11:15+00:00",
+                "promote": false,
+                "language": "da",
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n",
+                "start_time": "2020-10-01T00:00:00+02:00",
+                "end_time": "2020-10-02T23:59:59+02:00",
+                "ticket": {
+                    "url": "http://billet.aarhus.dk",
+                    "text": "Book billet her"
+                },
+                "app": {
+                    "primary_color": "#ffffff",
+                    "logo": "/data/test-conference/sites/default/files/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.png",
+                    "icons": {
+                        "114x114": "/data/test-conference/sites/default/files/styles/app_icon_114x114/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-9bc46716c78173507eb2b269a5fb0efa3d8c8200",
+                        "120x120": "/data/test-conference/sites/default/files/styles/app_icon_120x120/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-e4eba5c14cddd54a08ff3065e080f55e29e79b87",
+                        "128x128": "/data/test-conference/sites/default/files/styles/app_icon_128x128/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-03b408dbfb3dcc6abde4d0f0b2aa1daf47649e2b",
+                        "144x144": "/data/test-conference/sites/default/files/styles/app_icon_144x144/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-d035999e9ad175f226779a367829532cd0d84b0c",
+                        "150x150": "/data/test-conference/sites/default/files/styles/app_icon_150x150/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-c0c1253e4332bd1387f7933afedb7dfefc4f1145",
+                        "152x152": "/data/test-conference/sites/default/files/styles/app_icon_152x152/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-b3a8f829aa62a0f27648dba2313a8e6b67a724f6",
+                        "16x16": "/data/test-conference/sites/default/files/styles/app_icon_16x16/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-70e2137ee08960da86b472715a278a0f81a3804c",
+                        "196x196": "/data/test-conference/sites/default/files/styles/app_icon_196x196/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-a59724b324efca56a4042f281322f7ff4ed32b3a",
+                        "310x150": "/data/test-conference/sites/default/files/styles/app_icon_310x150/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-65c2eb1654071adf268cb14dd3c031738d8ced60",
+                        "310x310": "/data/test-conference/sites/default/files/styles/app_icon_310x310/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@2-f273183c9b13c64c6d544629db998b518b42de41",
+                        "32x32": "/data/test-conference/sites/default/files/styles/app_icon_32x32/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-6708bd476aac8967085aa78682b7aef3e7b92875",
+                        "57x57": "/data/test-conference/sites/default/files/styles/app_icon_57x57/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-05f88b38c1281d1dbc2d3b86a17ea65bcb63633e",
+                        "60x60": "/data/test-conference/sites/default/files/styles/app_icon_60x60/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-d139b1075c0cdab46216bb6de2724d1eba809ac8",
+                        "70x70": "/data/test-conference/sites/default/files/styles/app_icon_70x70/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-849f41bcd0f37eeed6d7b392f603fdb4dd7751b0",
+                        "72x72": "/data/test-conference/sites/default/files/styles/app_icon_72x72/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-7489bc069ffd15cf57501785d45197eb75c36dc8",
+                        "76x76": "/data/test-conference/sites/default/files/styles/app_icon_76x76/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-6a22facf0633efaf3c7b1b0e901d8ced1745e6c1",
+                        "96x96": "/data/test-conference/sites/default/files/styles/app_icon_96x96/public/2020-09/8e16d5c24067af0a9abb899b5a8215c0@20@281@29.-dc9371aec8acd9c84668aa4bc84031bc16b79e58"
+                    },
+                    "accessibility_statement": {
+                        "url": "https://eb.dk",
+                        "text": "Tilgængelighedserklæring"
+                    }
+                }
+            },
+            "relationships": {
+                "location": {
+                    "data": null,
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d/field_location?resourceVersion=id%3A60"
+                        },
+                        "self": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d/relationships/field_location?resourceVersion=id%3A60"
+                        }
+                    }
+                },
+                "organizers": {
+                    "data": []
+                },
+                "sponsors": {
+                    "data": [
+                        {
+                            "type": "sponsor",
+                            "id": "a9e2978f-5631-4623-8e2a-23786b685cb9"
+                        },
+                        {
+                            "type": "sponsor",
+                            "id": "8df551ca-a0dc-4fdf-ae49-3358334fe2da"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "location",
+            "id": "a097b641-9233-4274-bdf8-7b106b63b276",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/location/a097b641-9233-4274-bdf8-7b106b63b276@resourceVersion@id@3A9.json"
+                }
+            },
+            "attributes": {
+                "title": "Dokk1",
+                "created": "2020-09-10T09:22:22+00:00",
+                "changed": "2020-09-10T09:22:29+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/dokk1_ex_01_1000x468_4.jpg",
+                    "meta": {
+                        "alt": "Dokk1",
+                        "title": "",
+                        "width": 1000,
+                        "height": 468
+                    }
+                },
+                "summary": null,
+                "description": "<p>Ved havnefronten i centrum af Aarhus</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "location",
+            "id": "06a5d460-7fdb-47dc-ac7e-6392484c207d",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/location/06a5d460-7fdb-47dc-ac7e-6392484c207d@resourceVersion@id@3A18.json"
+                }
+            },
+            "attributes": {
+                "title": "Musikhuset",
+                "created": "2020-09-14T06:31:57+00:00",
+                "changed": "2020-09-14T06:32:06+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/_d3_9929.jpg",
+                    "meta": {
+                        "alt": "Musikhuset",
+                        "title": "",
+                        "width": 1200,
+                        "height": 560
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "c8b1a163-ec96-47e3-ab53-ee5cefaac3e0",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/speaker/c8b1a163-ec96-47e3-ab53-ee5cefaac3e0@resourceVersion@id@3A12.json"
+                }
+            },
+            "attributes": {
+                "title": "Jacob Bundsgaard",
+                "created": "2020-09-10T09:53:55+00:00",
+                "changed": "2020-09-10T09:54:18+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/download.jpg",
+                    "meta": {
+                        "alt": "Jacob Bundsgaard",
+                        "title": "",
+                        "width": 225,
+                        "height": 225
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "0c207470-acaa-4edf-80bb-0c11ca9a4b51",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/speaker/0c207470-acaa-4edf-80bb-0c11ca9a4b51@resourceVersion@id@3A23.json"
+                }
+            },
+            "attributes": {
+                "title": "Jacob Risgaard",
+                "created": "2020-09-14T06:39:51+00:00",
+                "changed": "2020-09-14T06:40:07+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/risgaard_og_buch.jpg",
+                    "meta": {
+                        "alt": "Jacob Risgaard",
+                        "title": "",
+                        "width": 437,
+                        "height": 484
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "48edbff0-c311-4688-96d4-674fd5e1b188",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/speaker/48edbff0-c311-4688-96d4-674fd5e1b188@resourceVersion@id@3A11.json"
+                }
+            },
+            "attributes": {
+                "title": "Jacob Haugaard",
+                "created": "2020-09-10T09:26:57+00:00",
+                "changed": "2020-09-10T09:27:19+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/Jakob_haugaard_at_gron_koncert.jpg",
+                    "meta": {
+                        "alt": "Jacob Haugaard",
+                        "title": "",
+                        "width": 1545,
+                        "height": 2000
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "4ca62d42-21ad-4b27-9994-a2d750067107",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/speaker/4ca62d42-21ad-4b27-9994-a2d750067107@resourceVersion@id@3A22.json"
+                }
+            },
+            "attributes": {
+                "title": "Jacob Riising",
+                "created": "2020-09-14T06:38:22+00:00",
+                "changed": "2020-09-14T06:38:32+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/desktop-20191119165607.jpg",
+                    "meta": {
+                        "alt": "Jacob Riising",
+                        "title": "",
+                        "width": 910,
+                        "height": 910
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "5067889e-7842-4321-96b3-9b6b120ec621",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/speaker/5067889e-7842-4321-96b3-9b6b120ec621@resourceVersion@id@3A13.json"
+                }
+            },
+            "attributes": {
+                "title": "Jacob Bundsgaard",
+                "created": "2020-09-14T06:10:21+00:00",
+                "changed": "2020-09-14T06:10:55+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/download_0.jpg",
+                    "meta": {
+                        "alt": "Jacob Bundsgaard",
+                        "title": "",
+                        "width": 225,
+                        "height": 225
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "speaker",
+            "id": "43df2bb3-13f0-4257-ab83-236800ccb9ec",
+            "links": {
+                "self": {
+                    "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/speaker/43df2bb3-13f0-4257-ab83-236800ccb9ec?resourceVersion=id%3A46"
+                }
+            },
+            "attributes": {
+                "title": "Jacob Christensen",
+                "created": "2020-09-14T08:28:42+00:00",
+                "changed": "2020-09-14T08:32:41+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/unnamed.jpg",
+                    "meta": {
+                        "alt": "Jacob Christensen",
+                        "title": "",
+                        "width": 512,
+                        "height": 512
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "6e64a393-a790-4c9e-a2b1-99b50d83ba88"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/6e64a393-a790-4c9e-a2b1-99b50d83ba88"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "sponsor",
+            "id": "8df551ca-a0dc-4fdf-ae49-3358334fe2da",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/sponsor/8df551ca-a0dc-4fdf-ae49-3358334fe2da@resourceVersion@id@3A25.json"
+                }
+            },
+            "attributes": {
+                "title": "Jyske Bank",
+                "created": "2020-09-14T06:42:40+00:00",
+                "changed": "2020-09-14T06:42:51+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/jyske@20bank@20logo.png",
+                    "meta": {
+                        "alt": "Jyske Bank",
+                        "title": "",
+                        "width": 900,
+                        "height": 277
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "sponsor",
+            "id": "91a909e9-e85b-49c4-800b-68bdc026aaa8",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/sponsor/91a909e9-e85b-49c4-800b-68bdc026aaa8@resourceVersion@id@3A27.json"
+                }
+            },
+            "attributes": {
+                "title": "Nordea",
+                "created": "2020-09-14T06:45:38+00:00",
+                "changed": "2020-09-14T06:45:44+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/266x150.png",
+                    "meta": {
+                        "alt": "Nordea",
+                        "title": "",
+                        "width": 266,
+                        "height": 150
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "sponsor",
+            "id": "a9e2978f-5631-4623-8e2a-23786b685cb9",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/sponsor/a9e2978f-5631-4623-8e2a-23786b685cb9@resourceVersion@id@3A24.json"
+                }
+            },
+            "attributes": {
+                "title": "Danske Bank",
+                "created": "2020-09-14T06:42:04+00:00",
+                "changed": "2020-09-14T06:42:13+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/Danske_Bank_logo_logotype.png",
+                    "meta": {
+                        "alt": "Danske Bank",
+                        "title": "",
+                        "width": 2750,
+                        "height": 450
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "sponsor",
+            "id": "7aada4f1-f6a5-463e-bda4-abbe6caf242a",
+            "links": {
+                "self": {
+                    "href": "/data/test-conference/api/sponsor/7aada4f1-f6a5-463e-bda4-abbe6caf242a@resourceVersion@id@3A26.json"
+                }
+            },
+            "attributes": {
+                "title": "Jutlander Bank",
+                "created": "2020-09-14T06:44:24+00:00",
+                "changed": "2020-09-14T06:44:33+00:00",
+                "promote": false,
+                "image": {
+                    "url": "/data/test-conference/sites/default/files/2020-09/Jutlander-Bank-logo.png",
+                    "meta": {
+                        "alt": "Jutlander Bank",
+                        "title": "",
+                        "width": 657,
+                        "height": 185
+                    }
+                },
+                "summary": null,
+                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+            },
+            "relationships": {
+                "conference": {
+                    "data": {
+                        "type": "conference",
+                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    },
+                    "links": {
+                        "related": {
+                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": {
+            "href": "/data/test-conference/api/event@filter@5Bconference.id@5D@a84ab2bb-432e-40f0-9de8-2bb709a8842d@include@conference@2Cconfer-03a1c3747ce9670dab2d4ef3e6af85b6e66e7621.json"
+        }
+    }
+}

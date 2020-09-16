@@ -1,0 +1,56 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "location",
+        "id": "3f116d1d-430f-4d49-bc5c-4ff156e20d5d",
+        "links": {
+            "self": {
+                "href": "/data/test-conference/api/location/3f116d1d-430f-4d49-bc5c-4ff156e20d5d@resourceVersion@id@3A17.json"
+            }
+        },
+        "attributes": {
+            "title": "Aarhus Rådhus",
+            "created": "2020-09-14T06:30:16+00:00",
+            "changed": "2020-09-14T06:30:43+00:00",
+            "promote": false,
+            "image": {
+                "url": "/data/test-conference/sites/default/files/2020-09/download@20@282@29_0.jpg",
+                "meta": {
+                    "alt": "Aarhus Rådhus",
+                    "title": "",
+                    "width": 168,
+                    "height": 299
+                }
+            },
+            "summary": null,
+            "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/test-conference/api/location/3f116d1d-430f-4d49-bc5c-4ff156e20d5d@resourceVersion@id@3A17.json"
+        }
+    }
+}
