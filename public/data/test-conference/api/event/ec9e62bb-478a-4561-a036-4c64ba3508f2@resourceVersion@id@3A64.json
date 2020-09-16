@@ -14,13 +14,13 @@
         "id": "ec9e62bb-478a-4561-a036-4c64ba3508f2",
         "links": {
             "self": {
-                "href": "/data/test-conference/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2@resourceVersion@id@3A48.json"
+                "href": "/data/test-conference/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2@resourceVersion@id@3A64.json"
             }
         },
         "attributes": {
             "title": "1. Event",
             "created": "2020-09-14T06:27:16+00:00",
-            "changed": "2020-09-14T09:08:49+00:00",
+            "changed": "2020-09-16T09:43:35+00:00",
             "promote": false,
             "language": "da",
             "summary": null,
@@ -75,13 +75,22 @@
                 ]
             },
             "tags": {
-                "data": []
+                "data": [
+                    {
+                        "type": "tag",
+                        "id": "77ae1440-64a8-4349-8265-3d9449e561e9"
+                    },
+                    {
+                        "type": "tag",
+                        "id": "caac0a5b-035c-4e19-aef8-84c0c307ac44"
+                    }
+                ]
             },
             "themes": {
                 "data": [],
                 "links": {
                     "self": {
-                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2/relationships/field_themes?resourceVersion=id%3A48"
+                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2/relationships/field_themes?resourceVersion=id%3A64"
                     }
                 }
             }
@@ -89,7 +98,7 @@
     },
     "links": {
         "self": {
-            "href": "/data/test-conference/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2@resourceVersion@id@3A48.json"
+            "href": "/data/test-conference/api/event/ec9e62bb-478a-4561-a036-4c64ba3508f2@resourceVersion@id@3A64.json"
         }
     }
 }
