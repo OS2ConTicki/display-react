@@ -121,89 +121,9 @@
             }
         }
     },
-    "included": [
-        {
-            "type": "sponsor",
-            "id": "a9e2978f-5631-4623-8e2a-23786b685cb9",
-            "links": {
-                "self": {
-                    "href": "/data/test-conference/api/sponsor/a9e2978f-5631-4623-8e2a-23786b685cb9@resourceVersion@id@3A24.json"
-                }
-            },
-            "attributes": {
-                "title": "Danske Bank",
-                "created": "2020-09-14T06:42:04+00:00",
-                "changed": "2020-09-14T06:42:13+00:00",
-                "promote": false,
-                "image": {
-                    "url": "/data/test-conference/sites/default/files/2020-09/Danske_Bank_logo_logotype.png",
-                    "meta": {
-                        "alt": "Danske Bank",
-                        "title": "",
-                        "width": 2750,
-                        "height": 450
-                    }
-                },
-                "summary": null,
-                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
-            },
-            "relationships": {
-                "conference": {
-                    "data": {
-                        "type": "conference",
-                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "type": "sponsor",
-            "id": "8df551ca-a0dc-4fdf-ae49-3358334fe2da",
-            "links": {
-                "self": {
-                    "href": "/data/test-conference/api/sponsor/8df551ca-a0dc-4fdf-ae49-3358334fe2da@resourceVersion@id@3A25.json"
-                }
-            },
-            "attributes": {
-                "title": "Jyske Bank",
-                "created": "2020-09-14T06:42:40+00:00",
-                "changed": "2020-09-14T06:42:51+00:00",
-                "promote": false,
-                "image": {
-                    "url": "/data/test-conference/sites/default/files/2020-09/jyske@20bank@20logo.png",
-                    "meta": {
-                        "alt": "Jyske Bank",
-                        "title": "",
-                        "width": 900,
-                        "height": 277
-                    }
-                },
-                "summary": null,
-                "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n"
-            },
-            "relationships": {
-                "conference": {
-                    "data": {
-                        "type": "conference",
-                        "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
-                    },
-                    "links": {
-                        "related": {
-                            "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
-                        }
-                    }
-                }
-            }
-        }
-    ],
     "links": {
         "self": {
-            "href": "/data/test-conference/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d@include@organizers@2Csponsors.json"
+            "href": "/data/test-conference/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d@resourceVersion@id@3A63.json"
         }
     }
 }

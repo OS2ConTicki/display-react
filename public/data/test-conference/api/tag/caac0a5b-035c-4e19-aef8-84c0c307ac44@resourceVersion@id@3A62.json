@@ -1,0 +1,47 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": {
+                "self": {
+                    "href": "http://jsonapi.org/format/1.0/"
+                }
+            }
+        }
+    },
+    "data": {
+        "type": "tag",
+        "id": "caac0a5b-035c-4e19-aef8-84c0c307ac44",
+        "links": {
+            "self": {
+                "href": "/data/test-conference/api/tag/caac0a5b-035c-4e19-aef8-84c0c307ac44@resourceVersion@id@3A62.json"
+            }
+        },
+        "attributes": {
+            "title": "Test tag 2",
+            "created": "2020-09-16T09:28:51+00:00",
+            "changed": "2020-09-16T09:29:07+00:00",
+            "promote": false,
+            "summary": null,
+            "description": "<p>Aenean metus urna, tempus eget auctor vitae, blandit et nisl.</p>\n"
+        },
+        "relationships": {
+            "conference": {
+                "data": {
+                    "type": "conference",
+                    "id": "a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                },
+                "links": {
+                    "related": {
+                        "href": "https://conticki.srvitkphp73stg.itkdev.dk/api/conference/a84ab2bb-432e-40f0-9de8-2bb709a8842d"
+                    }
+                }
+            }
+        }
+    },
+    "links": {
+        "self": {
+            "href": "/data/test-conference/api/tag/caac0a5b-035c-4e19-aef8-84c0c307ac44@resourceVersion@id@3A62.json"
+        }
+    }
+}

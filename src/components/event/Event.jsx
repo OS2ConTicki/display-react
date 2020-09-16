@@ -15,7 +15,7 @@ import { formatDate, formatTime } from '../utils/dateHandler.jsx'
 const Event = ({ event, onLike }) => {
   const t = useTranslate('Conticki')
   // Unwrap the event object.
-  const { title, image, description, ticket, themes, location } = event
+  const { title, image, description, ticket, themes, location, tags } = event
 
   return (
     <div className='event'>
@@ -33,6 +33,13 @@ const Event = ({ event, onLike }) => {
                 <p className='lead mb-0'>
                   <strong className='mr-3'>{t('Themes', { n: themes.length })}</strong>
                   {themes.map(theme => <Link key={theme.id} to={`/theme/${theme.id}`}>{theme.title}</Link>)}
+                </p>}
+            </Col>
+            <Col>
+              {tags && tags.length > 0 &&
+                <p className='lead mb-0'>
+                  <strong className='mr-3'>{t('Tags', { n: tags.length })}</strong>
+                  {tags.map(tag => <span key={tag.id} className='mr-3'>{tag.title}</span>)}
                 </p>}
             </Col>
           </Row>
