@@ -15,21 +15,19 @@ function Conference (props) {
 
   return (
     <>
-      <div>
-        {conference && (
-          <ConferenceInfo />
-        )}
-        {context.events.get && context.tags.get && context.themes.get && (
-          <Program
-            eventsList={context.events.get}
-            tagsList={context.tags.get}
-            themesList={context.themes.get}
-          />
-        )}
-        {promotedSpeakers.length > 0 && <SpeakerListPromoted title={t('Speakers', { n: 87 })} speakers={promotedSpeakers} />}
-        {conference.organizers && conference.organizers.length > 0 && <OrganizerTeaser organizers={conference.organizers} />}
-        {conference.sponsors && conference.sponsors.length > 0 && <SponsorTeaser title={t('Sponsors', { n: 87 })} sponsors={conference.sponsors} />}
-      </div>
+      {conference && (
+        <ConferenceInfo />
+      )}
+      {context.events.get && context.tags.get && context.themes.get && (
+        <Program
+          eventsList={context.events.get}
+          tagsList={context.tags.get}
+          themesList={context.themes.get}
+        />
+      )}
+      {promotedSpeakers.length > 0 && <SpeakerListPromoted title={t('Speakers', { n: 87 })} speakers={promotedSpeakers} />}
+      {conference.organizers && conference.organizers.length > 0 && <OrganizerTeaser organizers={conference.organizers} />}
+      {conference.sponsors && conference.sponsors.length > 0 && <SponsorTeaser title={t('Sponsors', { n: 87 })} sponsors={conference.sponsors} />}
     </>
   )
 }

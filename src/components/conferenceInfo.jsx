@@ -11,9 +11,7 @@ function ConferenceInfo () {
   return (
     <>
       {conference && (
-        <div id='top'>
-          <DisplayInfoComponent {...conference} />
-        </div>
+        <DisplayInfoComponent {...conference} />
       )}
     </>
   )

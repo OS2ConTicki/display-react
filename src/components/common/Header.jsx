@@ -6,13 +6,13 @@ import Col from 'react-bootstrap/Col'
 function Header ({ title, image }) {
   return (
     <>
-      <Container className='my-md-5'>
-        <Row>
-          <Col xs={12} md={image ? 7 : 12} className='mb-5'>
-            <h1>{title}</h1>
+      <Container className='my-5'>
+        <Row className='align-items-center'>
+          <Col xs={12} md={image ? 7 : 12}>
+            <h1 className='mb-3 mb-md-0'>{title}</h1>
           </Col>
           {image && (
-            <Col xs={12} md={5} className='mb-3 text-center text-md-right'>
+            <Col xs={12} md={5} className='text-center text-md-right'>
               <img
                 className='img-fluid'
                 height={image.meta.height}

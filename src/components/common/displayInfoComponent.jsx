@@ -15,14 +15,16 @@ function DisplayInfoComponent ({ title, description, image, ticket, start_time: 
   return (
     <>
       <Row className='top scroll-offset-class'>
-        <Header title={title} image={image} />
-        <Container>
-          <Row>
-            <Col>
-              <p className='lead text-white'>{capitalize(t('{{start_time}} to {{end_time}}', { start_time: formatDate(startTime, 'PPPP'), end_time: formatDate(endTime, 'PPPP') }))}</p>
-            </Col>
-          </Row>
-        </Container>
+        <Col>
+          <Header title={title} image={image} />
+          <Container>
+            <Row>
+              <Col>
+                <p className='lead text-white'>{capitalize(t('{{start_time}} to {{end_time}}', { start_time: formatDate(startTime, 'PPPP'), end_time: formatDate(endTime, 'PPPP') }))}</p>
+              </Col>
+            </Row>
+          </Container>
+        </Col>
       </Row>
       <Row className='py-3 bg-light'>
         <Container>
