@@ -39,7 +39,7 @@ const Event = ({ event, onLike }) => {
               {tags && tags.length > 0 &&
                 <p className='lead mb-0'>
                   <strong className='mr-3'>{t('Tags', { n: tags.length })}</strong>
-                  {tags.map(tag => <span key={tag.id} to={`/theme/${tag.id}`} className='mr-3'>{tag.title}</span>)}
+                  {tags.map(tag => <span key={tag.id} className='mr-3'>{tag.title}</span>)}
                 </p>}
             </Col>
           </Row>
