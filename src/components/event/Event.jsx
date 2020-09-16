@@ -28,20 +28,20 @@ const Event = ({ event, onLike }) => {
             <Col><p className='lead mb-0'><strong className='mr-3'>{t('Date')}</strong>{formatDate(event.start_time, 'PPPP')}</p></Col>
             <Col><p className='lead mb-0'><strong className='mr-3'>{t('Time')}</strong>{t('{{start_time}} to {{end_time}}', { start_time: formatTime(event.start_time), end_time: formatTime(event.end_time) })}</p></Col>
             <Col><p className='lead mb-0'><strong className='mr-3'>{t('Where')}</strong><Link to={`/location/${location.id}`}>{location.title}</Link></p></Col>
-            <Col>
-              {themes && themes.length > 0 &&
+            {themes && themes.length > 0 &&
+              <Col>
                 <p className='lead mb-0'>
                   <strong className='mr-3'>{t('Themes', { n: themes.length })}</strong>
                   {themes.map(theme => <Link key={theme.id} to={`/theme/${theme.id}`}>{theme.title}</Link>)}
-                </p>}
-            </Col>
-            <Col>
-              {tags && tags.length > 0 &&
+                </p>
+              </Col>}
+            {tags && tags.length > 0 &&
+              <Col>
                 <p className='lead mb-0'>
                   <strong className='mr-3'>{t('Tags', { n: tags.length })}</strong>
                   {tags.map(tag => <span key={tag.id} className='mr-3'>{tag.title}</span>)}
-                </p>}
-            </Col>
+                </p>
+              </Col>}
           </Row>
           {ticket && ticket.url &&
             <Row>
