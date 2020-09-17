@@ -165,7 +165,8 @@ function Program ({ eventsList, tagsList, themesList }) {
             <Collapse in={open} className='bg-light border p-3 rounded-sm'>
               <div id='searchEvent' className='searchEvent mb-3'>
                 <SearchBox value={searchText} onChange={handleSearch} />
-                {themes && themes.length > 0 && (
+                {/* We check for lenght more than 1 since we wil allways have an "All themes" entry */}
+                {themes && themes.length > 1 && (
                   <div className='mb-3'>
                     <BadgeList
                       title={t('Themes', { n: 87 })}
@@ -176,7 +177,8 @@ function Program ({ eventsList, tagsList, themesList }) {
                       onItemSelect={handleThemeSelect}
                     />
                   </div>)}
-                {tags && tags.length > 0 && (
+                {/* We check for lenght more than 1 since we wil allways have an "All tags" entry */}
+                {tags && tags.length > 1 && (
                   <BadgeList
                     title={t('Tags', { n: 87 })}
                     items={tags}
