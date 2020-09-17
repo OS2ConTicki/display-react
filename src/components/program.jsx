@@ -165,7 +165,6 @@ function Program ({ eventsList, tagsList, themesList }) {
             <Collapse in={open} className='bg-light border p-3 rounded-sm'>
               <div id='searchEvent' className='searchEvent mb-3'>
                 <SearchBox value={searchText} onChange={handleSearch} />
-                <pre>{themes.length}</pre>
                 {themes.length > 1 && themes && (
                   <div className='mb-3'>
                     <BadgeList
