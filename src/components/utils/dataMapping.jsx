@@ -1,9 +1,15 @@
 import { getDate } from './dateHandler'
 
 export function mapElement (element, entities = {}) {
+  // Check if element has already been mapped.
+  if (element.mapped) {
+    return element
+  }
+
   const data = {
     id: element.id,
-    type: element.type
+    type: element.type,
+    mapped: true
   }
 
   if (element.attributes) {
