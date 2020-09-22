@@ -6,9 +6,11 @@ export function mapElement (element, entities = {}) {
     type: element.type
   }
 
-  // Map all attributes.
-  for (const [name, value] of Object.entries(element.attributes)) {
-    data[name] = value
+  if (element.attributes) {
+    // Map all attributes.
+    for (const [name, value] of Object.entries(element.attributes)) {
+      data[name] = value
+    }
   }
 
   // Expand all relationships.
