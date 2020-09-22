@@ -230,7 +230,8 @@ function App (props) {
             setLoading(false)
           }
         }
-      }).catch(() => {
+      }).catch((err) => {
+        console.log(err)
         setError(true)
         setLoading(false)
       })
@@ -252,7 +253,8 @@ function App (props) {
           // Pass along the entities related to the conference.
           fetchEvents(allUrl, entities)
         }
-      }).catch(() => {
+      }).catch((err) => {
+        console.log(err)
         setError(true)
         setLoading(false)
       }
