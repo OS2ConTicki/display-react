@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Toast from 'react-bootstrap/Toast'
 import NavigationActionIcon from '../images/Navigation_Action.png'
 import { useTranslate } from 'react-translate'
 
 const AppInstallBanner = (icons) => {
   const t = useTranslate('Conticki')
+  const [showA, setShowA] = useState(true)
+  const toggleShowA = () => setShowA(!showA)
 
   return (
-    <Toast className='bg-warning'>
+    <Toast className='bg-warning' show={showA} onClose={toggleShowA}>
       <Toast.Header>
         <img src={icons.icons['16x16']} width='16' height='16' alt='' className='mr-1' />
         <strong className='mr-auto'>{t('Install Conference App')}</strong>
