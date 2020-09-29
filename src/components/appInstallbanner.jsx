@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Toast from 'react-bootstrap/Toast'
 import NavigationActionIcon from '../images/Navigation_Action.png'
 import { useTranslate } from 'react-translate'
@@ -12,7 +12,7 @@ const AppInstallBanner = (icons) => {
       return storedState !== 'false'
     })
 
-    React.useEffect(() => {
+    useEffect(() => {
       window.localStorage.setItem(key, state)
     }, [state])
 
