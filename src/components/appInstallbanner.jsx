@@ -9,7 +9,7 @@ const AppInstallBanner = (icons) => {
   const handleBanner = (key = 'iosInstallBanner', initialState = true) => {
     const [state, setState] = useState(() => {
       const storedState = window.localStorage.getItem(key)
-      return storedState ?? initialState
+      return storedState !== 'false'
     })
 
     React.useEffect(() => {
