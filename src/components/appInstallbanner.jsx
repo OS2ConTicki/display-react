@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Toast from 'react-bootstrap/Toast'
 import NavigationActionIcon from '../images/Navigation_Action.png'
 import { useTranslate } from 'react-translate'
@@ -6,8 +6,23 @@ import { useTranslate } from 'react-translate'
 const AppInstallBanner = (icons) => {
   const t = useTranslate('Conticki')
 
+  const handleBanner = (key = 'iosInstallBanner', initialState = true) => {
+    const [state, setState] = useState(() => {
+      const storedState = window.localStorage.getItem(key)
+      return storedState !== 'false'
+    })
+
+    useEffect(() => {
+      window.localStorage.setItem(key, state)
+    }, [state])
+
+    return [state, setState]
+  }
+
+  const [value, setValue] = handleBanner()
+
   return (
-    <Toast className='bg-warning'>
+    <Toast className='bg-warning' show={value} onClose={() => setValue(false)}>
       <Toast.Header>
         <img src={icons.icons['16x16']} width='16' height='16' alt='' className='mr-1' />
         <strong className='mr-auto'>{t('Install Conference App')}</strong>
