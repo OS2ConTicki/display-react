@@ -3,6 +3,10 @@ import { utcToZonedTime, format } from 'date-fns-tz'
 import { da, enGB } from 'date-fns/locale'
 import AppStateContext from '../../context/appStateContext'
 
+// We need this for time zone support in IE 11.
+// https://www.npmjs.com/package/date-time-format-timezone
+require('date-time-format-timezone')
+
 const locales = { da, en: enGB }
 
 const getCurrentTimeZone = () => {
@@ -41,14 +45,7 @@ export const formatTime = (date, formatStr = 'p') => {
 }
 
 export function getDateByLanguage (inputDate, language) {
-  const date = new Date(inputDate)
-  const lang = language === 'en' ? 'en-EN' : 'da-DA'
-  const dateOptions = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  }
-  return date.toLocaleDateString(lang, dateOptions)
+  return formatDate(inputDate, 'PPP')
 }
 
 export function getDate (inputDate) {
@@ -56,16 +53,10 @@ export function getDate (inputDate) {
   return date.toDateString()
 }
 export function getDayByLanguage (inputDate, language) {
-  const lang = language === 'en' ? 'en-EN' : 'da-DA'
-  const dayOptions = {
-    weekday: 'long'
-  }
+  const day = formatDate(inputDate, 'EEEE')
+  const capitalize = ([first, ...rest], lowerRest = false) => first.toUpperCase() + (lowerRest ? rest.join('').toLowerCase() : rest.join(''))
 
-  const date = new Date(inputDate)
-  let helperStartDate = date.toLocaleDateString(lang, dayOptions)
-  helperStartDate =
-      helperStartDate.charAt(0).toUpperCase() + helperStartDate.slice(1)
-  return helperStartDate
+  return capitalize(day)
 }
 
 export function getTime (inputDate, language) {
