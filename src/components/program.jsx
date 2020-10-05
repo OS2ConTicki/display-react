@@ -18,14 +18,13 @@ import IconButton from './common/IconButton'
 function Program ({ eventsList, tagsList, themesList }) {
   const t = useTranslate('Conticki')
   const context = useContext(AppStateContext)
-  const allEventsTag = { title: 'Alle emner', id: '' }
   const allEventsTheme = { title: 'Alle temaer', id: '' }
   const allEventsDay = { title: 'Alle dage', id: '' }
   const [events, setEvents] = useState(eventsList)
-  const [selectedTag, setSelectedTag] = useState(allEventsTag)
+  const [selectedTags, setSelectedTags] = useState({})
   const [selectedTheme, setSelectedTheme] = useState(allEventsTheme)
   const [selectedDay, setSelectedDay] = useState(allEventsDay)
-  const [tags] = useState([allEventsTag, ...tagsList])
+  const [tags] = useState(tagsList)
   const [themes] = useState([allEventsTheme, ...themesList])
   const [searchText, setSearchText] = useState('')
   const [dates] = useState(getDates())
@@ -79,7 +78,14 @@ function Program ({ eventsList, tagsList, themesList }) {
   }
 
   function handleTagSelect (tag) {
-    setSelectedTag(tag)
+    const tags = { ...selectedTags }
+    // Toggle the selected tag.
+    if (tag.id in selectedTags) {
+      delete tags[tag.id]
+    } else {
+      tags[tag.id] = tag
+    }
+    setSelectedTags(tags)
     setSearchText('')
   }
 
@@ -100,9 +106,9 @@ function Program ({ eventsList, tagsList, themesList }) {
         (event) => event.search && event.search.includes(search)
       )
     }
-    if (selectedTag.id) {
+    if (Object.keys(selectedTags).length > 0) {
       filteredEvents = filteredEvents.filter((event) => {
-        return event.tags && event.tags.filter(tag => tag.id === selectedTag.id).length > 0
+        return event.tags && event.tags.filter(tag => tag.id in selectedTags).length > 0
       })
     }
 
@@ -133,14 +139,15 @@ function Program ({ eventsList, tagsList, themesList }) {
       ? t('NO_EVENTS')
       : t('NUMBER_OF_EVENTS', { n: totalCount })
 
-  if (selectedTheme.id && selectedTag.id) {
+  const selectedTagNames = Object.values(selectedTags).map(tag => tag.title)
+  if (selectedTheme.id && selectedTagNames.length > 0) {
     eventString +=
       t('WITH_THEME', { theme: selectedTheme.title }) +
-      t('AND_WITH_TAG', { tag: selectedTag.title })
+      t('AND_WITH_TAGS', { tags: selectedTagNames.join(', ') })
   } else if (selectedTheme.id) {
     eventString += t('WITH_THEME', { theme: selectedTheme.title })
-  } else if (selectedTag.id) {
-    eventString += t('WITH_TAG', { tag: selectedTag.title })
+  } else if (selectedTagNames.length > 0) {
+    eventString += t('WITH_TAGS', { tags: selectedTagNames.join(', ') })
   }
 
   return (
@@ -184,7 +191,7 @@ function Program ({ eventsList, tagsList, themesList }) {
                     items={tags}
                     textProperty='name'
                     valueProperty='id'
-                    selectedItem={selectedTag}
+                    selectedItems={selectedTags}
                     onItemSelect={handleTagSelect}
                   />
                 )}

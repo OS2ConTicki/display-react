@@ -1,7 +1,11 @@
 import React from 'react'
 import Badge from './common/badge'
 
-function BadgeList ({ title, items, onItemSelect, valueProperty, selectedItem }) {
+function BadgeList ({ title, items, onItemSelect, valueProperty, selectedItem, selectedItems }) {
+  if (!selectedItems) {
+    selectedItems = { [selectedItem.id]: selectedItem }
+  }
+
   return (
     <>
       {title && <h3 className='mb-3'>{title}</h3>}
@@ -10,7 +14,7 @@ function BadgeList ({ title, items, onItemSelect, valueProperty, selectedItem })
           <Badge
             item={item}
             onItemSelect={onItemSelect}
-            selectedItem={selectedItem.id}
+            selectedItem={selectedItems[item.id]}
           />
         </span>
       ))}
