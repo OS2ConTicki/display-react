@@ -2,10 +2,7 @@ import React from 'react'
 import Badge from 'react-bootstrap/Badge'
 
 function BadgeItem ({ item, selectedItem, onItemSelect }) {
-  const classes =
-    selectedItem === item.id
-      ? 'primary'
-      : 'secondary'
+  const classes = (selectedItem && selectedItem.id === item.id) ? 'primary' : 'secondary'
   return (
     <Badge
       variant={classes}
