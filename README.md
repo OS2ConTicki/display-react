@@ -42,6 +42,12 @@ Or get it directly from a cdn:
   <body>
     <div id="app"></div>
 
+    <!-- Load polyfills for IE11 (!) (cf. https://stackoverflow.com/a/29988202) -->
+    <script>
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+        document.write('<script src="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/public/dist/ie11.js"></script>')
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@os2conticki/display-react@latest/public/dist/entry.js"></script>
     <script>
      ConferenceApp.render({

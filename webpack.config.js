@@ -23,6 +23,7 @@ Encore
    * Each entry will result in one JavaScript file (e.g. app.js)
    * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
    */
+  .addEntry('ie11', './src/ie11.js')
   .addEntry('entry', './src/entry.js')
 
   // will require an extra script tag for runtime.js
